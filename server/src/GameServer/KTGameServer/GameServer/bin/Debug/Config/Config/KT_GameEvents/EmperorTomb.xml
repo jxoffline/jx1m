@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	TẦN LĂNG
+	- Config: Thiết lập
+		- LimitLevel: Cấp độ tối thiểu vào
+		- DurationPerDay: Thời gian vào tối đa mỗi ngày
+		- MonsterLevel: Cấp độ quái
+	- Event: Thông tin sự kiện
+		- Relive: Thông tin điểm hồi sinh
+			- MapID: ID bản đồ hồi sinh
+			- PosX: Vị trí X điểm hồi sinh
+			- PosY: Vị trí Y điểm hồi sinh
+		- Stage: Thông tin tầng
+			- ID: Thứ tự tầng
+			- MapID: ID bản đồ tầng
+			- NPCs: Danh sách NPC
+				- ID: ID NPC
+				- PosX: Vị trí đứng X
+				- PosY: Vị trí đứng Y
+			- Monsters: Danh sách quái và Boss
+				- Monster: Thông tin quái
+					- ID: ID quái
+					- Name: Tên quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+					- Title: Danh hiệu quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+					- PosX: Vị trí X
+					- PosY: Vị trí Y
+					- BaseHP: Sinh lực cơ bản
+					- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+					- AIType: Loại AI (0: Quái thường, 1: Quái tinh anh, 2: Quái thủ lĩnh, 3: Boss, 4: Hải tặc, 5: Quái chữ đỏ)
+					- Series: Ngũ hành (-1: Ngẫu nhiên, 1: Kim, 2: Mộc, 3: Thủy, 4: Hỏa, 5: Thổ)
+					- AIScriptID: IDScriptAI điều khiển
+						- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+					- RespawnTicks: Thời gian tái sinh
+					- Skills: Danh sách kỹ năng được sử dụng, gồm 2 tham biến, ngăn cách nhau bởi dấu ; giữa các loại kỹ năng
+						- ID_Cấp
+						- Kỹ năng sẽ được dùng theo thứ tự từ trái sang phải, nếu kỹ năng trước đang chờ hồi phục thì dùng kỹ năng sau
+					- Auras: Danh sách vòng sáng kích hoạt, gồm 2 tham biến, ngăn cách nhau bởi dấu ; giữa các loại vòng sáng
+						- ID_Cấp
+						- Tất cả quái xung quanh sẽ được vòng sáng tương ứng cho đến khi bản thân quái mang vòng sáng bị giết chết
+				- Boss: Tương tự quái (mỗi khi đến giờ sẽ chọn ngẫu nhiên 1 trong số các con có cùng thời gian xuất hiện)
+					- SpawnAt: Xuất hiện vào giờ cố định tương ứng
+				- MiniBoss: Danh sách Boss Mini, sẽ chọn ngẫu nhiên 1 trong số này để xuất hiện sau mỗi khoảng tương ứng
+					- MinDuration: Thời gian ngẫu nhiên tối thiểu sau khi Boss cũ bị giết
+					- MaxDuration: Thời gian ngẫu nhiên tối đa sau khi Boss cũ bị giết
+			- Teleport: Cổng dịch chuyển
+				- Name: Tên cổng
+				- PosX: Vị trí X
+				- PosY: Vị trí Y
+				- ToMapID: Vị trí bản đồ đích đến
+				- ToPosX: Vị trí đích đến X
+				- ToPosY: Vị trí đích đến Y
+			
+-->
+<EmperorTomb>
+	<Config LimitLevel="120" DurationPerDay="7200000" MonsterLevel="125" />
+	<Event>
+		<Relive MapID="61" PosX="1803" PosY="3393" />
+		
+		<Stage ID="1" MapID="61">
+			<NPCs>
+				<NPC ID="20023" PosX="2310" PosY="3728" ScriptID="400041" />
+				<NPC ID="240" PosX="3025" PosY="3381" ScriptID="400032" />
+			</NPCs>
+			
+			<Monsters>
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3766" PosY="2367" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3475" PosY="2535" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3977" PosY="2536" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4036" PosY="2219" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3464" PosY="2221" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3744" PosY="2743" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4506" PosY="2369" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3775" PosY="2011" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3022" PosY="2380" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3265" PosY="2674" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4215" PosY="2674" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4277" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3231" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3761" PosY="2988" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5010" PosY="2365" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3770" PosY="1800" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="2567" PosY="2370" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5716" PosY="1349" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5690" PosY="1558" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6114" PosY="1337" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5740" PosY="1152" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5294" PosY="1360" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5430" PosY="1515" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5989" PosY="1498" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5970" PosY="1197" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5619" PosY="1199" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5704" PosY="1713" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6454" PosY="1348" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5734" PosY="987" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4972" PosY="1358" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5191" PosY="1632" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6192" PosY="1666" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="6233" PosY="1055" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5237" PosY="1029" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7674" PosY="2371" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7410" PosY="2544" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7942" PosY="2520" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7941" PosY="2210" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7402" PosY="2219" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7661" PosY="2751" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8409" PosY="2371" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7691" PosY="2018" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6937" PosY="2384" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7188" PosY="2671" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8179" PosY="2660" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="8194" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7139" PosY="2099" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7690" PosY="2934" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8786" PosY="2351" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7683" PosY="1822" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6637" PosY="2407" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9633" PosY="3400" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9616" PosY="3607" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="10043" PosY="3388" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9684" PosY="3218" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="9210" PosY="3405" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9345" PosY="3562" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="9899" PosY="3548" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9909" PosY="3238" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="9375" PosY="3244" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9626" PosY="3768" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="10379" PosY="3395" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9659" PosY="3034" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8900" PosY="3408" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="9123" PosY="3677" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="10112" PosY="3699" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="10148" PosY="3088" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="9149" PosY="3104" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7676" PosY="4428" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7419" PosY="4581" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7939" PosY="4564" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7947" PosY="4253" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7402" PosY="4258" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7665" PosY="4794" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8423" PosY="4417" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7696" PosY="4059" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6944" PosY="4431" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7189" PosY="4701" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8154" PosY="4709" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="8184" PosY="4119" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7190" PosY="4112" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7683" PosY="4988" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8835" PosY="4401" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7690" PosY="3857" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6492" PosY="4423" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5716" PosY="5432" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5695" PosY="5654" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6126" PosY="5433" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5734" PosY="5237" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5299" PosY="5450" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5426" PosY="5603" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5951" PosY="5612" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5999" PosY="5274" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5468" PosY="5279" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5711" PosY="5813" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6467" PosY="5437" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5748" PosY="5082" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4988" PosY="5448" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5235" PosY="5744" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6183" PosY="5743" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="6209" PosY="5146" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5202" PosY="5165" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3744" PosY="4416" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3476" PosY="4584" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4010" PosY="4572" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4021" PosY="4253" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3519" PosY="4252" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3743" PosY="4792" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4495" PosY="4418" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3773" PosY="4057" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3020" PosY="4428" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3284" PosY="4731" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4216" PosY="4723" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4288" PosY="4120" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3277" PosY="4097" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3771" PosY="5004" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4880" PosY="4418" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3778" PosY="3864" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="2639" PosY="4433" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				
+				
+				<MiniBoss MinDuration="1200000" MaxDuration="3200000">
+					<Boss ID="10135" Name="" Title="" PosX="4164" PosY="2366" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />          
+					<Boss ID="10133" Name="" Title="" PosX="5841" PosY="1565" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />  
+					<Boss ID="10135" Name="" Title="" PosX="8087" PosY="2370" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />          
+					<Boss ID="10133" Name="" Title="" PosX="9767" PosY="3614" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />   
+					<Boss ID="10135" Name="" Title="" PosX="8093" PosY="4410" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_30_-1" />             
+					<Boss ID="10133" Name="" Title="" PosX="5845" PosY="5496" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />     
+					<Boss ID="10135" Name="" Title="" PosX="4194" PosY="4420" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />           
+				</MiniBoss>
+				
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="3768" PosY="2314" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="5828" PosY="1355" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="7678" PosY="2522" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="9783" PosY="3369" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="7479" PosY="4411" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="5531" PosY="5421" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="3464" PosY="4425" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				
+			</Monsters>
+			<Teleports>
+				<Teleport Name="Tầng 2" PosX="5707" PosY="3392" ToMapID="62" ToPosX="2146" ToPosY="3187" />
+			</Teleports>
+		</Stage>
+		
+		<Stage ID="2" MapID="62">
+			<NPCs>
+				
+			</NPCs>
+			
+			<Monsters>
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3766" PosY="2367" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3475" PosY="2535" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3977" PosY="2536" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4036" PosY="2219" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3464" PosY="2221" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3744" PosY="2743" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4506" PosY="2369" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3775" PosY="2011" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3022" PosY="2380" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3265" PosY="2674" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4215" PosY="2674" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4277" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3231" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3761" PosY="2988" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5010" PosY="2365" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3770" PosY="1800" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="2567" PosY="2370" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5716" PosY="1349" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5690" PosY="1558" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6114" PosY="1337" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5740" PosY="1152" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5294" PosY="1360" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5430" PosY="1515" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5989" PosY="1498" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5970" PosY="1197" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5619" PosY="1199" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5704" PosY="1713" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6454" PosY="1348" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5734" PosY="987" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4972" PosY="1358" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5191" PosY="1632" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6192" PosY="1666" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="6233" PosY="1055" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5237" PosY="1029" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7674" PosY="2371" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7410" PosY="2544" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7942" PosY="2520" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7941" PosY="2210" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7402" PosY="2219" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7661" PosY="2751" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8409" PosY="2371" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7691" PosY="2018" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6937" PosY="2384" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7188" PosY="2671" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8179" PosY="2660" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="8194" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7139" PosY="2099" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7690" PosY="2934" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8786" PosY="2351" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7683" PosY="1822" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6637" PosY="2407" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7676" PosY="4428" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7419" PosY="4581" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7939" PosY="4564" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7947" PosY="4253" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7402" PosY="4258" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7665" PosY="4794" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8423" PosY="4417" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7696" PosY="4059" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6944" PosY="4431" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7189" PosY="4701" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8154" PosY="4709" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="8184" PosY="4119" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="7190" PosY="4112" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7683" PosY="4988" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="8835" PosY="4401" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="7690" PosY="3857" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6492" PosY="4423" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5716" PosY="5432" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5695" PosY="5654" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6126" PosY="5433" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5734" PosY="5237" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5299" PosY="5450" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5426" PosY="5603" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5951" PosY="5612" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5999" PosY="5274" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5468" PosY="5279" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5711" PosY="5813" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6467" PosY="5437" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5748" PosY="5082" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4988" PosY="5448" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5235" PosY="5744" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6183" PosY="5743" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="6209" PosY="5146" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5202" PosY="5165" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3744" PosY="4416" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3476" PosY="4584" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4010" PosY="4572" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4021" PosY="4253" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3519" PosY="4252" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3743" PosY="4792" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4495" PosY="4418" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3773" PosY="4057" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3020" PosY="4428" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3284" PosY="4731" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4216" PosY="4723" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="4288" PosY="4120" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="3277" PosY="4097" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3771" PosY="5004" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4880" PosY="4418" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="3778" PosY="3864" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="2639" PosY="4433" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5715" PosY="3386" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5689" PosY="3605" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6173" PosY="3397" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5722" PosY="3193" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5301" PosY="3405" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5447" PosY="3574" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5958" PosY="3555" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5978" PosY="3234" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5466" PosY="3238" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5703" PosY="3770" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6451" PosY="3392" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5737" PosY="3037" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="4980" PosY="3407" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="5249" PosY="3698" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="6175" PosY="3690" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10132" Name="Quỷ Sứ" Title="" PosX="6206" PosY="3089" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10131" Name="Quỷ Nô" Title="" PosX="5221" PosY="3126" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<MiniBoss MinDuration="1200000" MaxDuration="3200000">
+					<Boss ID="10135" Name="" Title="" PosX="3973" PosY="4402" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />          
+					<Boss ID="10133" Name="" Title="" PosX="5823" PosY="5636" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />  
+					<Boss ID="10135" Name="" Title="" PosX="7685" PosY="4628" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />           
+					<Boss ID="10133" Name="" Title="" PosX="5794" PosY="3483" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />     
+					<Boss ID="10135" Name="" Title="" PosX="3754" PosY="2543" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_30_-1" />           
+					<Boss ID="10133" Name="" Title="" PosX="5622" PosY="1437" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />  
+					<Boss ID="10135" Name="" Title="" PosX="7455" PosY="2405" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />           
+				</MiniBoss>
+				
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="3930" PosY="4293" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="5964" PosY="5436" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="7776" PosY="4330" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="5903" PosY="3348" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="3962" PosY="2376" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="5957" PosY="1328" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="7909" PosY="2332" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				
+			</Monsters>
+			
+			<Teleports>
+				<Teleport Name="Tầng 3" PosX="9635" PosY="3399" ToMapID="63" ToPosX="6049" ToPosY="5248" />
+				
+				<Teleport Name="Tầng 1" PosX="1783" PosY="3391" ToMapID="61" ToPosX="5384" ToPosY="3593" />
+			</Teleports>
+		</Stage>
+		
+		<Stage ID="3" MapID="63">
+			<NPCs>
+				
+			</NPCs>
+			
+			<Monsters>
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3766" PosY="2367" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3475" PosY="2535" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3977" PosY="2536" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4036" PosY="2219" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3464" PosY="2221" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3744" PosY="2743" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4506" PosY="2369" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3775" PosY="2011" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3022" PosY="2380" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3265" PosY="2674" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4215" PosY="2674" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4277" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3231" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3761" PosY="2988" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5010" PosY="2365" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3770" PosY="1800" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2567" PosY="2370" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5716" PosY="1349" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5690" PosY="1558" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6114" PosY="1337" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5740" PosY="1152" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5294" PosY="1360" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5430" PosY="1515" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5989" PosY="1498" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5970" PosY="1197" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5619" PosY="1199" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5704" PosY="1713" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6454" PosY="1348" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5734" PosY="987" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4972" PosY="1358" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5191" PosY="1632" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6192" PosY="1666" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6233" PosY="1055" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5237" PosY="1029" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7674" PosY="2371" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7410" PosY="2544" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7942" PosY="2520" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7941" PosY="2210" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7402" PosY="2219" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7661" PosY="2751" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8409" PosY="2371" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7691" PosY="2018" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6937" PosY="2384" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7188" PosY="2671" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8179" PosY="2660" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8194" PosY="2076" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7139" PosY="2099" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7690" PosY="2934" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8786" PosY="2351" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7683" PosY="1822" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6637" PosY="2407" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9633" PosY="3400" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9616" PosY="3607" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="10043" PosY="3388" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9684" PosY="3218" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9210" PosY="3405" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9345" PosY="3562" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9899" PosY="3548" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9909" PosY="3238" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9375" PosY="3244" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9626" PosY="3768" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="10379" PosY="3395" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9659" PosY="3034" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8900" PosY="3408" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9123" PosY="3677" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="10112" PosY="3699" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="10148" PosY="3088" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="9149" PosY="3104" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7676" PosY="4428" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7419" PosY="4581" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7939" PosY="4564" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7947" PosY="4253" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7402" PosY="4258" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7665" PosY="4794" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8423" PosY="4417" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7696" PosY="4059" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6944" PosY="4431" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7189" PosY="4701" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8154" PosY="4709" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8184" PosY="4119" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7190" PosY="4112" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7683" PosY="4988" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="8835" PosY="4401" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="7690" PosY="3857" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6492" PosY="4423" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3744" PosY="4416" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3476" PosY="4584" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4010" PosY="4572" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4021" PosY="4253" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3519" PosY="4252" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3743" PosY="4792" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4495" PosY="4418" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3773" PosY="4057" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3020" PosY="4428" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3284" PosY="4731" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4216" PosY="4723" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4288" PosY="4120" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3277" PosY="4097" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3771" PosY="5004" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4880" PosY="4418" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="3778" PosY="3864" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2639" PosY="4433" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1790" PosY="3392" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1771" PosY="3600" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2210" PosY="3385" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1809" PosY="3187" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1378" PosY="3406" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1550" PosY="3564" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2056" PosY="3550" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2057" PosY="3221" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1521" PosY="3239" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1786" PosY="3764" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2540" PosY="3389" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1817" PosY="3033" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1060" PosY="3400" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1301" PosY="3704" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2278" PosY="3699" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="2307" PosY="3089" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="1299" PosY="3082" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5715" PosY="3386" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5689" PosY="3605" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6173" PosY="3397" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5722" PosY="3193" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5301" PosY="3405" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5447" PosY="3574" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5958" PosY="3555" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5978" PosY="3234" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5466" PosY="3238" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5703" PosY="3770" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6451" PosY="3392" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5737" PosY="3037" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="4980" PosY="3407" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5249" PosY="3698" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6175" PosY="3690" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="6206" PosY="3089" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				<Monster ID="10134" Name="Chiến sĩ vong trận" Title="" PosX="5221" PosY="3126" BaseHP="45440" HPIncreaseEachLevel="1500" AIType="5" Series="1" AIScriptID="100000" RespawnTicks="40000" Auras="" Skills="" />
+				
+				
+				<MiniBoss MinDuration="1200000" MaxDuration="3200000">
+					<Boss ID="10133" Name="" Title="" PosX="7552" PosY="4498" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />      
+					<Boss ID="10135" Name="" Title="" PosX="9523" PosY="3494" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />           
+					<Boss ID="10133" Name="" Title="" PosX="7734" PosY="2581" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />     
+					<Boss ID="10135" Name="" Title="" PosX="5792" PosY="1451" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />           
+					<Boss ID="10133" Name="" Title="" PosX="4079" PosY="2458" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" />    
+					<Boss ID="10135" Name="" Title="" PosX="1862" PosY="3611" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_30_-1" />          
+					<Boss ID="10133" Name="" Title="" PosX="3724" PosY="4302" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="14255_15" Skills="14239_20_5000;14241_20_3000;14250_20_-1" /> 
+					<Boss ID="10135" Name="" Title="" PosX="5521" PosY="3423" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" Auras="" Skills="14244_15_5000;14237_15_3000;14252_15_-1" />          
+				</MiniBoss>
+				
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="7890" PosY="4411" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="9560" PosY="3301" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="7788" PosY="2389" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="5618" PosY="1254" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10136" Name="Tần Thủy Hoàng" Title="" PosX="3625" PosY="2396" BaseHP="6100200" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_30_9000;14210_30_8000;14211_30_7000;14213_30_6000;14219_30_5000;14206_30_4000;14208_30_3000;14232_30_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="1986" PosY="3375" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="3789" PosY="4553" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				<Boss ID="10140" Name="Tần Thủy Hoàng" Title="" PosX="5790" PosY="3325" BaseHP="222220" HPIncreaseEachLevel="3100000" AIType="3" Series="-1" AIScriptID="100001" SpawnAt="15:00" Auras="14256_20" Skills="14200_15_9000;14210_15_8000;14211_15_7000;14213_15_6000;14219_15_5000;14206_15_4000;14208_15_3000;14232_15_-1" />
+				
+			</Monsters>
+			
+			<Teleports>
+				<Teleport Name="Tầng 2" PosX="5724" PosY="5435" ToMapID="62" ToPosX="9297" ToPosY="3193" />
+			</Teleports>
+		</Stage>
+	</Event>
+</EmperorTomb>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	SỰ KIỆN PHONG HỎA LIÊN THÀNH
+	- Config: Thiết lập sự kiện
+		- RequireLevel: Cấp độ yêu cầu
+		- MinPlayers: Số người chơi tối thiểu
+		- MaxPlayers: Số người chơi tối đa
+	- EventMap: Thông tin bản đồ sự kiện
+		- EnterMapID: ID bản đồ sự kiện
+		- EnterPosX: Tọa độ X tiến vào (cũng là vị trí hồi sinh khi chết)
+		- EnterPosX: Tọa độ Y tiến vào (cũng là vị trí hồi sinh khi chết)
+		- CityMapID: ID bản đồ thành thị
+		- CityPosX: Tọa độ X ở thành thị khi thoát sự kiện
+		- CityPosY: Tọa độ Y ở thành thị khi thoát sự kiện
+	- EventPoints: Điểm tích lũy trong sự kiện
+		- ProtectMarshalAwardPeriod: Thời gian bảo vệ nguyên soái mỗi lần tích tăng điểm (Mili-giây)
+		- ProtectMarshalAwardPoint: Số điểm tích lũy có được mỗi lần bảo vệ nguyên soái
+		- KillMonsterPoint: Số điểm có được khi giết quái
+		- KillSiegePoint: Số điểm có được khi giết xe công thành
+		- KillSiegeTeamPoint: Số điểm các thành viên khác trong đội có được khi giết xe công thành
+		- KillBossPoint: Số điểm có được khi giết Boss
+		- KillBossTeamPoint: Số điểm các thành viên khác trong đội có được khi giết Boss
+		- KillBossAllPoint: Số điểm toàn bộ người chơi khác có được khi giết Boss
+	- Awards: Danh sách phần thưởng sự kiện	
+		- Award: Thông tin phần thưởng
+			- FromRank: Từ thứ hạng
+			- ToRank: Đến thứ hạng
+			- ReputeID: ID danh vọng
+			- ReputePoint: Số điểm danh vọng
+			- AwardItem: Thông tin vật phẩm thưởng
+				- ItemID: ID vật phẩm
+				- Quantity: Số lượng
+				- Bound: Nhận khóa hay không (True/False)
+	- NPCs: Danh sách NPC
+		- NPC: Thông tin NPC
+			- ID: ID NPC (xem ở File Npc)
+			- Name: Tên NPC, bỏ trống sẽ lấy thông tin ở File cấu hình
+			- Title: Danh hiệu NPC, bỏ trống sẽ lấy thông tin ở File cấu hình
+			- PosX: Vị trí X
+			- PosY: Vị trí Y
+			- ScriptID: ID script Lua điều khiển (-1 nếu không có)
+	- Teleport: Cổng dịch chuyển
+		- Name: Tên cổng
+		- PosX: Vị trí X (nếu mặc định là dịch chuyển ra ngoài vị trí báo danh thì điền -1)
+		- PosY: Vị trí Y (nếu mặc định là dịch chuyển ra ngoài vị trí báo danh thì điền -1)
+		- ToMapID: Vị trí bản đồ đích đến (nếu cùng bản đồ hiện tại thì điền -1)
+		- ToPosX: Vị trí đích đến X
+		- ToPosY: Vị trí đích đến Y
+	- GroupPositions: Danh sách vị trí xuất hiện của các nhóm
+		- Group: Thông tin nhóm
+			- ID: ID nhóm
+			- DestPosX: Vị trí X sẽ dịch chuyển đến
+			- DestPosY: Vị trí Y sẽ dịch chuyển đến
+			- Position: Vị trí xuất hiện ngẫu nhiên mỗi đợt
+				- PosX: Tọa độ X
+				- PosY: Tọa độ Y
+				- Radius: Phạm vi xuất hiện xung quanh vị trí
+	- Attackers: Danh sách các đối tượng công thành
+		- Monster: Thông tin quái
+			- ID: ID quái (xem ở File Monster)
+			- OrderID: Thứ tự (dùng để đánh dấu con nào gọi ở Round nào)
+			- Name: Tên quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+			- Title: Danh hiệu, bỏ trống sẽ lấy thông tin ở File cấu hình
+			- PosX: Tọa độ X
+			- PosY: Tọa độ Y
+			- BaseHP: Sinh lực cơ bản
+			- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+			- AIScriptID: IDScriptAI điều khiển
+				- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+			- Skills: Danh sách kỹ năng được sử dụng, gồm 2 tham biến, ngăn cách nhau bởi dấu ; giữa các loại kỹ năng
+				- ID_Cấp
+				- Kỹ năng sẽ được dùng theo thứ tự từ trái sang phải, nếu kỹ năng trước đang chờ hồi phục thì dùng kỹ năng sau
+			- Auras: Danh sách vòng sáng kích hoạt, gồm 2 tham biến, ngăn cách nhau bởi dấu ; giữa các loại vòng sáng
+				- ID_Cấp
+				- Tất cả quái xung quanh sẽ được vòng sáng tương ứng cho đến khi bản thân quái mang vòng sáng bị giết chết
+		- Boss: Thông tin Boss
+			- Tương tự như quái
+		- Siege: Thông tin xe công thành
+			- Tương tự như quái
+	- Defenders: Danh sách các đối tượng thủ thành
+		- Monster: Thông tin quái thủ thành
+			- Tương tự quái công thành
+			- RespawnTicks: Thời gian tái sinh sau khi chết
+		- Marshal: Thông tin nguyên soái thủ thành
+			- Tương tự Boss công thành
+	- Rounds: Thông tin các lượt ra quân của phe công thành
+		- RoundPeriod: Thời gian giãn cách bắt đầu mỗi lượt tấn công
+		- AdditionByPlayers: Số lượng thêm vào tùy theo mỗi khoảng người chơi tương ứng
+			- Monsters: Thêm 1 con quái với mỗi số lượng x người chơi tương ứng
+			- Sieges: Thêm 1 xe công thành với mỗi số lượng x người chơi tương ứng
+			- Bosses: Thêm 1 con Boss với mỗi số lượng x người chơi tương ứng
+		- Round: Thông tin lượt (áp dụng cho từng nhóm)
+			- MonsterCount: Số lượng quái
+			- SiegeCount: Số lượng xe
+			- BossCount: Số lượng Boss
+-->
+<FengHuoLianCheng>
+	<Config RequireLevel="60" MinPlayers="1" MaxPlayers="200" />
+	
+	<EventMap EnterMapID="69" EnterPosX="4486" EnterPosY="360" CityMapID="2" CityPosX="2379" CityPosY="1456"/>
+	
+	<EventPoints ProtectMarshalAwardPeriod="15000" ProtectMarshalAwardPoint="15" KillMonsterPoint="5" KillSiegePoint="20" KillSiegeTeamPoint="10" KillBossPoint="200" KillBossTeamPoint="100" KillBossAllPoint="50" />
+	
+	<Awards>
+		<Award FromRank="1" ToRank="1" ReputeID="2" ReputePoint="10">
+			<AwardItem ItemID="188" Quantity="1" Bound="true" />
+			<AwardItem ItemID="10452" Quantity="10" Bound="true" />
+		</Award>
+		<Award FromRank="2" ToRank="2" ReputeID="2" ReputePoint="10">
+			<AwardItem ItemID="187" Quantity="2" Bound="true" />
+			<AwardItem ItemID="10452" Quantity="8" Bound="true" />
+		</Award>
+		<Award FromRank="3" ToRank="3" ReputeID="2" ReputePoint="10">
+			<AwardItem ItemID="186" Quantity="4" Bound="true" />
+			<AwardItem ItemID="10452" Quantity="6" Bound="true" />
+		</Award>
+		<Award FromRank="4" ToRank="10" ReputeID="2" ReputePoint="10">
+			<AwardItem ItemID="185" Quantity="5" Bound="true" />
+			<AwardItem ItemID="10452" Quantity="4" Bound="true" />
+		</Award>
+		<Award FromRank="11" ToRank="50" ReputeID="2" ReputePoint="10">
+			<AwardItem ItemID="185" Quantity="2" Bound="true" />
+			<AwardItem ItemID="10452" Quantity="2" Bound="true" />
+		</Award>
+		<Award FromRank="51" ToRank="100" ReputeID="2" ReputePoint="10">
+			<AwardItem ItemID="184" Quantity="5" Bound="true" />
+			<AwardItem ItemID="10452" Quantity="1" Bound="true" />
+		</Award>
+	</Awards>
+	
+	<NPCs>
+		<NPC ID="20023" Name="Chủ Hiệu Thuốc" Title="" PosX="3794" PosY="596" ScriptID="400041" />
+	</NPCs>
+	
+	<Teleports>
+		<Teleport Name="Dịch chuyển" PosX="4825" PosY="826" ToPosX="4638" ToPosY="3161" />
+	</Teleports>
+	
+	<GroupPositions>
+		<Group ID="1" DestPosX="4647" DestPosY="3148">
+			<Position PosX="574" PosY="5496" Radius="100" />
+			<Position PosX="558" PosY="5458" Radius="100" />
+			<Position PosX="721" PosY="5466" Radius="100" />
+			<Position PosX="628" PosY="5420" Radius="100" />
+			<Position PosX="636" PosY="5333" Radius="100" />
+			<Position PosX="797" PosY="5363" Radius="100" />
+			<Position PosX="724" PosY="5363" Radius="100" />
+			<Position PosX="729" PosY="5257" Radius="100" />
+			<Position PosX="884" PosY="5317" Radius="100" />
+			<Position PosX="843" PosY="5404" Radius="100" />
+		</Group>
+		<Group ID="2" DestPosX="4647" DestPosY="3148">
+			<Position PosX="8709" PosY="5615" Radius="100" />
+			<Position PosX="8780" PosY="5489" Radius="100" />
+			<Position PosX="8614" PosY="5552" Radius="100" />
+			<Position PosX="8684" PosY="5468" Radius="100" />
+			<Position PosX="8682" PosY="5394" Radius="100" />
+			<Position PosX="8573" PosY="5487" Radius="100" />
+			<Position PosX="8606" PosY="5427" Radius="100" />
+			<Position PosX="8502" PosY="5454" Radius="100" />
+			<Position PosX="8570" PosY="5359" Radius="100" />
+			<Position PosX="8469" PosY="5394" Radius="100" />
+		</Group>
+		<Group ID="3" DestPosX="4647" DestPosY="3148">
+			<Position PosX="8777" PosY="816" Radius="100" />
+			<Position PosX="8684" PosY="721" Radius="100" />
+			<Position PosX="8573" PosY="737" Radius="100" />
+			<Position PosX="8671" PosY="870" Radius="100" />
+			<Position PosX="8622" PosY="800" Radius="100" />
+			<Position PosX="8491" PosY="786" Radius="100" />
+			<Position PosX="8573" PosY="865" Radius="100" />
+			<Position PosX="8600" PosY="936" Radius="100" />
+			<Position PosX="8496" PosY="870" Radius="100" />
+			<Position PosX="8586" PosY="1001" Radius="100" />
+		</Group>
+		<Group ID="4" DestPosX="4647" DestPosY="3148">
+			<Position PosX="477" PosY="842" Radius="100" />
+			<Position PosX="654" PosY="784" Radius="100" />
+			<Position PosX="583" PosY="904" Radius="100" />
+			<Position PosX="673" PosY="833" Radius="100" />
+			<Position PosX="779" PosY="803" Radius="100" />
+			<Position PosX="730" PosY="956" Radius="100" />
+			<Position PosX="844" PosY="904" Radius="100" />
+			<Position PosX="795" PosY="1013" Radius="100" />
+			<Position PosX="893" PosY="983" Radius="100" />
+			<Position PosX="942" PosY="923" Radius="100" />
+		</Group>
+	</GroupPositions>
+	
+	<Attackers>
+		<Monster ID="6330" OrderID ="1" Name="Sói Xám" Title="" BaseHP="200" HPIncreaseEachLevel="300" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6331" OrderID ="2" Name="Báo Hoang" Title="" BaseHP="200" HPIncreaseEachLevel="450" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6332" OrderID ="3" Name="Hổ Vương" Title="" BaseHP="200" HPIncreaseEachLevel="600" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6333" OrderID ="4" Name="Gấu Đen" Title="" BaseHP="200" HPIncreaseEachLevel="750" AIScriptID="100000" Auras="" Skills="" />
+		<Boss ID="6334" OrderID ="5" Name="Thống Lĩnh Ác Thú" Title="" BaseHP="2000" HPIncreaseEachLevel="9000" AIScriptID="100001" Auras="" Skills="14258_10_5000;14510_10_-1" />
+		
+		
+		<Monster ID="6335" OrderID ="6" Name="Thổ Phỉ" Title="" BaseHP="600" HPIncreaseEachLevel="1200" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6336" OrderID ="7" Name="Thổ Phỉ Giáp" Title="" BaseHP="600" HPIncreaseEachLevel="1800" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6337" OrderID ="8" Name="Lợi Phủ" Title="" BaseHP="600" HPIncreaseEachLevel="2400" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6338" OrderID ="9" Name="Trường Đao" Title="" BaseHP="600" HPIncreaseEachLevel="3000" AIScriptID="100000" Auras="" Skills="" />
+		<Boss ID="6339" OrderID ="10" Name="Đồng Chùy" Title="" BaseHP="6000" HPIncreaseEachLevel="27000" AIScriptID="100001" Auras="" Skills="14258_20_5000;14510_10_-1" />
+		
+		
+		<Monster ID="6340" OrderID ="11" Name="Lãnh Thương" Title="" BaseHP="1800" HPIncreaseEachLevel="3600" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6341" OrderID ="12" Name="Lam Cân" Title="" BaseHP="1800" HPIncreaseEachLevel="5400" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6342" OrderID ="13" Name="Lưu Lương" Title="" BaseHP="1800" HPIncreaseEachLevel="7200" AIScriptID="100000" Auras="" Skills="" />
+		<Monster ID="6343" OrderID ="14" Name="Kế Chủy" Title="" BaseHP="1800" HPIncreaseEachLevel="9000" AIScriptID="100000" Auras="" Skills="" />
+		<Boss ID="6344" OrderID ="15" Name="Ma Hoàng" Title="" BaseHP="18000" HPIncreaseEachLevel="81000" AIScriptID="100001" Auras="" Skills="14259_20_6000;14261_20_5000;14512_10_-1" />
+		
+		
+		<Siege ID="6348" OrderID ="16" Name="Kim Tiên Phong" Title="" BaseHP="5400" HPIncreaseEachLevel="10800" AIScriptID="100001" Auras="14255_20" Skills="14259_20_5000;14261_20_4000;14512_10_-1" />
+		<Siege ID="6349" OrderID ="17" Name="Kim Đội Trưởng" Title="" BaseHP="5400" HPIncreaseEachLevel="16200" AIScriptID="100001" Auras="" Skills="14257_20_6000;14258_20_3000;14510_10_-1" />
+		<Siege ID="6347" OrderID ="18" Name="Kim Binh" Title="" BaseHP="5400" HPIncreaseEachLevel="21600" AIScriptID="100001" Auras="" Skills="14264_20_6000;14266_20_4000;14267_20_2000;14512_20_-1" />
+		<Boss ID="6345" OrderID ="19" Name="Song Sát" Title="" BaseHP="5400" HPIncreaseEachLevel="27000" AIScriptID="100001" Auras="" Skills="14270_20_2000;14268_20_1000;14513_20_-1" />
+		<Boss ID="6346" OrderID ="20" Name="Hạo Thiên" Title="" BaseHP="5400" HPIncreaseEachLevel="32400" AIScriptID="100001" Auras="" Skills="14271_20_1000;14272_20_-1" />
+		<Boss ID="6350" OrderID ="21" Name="Kim Phó Tướng" Title="" BaseHP="16200" HPIncreaseEachLevel="64800" AIScriptID="100001" Auras="14255_20" Skills="14259_20_6000;14257_20_5000;14261_20_4000;14271_20_3000;14266_20_2000;14512_20_-1" />
+		<Boss ID="6351" OrderID ="22" Name="Kim Chủ Tướng" Title="" BaseHP="16200" HPIncreaseEachLevel="97200" AIScriptID="100001" Auras="14256_5" Skills="14237_20_6000;14239_20_5000;14241_20_4000;14244_20_3000;14248_20_2000;14250_20_1000;14512_20_-1" />
+		<Boss ID="6352" OrderID ="23" Name="Kim Nguyên Soái" Title="" BaseHP="16200" HPIncreaseEachLevel="129600" AIScriptID="100001" Auras="14256_10" Skills="14237_20_6000;14239_20_5000;14241_20_4000;14244_20_3000;14248_20_2000;14250_20_1000;14512_20_-1" />
+	</Attackers>
+	
+	<Defenders>
+	
+		<Monster ID="6353" OrderID ="25" Name="" Title="" PosX="5257" PosY="3522" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6353" OrderID ="25" Name="" Title="" PosX="5348" PosY="2686" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6353" OrderID ="25" Name="" Title="" PosX="4049" PosY="2745" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6353" OrderID ="25" Name="" Title="" PosX="4111" PosY="3491" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		
+		
+		<Monster ID="6354" OrderID ="26" Name="" Title="" PosX="4960" PosY="3567" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6354" OrderID ="26" Name="" Title="" PosX="5379" PosY="2906" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6354" OrderID ="26" Name="" Title="" PosX="4413" PosY="2777" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6354" OrderID ="26" Name="" Title="" PosX="4068" PosY="3301" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		
+		<Monster ID="6355" OrderID ="27" Name="" Title="" PosX="6824" PosY="3373" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6355" OrderID ="27" Name="" Title="" PosX="5020" PosY="2712" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6355" OrderID ="27" Name="" Title="" PosX="4066" PosY="3002" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6355" OrderID ="27" Name="" Title="" PosX="4425" PosY="3476" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		
+		<Monster ID="6356" OrderID ="28" Name="" Title="" PosX="5106" PosY="3699" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6356" OrderID ="28" Name="" Title="" PosX="5549" PosY="2829" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6356" OrderID ="28" Name="" Title="" PosX="4257" PosY="2642" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6356" OrderID ="28" Name="" Title="" PosX="3905" PosY="3385" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		
+		<Monster ID="6357" OrderID ="29" Name="" Title="" PosX="5453" PosY="3443" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6357" OrderID ="29" Name="" Title="" PosX="5158" PosY="2585" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6357" OrderID ="29" Name="" Title="" PosX="3905" PosY="2858" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Monster ID="6357" OrderID ="29" Name="" Title="" PosX="4267" PosY="3582" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		
+		<Marshal ID="6358" OrderID ="30" Name="" Title="" PosX="5197" PosY="2789" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Marshal ID="6358" OrderID ="30" Name="" Title="" PosX="5099" PosY="3426" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Marshal ID="6358" OrderID ="30" Name="" Title="" PosX="4243" PosY="3392" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+		<Marshal ID="6358" OrderID ="30" Name="" Title="" PosX="4238" PosY="2872" BaseHP="1000" HPIncreaseEachLevel="1000" AIScriptID="100000" RespawnTicks="-1" Auras="" Skills="" />
+	</Defenders>
+	
+	<Rounds RoundPeriod="60000">
+		<AdditionByPlayers Monsters="1" Sieges="20" Bosses="100" />
+		
+		<Round Monsters="1_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="2_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="3_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="4_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="" Bosses="5_15" DelaySpawn="2000" />
+		<Round Monsters="6_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="7_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="8_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="9_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="" Bosses="10_15" DelaySpawn="2000" />
+		<Round Monsters="11_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="12_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="13_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="14_30" Sieges="" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="" Bosses="15_6" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="16_15" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="17_15" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="18_15" Bosses="" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="15_15" Bosses="19_3" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="16_15" Bosses="20_3" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="17_15" Bosses="21_3" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="18_15" Bosses="22_3" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="" Bosses="23_6;20_6" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="" Bosses="24_6;21_6" DelaySpawn="2000" />
+		<Round Monsters="" Sieges="" Bosses="25_6;22_6" DelaySpawn="2000" />
+	</Rounds>
+</FengHuoLianCheng>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Kinh nghiệm lên cấp kỹ năng, áp dụng với các kỹ năng có thuộc tính IsExpSkill = true
+	- MaxExpEachDay: Lượng kinh nghiệm tối đa nhận được từ việc đánh quái và giết Boss mỗi ngày
+	- Skills: Thông tin kỹ năng
+		- IDs: Danh sách ID kỹ năng tương ứng thuộc nhóm, ngăn cách bởi dấu ;
+		- Exp: Thông tin kinh nghiệm
+			- Require: Lượng kinh nghiệm yêu cầu
+			- MonsterExpP: % kinh nghiệm giết quái
+			- BossExpP: % kinh nghiệm giết Boss
+			- AutoLevelUp: Tự lên cấp khi đạt ngưỡng kinh nghiệm yêu cầu
+-->
+<SkillExp MaxExpEachDay="2000000">
+<!--Skill 90-->
+	<Skills IDs="10019;10027;10031;10322;10323;10325;10107;10113;10137;10143;10130;10161;10170;10192;10200;10207;10216;10229;10236;10250;10258;10273;10280;11368;11370;11394;11410">
+		<Exp Require="15000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="25000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="35000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="45000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="55000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="60000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="65000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="70000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="75000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="80000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="85000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="90000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="95000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="105000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="125000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="150000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="175000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="200000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="300000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+	</Skills>
+	<!--Skill 120-->
+		<Skills IDs="10022;10052;10098;10157;10176;10085;10083;10080;10267;10296;11377;11371;11397;11411">
+		<Exp Require="15000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="25000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="35000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="45000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="55000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="60000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="65000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="70000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="75000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="80000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="85000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="90000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="95000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="105000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="125000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="150000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="175000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="200000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="300000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+	</Skills>
+	<!--Skill 150-->
+		<Skills IDs="10028;10209;10032;10021;11057;11060;11061;10109;10115;10139;10144;10129;10163;10172;10092;10194;10202;10211;10217;10230;10238;10251;10261;10274;10281;11373;11375;11398;11412">
+		<Exp Require="20000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="30000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="40000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="50000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="60000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="65000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="70000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="75000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="80000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="85000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="90000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="95000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="100000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="110000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="130000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="160000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="190000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="250000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="350000" MonsterExpP="5" BossExpP="5" AutoLevelUp="true" />
+		<Exp Require="360000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="380000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="400000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="450000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="600000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="750000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="880000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1000000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1200000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+		<Exp Require="1500000" MonsterExpP="5" BossExpP="5" AutoLevelUp="false" />
+	</Skills>
+</SkillExp>

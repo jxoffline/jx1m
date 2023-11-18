@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <!--EventLevel事件日志级别为, -1:不记录, 0: 调试, 1: 提示, 2: 记录, 3: 重要-->
+  <!--LogType程序日志级别为, -1:不记录, 0: 提示, 1: 警告, 2: 错误, 3: SQL语句-->
+  <Server EventLevel="0" LogType="0" />
+  <Socket ip="" port="23001" capacity="100" HttpPort="23001" />
+  <Database names="utf8" codePage="936" maxConns="10" ip="127.0.0.1" port="3306" dname="gamedb" uname="39D151A0ACD963CCC961EDA64BBC46C7" upasswd="79B872540BFE63284663AC625BC18EF6" />
+  <GameServer>
+    <Line ID="1" ip="127.0.0.1" port="4403" />
+  </GameServer>
+  <DBLog DBLogEnable="0" Path="log" />
+  <Zone ID="1" />
+</Config>

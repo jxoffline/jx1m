@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="LoadConfigFromServer" value="true"/>
+    <add key="HuanYingSiYuanRoleCountTotal" value="16"/>
+    <add key="HuanYingSiYuanRoleCountPerSide" value="8"/>
+    <add key="WritePerformanceLogMs" value="20"/>
+    <add key="SignUpWaitSecs1" value="30"/>
+    <add key="SignUpWaitSecs2" value="60"/>
+    <add key="WaitForJoinMaxSecs" value="60"/>
+    <add key="MaxPaiMingRank" value="50000"/>
+    <add key="MaxSendDetailDataCount" value="100"/>
+    <add key="MinEnterCount" value="100"/>
+    <add key="KuaFuBossRoleCount" value="50"/>
+    <add key="KingOfBattleRoleCount" value="40"/>   
+    <!-- 防刷，天梯和情侣竞技每天 相同的两队人最多允许匹配次数 -->
+    <add key="MaxRolePairFightCount" value="3"/>
+    
+    <!--重置城池进攻方的时间，战斗结束后和下一次开始报名时间之间（5分钟）-->
+    <add key="LangHunLingYuResetCityTime" value="20:35"/>
+
+    <add key="SpreadTelMaxCount" value="5"/>
+    <add key="SpreadTelTimeLimit" value="30"/>
+    <add key="SpreadTelTimeStop" value="120"/>
+
+    <add key="SpreadVerifyRoleMaxCount" value="5"/>
+    <add key="SpreadVerifyRoleTimeLimit" value="30"/>
+    <add key="SpreadVerifyRoleTimeStop" value="30"/>
+         
+    <add key="AllyNumMax" value="5"/>
+    <add key="AllyRequestClearSecond" value="86400"/>
+    <!--<add key="AllyRequestClearSecone" value="86400"/> -->
+
+    <add key="IsTest" value="0"/>
+
+    <!-- 副本队伍创建完成后，间隔多久之后如果还不开始，那么就强制清除队伍，单位：分钟 -->
+    <add key="FuBenTeamMaxWaitMinutes" value="10"/>
+  </appSettings>
+  <KuaFuMaps>
+    <MapLine ID="1" Name="卡伦特" Line="1,50,9001|2,50,9002|3,50,9801|4,50,9002|5,50" MaxNum="500"/>
+  </KuaFuMaps>
+</configuration>

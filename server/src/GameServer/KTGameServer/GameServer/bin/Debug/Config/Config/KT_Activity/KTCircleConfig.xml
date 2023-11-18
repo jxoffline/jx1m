@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- CostUsingToken : Số đồng sẽ mất / 1 lượt quay -->
+<!-- CostUsingBoundToken : Số đồng khóa sẽ mất / 1 lượt quay -->
+<!-- CostUsingTiket : Số phiếu thưởng sẽ mất / 1 lượt quay -->
+<!-- IsOpen : true / 1 lượt quay -->
+
+<CircleConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CostUsingToken="100" CostUsingBoundToken="200" CostUsingTiket="100" IsOpen="true">
+ 
+ <!-- Danh sách phần thưởng khi quay -->
+ <!-- Tổng tỉ lệ của tất cả các dòng phải là 1000 -->
+ <!-- Index phải bắt đầu từ 1 và kết thúc 28 -->
+ <!-- Tổng số vật phẩm ở vòng quay chỉ được phép là 28 -->
+  <Items Index="1" ItemID="84" Number="1" Percent="100" />
+  <Items Index="2" ItemID="85" Number="1" Percent="100" />
+  
+</CircleConfig>

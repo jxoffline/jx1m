@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GuildShop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShopName="Cửa Hàng Bang Hội" ShopID="226">
+
+  <SellItems ID="7033" ItemID="8465" Money="50000" BuyLimitRank="0 1 0 0 0 0" LimitType="1" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7034" ItemID="8483" Money="7000" BuyLimitRank="1 3 2 1 1 1" LimitType="0" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7035" ItemID="9594" Money="40000" BuyLimitRank="1 3 2 1 1 1" LimitType="0" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7036" ItemID="20800" Money="5000" BuyLimitRank="1 5 4 3 2 2" LimitType="0" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7037" ItemID="20797" Money="5000" BuyLimitRank="1 5 4 3 2 2" LimitType="0" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7038" ItemID="8618" Money="3000" BuyLimitRank="1 1 1 1 1 1" LimitType="0" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7039" ItemID="8619" Money="25000" BuyLimitRank="1 1 1 1 1 1" LimitType="0" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7040" ItemID="8466" Money="100000" BuyLimitRank="0 1 0 0 0 0" LimitType="1" Bind="1" Expiry="10080" />
+
+  <SellItems ID="7041" ItemID="10196" Money="800000" BuyLimitRank="0 2 1 0 0 0" LimitType="1" Bind="1" Expiry="10080" />
+</GuildShop>
+ <!-- Khai báo shop bang hội tại đây 
+ 
+ ID : Tăng dần cứ từ 1-> X
+ ITemID : Là ID vật phẩm trong
+TotalItem 
+ Money : Là số tiền bang cống sẽ tiêu tốn
+ 
+ BuyLimitRank : Là số lượng sẽ mua được
+tùy theo mỗi chức vụ
+ Member : Vị trí 0
+ Bang chủ Vị trí 1
+ Phó bang chủ vị trí 2
+ Trưởng lão vị 3
+trí 3
+ Đường chủ vị trí 4
+ Tinh anh vị trí 5
+ 
+ LimitType : Là kiểu giới hạn
+  -1 : Là mua thỏa mái
+mái đéo giới hạn gì
+   0 : Là giới hạn trên ngày
+   1 : Là giới hạn tuần
+  
+ Chú ý : Nếu mà
+LimitType là -1 thì nó bỏ qua không xét BuyLimitRank vì mua thỏa mái rồi
+Bind : 0 không khóa, 1 là khóa 
+Expiry :hạn sự dụng vật phẩm
+ -->

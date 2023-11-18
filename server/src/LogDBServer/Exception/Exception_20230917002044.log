@@ -1,0 +1,11 @@
+应用程序出现了异常[1]:
+Only one usage of each socket address (protocol/network address/port) is normally permitted
+
+ 额外信息: CurrentDomain_UnhandledException
+    at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Server.TCP.SocketListener.Start(String ip, Int32 port)
+   at LogDBServer.Server.TCPManager.Start(String ip, Int32 port)
+   at LogDBServer.Program.InitServer()
+   at LogDBServer.Program.OnStartServer()
+   at LogDBServer.Program.Main(String[] args)

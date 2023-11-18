@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MapSetting Thôn-Phái
+	DropRate: Tỷ lệ rơi đồ (0-100)
+	ExpRate: Tỷ lệ nhận kinh nghiệm (0-100)
+	MoneyRate: Tỷ lệ nhận tiền (0-100)
+
+	IsCopyScene: Có phải phụ bản không, nếu là phụ bản thì các cổng Teleport hoặc NPC thường sẽ không thể dịch chuyển vào được
+	FreePK: PK tự do, không tăng sát khí
+	AllowPK: Cho phép PK không
+	AllowStall: Cho phép mở sạp không
+	AllowTrade: Cho phép giao dịch không
+	PKAllSubStamina: Khi ở trạng thái đồ sát thì trừ bao nhiêu thể lực khi chạy mỗi nửa giây
+	SitHealHP: Khi ở trạng thái ngồi thì hồi bao nhiêu máu mỗi nửa giây
+	SitHealMP: Khi ở trạng thái ngồi thì hồi bao nhiêu mana mỗi nửa giây
+	SitHealStamina: Khi ở trạng thái ngồi thì hồi bao nhiêu thể mỗi nửa giây
+	
+	SubPKValueTick: Thời gian trừ 1 điểm sát khí (-1 nếu không)
+	ForceChangePKStatusTo: Khi vào bản đồ, buộc thay đổi trạng thái PK về dạng tương ứng (-1 nếu không)
+	AllowChangePKStatus: Cho phép chủ động thay đổi trạng thái PK không
+	AllowFightTarget: Cho phép tuyên chiến với người chơi chỉ định không
+	
+	AllowChallenge: Cho phép tỷ thí hay không
+	
+	AllowUseSkill: Cho phép dùng kỹ năng hay không
+	AllowUseOffensiveSkill: Cho phép dùng các kỹ năng chủ động tấn công hay không
+	BanSkills: Danh sách các kỹ năng bị cấm, ngăn cách bởi dấu ;
+	
+	AllowTeam: Cho phép tổ đội không, nếu không có thì khi vào toàn bộ người sẽ bị xóa trạng thái đội
+	AllowCreateTeam: Cho phép tạo nhóm hay không
+	AllowInviteToTeam: Cho phép mời vào nhóm hay không
+	AllowKickFromTeam: Cho phép trục xuất thành viên khỏi nhóm hay không
+	AllowLeaveTeam: Cho phép chủ động rời nhóm hay không
+	AllowJoinTeam: Cho phép chấp nhận thành viên vào nhóm hay không
+	AllowChangeTeamLeader: Cho phép thay đổi nhóm trưởng hay không
+	
+	AllowUseItem: Cho phép dùng vật phẩm hay không
+	BanItems: Danh sách vật phẩm bị cấm
+	
+	AllowReviveAtPos: Cho phép hồi sinh tại chỗ (có thể bởi kỹ năng) không
+	AllowUseReviveMedicine: Cho phép dùng Cửu Chuyển Hoàn Hồn Đơn không
+-->
+<MapSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<RateConfig DropRate="100" ExpRate="100" MoneyRate="100" />
+	<Base IsCopyScene="false" FreePK="true" AllowPK="true" AllowStall="true" AllowTrade="true" PKAllSubStamina="0" SitHealHP="10" SitHealMP="10" SitHealStamina="10" />
+	<PK SubPKValueTick="-1" ForceChangePKStatusTo="2" AllowChangePKStatus="false" AllowFightTarget="true" />
+	<Challenge AllowChallenge="true" />
+	<Skill AllowUseSkill="true" AllowUseOffensiveSkill="true" BanSkills="" />
+	<Team AllowTeam="true" AllowCreateTeam="true" AllowInviteToTeam="true" AllowKickFromTeam="true" AllowLeaveTeam="true" AllowJoinTeam="true" AllowChangeTeamLeader="true" />
+	<Item AllowUseItem="true" BanItems="9683;9679;9680;344;354" />
+	<Revive AllowReviveAtPos="false" AllowUseReviveMedicine="false" />
+</MapSetting>

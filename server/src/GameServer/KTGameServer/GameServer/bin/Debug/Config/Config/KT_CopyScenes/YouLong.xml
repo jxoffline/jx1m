@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	DU LONG CÁC
+	Duration: Thời gian tồn tại phụ bản (mili-giây)
+	RequireLevel: Cấp độ yêu cầu
+	LimitRoundPerDay: Số lượt đánh tối đa trong ngày
+	KickOutIfNoChallengeFor: Thời gian tự kick ra khỏi nếu không khiêu chiến (mili-giây)
+	ChallengeDuration: Thời gian tự xử thua nếu không đánh bại Boss (mili-giây)
+	RequireItem: Vật phẩm yêu cầu
+	Map: Thông tin bản đồ Du Long Các
+		- ID: ID bản đồ
+		- EnterPosX: Vị trí vào X
+		- EnterPosY: Vị trí vào Y
+	NPC: Thông tin NPC
+		- ID: ID NPC
+		- Name: Tên NPC
+		- Title: Danh hiệu NPC
+		- PosX: Vị trí X
+		- PosY: Vị trí Y
+	Boss: Thông tin Boss
+		- ID: ID Boss
+		- Name: Tên Boss
+		- Title: Danh hiệu Boss
+		- PosX: Vị trí X
+		- PosY: Vị trí Y
+		- BaseHP: Sinh lực cơ bản
+		- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+		- AIType: Loại AI (0: Quái thường, 1: Quái tinh anh, 2: Quái thủ lĩnh, 3: Boss, 4: Hải tặc, 5: Quái chữ đỏ, tự đuổi người)
+		- AIScriptID: IDScriptAI điều khiển
+			- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+		- Skill: Danh sách kỹ năng sử dụng, gồm 3 tham biến mỗi kỹ năng, ngăn cách bởi dấu ; giữa các kỹ năng với nhau
+			- ID_Cấp_Giãn cách mỗi lần dùng (-1) nếu chỉ dùng một lần
+		- Auras: Danh sách vòng sáng kích hoạt, gồm 2 tham biến, ngăn cách nhau bởi dấu ; giữa các loại vòng sáng
+			- ID_Cấp
+			- Tất cả quái xung quanh sẽ được vòng sáng tương ứng cho đến khi bản thân quái mang vòng sáng bị giết chết
+	Awards: Danh sách quà thưởng
+		- Count: Tổng số vật phẩm
+		- MaxTryTime: Số lần nhận tối đa trong một danh sách
+		- Award: Thông tin phần thưởng
+			- ID: ID vật phẩm
+			- Number: Số lượng vật phẩm
+			- Rate: Tỷ lệ nhận được
+			- AppearRate: Tỷ lệ xuất hiện trong khung quà thưởng
+			- NumberOfCoins: Đổi được bao nhiêu Tiền Du Long
+-->
+<YouLong EventID="13" Duration="3600000" RequireLevel="50" LimitRoundPerDay="20" KickOutIfNoChallengeFor="360000" ChallengeDuration="300000" RequireItem="1026">
+	<Item MoonStoneID="928" YouLongCoinID="1074" />
+	<Map ID="1665" EnterPosX="941" EnterPosY="563" />
+	<NPC ID="3690" Name="" Title="" PosX="715" PosY="647" />
+	<Boss ID="3689" Name="" Title="" PosX="715" PosY="647" BaseHP="100000" HPIncreaseEachLevel="2000" AIType="5" AIScriptID="100001" Auras="" Skills="489_10_20000;134_10_-1" />
+	
+	<Awards Count="20" MaxTryTime="5">
+		<Award ID="187" Number="1" Rate="50" AppearRate="80" NumberOfCoins="1" />
+		<Award ID="188" Number="1" Rate="30" AppearRate="50" NumberOfCoins="2" />
+		<Award ID="189" Number="1" Rate="10" AppearRate="30" NumberOfCoins="10" />
+		<Award ID="190" Number="1" Rate="5" AppearRate="20" NumberOfCoins="30" />
+		<Award ID="920" Number="1" Rate="50" AppearRate="70" NumberOfCoins="5" />
+		<Award ID="590" Number="1" Rate="10" AppearRate="40" NumberOfCoins="18" />
+		<Award ID="344" Number="1" Rate="60" AppearRate="80" NumberOfCoins="1" />
+		<Award ID="1036" Number="1" Rate="0" AppearRate="10" NumberOfCoins="50" />
+		<Award ID="1037" Number="1" Rate="0" AppearRate="10" NumberOfCoins="50" />
+		<Award ID="1038" Number="1" Rate="0" AppearRate="10" NumberOfCoins="50" />
+		<Award ID="1039" Number="1" Rate="0" AppearRate="10" NumberOfCoins="50" />
+		<Award ID="1040" Number="1" Rate="0" AppearRate="10" NumberOfCoins="50" />
+		<Award ID="1041" Number="1" Rate="0" AppearRate="10" NumberOfCoins="50" />
+		<Award ID="1042" Number="1" Rate="0" AppearRate="10" NumberOfCoins="50" />
+		<Award ID="1034" Number="1" Rate="10" AppearRate="40" NumberOfCoins="10" />
+		<Award ID="1032" Number="1" Rate="80" AppearRate="80" NumberOfCoins="1" />
+		<Award ID="1035" Number="1" Rate="60" AppearRate="80" NumberOfCoins="1" />
+		<Award ID="513" Number="1" Rate="30" AppearRate="30" NumberOfCoins="18" />
+		<Award ID="579" Number="1" Rate="20" AppearRate="60" NumberOfCoins="3" />
+		<Award ID="739" Number="1" Rate="30" AppearRate="50" NumberOfCoins="5" />
+		<Award ID="488" Number="1" Rate="30" AppearRate="50" NumberOfCoins="1" />
+		<Award ID="916" Number="1" Rate="0" AppearRate="5" NumberOfCoins="100" />
+		<Award ID="917" Number="1" Rate="0" AppearRate="5" NumberOfCoins="100" />
+		<Award ID="1031" Number="1" Rate="20" AppearRate="60" NumberOfCoins="4" />
+	</Awards>
+</YouLong>

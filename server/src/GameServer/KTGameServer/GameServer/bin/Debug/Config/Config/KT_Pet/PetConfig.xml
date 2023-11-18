@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	CẤU HÌNH PET
+	- Limitation: Giới hạn
+		- MaxCanTake: Số lượng pet tối đa có thể mang theo
+		- MaxLevel: Cấp độ tối đa
+		- MaxSkill: Số lượng kỹ năng tối đa
+		- MaxJoy: Số điểm vui vẻ tối đa
+		- MaxLife: Số điểm tuổi thọ tối đa
+	- Base: Thông tin cơ bản
+		- BaseAttackSkillID: ID kỹ năng đánh thường cơ bản
+		- LevelUpRemainPoints: Số điểm tiềm năng cộng thêm mỗi khi lên cấp
+		- DieLoseLife: Số điểm tuổi thọ mất khi chết
+		- CallFightRequịreJoyOver: Xuất chiến yêu cầu phải có tối thiểu bao nhiêu điểm vui vẻ
+		- CallFightRequịreLifeOver: Xuất chiến yêu cầu phải có tối thiểu bao nhiêu điểm tuổi thọ
+		- CallFightCostJoy: Xuất chiến tiêu hao bao nhiêu điểm vui vẻ
+		- SubJoyInterval: Thời gian mỗi khoảng sẽ giảm độ vui vẻ của tinh linh đi 1 điểm (mili-giây)
+		- OwnerExpP: % kinh nghiệm nhận được từ chủ nhân khi giết quái
+	- Items: Danh sách vật phẩm chức năng
+		- ResetAttributesItemID: ID vật phẩm tẩy điểm tiềm năng
+		- SkillStudyMedicineItemID: ID vật phẩm lĩnh hội đan
+	- Feed: Thông tin các vật phẩm chức năng
+		- Joyful: Độ vui vẻ
+			- Item: Thông tin vật phẩm
+				- ItemID: ID vật phẩm
+				- Point: Số điểm tăng thêm
+		- Life: Tuổi thọ
+			- Item: Thông tin vật phẩm
+				- ItemID: ID vật phẩm
+				- Point: Số điểm tăng thêm
+		- Enlightenment: Lĩnh ngộ
+			- Item: Thông tin vật phẩm
+				- ItemID: ID vật phẩm
+				- Point: Số điểm tăng thêm
+	- ExpList: Danh sách kinh nghiệm thăng cấp theo cấp độ đánh dấu từ 1
+		- Value: Giá trị kinh nghiệm yêu cầu
+	- Scrolls: Danh sách sách kỹ năng
+		- Scroll: Thông tin sách
+			- ItemID: ID vật phẩm sách
+			- SkillID: ID kỹ năng sẽ học được
+	- SkillLevelUp: Thông tin thăng cấp kỹ năng
+		- LevelUpData: Thông tin thăng cấp (đánh số từ 1)
+			- Rate: Tỷ lệ %
+			- RequireEnlightenment: Số điểm lĩnh ngộ yêu cầu
+	- SkillStudyRates: Danh sách tỷ lệ học được kỹ năng mới theo cấp độ hiện tại của kỹ năng (đánh số từ 0), nếu hỏng sẽ đè lên kỹ năng bất kỳ hiện có
+		- Data: Dữ liệu
+			- StudyNewRate: Tỷ lệ học mới (%)
+-->
+<PetConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Limitation MaxCanTake="5" MaxLevel="120" MaxSkill="10" MaxJoy="100" MaxLife="100" />
+	
+	<Base BaseAttackSkillID="14001" LevelUpRemainPoints="5" DieLoseLife="10" CallFightRequịreJoyOver="10" CallFightRequịreLifeOver="10" CallFightCostJoy="2" SubJoyInterval="1800000" OwnerExpP="25" />
+	
+	<Items ResetAttributesItemID="10407" SkillStudyMedicineItemID="12002" />
+	
+	<Feed>
+		<Joyful>
+			<Item ItemID="10400" Point="10" />
+			<Item ItemID="10401" Point="100" />
+		</Joyful>
+		<Life>
+			<Item ItemID="10402" Point="10" />
+			<Item ItemID="10403" Point="100" />
+		</Life>
+		<Enlightenment>
+			<Item ItemID="10405" Point="10" />
+			<Item ItemID="10406" Point="100" />
+		</Enlightenment>
+	</Feed>
+	
+	<ExpList>
+		<Exp Value="1000" />
+		<Exp Value="2000" />
+		<Exp Value="3000" />
+		<Exp Value="4500" />
+		<Exp Value="5800" />
+		<Exp Value="7000" />
+		<Exp Value="8400" />
+		<Exp Value="11300" />
+		<Exp Value="17000" />
+		<Exp Value="22400" />
+		<Exp Value="29000" />
+		<Exp Value="36000" />
+		<Exp Value="45000" />
+		<Exp Value="58000" />
+		<Exp Value="75000" />
+		<Exp Value="95000" />
+		<Exp Value="120000" />
+		<Exp Value="175000" />
+		<Exp Value="244600" />
+		<Exp Value="250000" />
+		<Exp Value="256000" />
+		<Exp Value="264000" />
+		<Exp Value="273000" />
+		<Exp Value="283000" />
+		<Exp Value="303000" />
+		<Exp Value="343000" />
+		<Exp Value="423000" />
+		<Exp Value="572000" />
+		<Exp Value="993000" />
+		<Exp Value="1030000" />
+		<Exp Value="1069000" />
+		<Exp Value="1111000" />
+		<Exp Value="1158000" />
+		<Exp Value="1213000" />
+		<Exp Value="1282000" />
+		<Exp Value="1373000" />
+		<Exp Value="1494000" />
+		<Exp Value="1650000" />
+		<Exp Value="1820000" />
+		<Exp Value="1830000" />
+		<Exp Value="1905200" />
+		<Exp Value="2000400" />
+		<Exp Value="2200000" />
+		<Exp Value="2420000" />
+		<Exp Value="2662000" />
+		<Exp Value="3058000" />
+		<Exp Value="3520000" />
+		<Exp Value="4219600" />
+		<Exp Value="5884800" />
+		<Exp Value="5900000" />
+		<Exp Value="5990000" />
+		<Exp Value="6240000" />
+		<Exp Value="6540000" />
+		<Exp Value="6940000" />
+		<Exp Value="7440000" />
+		<Exp Value="8040000" />
+		<Exp Value="8740000" />
+		<Exp Value="9740000" />
+		<Exp Value="12550000" />
+		<Exp Value="12600000" />
+		<Exp Value="12800000" />
+		<Exp Value="13100000" />
+		<Exp Value="13500000" />
+		<Exp Value="14000000" />
+		<Exp Value="14700000" />
+		<Exp Value="15700000" />
+		<Exp Value="17250000" />
+		<Exp Value="19250000" />
+		<Exp Value="23340000" />
+		<Exp Value="23600000" />
+		<Exp Value="25100000" />
+		<Exp Value="26700000" />
+		<Exp Value="28400000" />
+		<Exp Value="30200000" />
+		<Exp Value="33100000" />
+		<Exp Value="36200000" />
+		<Exp Value="39500000" />
+		<Exp Value="43000000" />
+		<Exp Value="49000000" />
+		<Exp Value="50490000" />
+		<Exp Value="52104000" />
+		<Exp Value="54060000" />
+		<Exp Value="57240000" />
+		<Exp Value="62700000" />
+		<Exp Value="70560000" />
+		<Exp Value="79800000" />
+		<Exp Value="91640000" />
+		<Exp Value="105020000" />
+		<Exp Value="129600000" />
+		<Exp Value="129840000" />
+		<Exp Value="132480000" />
+		<Exp Value="139080000" />
+		<Exp Value="150240000" />
+		<Exp Value="165240000" />
+		<Exp Value="181800000" />
+		<Exp Value="199920000" />
+		<Exp Value="216120000" />
+		<Exp Value="237840000" />
+		<Exp Value="284880000" />
+		<Exp Value="285600000" />
+		<Exp Value="286800000" />
+		<Exp Value="292800000" />
+		<Exp Value="300000000" />
+		<Exp Value="312000000" />
+		<Exp Value="328800000" />
+		<Exp Value="350400000" />
+		<Exp Value="375600000" />
+		<Exp Value="406800000" />
+		<Exp Value="506400000" />
+		<Exp Value="507000000" />
+		<Exp Value="508200000" />
+		<Exp Value="510600000" />
+		<Exp Value="516600000" />
+		<Exp Value="528600000" />
+		<Exp Value="552600000" />
+		<Exp Value="612360000" />
+		<Exp Value="730200000" />
+		<Exp Value="895800000" />
+		<Exp Value="1152600000" />
+		<Exp Value="1164000000" />
+	</ExpList>
+	
+	<Scrolls>
+	<!-- Skill Cơ Bản 1x -->
+		<Scroll ItemID="34455" SkillID="14002" /> <!-- Kim Long Quyết -->
+		<Scroll ItemID="34458" SkillID="14006" /> <!-- Âm Độc Chưởng -->
+		<Scroll ItemID="34461" SkillID="14009" /> <!-- Âm Độc Cuồng Đao -->
+		<Scroll ItemID="34471" SkillID="14019" /> <!-- Li Hỏa Đạn -->
+		<Scroll ItemID="34479" SkillID="14027" /> <!--Hàn Băng Quyết-->
+		<Scroll ItemID="34481" SkillID="14029" /> <!--Hàn Băng Chi Thủ-->
+		<Scroll ItemID="34484" SkillID="14033" /> <!--Thiên Ngoại Hàn Băng-->
+		<Scroll ItemID="34488" SkillID="14036" /> <!--Phi Tuyết Phiêu Hoa-->
+		<Scroll ItemID="34492" SkillID="14040" /> <!--Liệt Hỏa Thiêu Thân-->
+		<Scroll ItemID="34494" SkillID="14042" /> <!--Phần Hoa Lưu Thủ-->
+		<Scroll ItemID="34495" SkillID="14043" /> <!--Liệm Diệm Cuồng Trảm-->
+		<Scroll ItemID="34508" SkillID="14055" /> <!--Liệt Diệm Âm Hỏa-->
+		<Scroll ItemID="34509" SkillID="14056" /> <!--Cuồng Phong Thuật-->
+		<Scroll ItemID="34510" SkillID="14058" /> <!--Cuồng Lôi Sát Kích-->
+		<Scroll ItemID="34518" SkillID="14066" /> <!--Ám Lôi Chỉ-->
+		<Scroll ItemID="34523" SkillID="14071" /> <!--Băng Tinh Nhật Ảnh-->
+		<Scroll ItemID="34524" SkillID="14072" /> <!--Băng Lam Khí Công-->
+	<!-- Skill Sơ Cấp 3x -->	
+		<Scroll ItemID="34472" SkillID="14021" /> <!-- Ám Độc Tiễn -->
+		<Scroll ItemID="34459" SkillID="14007" /> <!-- Khô Lâu Độc Thủ -->
+		<Scroll ItemID="34462" SkillID="14010" /> <!-- U Hồn Vạn Độc -->
+		<Scroll ItemID="34475" SkillID="14023" /> <!-- Bách Hoa Lạc Trần -->
+		<Scroll ItemID="34480" SkillID="14028" /> <!--Nguyệt Ảnh Hàn Băng-->
+		<Scroll ItemID="34483" SkillID="14031" /> <!--Phi Tuyết Phi Hoa-->
+		<Scroll ItemID="34486" SkillID="14034" /> <!--Băng Thiên Tuyết Địa-->
+		<Scroll ItemID="34489" SkillID="14037" /> <!--Lệ Hoa Lạc Trần-->
+		<Scroll ItemID="34496" SkillID="14044" /> <!--Địa Hỏa Tình Thiên-->
+		<Scroll ItemID="34498" SkillID="14046" /> <!--Bích Diệm Chi Hỏa-->
+		<Scroll ItemID="34511" SkillID="14059" /> <!--Thiên Lôi Tế Đàn-->
+		<Scroll ItemID="34519" SkillID="14067" /> <!--Thất Tinh La Sát Trận-->
+		<Scroll ItemID="34521" SkillID="14069" /> <!--Thiên Lôi Quyết-->
+		<Scroll ItemID="34525" SkillID="14073" /> <!--Băng Phong Thiến Ảnh-->
+		
+	<!-- Skill Trung Cấp 5x -->
+		<Scroll ItemID="34457" SkillID="14005" /> <!-- Như Lai Thần Chưởng -->	
+		<Scroll ItemID="34460" SkillID="14008" /> <!-- Âm Độc Hủ Cốt -->	
+		<Scroll ItemID="34463" SkillID="14011" /> <!-- Chu Mô Công -->
+		<Scroll ItemID="34474" SkillID="14022" /> <!-- Tiểu Lý Phi Tiêu -->
+		<Scroll ItemID="34476" SkillID="14024" /> <!--Thiên La Chân Thức Trận-->
+		<Scroll ItemID="34477" SkillID="14026" /> <!--Mãn Thiên Hoa Lạc Tiêu-->
+		<Scroll ItemID="34482" SkillID="14030" /> <!--Nguyệt Ảnh Phi Vũ-->
+		<Scroll ItemID="34487" SkillID="14035" /> <!--Băng Tinh Lạc Địa-->
+		<Scroll ItemID="34490" SkillID="14038" /> <!--Băng Lan Phiến-->
+		<Scroll ItemID="34493" SkillID="14041" /> <!--Long Trảo Thủ-->
+		<Scroll ItemID="34497" SkillID="14045" /> <!--Nhược Hỏa Hấp Huyết-->
+		<Scroll ItemID="34499" SkillID="14047" /> <!--Hỏa Diệm Phi Mã-->	
+		<Scroll ItemID="34512" SkillID="14060" /> <!--Ngũ Lôi Oanh Đỉnh-->
+		<Scroll ItemID="34520" SkillID="14068" /> <!--Võng Lôi Kiếm-->
+		<Scroll ItemID="34522" SkillID="14070" /> <!--Bát Quái Tam Thanh Đàn-->
+		<Scroll ItemID="34526" SkillID="14074" /> <!--Thiên Băng Kiếm Ảnh-->
+		<Scroll ItemID="34527" SkillID="14075" /> <!--Kiếm Ảnh Huyền Băng-->
+		<Scroll ItemID="34562" SkillID="14057" /> <!--Cuồng Phong Thiên Lôi Pháp-->
+	<!-- Skill Cao Cấp 9x-->
+		<Scroll ItemID="34528" SkillID="14078" /> <!-- Địa Không Phá Kích -->
+		<Scroll ItemID="34529" SkillID="14080" /> <!-- Hủ Độc Thực Cốt -->
+		<Scroll ItemID="34531" SkillID="14082" /> <!-- Thương Hạt Chi Linh -->
+		<Scroll ItemID="34532" SkillID="14084" /> <!-- Bách Độc Ngân Xuyên Châm -->
+		<Scroll ItemID="34534" SkillID="14086" /> <!-- Huyền Băng Thanh Phong Kiếm -->
+		<Scroll ItemID="34536" SkillID="14088" /> <!-- Nguyệt Lạc Sương Băng -->
+		<Scroll ItemID="34538" SkillID="14090" /> <!-- Hàn Băng Ánh Tuyết -->
+		<Scroll ItemID="34540" SkillID="14092" /> <!-- Huyền Băng Hộ Pháp -->
+		<Scroll ItemID="34542" SkillID="14094" /> <!-- Viêm Long Xuyên Vân Tụ -->
+		<Scroll ItemID="34544" SkillID="14096" /> <!-- Liệt Hỏa Thiên Bổng -->
+		<Scroll ItemID="34546" SkillID="14097" /> <!-- Địa Hỏa Thiên Lôi -->
+		<Scroll ItemID="34547" SkillID="14098" /> <!-- Liệt Hỏa Liên Thành -->
+		<Scroll ItemID="34548" SkillID="14100" /> <!-- Bát Quái Địa Linh Trận -->
+		<Scroll ItemID="34550" SkillID="14101" /> <!-- Thái Cực Huyền Thiên Kiếm -->
+		<Scroll ItemID="34551" SkillID="14104" /> <!-- Cuồng Phong Địa Liệt -->
+		<Scroll ItemID="34554" SkillID="14106" /> <!-- Thiên Lôi Thiên Giáng -->
+		<Scroll ItemID="34558" SkillID="14116" /> <!-- Lan Tú Quang Hoàn -->
+		<Scroll ItemID="34559" SkillID="14125" /> <!-- U Linh Huyền Âm Độc -->
+		<Scroll ItemID="34560" SkillID="14127" /> <!-- Âm Ty Hỏa Phát Độc -->
+		<Scroll ItemID="34561" SkillID="14004" /> <!-- Đạt Ma Quyền Pháp -->
+	<!-- Skill Lure-->
+		<Scroll ItemID="34456" SkillID="14003" /> <!-- Hách Không Vô Tướng -->		
+	<!-- Skill Bùa Chú-->	
+		<Scroll ItemID="34464" SkillID="14012" /> <!-- Cuồng Lôi Ám Chú -->	
+		<Scroll ItemID="34465" SkillID="14013" /> <!-- Liệt Diệm Ám Chú -->
+		<Scroll ItemID="34466" SkillID="14014" /> <!-- Hàn Băng Ám Chú -->
+		<Scroll ItemID="34467" SkillID="14015" /> <!-- Kim Hoàng Ám Chú -->
+		<Scroll ItemID="34468" SkillID="14016" /> <!-- Hủ Độc Ám Chú -->
+		<Scroll ItemID="34469" SkillID="14017" /> <!-- U Minh U Hồn -->
+		<Scroll ItemID="34470" SkillID="14018" /> <!-- Bách Độc Bất Xâm -->
+		<Scroll ItemID="34501" SkillID="14049" /> <!--Ly Hỏa Thần Công-->
+		<Scroll ItemID="34502" SkillID="14050" /> <!--Huyễn Ảnh Phi Thân-->
+		<Scroll ItemID="34503" SkillID="14051" /> <!--Ma Viêm Chi Giáng-->
+		<Scroll ItemID="34505" SkillID="14052" /> <!--Viêm Nhãn Ám Chú-->
+		<Scroll ItemID="34506" SkillID="14053" /> <!--Huyễn Nhật Đoạt Mệnh-->
+		<Scroll ItemID="34513" SkillID="14061" /> <!--Ám Lôi Chú-->
+		<Scroll ItemID="34514" SkillID="14062" /> <!--Địa Lôi Sát Kích-->
+		<Scroll ItemID="34516" SkillID="14064" /> <!--Ngạo Tuyết Tâm Chú-->
+		<Scroll ItemID="34517" SkillID="14065" /> <!--Huyễn Ảnh Chân Quân-->
+	<!-- Skill Đặc Biệt 9x-->	
+		<Scroll ItemID="34507" SkillID="14054" /> <!--Viêm Hỏa Chi Châu-->
+		<Scroll ItemID="34515" SkillID="14063" /> <!--Nhất Khí Hộ Thể-->
+		<Scroll ItemID="34556" SkillID="14108" /> <!-- Nguyệt Ảnh Chi Thủ -->
+		<Scroll ItemID="34569" SkillID="14300" /> <!-- Kim Cang Hộ Thể -->
+		<Scroll ItemID="34571" SkillID="14301" /> <!-- Canh Khí Hộ Thể -->
+		<Scroll ItemID="34570" SkillID="14302" /> <!-- Mê Tâm Thuật -->
+	</Scrolls>
+	
+	<SkillLevelUp>
+		<LevelUpData Rate="100" RequireEnlightenment="100" />
+		<LevelUpData Rate="90" RequireEnlightenment="200" />
+		<LevelUpData Rate="80" RequireEnlightenment="300" />
+		<LevelUpData Rate="70" RequireEnlightenment="400" />
+		<LevelUpData Rate="60" RequireEnlightenment="500" />
+		<LevelUpData Rate="50" RequireEnlightenment="600" />
+		<LevelUpData Rate="40" RequireEnlightenment="700" />
+		<LevelUpData Rate="30" RequireEnlightenment="800" />
+		<LevelUpData Rate="20" RequireEnlightenment="900" />
+		<LevelUpData Rate="10" RequireEnlightenment="1000" />
+		<LevelUpData Rate="9" RequireEnlightenment="1100" />
+		<LevelUpData Rate="8" RequireEnlightenment="1200" />
+		<LevelUpData Rate="7" RequireEnlightenment="1300" />
+		<LevelUpData Rate="6" RequireEnlightenment="1300" />
+		<LevelUpData Rate="5" RequireEnlightenment="1400" />
+		<LevelUpData Rate="4" RequireEnlightenment="1500" />
+		<LevelUpData Rate="3" RequireEnlightenment="1600" />
+		<LevelUpData Rate="2" RequireEnlightenment="1700" />
+		<LevelUpData Rate="1" RequireEnlightenment="1800" />
+		<LevelUpData Rate="1" RequireEnlightenment="1900" />
+		<LevelUpData Rate="1" RequireEnlightenment="2000" />
+		<LevelUpData Rate="0" RequireEnlightenment="2100" />
+	</SkillLevelUp>
+	
+	<SkillStudyRates>
+		<Data StudyNewRate="100" />
+		<Data StudyNewRate="60" />
+		<Data StudyNewRate="50" />
+		<Data StudyNewRate="45" />
+		<Data StudyNewRate="40" />
+		<Data StudyNewRate="35" />
+		<Data StudyNewRate="30" />
+		<Data StudyNewRate="10" />
+	</SkillStudyRates>
+</PetConfig>

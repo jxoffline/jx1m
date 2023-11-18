@@ -1,0 +1,21 @@
+using ProtoBuf;
+using System;
+namespace Server.Data
+{
+    [ProtoContract]
+    public class ActivityData
+    {
+[ProtoMember(1)]
+        public int ActivityType;
+[ProtoMember(1)]
+        public bool ActivityIsOpen;
+[ProtoMember(1)]
+        public DateTime TimeBegin = DateTime.MinValue;
+[ProtoMember(1)]
+        public DateTime TimeEnd = DateTime.MinValue;
+[ProtoMember(1)]
+        public DateTime TimeAwardBegin = DateTime.MinValue;
+[ProtoMember(1)]
+        public DateTime TimeAwardEnd = DateTime.MinValue;
+    }
+}

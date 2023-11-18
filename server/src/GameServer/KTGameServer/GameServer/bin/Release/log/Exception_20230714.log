@@ -1,0 +1,9 @@
+2023-07-14 18:54:53: ##exception##
+System.InvalidOperationException: There is an error in XML document (2, 2). ---> System.InvalidOperationException: <GuildConfig xmlns=''> was not expected.
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderGuildDef.Read10_GuildDef()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at GameServer.VLTK.Core.GuildManager.GuildManager.LoadGuildSkill() in I:\ALLDATA\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Logic\Manager\Guild\GuildManager_Main.cs:line 56
+   at GameServer.KiemThe.KTMain.InitFirst() in I:\ALLDATA\VL_Project\GameServer\KTGameServer\GameServer\VLTK\KTMain.cs:line 292
+   at GameServer.Program.InitServer() in I:\ALLDATA\VL_Project\GameServer\KTGameServer\GameServer\Program.cs:line 521

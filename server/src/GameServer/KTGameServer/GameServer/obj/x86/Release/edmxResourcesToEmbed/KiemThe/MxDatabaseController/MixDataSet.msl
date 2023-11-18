@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KiemTheMixDbModelStoreContainer" CdmEntityContainer="KiemTheMixDbEntities">
+    <EntitySetMapping Name="RoleParamInts">
+      <EntityTypeMapping TypeName="KiemTheMixDbModel.RoleParamInt">
+        <MappingFragment StoreEntitySet="RoleParamInt">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="ParamID" ColumnName="ParamID" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleParamStrings">
+      <EntityTypeMapping TypeName="KiemTheMixDbModel.RoleParamString">
+        <MappingFragment StoreEntitySet="RoleParamString">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="ParamID" ColumnName="ParamID" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	=== Hướng dẫn config randombox ===
+	=== Hướng dẫn config randombox ===
+	
+	Khai báo 1 Boxs ID mới thì IDBox cần phải khác nhau không được giống nhau
+	Tổng số lượng RATE phải điền đúng nếu ko sẽ gây lỗi
+	LimitWeek : Tối đa 1 tuần được mở mấy lần  | Nếu để là 0 thì không giới hạn
+	LimitDay : Tối đa 1 ngày được mở mấy lần | Nếu để là 0 thì không giới hạn
+	Lock : 0 Là không khóa | 1 là có khóa
+	Type : Là kiểu tong đó : 0 là vật phẩm | 1 là bạc khóa , 2: là bạc , 3 là đồng khóa , 4 là đồng	| 5 là Exp
+  Serier : là đồ theo hệ
+  TimeLimit : thời gian đồ có thể dùng
+  ItemID là ID đồ của vật phẩm 
+	Number : Là số lượng tương ứng của mỗi vật phẩm | Nếu type là tiền thì Number là số tiền
+-->
+<ConfigBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Boxs IDBox="337" BoxName="Túi Phúc Hoàng Kim" TotalRate="6200" LimitWeek="0" LimitDay="0">
+    <Items Type="3" ItemID="-1" Series="0" TimeLimit="0" Number="25" Rate="2000" Lock="1" />
+    <Items Type="1" ItemID="-1" Series="0" TimeLimit="0" Number="2000" Rate="2000" Lock="1" />
+    <Items Type="1" ItemID="-1" Series="0" TimeLimit="0" Number="3000" Rate="1000" Lock="1" />
+    <Items Type="1" ItemID="-1" Series="0" TimeLimit="0" Number="5000" Rate="500" Lock="1" />
+    <Items Type="1" ItemID="-1" Series="0" TimeLimit="0" Number="7000" Rate="300" Lock="1" />
+    <Items Type="3" ItemID="-1" Series="0" TimeLimit="0" Number="50" Rate="200" Lock="1" />
+    <Items Type="3" ItemID="-1" Series="0" TimeLimit="0" Number="100" Rate="100" Lock="1" />
+    <Items Type="1" ItemID="-1" Series="0" TimeLimit="0" Number="10000" Rate="100" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="10196" BoxName="Rương Trang Bị Hồng Ảnh" TotalRate="10000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="1593" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1594" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1595" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1596" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="10195" BoxName="Rương Trang Bị Động Sát " TotalRate="10000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="1532" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1533" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1534" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1535" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="11241" BoxName="Rương Trang Bị Tinh Linh (Khóa)" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="50080" Series="0" TimeLimit="0" Number="1" Rate="1300" Lock="1" />
+    <Items Type="0" ItemID="50081" Series="0" TimeLimit="0" Number="1" Rate="400" Lock="1" />
+    <Items Type="0" ItemID="50082" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="1" />
+    <Items Type="0" ItemID="50083" Series="0" TimeLimit="0" Number="1" Rate="1300" Lock="1" />
+    <Items Type="0" ItemID="50084" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="1" />
+    <Items Type="0" ItemID="50085" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="1" />
+    <Items Type="0" ItemID="50086" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="1" />
+    <Items Type="0" ItemID="50087" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12499" BoxName="Rương Trứng Tinh Linh Sơ Cấp" TotalRate="10000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="12480" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="1" />
+    <Items Type="0" ItemID="12481" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12482" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12483" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12484" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12485" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12486" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12487" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12500" BoxName="Rương Trứng Tinh Linh Cao Cấp" TotalRate="10000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="12447" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="12448" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12449" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12450" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12451" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12452" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12453" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12454" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12455" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12501" BoxName="Rương Trứng Tinh Linh Bạch Kim" TotalRate="10000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="12456" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="1" />
+    <Items Type="0" ItemID="12457" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="1" />
+    <Items Type="0" ItemID="12458" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="1" />
+    <Items Type="0" ItemID="12459" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="1" />
+    <Items Type="0" ItemID="12460" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12461" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12462" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12463" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12502" BoxName="Rương Trứng Tinh Linh Hoàng Kim" TotalRate="10000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="12465" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="12466" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12467" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12468" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12469" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12470" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12471" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12472" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="12473" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12503" BoxName="Rương Sách Tinh Linh Sơ Cấp" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="34455" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34458" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34461" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34471" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34479" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34481" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34484" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34488" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34492" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34494" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34495" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34508" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34509" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34510" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34518" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="34523" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="34524" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12504" BoxName="Rương Sách Tinh Linh Trung Cấp" TotalRate="15000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="34472" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34459" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34462" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34475" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34480" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34483" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34486" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34489" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34496" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34498" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34511" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34519" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34521" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34525" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12505" BoxName="Rương Sách Tinh Linh Cao Cấp" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="34457" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34460" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34463" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34474" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34476" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34477" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34482" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34487" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34490" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34493" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34497" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34499" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34512" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34520" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34522" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34526" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34527" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="34562" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12506" BoxName="Rương Sách Tinh Linh Huyền Thoại" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="34528" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34529" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34531" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34532" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34534" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34536" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34538" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34540" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34542" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34544" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34546" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34547" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34548" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34550" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34551" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34554" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34556" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34558" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34559" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="34560" Series="0" TimeLimit="0" Number="1" Rate="500" Lock="0" />
+    <Items Type="0" ItemID="34561" Series="0" TimeLimit="0" Number="1" Rate="500" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="12507" BoxName="Rương Sách Tinh Linh Bùa Chú" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="34464" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34465" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34466" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34467" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34468" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34469" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34470" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34501" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34502" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34503" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34505" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34506" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34513" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34514" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+    <Items Type="0" ItemID="34516" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="34517" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="34515" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12508" BoxName="Rương Sách Tinh Linh Đặc Biệt" TotalRate="9000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="34456" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="1" />
+    <Items Type="0" ItemID="34515" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="1" />
+    <Items Type="0" ItemID="34507" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="11256" BoxName="Rương đã tấu Đồng" TotalRate="30000" LimitWeek="0" LimitDay="0">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="100000 " Rate="3000" Lock="1" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="250000" Rate="3000" Lock="1" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="500000" Rate="3000" Lock="1" />
+    <Items Type="0" ItemID="20795" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+    <Items Type="0" ItemID="20796" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+    <Items Type="0" ItemID="20798" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+    <Items Type="0" ItemID="20799" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+    <Items Type="0" ItemID="10447" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+    <Items Type="0" ItemID="10446" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+	<Items Type="0" ItemID="348" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+    <Items Type="0" ItemID="351" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+    <Items Type="0" ItemID="343" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="11257" BoxName="Rương đã tấu Bạc" TotalRate="30000" LimitWeek="0" LimitDay="0">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="600000" Rate="3500" Lock="1" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="800000" Rate="3500" Lock="1" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="1000000" Rate="3000" Lock="1" />
+    <Items Type="0" ItemID="20795" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="20796" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="20798" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="20799" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="20797" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="10445" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="10446" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="349" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="352" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+    <Items Type="0" ItemID="343" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="11261" BoxName="Rương trang bị Định Quốc" TotalRate="15000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="1787" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="0" />
+    <Items Type="0" ItemID="1788" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="0" />
+    <Items Type="0" ItemID="1789" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="0" />
+    <Items Type="0" ItemID="1790" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="0" />
+    <Items Type="0" ItemID="1791" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="11262" BoxName="Rương trang bị An Bang" TotalRate="10000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="1605" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+    <Items Type="0" ItemID="1606" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="0" />
+    <Items Type="0" ItemID="1607" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="0" />
+    <Items Type="0" ItemID="1608" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="11263" BoxName="Rương trang bị Hoàng Kim Kim Quang" TotalRate="22500" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="1583" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1584" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1585" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1587" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1588" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1589" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1590" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="11264" BoxName="Rương Dã Tẩu trang bị Hoàng Kim Môn Phái" TotalRate="70000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="1390" Series="0" TimeLimit="0" Number="1" Rate="4500" Lock="0" /> <!-- ItemID="1390" Name="Mộng Long Chính Hồng Tăng Mão" -->
+    <Items Type="0" ItemID="1395" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" /> <!-- ItemID="1395" Name="Phục Ma Tử Kim Côn" -->
+    <Items Type="0" ItemID="1400" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1400" Name="Tứ Không Giáng Ma Giới đao" -->
+    <Items Type="0" ItemID="1405" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1405" Name="Hám Thiên Kim Hoàn Đại Nhãn Thần Chùy" -->
+    <Items Type="0" ItemID="1410" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" /> <!-- ItemID="1410" Name="Kế Nghiệp Bôn Lôi Toàn Long thương" -->
+    <Items Type="0" ItemID="1415" Series="0" TimeLimit="0" Number="1" Rate="4500" Lock="0" /> <!-- ItemID="1415" Name="Ngự Long Lượng Ngân Bảo đao" -->
+    <Items Type="0" ItemID="1420" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" /> <!-- ItemID="1420" Name="Vô Gian ỷ Thiên Kiếm" -->
+    <Items Type="0" ItemID="1428" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1428" Name="Vô Ma Tẩy Tượng Ngọc Khấu" -->
+    <Items Type="0" ItemID="1430" Series="0" TimeLimit="0" Number="1" Rate="4500" Lock="0" /> <!-- ItemID="1430" Name="Vô Trần Ngọc Nữ Tố Tâm quán" -->
+    <Items Type="0" ItemID="1435" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1435" Name="Tê Hoàng Phụng Nghi đao" -->
+    <Items Type="0" ItemID="1440" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1440" Name="Bích Hải Uyên Ương Liên Hoàn đao" -->
+    <Items Type="0" ItemID="1445" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" /> <!-- ItemID="1445" Name="U Lung Kim Xà Phát đái" -->
+    <Items Type="0" ItemID="1450" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1450" Name="Minh ảo Tà Sát Độc Nhận" -->
+    <Items Type="0" ItemID="1455" Series="0" TimeLimit="0" Number="1" Rate="4500" Lock="0" /> <!-- ItemID="1455" Name="Chú Phược Phá giáp đầu hoàn" -->
+    <Items Type="0" ItemID="1460" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" /> <!-- ItemID="1460" Name="Băng Hàn Đơn Chỉ Phi Đao" -->
+    <Items Type="0" ItemID="1465" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1465" Name="Thiên Quang Hoa Vũ Mạn Thiên" -->
+    <Items Type="0" ItemID="1470" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="0" /> <!-- ItemID="1470" Name="Sâm Hoang Phi Tinh Đoạt Hồn" -->
+    <Items Type="0" ItemID="1475" Series="0" TimeLimit="0" Number="1" Rate="4500" Lock="0" /> <!-- ItemID="1475" Name="Địa Phách Ngũ hành Liên Hoàn Quán" -->
+    <Items Type="0" ItemID="1483" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1483" Name="Đồng Cừu Kháng Long Hộ Uyển" -->
+    <Items Type="0" ItemID="1485" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="0" /> <!-- ItemID="1485" Name="Địch Khái Lục Ngọc Trượng" -->
+    <Items Type="0" ItemID="1490" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1490" Name="Ma Sát Quỷ Cốc U Minh Thương" -->
+    <Items Type="0" ItemID="1499" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" /> <!-- ItemID="1499" Name="Ma Hoàng Đăng Đạp Ngoa" -->
+    <Items Type="0" ItemID="1500" Series="0" TimeLimit="0" Number="1" Rate="4500" Lock="0" /> <!-- ItemID="1500" Name="Ma Thị Liệt Diệm Quán Miện" -->
+    <Items Type="0" ItemID="1505" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1505" Name="Lăng Nhạc Thái Cực Kiếm" -->
+    <Items Type="0" ItemID="1510" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1510" Name="Cập Phong Chân Vũ Kiếm" -->
+    <Items Type="0" ItemID="1515" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="1515" Name="Sương Tinh Thiên Niên Hàn Thiết" -->
+    <Items Type="0" ItemID="1520" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" /> <!-- ItemID="1520" Name="Lôi Khung Hàn Tung Băng Bạch quan" -->
+    <Items Type="0" ItemID="1526" Series="0" TimeLimit="0" Number="1" Rate="4500" Lock="0" /> <!-- ItemID="1526" Name="Vụ ảo Ki Bán phù chú " -->
+    <Items Type="0" ItemID="30001" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" /> <!-- ItemID="30001" Name="Thương Huyền Phi Thiên Kiếm" -->
+    <Items Type="0" ItemID="30009" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="0" /> <!-- ItemID="30009" Name="Bích Hoa Bạch Ngọc Bội" -->
+  </Boxs>
+  <Boxs IDBox="335" BoxName="Rương Thi Đấu Môn Phái" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="500000" Rate="5000" Lock="1" />
+	<Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="1000000" Rate="2500" Lock="1" />
+	<Items Type="0" ItemID="338" Series="0" TimeLimit="0" Number="1" Rate="5000" Lock="1" />
+	<Items Type="0" ItemID="339" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+	<Items Type="0" ItemID="340" Series="0" TimeLimit="0" Number="1" Rate="500" Lock="1" />
+	<Items Type="0" ItemID="184" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="1" />
+	<Items Type="0" ItemID="185" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="1" />
+  </Boxs>
+  
+  
+  <Boxs IDBox="1932" BoxName="Bánh Giầy" TotalRate="10000" LimitWeek="0" LimitDay="15">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="100000" Rate="3000" Lock="1" />
+	<Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="200000" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="183" Series="0" TimeLimit="0" Number="1" Rate="3000" Lock="1" />
+	<Items Type="0" ItemID="183" Series="0" TimeLimit="0" Number="2" Rate="2000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="1931" BoxName="Bánh Chưng" TotalRate="15000" LimitWeek="0" LimitDay="10">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="250000" Rate="3000" Lock="1" />
+	<Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="500000" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="183" Series="0" TimeLimit="0" Number="2" Rate="3000" Lock="1" />
+	<Items Type="0" ItemID="184" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="348" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+	<Items Type="0" ItemID="351" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="1933" BoxName="Bánh Chưng Thập Cẩm" TotalRate="15000" LimitWeek="0" LimitDay="30">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="600000" Rate="3000" Lock="1" />
+	<Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="1200000" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="184" Series="0" TimeLimit="0" Number="4" Rate="3000" Lock="1" />
+	<Items Type="0" ItemID="185" Series="0" TimeLimit="0" Number="2" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="350" Series="0" TimeLimit="0" Number="2" Rate="2500" Lock="1" />
+	<Items Type="0" ItemID="353" Series="0" TimeLimit="0" Number="2" Rate="2500" Lock="1" />
+	</Boxs>
+  <Boxs IDBox="1928" BoxName="Bánh Chưng Đặc Biệt" TotalRate="15000" LimitWeek="0" LimitDay="30">
+	<Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="1500000" Rate="3000" Lock="1" />
+	<Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="3000000" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="185" Series="0" TimeLimit="0" Number="3" Rate="3000" Lock="1" />
+	<Items Type="0" ItemID="186" Series="0" TimeLimit="0" Number="1" Rate="2000" Lock="1" />
+	<Items Type="0" ItemID="350" Series="0" TimeLimit="0" Number="2" Rate="2500" Lock="1" />
+	<Items Type="0" ItemID="353" Series="0" TimeLimit="0" Number="2" Rate="2500" Lock="1" />
+  </Boxs>
+  
+  <Boxs IDBox="13725" BoxName="Rương nguyên liệu sơ cấp" TotalRate="10000" LimitWeek="0" LimitDay="100">
+	<Items Type="0" ItemID="2190" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2210" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2230" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2250" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2310" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2330" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2350" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2370" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="183" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="184" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	
+  </Boxs>
+  <Boxs IDBox="13726" BoxName="Rương nguyên liệu trung cấp" TotalRate="10000" LimitWeek="0" LimitDay="100">
+	<Items Type="0" ItemID="2191" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2211" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2231" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2251" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2311" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2331" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2351" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2371" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="183" Series="0" TimeLimit="0" Number="2" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="184" Series="0" TimeLimit="0" Number="2" Rate="1000" Lock="1" />
+  </Boxs>
+ <Boxs IDBox="13727" BoxName="Rương nguyên liệu cao cấp" TotalRate="10000" LimitWeek="0" LimitDay="100">
+	<Items Type="0" ItemID="2192" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2212" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2232" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2252" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2312" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2332" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2352" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2372" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="183" Series="0" TimeLimit="0" Number="3" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="184" Series="0" TimeLimit="0" Number="3" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="13728" BoxName="Rương nguyên liệu siêu cấp" TotalRate="10000" LimitWeek="0" LimitDay="100">
+	<Items Type="0" ItemID="2193" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2213" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2233" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2253" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2313" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2333" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2353" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="2373" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="183" Series="0" TimeLimit="0" Number="4" Rate="1000" Lock="1" />
+	<Items Type="0" ItemID="184" Series="0" TimeLimit="0" Number="4" Rate="1000" Lock="1" />
+  </Boxs>
+  <Boxs IDBox="12022" BoxName="Rương trang bị Nhu Tình" TotalRate="10000" LimitWeek="0" LimitDay="100">
+    <Items Type="0" ItemID="1579" Series="0" TimeLimit="0" Number="1" Rate="1500" Lock="0" />
+    <Items Type="0" ItemID="1580" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    <Items Type="0" ItemID="1581" Series="0" TimeLimit="0" Number="1" Rate="3500" Lock="0" />
+    <Items Type="0" ItemID="1582" Series="0" TimeLimit="0" Number="1" Rate="2500" Lock="0" />
+    </Boxs>
+  <Boxs IDBox="11242" BoxName="Rương Trang Bị Tinh Linh" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="0" ItemID="50080" Series="0" TimeLimit="0" Number="1" Rate="1300" Lock="0" />
+    <Items Type="0" ItemID="50081" Series="0" TimeLimit="0" Number="1" Rate="400" Lock="0" />
+    <Items Type="0" ItemID="50082" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="0" />
+    <Items Type="0" ItemID="50083" Series="0" TimeLimit="0" Number="1" Rate="1300" Lock="0" />
+    <Items Type="0" ItemID="50084" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="0" />
+    <Items Type="0" ItemID="50085" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="0" />
+    <Items Type="0" ItemID="50086" Series="0" TimeLimit="0" Number="1" Rate="4000" Lock="0" />
+    <Items Type="0" ItemID="50087" Series="0" TimeLimit="0" Number="1" Rate="1000" Lock="0" />
+  </Boxs>
+
+  <Boxs IDBox="8871" BoxName="Mâm Lễ Chay (Sự kiện giỗ tổ Hùng Vương)" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="1000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="2000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="3000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="4000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="5000000" Rate="4000" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="8872" BoxName="Mâm Lễ mặn (Sự kiện giỗ tổ Hùng Vương)" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="5000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="6000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="8000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="9000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="10000000" Rate="4000" Lock="0" />
+  </Boxs>
+  <Boxs IDBox="8873" BoxName="Mâm Lễ đặc biệt (Sự kiện giỗ tổ Hùng Vương)" TotalRate="20000" LimitWeek="0" LimitDay="0">
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="10000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="12000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="16000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="18000000" Rate="4000" Lock="0" />
+    <Items Type="5" ItemID="-1" Series="0" TimeLimit="0" Number="20000000" Rate="4000" Lock="0" />
+  </Boxs>
+
+</ConfigBox><!--
+	=== Hướng dẫn config randombox ===
+	=== Hướng dẫn config randombox ===
+	
+	Khai báo 1 Boxs ID mới thì IDBox cần phải khác nhau không được giống nhau
+	Tổng số lượng RATE phải điền đúng nếu ko sẽ gây lỗi
+	LimitWeek : Tối đa 1 tuần được mở mấy lần  | Nếu để là 0 thì không giới hạn
+	LimitDay : Tối đa 1 ngày được mở mấy lần | Nếu để là 0 thì không giới hạn
+	Lock : 0 Là không khóa | 1 là có khóa
+	Type : Là kiểu tong đó : 0 là vật phẩm | 1 là bạc khóa , 2: là bạc , 3 là đồng khóa , 4 là đồng	| 5 là Exp
+  Serier : là đồ theo hệ
+  TimeLimit : thời gian đồ có thể dùng
+  ItemID là ID đồ của vật phẩm 
+	Number : Là số lượng tương ứng của mỗi vật phẩm | Nếu type là tiền thì Number là số tiền
+-->

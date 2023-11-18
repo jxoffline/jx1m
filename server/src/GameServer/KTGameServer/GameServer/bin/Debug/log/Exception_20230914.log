@@ -1,0 +1,651 @@
+2023-09-14 00:00:38: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 00:00:39: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 01:00:04: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 01:00:14: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 02:00:12: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 02:00:33: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 09:44:07: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:23001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Server.TCP.TMSKSocket.Connect(EndPoint remoteEP) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\TCPSOCKET\TMSKSocket.cs:line 1877
+   at GameServer.Server.TCPClient.Connect(String ip, Int32 port, String serverName) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Server\TCPClient.cs:line 118
+   at GameServer.Server.TCPClientPool.Init(Int32 count, String ip, Int32 port, String serverName) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Server\TCPClientPool.cs:line 94
+   at GameServer.Program.InitTCPManager(XElement xml, Boolean bConnectDB) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Program.cs:line 802
+   at GameServer.Program.InitServer() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Program.cs:line 511
+2023-09-14 09:45:30: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 09:45:31: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 10:00:00: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 10:00:13: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 11:13:58: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 11:13:58: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 12:00:19: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 12:00:22: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 13:00:30: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 13:00:39: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 14:00:14: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 14:00:39: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 15:00:04: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 15:00:33: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 16:00:08: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 16:00:13: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 17:00:28: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 17:00:31: ##exception##
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 27.71.227.48:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-09-14 17:28:06: ##exception##
+Exception while sending data to DBServer
+System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 size, SocketFlags socketFlags)
+   at Server.TCP.TMSKSocket.Send(Byte[] buffer, Int32 size, SocketFlags socketFlags) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\TCPSOCKET\TMSKSocket.cs:line 3571
+   at GameServer.Server.TCPClient.SendData(TCPOutPacket tcpOutPacket) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Server\TCPClient.cs:line 188
+   at GameServer.Logic.Global.SendAndRecvData(TCPOutPacket tcpOutPacket, Int32 serverId, Int32 PoolId) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Logic\Global\Global.cs:line 425
+   at GameServer.Logic.Global.SendAndRecvData[T](Int32 cmdId, T data, Int32 serverId, Int32 PoolId) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Logic\Global\Global.cs:line 522
+   at GameServer.Logic.Global.RequestToDBServer2(TCPClientPool tcpClientPool, TCPOutPacketPool pool, Int32 nID, String strcmd, TCPOutPacket& tcpOutPacket, Int32 serverId) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Logic\Global\Global.cs:line 642
+   at GameServer.KiemThe.Logic.KT_TCPHandler.HandleTransferChatMsg() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Network\KT_TCPHandler_Chat.cs:line 495
+   at GameServer.Program.chatMsgWorker_DoWork(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Program.cs:line 1361
+   at System.ComponentModel.BackgroundWorker.OnDoWork(DoWorkEventArgs e)
+   at System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink.AsyncProcessMessage(IMessage msg, IMessageSink replySink)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+2023-09-14 17:28:13: ##exception##
+Exception while sending data to DBServer
+System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 size, SocketFlags socketFlags)
+   at Server.TCP.TMSKSocket.Send(Byte[] buffer, Int32 size, SocketFlags socketFlags) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\TCPSOCKET\TMSKSocket.cs:line 3571
+   at GameServer.Server.TCPClient.SendData(TCPOutPacket tcpOutPacket) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Server\TCPClient.cs:line 188
+   at GameServer.Logic.Global.SendAndRecvData(TCPOutPacket tcpOutPacket, Int32 serverId, Int32 PoolId) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Logic\Global\Global.cs:line 425
+   at GameServer.Logic.Global.SendAndRecvData[T](Int32 cmdId, T data, Int32 serverId, Int32 PoolId) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Logic\Global\Global.cs:line 522
+   at GameServer.Logic.Global.RequestToDBServer2(TCPClientPool tcpClientPool, TCPOutPacketPool pool, Int32 nID, String strcmd, TCPOutPacket& tcpOutPacket, Int32 serverId) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Logic\Global\Global.cs:line 642
+   at GameServer.KiemThe.Logic.KT_TCPHandler.HandleTransferChatMsg() in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\VLTK\Network\KT_TCPHandler_Chat.cs:line 495
+   at GameServer.Program.chatMsgWorker_DoWork(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\Server\GameServer\KTGameServer\GameServer\Program.cs:line 1361
+   at System.ComponentModel.BackgroundWorker.OnDoWork(DoWorkEventArgs e)
+   at System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink.AsyncProcessMessage(IMessage msg, IMessageSink replySink)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+

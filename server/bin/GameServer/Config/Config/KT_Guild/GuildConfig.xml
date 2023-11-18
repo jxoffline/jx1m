@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GuildDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ChangeQuestCost="1000" MaxQuestPerDay="20" RequireItem="13220" RequireMoney="5000000" RequireAdditionString="Yêu cầu 100 điểm danh vọng">
+  <LevelUps Level="1" ExpRequest="2000" PointUpdate="3000">
+    <ItemRequest ItemID="9809" ItemNum="100" />
+    <ItemRequest ItemID="9433" ItemNum="100" />
+  </LevelUps>
+  <LevelUps Level="2" ExpRequest="10000" PointUpdate="12000">
+    <ItemRequest ItemID="9809" ItemNum="1000" />
+    <ItemRequest ItemID="9433" ItemNum="1000" />
+  </LevelUps>
+  <LevelUps Level="3" ExpRequest="20000" PointUpdate="24000">
+    <ItemRequest ItemID="9809" ItemNum="2000" />
+    <ItemRequest ItemID="9433" ItemNum="2000" />
+  </LevelUps>
+  <LevelUps Level="4" ExpRequest="40000" PointUpdate="46000">
+    <ItemRequest ItemID="9809" ItemNum="4000" />
+    <ItemRequest ItemID="9433" ItemNum="4000" />
+  </LevelUps>
+  <LevelUps Level="5" ExpRequest="60000" PointUpdate="70000">
+    <ItemRequest ItemID="9809" ItemNum="7000" />
+    <ItemRequest ItemID="9433" ItemNum="7000" />
+  </LevelUps>
+  <LevelUps Level="6" ExpRequest="80000" PointUpdate="100000">
+    <ItemRequest ItemID="9809" ItemNum="10000" />
+    <ItemRequest ItemID="9433" ItemNum="10000" />
+  </LevelUps>
+  <LevelUps Level="7" ExpRequest="120000" PointUpdate="150000">
+    <ItemRequest ItemID="9809" ItemNum="15000" />
+    <ItemRequest ItemID="9433" ItemNum="15000" />
+  </LevelUps>
+  <LevelUps Level="8" ExpRequest="160000" PointUpdate="200000">
+    <ItemRequest ItemID="9809" ItemNum="20000" />
+    <ItemRequest ItemID="9433" ItemNum="20000" />
+  </LevelUps>
+  <LevelUps Level="9" ExpRequest="200000" PointUpdate="300000">
+    <ItemRequest ItemID="9809" ItemNum="30000" />
+    <ItemRequest ItemID="9433" ItemNum="30000" />
+  </LevelUps>
+  <LevelUps Level="10" ExpRequest="300000" PointUpdate="500000">
+    <ItemRequest ItemID="9809" ItemNum="50000" />
+    <ItemRequest ItemID="9433" ItemNum="50000" />
+  </LevelUps>
+  <Skills ID="35001" Name="Thánh Long Thần Công" Icon="Icon_Skill_1" Desc="Tăng sát thương lên quái">
+    <LevelData Level="1" PointUpdate="1000">
+      <SkillProb PropType="npcdamageadded" Value1="1" Value2="-1" Value3="-1" />
+      <ItemRequest ItemID="9809" ItemNum="100" />
+      <ItemRequest ItemID="9433" ItemNum="100" />
+    </LevelData>
+	  <LevelData Level="2" PointUpdate="2000">
+      <SkillProb PropType="npcdamageadded" Value1="3" Value2="-1" Value3="-1" />
+      <ItemRequest ItemID="9809" ItemNum="500" />
+      <ItemRequest ItemID="9433" ItemNum="500" />
+    </LevelData>
+	  <LevelData Level="3" PointUpdate="3000">
+      <SkillProb PropType="npcdamageadded" Value1="5" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1000" />
+      <ItemRequest ItemID="9433" ItemNum="1000" />
+    </LevelData>
+	  <LevelData Level="4" PointUpdate="4000">
+      <SkillProb PropType="npcdamageadded" Value1="7" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1500" />
+      <ItemRequest ItemID="9433" ItemNum="1500" />
+    </LevelData>
+	  <LevelData Level="5" PointUpdate="5000">
+      <SkillProb PropType="npcdamageadded" Value1="10" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="2000" />
+      <ItemRequest ItemID="9433" ItemNum="2000" />
+    </LevelData>
+	  <LevelData Level="6" PointUpdate="6000">
+      <SkillProb PropType="npcdamageadded" Value1="14" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="3000" />
+      <ItemRequest ItemID="9433" ItemNum="3000" />
+    </LevelData>
+	  <LevelData Level="7" PointUpdate="7000">
+      <SkillProb PropType="npcdamageadded" Value1="18" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="4000" />
+      <ItemRequest ItemID="9433" ItemNum="4000" />
+    </LevelData>
+	  <LevelData Level="8" PointUpdate="8000">
+      <SkillProb PropType="npcdamageadded" Value1="22" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="5000" />
+      <ItemRequest ItemID="9433" ItemNum="5000" />
+    </LevelData>
+	  <LevelData Level="9" PointUpdate="9000">
+      <SkillProb PropType="npcdamageadded" Value1="26" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="6000" />
+      <ItemRequest ItemID="9433" ItemNum="6000" />
+    </LevelData>
+	  <LevelData Level="10" PointUpdate="10000">
+      <SkillProb PropType="npcdamageadded"  Value1="30" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="8000" />
+      <ItemRequest ItemID="9433" ItemNum="8000" />
+    </LevelData>
+  </Skills>
+  <Skills ID="35002" Name="Long Khí Hóa Kình" Icon="Icon_Skill_2" Desc="Phát huy lực tấn công kỹ năng">
+    <LevelData Level="1" PointUpdate="1000">
+      <SkillProb PropType="skillselfdamagetrim"  Value1="1" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="100" />
+      <ItemRequest ItemID="9433" ItemNum="100" />
+    </LevelData>
+	  <LevelData Level="2" PointUpdate="2000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="3" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="500" />
+      <ItemRequest ItemID="9433" ItemNum="500" />
+    </LevelData>
+    <LevelData Level="3" PointUpdate="3000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="5" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1000" />
+      <ItemRequest ItemID="9433" ItemNum="1000" />
+    </LevelData>
+	  <LevelData Level="4" PointUpdate="4000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="7" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1500" />
+      <ItemRequest ItemID="9433" ItemNum="1500" />
+    </LevelData>
+    <LevelData Level="5" PointUpdate="5000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="10" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="2000" />
+      <ItemRequest ItemID="9433" ItemNum="2000" />
+    </LevelData>
+	  <LevelData Level="6" PointUpdate="6000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="14" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="3000" />
+      <ItemRequest ItemID="9433" ItemNum="3000" />
+    </LevelData>
+    <LevelData Level="7" PointUpdate="7000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="18" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="4000" />
+      <ItemRequest ItemID="9433" ItemNum="4000" />
+    </LevelData>
+	  <LevelData Level="8" PointUpdate="8000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="22" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="5000" />
+      <ItemRequest ItemID="9433" ItemNum="5000" />
+    </LevelData>
+    <LevelData Level="9" PointUpdate="9000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="26" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="6000" />
+      <ItemRequest ItemID="9433" ItemNum="6000" />
+    </LevelData>
+	  <LevelData Level="10" PointUpdate="10000">
+      <SkillProb PropType="skillselfdamagetrim" Value1="30" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="8000" />
+      <ItemRequest ItemID="9433" ItemNum="8000" />
+    </LevelData>
+  </Skills>
+  <Skills ID="35003" Name="Chân Long Huyền Công" Icon="Icon_Skill_3" Desc="Tăng tất cả thuộc tính">
+    <LevelData Level="1" PointUpdate="1000">
+      <SkillProb PropType="strength_v"  Value1="5" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="5" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="5" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="5" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="100" />
+      <ItemRequest ItemID="9433" ItemNum="100" />
+    </LevelData>
+    <LevelData Level="2" PointUpdate="1500">
+      <SkillProb PropType="strength_v"  Value1="10" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="10" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="10" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="10" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="300" />
+      <ItemRequest ItemID="9433" ItemNum="300" />
+    </LevelData>
+    <LevelData Level="3" PointUpdate="2000">
+      <SkillProb PropType="strength_v"  Value1="15" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="15" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="15" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="15" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="600" />
+      <ItemRequest ItemID="9433" ItemNum="600" />
+    </LevelData>
+    <LevelData Level="4" PointUpdate="2500">
+      <SkillProb PropType="strength_v"  Value1="20" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="20" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="20" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="20" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1000" />
+      <ItemRequest ItemID="9433" ItemNum="1000" />
+    </LevelData>
+    <LevelData Level="5" PointUpdate="3000">
+      <SkillProb PropType="strength_v"  Value1="25" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="25" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="25" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="25" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1300" />
+      <ItemRequest ItemID="9433" ItemNum="1300" />
+    </LevelData>
+    <LevelData Level="6" PointUpdate="3500">
+      <SkillProb PropType="strength_v"  Value1="30" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="30" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="30" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="30" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1700" />
+      <ItemRequest ItemID="9433" ItemNum="1700" />
+    </LevelData>
+    <LevelData Level="7" PointUpdate="4000">
+      <SkillProb PropType="strength_v"  Value1="35" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="35" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="35" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="35" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="2100" />
+      <ItemRequest ItemID="9433" ItemNum="2100" />
+    </LevelData>
+    <LevelData Level="8" PointUpdate="4500">
+      <SkillProb PropType="strength_v"  Value1="40" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="40" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="40" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="40" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="2500" />
+      <ItemRequest ItemID="9433" ItemNum="2500" />
+    </LevelData>
+    <LevelData Level="9" PointUpdate="5000">
+      <SkillProb PropType="strength_v"  Value1="45" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="45" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="45" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="45" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="3000" />
+      <ItemRequest ItemID="9433" ItemNum="3000" />
+    </LevelData>
+    <LevelData Level="10" PointUpdate="6000">
+      <SkillProb PropType="strength_v"  Value1="50" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="dexterity_v"  Value1="50" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="vitality_v"  Value1="50" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="energy_v"  Value1="50" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="4000" />
+      <ItemRequest ItemID="9433" ItemNum="4000" />
+    </LevelData>
+  </Skills>
+  <Skills ID="35004" Name="Thánh Long Tổng Quyết" Icon="Icon_Skill_4" Desc="Tăng sinh lực và nội lực">
+    <LevelData Level="1" PointUpdate="500">
+      <SkillProb PropType="lifemax_p"  Value1="1" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="1" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="50" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="50" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="100" />
+      <ItemRequest ItemID="9433" ItemNum="100" />
+    </LevelData>
+    <LevelData Level="2" PointUpdate="1000">
+      <SkillProb PropType="lifemax_p"  Value1="3" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="3" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="100" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="100" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="200" />
+      <ItemRequest ItemID="9433" ItemNum="200" />
+    </LevelData>
+    <LevelData Level="3" PointUpdate="1500">
+      <SkillProb PropType="lifemax_p"  Value1="5" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="5" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="150" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="150" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="300" />
+      <ItemRequest ItemID="9433" ItemNum="300" />
+    </LevelData>
+    <LevelData Level="4" PointUpdate="2000">
+      <SkillProb PropType="lifemax_p"  Value1="7" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="7" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="200" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="200" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="500" />
+      <ItemRequest ItemID="9433" ItemNum="500" />
+    </LevelData>
+    <LevelData Level="5" PointUpdate="2500">
+      <SkillProb PropType="lifemax_p"  Value1="10" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="10" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="250" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="250" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="700" />
+      <ItemRequest ItemID="9433" ItemNum="700" />
+    </LevelData>
+    <LevelData Level="6" PointUpdate="3000">
+      <SkillProb PropType="lifemax_p"  Value1="14" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="14" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="300" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="300" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1000" />
+      <ItemRequest ItemID="9433" ItemNum="1000" />
+    </LevelData>
+    <LevelData Level="7" PointUpdate="3500">
+      <SkillProb PropType="lifemax_p"  Value1="18" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="18" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="350" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="350" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="10" />
+      <ItemRequest ItemID="9433" ItemNum="10" />
+    </LevelData>
+    <LevelData Level="8" PointUpdate="4000">
+      <SkillProb PropType="lifemax_p"  Value1="22" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="22" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="400" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="400" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1300" />
+      <ItemRequest ItemID="9433" ItemNum="1300" />
+    </LevelData>
+    <LevelData Level="9" PointUpdate="4500">
+      <SkillProb PropType="lifemax_p"  Value1="26" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="26" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="450" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="450" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="1600" />
+      <ItemRequest ItemID="9433" ItemNum="1600" />
+    </LevelData>
+    <LevelData Level="10" PointUpdate="6000">
+      <SkillProb PropType="lifemax_p"  Value1="30" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_p"  Value1="30" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="lifemax_v"  Value1="500" Value2="-1" Value3="-1"/>
+      <SkillProb PropType="manamax_v"  Value1="500" Value2="-1" Value3="-1"/>
+      <ItemRequest ItemID="9809" ItemNum="2000" />
+      <ItemRequest ItemID="9433" ItemNum="2000" />
+    </LevelData>
+  </Skills>
+  <Donates PointPerGold="0.002">
+    <ItemDonate ItemID="9809" Point="5" />
+    <ItemDonate ItemID="9433" Point="5" />
+  </Donates>
+</GuildDef>

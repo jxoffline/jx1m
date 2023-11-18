@@ -1,0 +1,134 @@
+<!--
+	BOSS thế giới
+	- Group: Thông tin nhóm
+		- SpawnType: Loại xuất hiện
+			0: Ngay khi mở Server
+			1: Hàng ngày vào giờ cố định
+			2: Thứ cố định trong tuần vào giờ tương ứng
+			3: Ngày cố định trong tháng vào giờ tương ứng
+			4: Ngày cố định trong năm vào giờ tương ứng
+			5: Chỉ xuất hiện 1 lần duy nhất vào ngày tương ứng
+		- SpawnTimes: Các mốc thời gian xuất hiện (tùy theo SpawnType là gì)
+			0: Không có tác dụng, bỏ trống
+			1: Giờ:Phút, nhiều mốc thì ngăn cách nhau bởi dấu ;
+			2: Thứ:Giờ:Phút, nhiều mốc thì ngăn cách nhau bởi dấu ;
+			3: Ngày:Giờ:Phút, nhiều mốc thì ngăn cách nhau bởi dấu ;
+			4: Ngày:Tháng:Giờ:Phút, nhiều mốc thì ngăn cách nhau bởi dấu ;
+			5: Ngày:Tháng:Năm:Giờ:Phút, nhiều mốc thì ngăn cách nhau bởi dấu ;
+		- SpawnCount: Số lượng xuất hiện mỗi lần
+		- Notification: Thông báo kênh
+			- NotifyOnSpawn: Thông báo khi xuất hiện
+			- NotifyLocation: Thông báo vị trí cụ thể khi xuất hiện, gồm tọa độ đang đứng, nếu False sẽ chỉ thông báo bản đồ đang đứng
+			- NotifyOnDead: Thông báo khi chết, bị đứa nào giết
+		- Award: Thông tin phần thưởng khi giết Boss
+			- GuildMoney: Ngân quỹ bang hội
+			- PartyMoney: Số bạc cả đội sẽ được
+		- Bosses: Danh sách Boss
+			- Boss: Thông tin Boss
+				- ID: ID Boss (xem ở File Monster)
+				- Name: Tên Boss (bỏ trống sẽ lấy ở File Monster)
+				- Title: Danh hiệu của Boss (bỏ trống sẽ lấy ở File Monster)
+				- Level="50"  MaxHP: Sinh lực tối đa
+				- Auras: Danh sách vòng sáng (ID_Cấp), ngăn cách bởi dấu ;
+				- Skills: Danh sách kỹ năng sẽ sử dụng (ID_Cấp_Hồi), ngăn cách bởi dấu ;
+				- Locations: Danh sách các vị trí xuất hiện
+					- Location: Thông tin vị trí xuất hiện
+						- MapID: ID bản đồ
+						- PosX: Vị trí X
+						- PosY: Vị trí Y
+-->
+<WorldBoss xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Group SpawnType="2" SpawnTimes="2:22:30;4:22:30" SpawnCount="1">
+		<Award GuildMoney="100000" PartyMoney="500000" />
+		<Notification NotifyOnSpawn="true" NotifyLocation="false" NotifyOnDead="true" />
+		<Bosses>
+			<Boss ID="568" Name="Cổ Bách" Title="" Level="50"  MaxHP="500000000" AIScriptID="100001" Auras="14256_20" Skills="14201_40_6000;14200_40_5000;14219_40_4000;14218_40_3000;14236_40_-1" >
+				<Location MapID="16" PosX="2050" PosY="1131" />
+				<Location MapID="16" PosX="7216" PosY="4148" />
+				<Location MapID="18" PosX="1487" PosY="5245" />
+				<Location MapID="18" PosX="7177" PosY="3489" />
+				<Location MapID="36" PosX="6456" PosY="3302" />
+				<Location MapID="36" PosX="1555" PosY="2948" />
+			</Boss>
+			<Boss ID="1368" Name="Đường Phi Yến" Title="" Level="50"  MaxHP="500000000" AIScriptID="100001" Auras="" Skills="14216_40_6000;14217_40_5000;14221_40_4000;14214_40_-1" >
+				<Location MapID="22" PosX="3360" PosY="3140" />
+				<Location MapID="22" PosX="2230" PosY="2598" />
+				<Location MapID="34" PosX="1666" PosY="3912" />
+				<Location MapID="34" PosX="4229" PosY="920" />
+				<Location MapID="37" PosX="1771" PosY="2876" />
+				<Location MapID="37" PosX="6927" PosY="3253" />
+			</Boss>
+			<Boss ID="570" Name="Hà Linh Phiêu" Title="" Level="50"  MaxHP="500000000" AIScriptID="100001" Auras="" Skills="14223_40_6000;14225_40_5000;14208_40_4000;14206_40_-1" >
+				<Location MapID="7" PosX="812" PosY="1248" />
+				<Location MapID="7" PosX="6177" PosY="751" />
+				<Location MapID="13" PosX="6104" PosY="463" />
+				<Location MapID="13" PosX="1430" PosY="4409" />
+				<Location MapID="35" PosX="1001" PosY="1158" />
+				<Location MapID="35" PosX="3420" PosY="3525" />
+			</Boss>
+			<Boss ID="565" Name="Gia Luật Tị Ly" Title="" Level="50"  MaxHP="500000000" AIScriptID="100001" Auras="" Skills="14248_40_6000;14210_40_5000;14211_40_4000;14228_40_3000;14229_40_-1" >
+				<Location MapID="6" PosX="1467" PosY="2279" />
+				<Location MapID="6" PosX="4011" PosY="5280" />
+				<Location MapID="8" PosX="1948" PosY="612" />
+				<Location MapID="8" PosX="5737" PosY="2589" />
+				<Location MapID="11" PosX="3297" PosY="977" />
+				<Location MapID="11" PosX="2316" PosY="3305" />
+			</Boss>
+			<Boss ID="564" Name="Đạo Thanh Chân Nhân" Title="" Level="50"  MaxHP="500000000" AIScriptID="100001" Auras="" Skills="14231_40_6000;14232_40_5000;14230_40_4000;14235_40_-1" >
+				<Location MapID="14" PosX="5710" PosY="1409" />
+				<Location MapID="14" PosX="3099" PosY="1969" />
+				<Location MapID="21" PosX="1299" PosY="421" />
+				<Location MapID="21" PosX="6028" PosY="914" />
+				<Location MapID="31" PosX="2629" PosY="5050" />
+				<Location MapID="31" PosX="6740" PosY="2794" />
+			</Boss>
+		</Bosses>
+	</Group>
+	<Group SpawnType="2" SpawnTimes="0:2:30;0:12:30;0:22:30;1:2:30;1:12:30;1:22:30;3:2:30;3:12:30;3:22:30;5:2:30;5:12:30;5:22:30" SpawnCount="3">
+		<Award GuildMoney="50000" PartyMoney="200000" />
+		<Notification NotifyOnSpawn="true" NotifyLocation="false" NotifyOnDead="true" />
+		<Bosses>
+			<Boss ID="1357" Name="Tịnh Thông" Title="" Level="50"  MaxHP="200000000" AIScriptID="100001" Auras="" Skills="14237_30_5000;14238_30_3000;14236_30_-1" >
+				<Location MapID="28" PosX="1505" PosY="5483" />
+				<Location MapID="28" PosX="9769" PosY="3005" />
+				<Location MapID="27" PosX="2356" PosY="921" />
+				<Location MapID="27" PosX="6839" PosY="1217" />
+			</Boss>
+			<Boss ID="525" Name="Liễu Thanh Thanh" Title="" Level="50"  MaxHP="200000000" AIScriptID="100001" Auras="" Skills="14241_30_5000;14242_30_4000;14239_30_-1" >
+				<Location MapID="9" PosX="6359" PosY="4182" />
+				<Location MapID="9" PosX="6022" PosY="1258" />
+				<Location MapID="20" PosX="3707" PosY="544" />
+				<Location MapID="20" PosX="7432" PosY="2263" />
+			</Boss>
+			<Boss ID="515" Name="Diệu Như" Title="" Level="50"  MaxHP="200000000" AIScriptID="100001" Auras="" Skills="14244_30_5000;14246_30_3000;14247_30_-1" >
+				<Location MapID="19" PosX="1673" PosY="749" />
+				<Location MapID="19" PosX="6015" PosY="1008" />
+				<Location MapID="29" PosX="4841" PosY="1597" />
+				<Location MapID="29" PosX="946" PosY="2365" />
+			</Boss>
+			<Boss ID="747" Name="Hà Nhân Ngã" Title="" Level="50"  MaxHP="200000000" AIScriptID="100001" Auras="" Skills="14211_30_5000;14229_30_4000;14250_30_-1" >
+				<Location MapID="3" PosX="2024" PosY="10483" />
+				<Location MapID="3" PosX="6406" PosY="9910" />
+				<Location MapID="42" PosX="3556" PosY="4125" />
+				<Location MapID="42" PosX="7934" PosY="1730" />
+			</Boss>
+			<Boss ID="513" Name="Trương Tông Chính" Title="" Level="50"  MaxHP="200000000" AIScriptID="100001" Auras="" Skills="14251_30_5000;14230_30_3000;14252_30_-1" >
+				<Location MapID="33" PosX="5923" PosY="252" />
+				<Location MapID="33" PosX="4251" PosY="87" />
+				<Location MapID="5" PosX="587" PosY="4192" />
+				<Location MapID="5" PosX="8332" PosY="4048" />
+			</Boss>
+		</Bosses>
+	</Group>
+	<Group SpawnType="2" SpawnTimes="7:18:30" SpawnCount="1">
+		<Award GuildMoney="200000" PartyMoney="1000000" />
+		<Notification NotifyOnSpawn="true" NotifyLocation="false" NotifyOnDead="true" />
+		<Bosses>
+			<Boss ID="6359" Name="Võ Kiếm Cao Thủ" Title="" Level="150"  MaxHP="900000000" AIScriptID="100001" Auras="14256_20" Skills="14216_40_6000;14217_40_5000;14221_40_4000;14214_40_-1" >
+				<Location MapID="1" PosX="1379" PosY="1820" />
+				<Location MapID="1" PosX="1155" PosY="4970" />
+				<Location MapID="1" PosX="6765" PosY="5104" />
+			</Boss>
+		</Bosses>
+	</Group>
+</WorldBoss>

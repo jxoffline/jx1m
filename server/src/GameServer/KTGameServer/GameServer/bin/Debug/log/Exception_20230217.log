@@ -1,0 +1,861 @@
+2023-02-17 11:33:36: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 11:33:37: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 12:00:03: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 12:00:04: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 12:01:33: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 12:01:34: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 12:03:35: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 12:03:35: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 12:05:58: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait)   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e)
+   at GameServer.Core.Executor.NormalScheduleTask.run()
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+2023-02-17 12:06:01: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait)   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e)
+   at GameServer.Core.Executor.NormalScheduleTask.run()
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 13:00:01: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait)   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e)
+   at GameServer.Core.Executor.NormalScheduleTask.run()
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 13:00:02: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait)   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e)
+   at GameServer.Core.Executor.NormalScheduleTask.run()
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 13:36:33: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:43001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Server.TCP.TMSKSocket.Connect(EndPoint remoteEP) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\TCPSOCKET\TMSKSocket.cs:line 1877
+   at GameServer.Server.TCPClient.Connect(String ip, Int32 port, String serverName) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Server\TCPClient.cs:line 118
+   at GameServer.Server.TCPClientPool.Init(Int32 count, String ip, Int32 port, String serverName) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Server\TCPClientPool.cs:line 94
+   at GameServer.Program.InitTCPManager(XElement xml, Boolean bConnectDB) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Program.cs:line 809
+   at GameServer.Program.InitServer() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Program.cs:line 511
+2023-02-17 13:36:58: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 13:36:58: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 13:42:46: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 13:42:47: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 14:00:00: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 14:00:05: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 15:00:04: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 15:00:04: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 16:00:02: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 16:00:04: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 17:00:01: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 17:00:03: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 18:00:03: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+
+2023-02-17 18:00:06: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 19:00:02: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 19:00:04: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 20:00:01: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 20:00:03: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 21:00:01: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 21:00:01: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 22:00:00: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IKuaFuCopyService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.KFCopyRpcClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 386   at KF.Client.KFCopyRpcClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\KuaFu\KFCopyRpcClient.cs:line 296
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+
+2023-02-17 22:00:06: ##exception##
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:4000
+
+Server stack trace: 
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Runtime.Remoting.Channels.RemoteConnection.CreateNewSocket(EndPoint ipEndPoint)
+   at System.Runtime.Remoting.Channels.SocketCache.GetSocket(String machinePortAndSid, Boolean openNew)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.SendRequestWithRetry(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream)
+   at System.Runtime.Remoting.Channels.Tcp.TcpClientTransportSink.ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, ITransportHeaders& responseHeaders, Stream& responseStream)
+   at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at KF.Contract.Interface.IYongZheZhanChangService.InitializeClient(IKuaFuClient callback, KuaFuClientContext clientInfo)
+   at KF.Client.YongZheZhanChangClient.GetKuaFuService(Boolean noWait) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 318   at KF.Client.YongZheZhanChangClient.TimerProc(Object sender, EventArgs e) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\VLTK\Core\CrossService\YongZheZhanChang\YongZheZhanChangClient.cs:line 228
+   at GameServer.Core.Executor.NormalScheduleTask.run() in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 38
+   at GameServer.Core.Executor.ScheduleExecutor2.OnTimedEvent(Object source) in F:\Clound\Dropbox\VL_Project\GameServer\KTGameServer\GameServer\Core\Executor\ScheduleExecutor2.cs:line 132
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+

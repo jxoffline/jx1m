@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <!--DCLog pid 日志地区编号-->
+	<DCLogs>
+        <!--DCLog path 日志的存放目录 要和运维沟通-->
+		<DCLog pid="0" path="d:\\data\\syslog\\platformlog" logHead=""/>
+	</DCLogs>
+
+  <!--FileBans 角色禁止登陆相关-->
+	<!--FileBanPros   FileBanHour角色禁止登陆时间，单位小时-->
+	<FileBans>
+		<FileBanPros FileBanHour="24"/>
+	</FileBans>
+
+	<!--Chats 聊天等级限制-->
+	<Chats>
+	  <Chat world="52" family="52" team="52" private="52" near="52" />
+	  <!--WorldChats 世界聊天等级限制-->
+	  <!--Item ID 序号-->
+	  <!--Item Day 开服后在多少天之内-->
+	  <!--Item Limit 等级限制，超过最大天数后，读取最大天数的配制-->
+		<WorldChats>
+		  <Item ID="1" Day="100" Limit="0,52"/>
+		</WorldChats>
+		  <!--FamilyChats 帮会等级限制-->
+	    <!--Item ID 序号-->
+	    <!--Item Day 开服后在多少天之内-->
+	    <!--Item Limit 等级限制，超过最大天数后，读取最大天数的配制-->
+		<FamilyChats>
+		  <Item ID="1" Day="100" Limit="0,52"/>
+		</FamilyChats>
+			<!--TeamChats 组队聊天等级限制-->
+	    <!--Item ID 序号-->
+	    <!--Item Day 开服后在多少天之内-->
+	    <!--Item Limit等级限制，超过最大天数后，读取最大天数的配制-->
+		<TeamChats>
+		  <Item ID="1" Day="100" Limit="0,52"/>
+		</TeamChats>
+			<!--PrivateChats 私人聊天等级限制-->
+	    <!--Item ID 序号-->
+	    <!--Item Day 开服后在多少天之内-->
+	    <!--Item Limit  等级限制，超过最大天数后，读取最大天数的配制-->
+		<PrivateChats>
+		  <Item ID="1" Day="100" Limit="0,52"/>
+		</PrivateChats>
+			<!--NearChats 附近聊天等级限制-->
+	    <!--Item ID 序号-->
+	    <!--Item Day 开服后在多少天之内-->
+	    <!--Item Limit  等级限制，超过最大天数后，读取最大天数的配制-->
+		<NearChats>
+		  <Item ID="1" Day="100" Limit="0,52"/>
+		</NearChats> 
+	</Chats>
+
+	<!--Speed BanMins 加速禁止登陆的时间(分钟)-->
+	<!--Speed maxposcmdnum 5秒加速检测阈值-->
+	<Speeds>
+		<Speed BanMins="10" MaxPosCmdNum="8"/>
+	</Speeds>
+	
+	<!--Waiting 排队相关-->
+	<!--Server ID 服务器编号  0为默认值-->
+	<!--Server NeedWaitNumber 需要排队的人数 用逗号分隔普通用户和vip用户-->
+	<!--Server MaxNumber 服务器最大人数-->
+	<!--Server WaitingMaxNumber 排队的队伍最大数量-->
+	<!--Server EnterMinInt 玩家进入的最小时间间隔 毫秒-->
+	<!--Server AllowMSecs 排队成功允许多久进入 毫秒-->
+	<!--Server LogoutAllowMSecs 登出后多久允许任意登陆 毫秒-->
+	<!--Server vipexp 充值多少钱算vip-->	
+	<Waiting >
+		<!--默认配置-->
+		<Server ID="0" NeedWaitNumber="700,900" MaxNumber="900,1000" WaitingMaxNumber="400,400" EnterMinInt="30000,30000" AllowMSecs="180000,180000" LogoutAllowMSecs="20000,20000" vipexp="10" />
+		<!--针对单独区的配置-->
+		<Server ID="1" NeedWaitNumber="700,900" MaxNumber="900,1000" WaitingMaxNumber="400,400" EnterMinInt="30000,30000" AllowMSecs="180000,180000" LogoutAllowMSecs="20000,20000" vipexp="10" />
+	</Waiting>
+	
+	<!--TradeLevelLimit 交易等级限制-->
+	<!--Item ID 序号-->
+	<!--Item Day 开服后过了多少天-->
+	<!--Item Limit 等级限制-->
+	<TradeLevelLimit >
+		<Item ID="1" Day="100" Limit="0,0"/>
+		<Item ID="2" Day="200" Limit="0,0"/>
+		<Item ID="3" Day="300" Limit="0,0"/>
+	</TradeLevelLimit>
+	
+	<!--海外功能需求,游客帐号增加交易等级限制的配置-->
+	<GuestTradeLevelLimits> 
+		<GuestTradeLevelLimit ID="1" Limit="0,0"/> 
+	</GuestTradeLevelLimits> 
+	
+	<TradeLimits >
+		<TradeLimit Platform="app" BeginTime="2016-10-01 00:00:00" EndTime="2099-12-31 23:59:59" LevelLimit="3,100" ZuanShiLimit="1800" ZuanShiOpen="1"  Message="您的转生等级无法交易出钻石"/>	
+	</TradeLimits>
+</Config>
+
+
+
+

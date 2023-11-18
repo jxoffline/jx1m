@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FactionDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema" MAX_ATTEND_PLAYER="200" MIN_ATTEND_PLAYER="2" MIN_LEVEL="60">
+   <!-- Ngày nào trong tuần có sự kiện-->
+   <OPEN_WEEK_DATE>2</OPEN_WEEK_DATE>
+
+
+   <!-- Thời gian bắt đầu sự kiện-->
+   <TimeBattle Hours="20" Minute="0" />
+
+
+
+   <!-- Tọa độ vào map -->
+   <GoIn PosX="3502" PosY="2305" />
+
+
+   <!-- Danh sách các map diễn ra sự kiện-->
+   <MapFactionList FactionID="1" MapId="71" />
+   <MapFactionList FactionID="2" MapId="80" />
+   <MapFactionList FactionID="3" MapId="82" />
+   <MapFactionList FactionID="4" MapId="81" />
+   <MapFactionList FactionID="5" MapId="83" />
+   <MapFactionList FactionID="6" MapId="84" />
+   <MapFactionList FactionID="7" MapId="87" />
+   <MapFactionList FactionID="8" MapId="86" />
+   <MapFactionList FactionID="9" MapId="88" />
+   <MapFactionList FactionID="10" MapId="89" />
+   <MapFactionList FactionID="11" MapId="85" />
+
+
+
+   <!-- Config tọa độ cho các lôi đài-->
+   <TotalArena ArenaID="0" PosX="6197" PosY="3734" />
+   <TotalArena ArenaID="1" PosX="5415" PosY="4149" />
+   <TotalArena ArenaID="2" PosX="7186" PosY="3269" />
+   <TotalArena ArenaID="3" PosX="4441" PosY="4648" />
+   <TotalArena ArenaID="4" PosX="8216" PosY="2763" />
+   <TotalArena ArenaID="5" PosX="1234" PosY="2919" />
+   <TotalArena ArenaID="6" PosX="2219" PosY="2405" />
+   <TotalArena ArenaID="7" PosX="3855" PosY="1553" />
+   <TotalArena ArenaID="8" PosX="4822" PosY="1105" />
+
+   <!-- Randomo tọa độ cờ -->
+   <RandomFlag PosX="1595" PosY="3459" />
+   <RandomFlag PosX="2347" PosY="3657" />
+   <RandomFlag PosX="3671" PosY="4215" />
+   <RandomFlag PosX="3602" PosY="4444" />
+   <RandomFlag PosX="7318" PosY="2610" />
+   <RandomFlag PosX="5099" PosY="1542" />
+   <RandomFlag PosX="6992" PosY="1851" />
+   <RandomFlag PosX="3786" PosY="2069" />
+   <RandomFlag PosX="3151" PosY="2274" />
+   <RandomFlag PosX="7821" PosY="3043" />
+   <RandomFlag PosX="6247" PosY="4142" />
+   <RandomFlag PosX="5030" PosY="4430" />
+   <RandomFlag PosX="4576" PosY="3931" />
+   <RandomFlag PosX="3862" PosY="3497" />
+   <RandomFlag PosX="2753" PosY="2988" />
+   <RandomFlag PosX="6514" PosY="2607" />
+   <RandomFlag PosX="5311" PosY="2024" />
+   <RandomFlag PosX="4240" PosY="2232" />
+   <RandomFlag PosX="7079" PosY="2353" />
+   <RandomFlag PosX="7495" PosY="2128" />
+   <RandomFlag PosX="7446" PosY="2821" />
+   <RandomFlag PosX="6829" PosY="3861" />
+   <RandomFlag PosX="9055" PosY="2727" />
+   <RandomFlag PosX="8212" PosY="3150" />
+   <RandomFlag PosX="8334" PosY="2332" />
+   <RandomFlag PosX="5977" PosY="1500" />
+   <RandomFlag PosX="3873" PosY="921" />
+   <RandomFlag PosX="2854" PosY="1458" />
+   <RandomFlag PosX="2313" PosY="1749" />
+   <RandomFlag PosX="1786" PosY="2023" />
+   <RandomFlag PosX="1145" PosY="2321" />
+   <RandomFlag PosX="420" PosY="2744" />
+   <RandomFlag PosX="2022" PosY="2789" />
+   <RandomFlag PosX="1866" PosY="3178" />
+   <RandomFlag PosX="2452" PosY="2883" />
+   <RandomFlag PosX="2688" PosY="3465" />
+   <RandomFlag PosX="3356" PosY="4097" />
+   <RandomFlag PosX="5672" PosY="3397" />
+   <RandomFlag PosX="6514" PosY="2971" />
+   <RandomFlag PosX="5211" PosY="3664" />
+   <RandomFlag PosX="4316" PosY="1258" />
+   <RandomFlag PosX="7110" PosY="2132" />
+   <RandomFlag PosX="2101" PosY="3629" />
+   <RandomFlag PosX="2084" PosY="3348" />
+   <RandomFlag PosX="3311" PosY="1209" />
+   <RandomFlag PosX="5650" PosY="1299" />
+   <RandomFlag PosX="5980" PosY="2349" />
+   <RandomFlag PosX="4534" PosY="4152" />
+   <RandomFlag PosX="5262" PosY="4654" />
+
+
+   <!-- Random tọa độ BOX -->
+   <!-- 5 -->
+   <Box ArenaID="5">
+      <RandomBox PosX="822" PosY="3121" />
+      <RandomBox PosX="1243" PosY="3310" />
+      <RandomBox PosX="1703" PosY="3100" />
+      <RandomBox PosX="1774" PosY="2702" />
+      <RandomBox PosX="1284" PosY="2447" />
+   </Box>
+   <!-- 8 -->
+   <Box ArenaID="8">
+      <RandomBox PosX="4852" PosY="1563" />
+      <RandomBox PosX="5136" PosY="1424" />
+      <RandomBox PosX="5495" PosY="1165" />
+      <RandomBox PosX="5570" PosY="1005" />
+      <RandomBox PosX="5184" PosY="821" />
+      <RandomBox PosX="4875" PosY="725" />
+      <RandomBox PosX="4543" PosY="690" />
+      <RandomBox PosX="4317" PosY="813" />
+      <RandomBox PosX="4037" PosY="981" />
+      <RandomBox PosX="4508" PosY="1325" />
+      <RandomBox PosX="4763" PosY="1493" />
+   </Box>
+   <!-- 6 -->
+   <Box ArenaID="6">
+      <RandomBox PosX="2394" PosY="2727" />
+      <RandomBox PosX="1822" PosY="2656" />
+      <RandomBox PosX="1504" PosY="2445" />
+      <RandomBox PosX="1629" PosY="2094" />
+      <RandomBox PosX="2110" PosY="1914" />
+      <RandomBox PosX="2506" PosY="2044" />
+      <RandomBox PosX="2917" PosY="2300" />
+   </Box>
+   <!-- 7 -->
+   <Box ArenaID="7">
+      <RandomBox PosX="4103" PosY="1986" />
+      <RandomBox PosX="4170" PosY="1789" />
+      <RandomBox PosX="4638" PosY="1584" />
+      <RandomBox PosX="4506" PosY="1383" />
+      <RandomBox PosX="4031" PosY="1159" />
+      <RandomBox PosX="3765" PosY="1076" />
+      <RandomBox PosX="3788" PosY="1256" />
+      <RandomBox PosX="3622" PosY="1404" />
+      <RandomBox PosX="3189" PosY="1605" />
+      <RandomBox PosX="3628" PosY="1845" />
+   </Box>
+   <!-- 3 -->
+   <Box ArenaID="3">
+      <RandomBox PosX="4607" PosY="5017" />
+      <RandomBox PosX="4881" PosY="4911" />
+      <RandomBox PosX="4902" PosY="4413" />
+      <RandomBox PosX="4628" PosY="4264" />
+      <RandomBox PosX="3718" PosY="4509" />
+      <RandomBox PosX="3921" PosY="4401" />
+      <RandomBox PosX="4269" PosY="4208" />
+   </Box>
+   <!-- 1 -->
+   <Box ArenaID="1">
+      <RandomBox PosX="5746" PosY="4364" />
+      <RandomBox PosX="6013" PosY="4235" />
+      <RandomBox PosX="5601" PosY="3819" />
+      <RandomBox PosX="5355" PosY="3667" />
+      <RandomBox PosX="4876" PosY="3896" />
+      <RandomBox PosX="4703" PosY="3972" />
+      <RandomBox PosX="4772" PosY="4270" />
+      <RandomBox PosX="5334" PosY="4457" />
+   </Box>
+   <!-- 4 -->
+   <Box ArenaID="4">
+      <RandomBox PosX="8528" PosY="3030" />
+      <RandomBox PosX="8834" PosY="2754" />
+      <RandomBox PosX="7700" PosY="2511" />
+      <RandomBox PosX="7992" PosY="2335" />
+      <RandomBox PosX="8544" PosY="2461" />
+      <RandomBox PosX="8965" PosY="2640" />
+      <RandomBox PosX="8741" PosY="2895" />
+      <RandomBox PosX="8069" PosY="3133" />
+   </Box>
+   <!-- 2 -->
+   <Box ArenaID="2">
+      <RandomBox PosX="7261" PosY="3629" />
+      <RandomBox PosX="7718" PosY="3417" />
+      <RandomBox PosX="7992" PosY="3251" />
+      <RandomBox PosX="7469" PosY="3514" />
+      <RandomBox PosX="7684" PosY="3019" />
+      <RandomBox PosX="8887" PosY="3088" />
+      <RandomBox PosX="7167" PosY="2748" />
+      <RandomBox PosX="6699" PosY="2970" />
+      <RandomBox PosX="6498" PosY="3105" />
+      <RandomBox PosX="6727" PosY="3435" />
+   </Box>
+
+   <!-- Random tọa độ BOX_1 -->
+   <Box ArenaID="0">
+      <RandomBox PosX="6905" PosY="3765" />
+      <RandomBox PosX="6585" PosY="3966" />
+      <RandomBox PosX="6334" PosY="4077" />
+      <RandomBox PosX="5900" PosY="3959" />
+      <RandomBox PosX="5748" PosY="3867" />
+      <RandomBox PosX="5400" PosY="3696" />
+      <RandomBox PosX="5557" PosY="3561" />
+      <RandomBox PosX="5856" PosY="3420" />
+      <RandomBox PosX="6167" PosY="3291" />
+      <RandomBox PosX="6343" PosY="3216" />
+      <RandomBox PosX="6499" PosY="3335" />
+      <RandomBox PosX="6717" PosY="3395" />
+      <RandomBox PosX="6953" PosY="3554" />
+      <RandomBox PosX="7065" PosY="3720" />
+      <RandomBox PosX="6673" PosY="3930" />
+      <RandomBox PosX="6470" PosY="4000" />
+      <RandomBox PosX="6109" PosY="4060" />
+   </Box>
+
+   <!-- Tọa độ hồi sinh random trong hỗn chiến -->
+   <PVPRandomRevice PosX="8187" PosY="6283" />
+   <PVPRandomRevice PosX="6185" PosY="5489" />
+   <PVPRandomRevice PosX="8345" PosY="4284" />
+   <PVPRandomRevice PosX="10389" PosY="5263" />
+   <PVPRandomRevice PosX="9163" PosY="5614" />
+   <PVPRandomRevice PosX="8943" PosY="5810" />   
+   <PVPRandomRevice PosX="7196" PosY="5834" />
+   <PVPRandomRevice PosX="7372" PosY="4897" />
+   <PVPRandomRevice PosX="8880" PosY="4873" />
+   <PVPRandomRevice PosX="9615" PosY="5403" />
+   <PVPRandomRevice PosX="7759" PosY="6007" />
+   <PVPRandomRevice PosX="6756" PosY="5310" />
+   <PVPRandomRevice PosX="7988" PosY="4986" />
+   <PVPRandomRevice PosX="7461" PosY="5471" />
+   <PVPRandomRevice PosX="8407" PosY="5902" />
+   <PVPRandomRevice PosX="9020" PosY="5397" />
+   <PVPRandomRevice PosX="7643" PosY="4391" />
+   <PVPRandomRevice PosX="9547" PosY="4680" />   
+   <PVPRandomRevice PosX="8794" PosY="6224" />
+   <PVPRandomRevice PosX="6702" PosY="5751" />
+   <PVPRandomRevice PosX="6574" PosY="5028" />
+   <PVPRandomRevice PosX="7211" PosY="4724" />
+   <PVPRandomRevice PosX="8383" PosY="4781" />
+   <PVPRandomRevice PosX="7910" PosY="5647" />
+   <PVPRandomRevice PosX="9517" PosY="5715" />
+   
+   
+   
+
+
+	<FactionAward TopRank="1" Point="50" PointType="201" ItemList="335|12" />
+	<FactionAward TopRank="2" Point="45" PointType="201" ItemList="335|8" />
+    <FactionAward TopRank="4" Point="40" PointType="201" ItemList="335|5" />
+	<FactionAward TopRank="8" Point="35" PointType="201" ItemList="335|2" />
+    <FactionAward TopRank="16" Point="30" PointType="201" ItemList="335|1" />
+  
+  
+	<TitleFaction FactionID="1" TitleID="1" />
+	<TitleFaction FactionID="2" TitleID="2" />
+	<TitleFaction FactionID="3" TitleID="3" />
+	<TitleFaction FactionID="4" TitleID="4" />
+	<TitleFaction FactionID="5" TitleID="5" />
+	<TitleFaction FactionID="6" TitleID="6" />
+	<TitleFaction FactionID="7" TitleID="7" />
+	<TitleFaction FactionID="8" TitleID="8" />
+	<TitleFaction FactionID="9" TitleID="9" />
+	<TitleFaction FactionID="10" TitleID="10" />
+	<TitleFaction FactionID="11" TitleID="11" />
+
+  
+  
+
+   <!-- Thời gian các sự kiện tính theo giây
+   <TimeAct SIGN_UP_DULATION="1800" MELEE_PVP_DULATION="300" MELEE_PVP_FREE_DUALTION="300" FREE_ELIMINATION="420" ELIMINATION_ROUND_ROUND="420" REVICE_AWARD="600" />
+	-->
+   <TimeAct SIGN_UP_DULATION="1800" MELEE_PVP_DULATION="300" MELEE_PVP_FREE_DUALTION="300" FREE_ELIMINATION="420" ELIMINATION_ROUND_ROUND="420" REVICE_AWARD="600" />
+</FactionDef>

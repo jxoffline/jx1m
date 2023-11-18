@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	SỰ KIỆN VẬN TIÊU
+		- Config: Thiết lập tổng quan
+			- OpenTime: Thời gian mở sự kiện
+			- EndTime: Thời gian đóng sự kiện
+			- DayOfWeek: Các thứ trong tuần diễn ra sự kiện
+			- MaxRoundsPerDay: Số lượt nhận tiêu tối đa trong ngày
+		- Carriages: Danh sách xe tiêu
+			- Carriage: Thông tin xe tiêu
+				- Type: Loại xe tiêu (0: Tiêu thường, 1: Tiêu bạch kim, 2: Tiêu hoàng kim)
+				- Name: Tên xe tiêu
+				- ResID: ID Res (ID của quái trong file Monsters.xml)
+				- MoveSpeed: Tốc độ di chuyển
+				- Vision: Tầm nhìn của xe tiêu. Khi xe tiêu di chuyển, đi đến đâu thì toàn bộ quái trong tầm nhìn sẽ đuổi theo để đánh.
+				- MaxHP: Sinh lực tối đa
+		- CargoNPCs: Danh sách NPC tiếp tiêu
+			- NPC: Thông tin NPC
+				- ID: ID NPC (xem ở file NPCs.xml)
+				- Name: Tên NPC
+				- Title: Danh hiệu
+				- MapID: ID bản đồ
+				- PosX: Tọa độ X
+				- PosY: Tọa độ Y
+		- Awards: Danh sách phần thưởng vận tiêu
+			- Award: Thông tin phần thưởng
+				- Type: Loại xe tiêu
+				- Money: Phần thưởng bạc
+				- BoundMoney: Phần thưởng bạc khóa
+				- Token: Phần thưởng KNB
+				- BoundToken: Phần thưởng KNB khóa
+				- Item: Thông tin vật phẩm thưởng
+					- ItemID: ID vật phẩm
+					- Quantity: Số lượng
+					- Bound: Khóa khi nhận không
+		- DeathPunishs: Danh sách vật phẩm rơi ra khi tiêu chết
+			- Punishment: Thông tin rơi
+				- Type: Loại xe tiêu
+				- Drop: Thông tin vật phẩm rơi
+					- ItemID: ID vật phẩm
+					- Quantity: Số lượng
+					- Bound: Nhặt lên khóa hay không
+		- Paths: Danh sách đường đi
+			- Path: Thông tin đoạn đường
+				- Type: Loại xe tiêu
+				- RequireLevel: Cấp độ yêu cầu
+				- RequireMoney: Thế chấp bạc
+				- RequireBoundMoney: Thế chấp bạc khóa
+				- RequireToken: Thế chấp KNB
+				- RequireBoundToken: Thế chấp KNB khóa
+				- LimitTime: Thời gian vận tiêu tối đa
+				- MovePath: Thông tin bản đồ đường đi
+					- FromMapID: Từ bản đồ
+					- ToMapID: Đến bản đồ
+			=> Đi giữa 2 bản đồ khác nhau hoặc chung bản đồ, hệ thống sẽ chọn ngẫu nhiên NPC nằm trong bản đồ đích đến để trả tiêu
+					
+-->
+<CargoCarriage>
+	<Config MaxRoundsPerDay="2" />
+	
+	<Carriages>
+		<Carriage Type="1" Name="Xe Tiêu Thường" ResID="10101" MoveSpeed="7" Vision="300" MaxHP="100000" />
+		<Carriage Type="2" Name="Xe Tiêu Bạch Kim" ResID="10139" MoveSpeed="7" Vision="300" MaxHP="1000000" />
+		<Carriage Type="3" Name="Xe Tiêu Hoàng Kim" ResID="10100" MoveSpeed="7" Vision="300" MaxHP="5000000" />
+	</Carriages>
+	
+	<CargoNPCs>
+		<NPC ID="13100" Name="Tiêu Viễn Tứ" Title="Lão Hổ Động Vận Tiêu Sứ (Tây)" MapID="17" PosX="995" PosY="2060" />
+		<NPC ID="13101" Name="Hồ Bát Nhất" Title="Mạc Cao Quật Vận Tiêu Sứ (Nam)" MapID="18" PosX="7661" PosY="6053" />
+		<NPC ID="13102" Name="Nhiếp Đình" Title="Tần Lăng Vận Tiêu Sứ (Đông)" MapID="24" PosX="3031" PosY="2011" />
+		<NPC ID="13103" Name="Hoàng Bảo Thiên" Title="Dược Vương Cốc Vận Tiêu Sứ (Đông)" MapID="35" PosX="8122" PosY="1412" />
+		<NPC ID="13104" Name="Phùng Khinh" Title="Sa Mạc Sơn Động Vận Tiêu Sứ (Đông)" MapID="23" PosX="7388" PosY="3716" />
+		<NPC ID="13105" Name="Đỗ Kỳ Thương" Title="Lão Hổ Động Vận Tiêu Sứ (Đông)" MapID="17" PosX="5943" PosY="771" />
+		<NPC ID="13106" Name="Đoàn Chính Nguyên" Title="Mạc Cao Quật Vận Tiêu Sứ (Bắc)" MapID="18" PosX="3677" PosY="664" />
+		<NPC ID="13107" Name="Ngô Bính" Title="Tần Lăng Vận Tiêu Sứ (Tây)" MapID="24" PosX="658" PosY="1608" />
+		<NPC ID="13108" Name="Lữ Linh Tiên" Title="Dược Vương Cốc Vận Tiêu Sứ (Tây)" MapID="35" PosX="1540" PosY="2880" />
+		<NPC ID="13109" Name="Triệu Hùng" Title="Sa Mạc Sơn Động Vận Tiêu Sứ (Nam)" MapID="23" PosX="4561" PosY="429" />
+	</CargoNPCs>
+	
+	<Awards>
+		<Award Type="1" Money="0" BoundMoney="0" Token="0" BoundToken="0">
+			<Item ItemID="8488" Quantity="1" Bound="true" />
+			<Item ItemID="184" Quantity="2" Bound="true" />
+			
+		</Award>
+		<Award Type="2" Money="0" BoundMoney="500000" Token="0" BoundToken="0">
+			<Item ItemID="8488" Quantity="5" Bound="true" />
+			<Item ItemID="8483" Quantity="1" Bound="true" />
+			<Item ItemID="185" Quantity="2" Bound="true" />
+			
+		</Award>
+		<Award Type="3" Money="0" BoundMoney="0" Token="0" BoundToken="5000">
+			<Item ItemID="8488" Quantity="10" Bound="true" />
+			<Item ItemID="8483" Quantity="2" Bound="true" />
+			<Item ItemID="186" Quantity="2" Bound="true" />
+			
+		</Award>
+	</Awards>
+	
+	<DeathPunishs>
+		<Punishment Type="1">
+			<Drop ItemID="184" Quantity="1" Bound="true" />
+		</Punishment>
+		<Punishment Type="2">
+			<Drop ItemID="8483" Quantity="1" Bound="true" />
+			<Drop ItemID="185" Quantity="1" Bound="true" />
+		</Punishment>
+		<Punishment Type="3">
+			<Drop ItemID="8483" Quantity="2" Bound="true" />
+			<Drop ItemID="186" Quantity="1" Bound="true" />
+		</Punishment>
+	</DeathPunishs>
+	
+	<Paths>
+		<Path Type="1" RequireLevel="80" RequireMoney="0" RequireBoundMoney="500000" RequireToken="0" RequireBoundToken="0" LimitTime="1000000" NotifySystem="false">
+			<MovePath FromMapID="17" ToMapID="17" MinLevel="80"/>
+			<MovePath FromMapID="18" ToMapID="18" MinLevel="80"/>
+			<MovePath FromMapID="24" ToMapID="24" MinLevel="80"/>
+			<MovePath FromMapID="35" ToMapID="35" MinLevel="80"/>
+			
+		</Path>
+		<Path Type="2" RequireLevel="90" RequireMoney="1500000" RequireBoundMoney="0" RequireToken="0" RequireBoundToken="0" LimitTime="1000000" NotifySystem="false">
+			<MovePath FromMapID="17" ToMapID="17" MinLevel="90"/>
+			<MovePath FromMapID="18" ToMapID="18" MinLevel="90"/>
+			<MovePath FromMapID="24" ToMapID="24" MinLevel="90"/>
+			<MovePath FromMapID="35" ToMapID="35" MinLevel="90"/>
+		</Path>
+		<Path Type="3" RequireLevel="100" RequireMoney="0" RequireBoundMoney="0" RequireToken="10000" RequireBoundToken="0" LimitTime="1000000" NotifySystem="true">
+			<MovePath FromMapID="17" ToMapID="17" MinLevel="100"/>
+			<MovePath FromMapID="18" ToMapID="18" MinLevel="100"/>
+			<MovePath FromMapID="24" ToMapID="24" MinLevel="100"/>
+			<MovePath FromMapID="35" ToMapID="35" MinLevel="100"/>
+		</Path>
+	</Paths>
+</CargoCarriage>

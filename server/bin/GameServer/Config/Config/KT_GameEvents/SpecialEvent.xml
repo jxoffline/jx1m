@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	SỰ KIỆN ĐẶC BIỆT
+	- Event: Thông tin sự kiện
+		- Activate: Kích hoạt sự kiện không
+		- Type: Loại sự kiện (1: Đánh quái nhặt nguyên liệu đổi quà, 2: Thu thập nguyên liệu đổi quà)
+		- Name: Tên sự kiện
+		- TimeConfig: Thiết lập thời gian sự kiện
+			- FromDay: Từ ngày
+			- ToDay: Đến ngày
+			
+		====== Với sự kiện Đánh quái nhặt nguyên liệu đổi quà ======
+			- Materials: Nguyên liệu rơi
+				- DropInfo: Thông tin rơi
+					- MonsterID: ID quái
+					- MapIDs: Danh sách ID bản đồ, ngăn cách bởi dấu ; (-1 sẽ có tác dụng trên tất cả bản đồ)
+					- Item: Thông tin vật phẩm rơi
+						- ID: ID vật phẩm
+						- Rate: Tỷ lệ rơi (phần 10.000)
+			- Awards: Danh sách phần thưởng
+				- AwardInfo: Thông tin phần thưởng
+					- Selection: Nội dung lựa chọn ở NPC
+					- RequireItems: Danh sách vật phẩm yêu cầu, ngăn cách nhau bởi dấu ;
+						- Gồm 2 tham biến ID_Số lượng
+					- AwardCount: Số lượng phần thưởng được nhận
+					- RequireFreeBagSpace: Yêu cầu số ô trống trong túi
+					- RequireMoney: Yêu cầu bạc
+					- RequireBoundMoney: Yêu cầu bạc khóa
+					- RequireToken: Yêu cầu đồng
+					- RequireBoundToken: Yêu cầu đồng khóa
+					- Award: Thông tin món thưởng
+						- ItemID: ID vật phẩm
+						- Quantity: Số lượng
+						- Rate: Tỷ lệ nhận được (phần 10.000)
+						- Bound: Khóa hay không
+						
+		====== Với sự kiện Thu thập nguyên liệu đổi quà ======
+			- Materials: Nguyên liệu thu thập
+				- GrowPoint: Thông tin điểm thu thập
+					- ID: ID điểm thu thập (xem ở File NPCs.xml)
+					- Name: Tên điểm thu thập (bỏ trống sẽ lấy tên ở file NPCs.xml)
+					- MapID: ID bản đồ
+					- Pos: Danh sách vị trí xuất hiện trên bản đồ, ngăn cách bởi dấu ;
+					- RespawnTicks: Thời gian xuất hiện tính từ khi sự kiện bắt đầu (Mili giây) (-1 sẽ không xuất hiện)
+					- DurationTicks: Thời gian tồn tại (Mili giây) (-1 là vĩnh viễn)
+					- CollectTicks: Thời gian thu thập (Mili giây)
+					- SpawnCount: Tổng số vị trí sẽ sinh ra (-1 sẽ sinh ra toàn bộ vị trí đã chỉ định)
+					- RequireBagSpaces: Yêu cầu số ô trống trong túi
+					- FromHour: Xuất hiện từ thời điểm (trong ngày)
+					- ToHour: Xuất hiện tới thời điểm (trong ngày)
+					- Item: Thông tin vật phẩm thu thập
+						- ID: ID vật phẩm
+						- Rate: Tỷ lệ thu thập được (phần 10.000)
+			- Awards: Danh sách phần thưởng
+				- AwardInfo: Thông tin phần thưởng
+					- Selection: Nội dung lựa chọn ở NPC
+					- RequireItems: Danh sách vật phẩm yêu cầu, ngăn cách nhau bởi dấu ;
+						- Gồm 2 tham biến ID_Số lượng
+					- AwardCount: Số lượng phần thưởng được nhận
+					- RequireFreeBagSpace: Yêu cầu số ô trống trong túi
+					- RequireMoney: Yêu cầu bạc
+					- RequireBoundMoney: Yêu cầu bạc khóa
+					- RequireToken: Yêu cầu đồng
+					- RequireBoundToken: Yêu cầu đồng khóa
+					- Award: Thông tin món thưởng
+						- ItemID: ID vật phẩm
+						- Quantity: Số lượng
+						- Rate: Tỷ lệ nhận được (phần 10.000)
+						- Bound: Khóa hay không
+-->
+<SpecialEvent>
+	<Event Activate="true" Type="1" Name="Sự kiện giỗ tổ Hùng Vương" NPCTalk="Công Thức Ghép Mâm Lễ&lt;br&gt;Mâm Lễ Chay = 1 Xôi + 1 Chè + 1 Bánh + 1 Hoa Quả + 20 vạn bạc&lt;br&gt;Mâm Lễ Mặn = 1 Thịt Bò + 1 Thịt Heo + 1 Thịt Dê + 2000 KNB Khóa&lt;br&gt;Mâm Lễ Đặc Biệt = 1 Xôi + 1 Chè + 1 Bánh + 1 Hoa Quả + 1 Thịt Bò + 1 Thịt Heo + 1 Thịt Dê + 1500 KNB Thường">
+		<TimeConfig FromDay="23/03/2023" ToDay="09/04/2023" />
+		<Materials>
+			<GrowPointInfo ID="1542" Name="Điểm thu thập" MapID="5" Pos="100_100;200_200" RespawnTicks="10000" DurationTicks="10000" CollectTicks="10000" SpawnCount="2" RequireBagSpaces="10" FromHour="00:00" ToHour="23:59">
+				<Item ID="496" Rate="10000" />
+				<Item ID="132" Rate="10000" />
+			</GrowPointInfo>
+		</Materials>
+		<Awards>
+			<AwardInfo Selection="Mâm Lễ Chay" RequireItems="8867_1;8868_1;8869_1;8870_1" AwardCount="1" RequireFreeBagSpace="10" RequireMoney="200000" RequireBoundMoney="0" RequireToken="0" RequireBoundToken="0">
+				<Award ItemID="8871" Quantity="1" Rate="10000" Bound="false" />
+			</AwardInfo>
+			<AwardInfo Selection="Mâm Lễ Mặn" RequireItems="8864_1;8865_1;8866_1" AwardCount="1" RequireFreeBagSpace="10" RequireMoney="0" RequireBoundMoney="0" RequireToken="0" RequireBoundToken="2000">
+				<Award ItemID="8872" Quantity="1" Rate="10000" Bound="false" />
+			</AwardInfo>
+			<AwardInfo Selection="Mâm Lễ Đặc Biệt" RequireItems="8864_1;8865_1;8866_1;8867_1;8868_1;8869_1;8870_1" AwardCount="1" RequireFreeBagSpace="10" RequireMoney="0" RequireBoundMoney="0" RequireToken="1500" RequireBoundToken="0">
+				<Award ItemID="8873" Quantity="1" Rate="10000" Bound="false" />
+			</AwardInfo>
+		</Awards>
+	</Event>
+</SpecialEvent>

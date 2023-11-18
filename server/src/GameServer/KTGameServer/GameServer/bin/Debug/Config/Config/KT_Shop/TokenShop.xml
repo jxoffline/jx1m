@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TokenShop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Tiệm Đồng -->
+	<Token>
+		<Shop ID="238" /> <!--Thường dùng-->
+		<Shop ID="241" /><!--Đạo Cụ-->
+		<Shop ID="243" /><!--Bí Kíp-->
+		<Shop ID="246" /><!--Thú Cưỡi/ Trứng Tinh Linh-->
+	</Token>
+	<!-- End -->
+	
+	<!-- Tiệm Đồng Khóa -->
+	<BoundToken>
+		<Shop ID="240" /><!--Thường dùng-->
+		<Shop ID="242" /><!--đạo cụ-->
+		<Shop ID="247" /><!--Thú Cưỡi/ Trứng Tinh Linh-->
+		<!--Shop ID="210" /> -->
+		<!-- <Shop ID="94" /> -->
+	</BoundToken>
+	<!-- End -->
+	
+	<!-- Store-Product -->
+	<StoreProduct>
+		<Product ID="com.ktfog.mobi.pack1" Token="4500" Name="4500 KNB" Hint="Nạp lần đầu tặng thêm 4500 KNB" Icon="icon_goi_1" FirstBonus="4500" Price="45000" Recommend="false" />
+		<Product ID="com.ktfog.mobi.pack2" Token="6900" Name="6900 KNB" Hint="Nạp lần đầu tặng thêm 6900 KNB" Icon="icon_goi_2" FirstBonus="6900" Price="69000" Recommend="true" />
+		<Product ID="com.ktfog.mobi.pack3" Token="12900" Name="12900 KNB" Hint="Nạp lần đầu tặng thêm 12900 KNB" Icon="icon_goi_3" FirstBonus="12900" Price="129000" Recommend="false" />
+		<Product ID="com.ktfog.mobi.pack4" Token="69900" Name="69900 KNB" Hint="Nạp lần đầu tặng thêm 69900 KNB" Icon="icon_goi_4" FirstBonus="69900" Price="699000" Recommend="true" />
+		<Product ID="com.ktfog.mobi.pack5" Token="129900" Name="129900 KNB" Hint="Nạp lần đầu tặng thêm 129900 KNB" Icon="icon_goi_5" FirstBonus="129900" Price="1299000" Recommend="false" />
+		<Product ID="com.ktfog.mobi.pack6" Token="199900" Name="199900 KNB" Hint="Nạp lần đầu tặng thêm 199900 KNB" Icon="icon_goi_6" FirstBonus="199900" Price="1999000" Recommend="true" />
+	</StoreProduct>
+	<!-- End -->
+</TokenShop>

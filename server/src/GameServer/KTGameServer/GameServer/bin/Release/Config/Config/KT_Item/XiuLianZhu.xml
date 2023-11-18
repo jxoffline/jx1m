@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	TU LUYỆN CHÂU
+	Config: Thiết lập
+		- LimitAddTime: Thời gian tu luyện tối đa
+		- HourAddPerDay: Số giờ cộng thêm mỗi ngày
+		- DoubleExpBuff: ID Buff x2 kinh nghiệm đánh quái
+		- LuckyBuff: ID Buff tăng may mắn
+	ExpLimit: Kinh nghiệm tối đa giới hạn theo cấp
+		- ID: ID nhóm cấp (= cấp độ / 10), nếu vượt quá cấp độ thì lấy giá trị cấp cao nhất trong danh sách
+		- Value: Giá trị
+	ExpByLevel: Kinh nghiệm có được tương ứng số giờ tu luyện được chọn
+		- ID: ID nhóm cấp (= cấp độ / 10), nếu vượt quá cấp độ thì lấy giá trị cấp cao nhất trong danh sách
+		- Value: Giá trị
+-->
+<XiuLianZhu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Config LimitAddTime="14" HourAddPerDay="2" DoubleExpBuff="332" LuckyBuff="333" />
+	<ExpLimit>
+		<Exp ID="1" Value="300000" />
+		<Exp ID="2" Value="480000" />
+		<Exp ID="3" Value="800000" />
+		<Exp ID="4" Value="1200000" />
+		<Exp ID="5" Value="1680000" />
+		<Exp ID="6" Value="2200000" />
+		<Exp ID="7" Value="2880000" />
+		<Exp ID="8" Value="3600000" />
+		<Exp ID="9" Value="4400000" />
+		<Exp ID="10" Value="5280000" />
+		<Exp ID="11" Value="6200000" />
+		<Exp ID="12" Value="7240000" />
+		<Exp ID="13" Value="8400000" />
+		<Exp ID="14" Value="9600000" />
+		<Exp ID="15" Value="9600000" />
+	</ExpLimit>
+	<ExpByHour>
+		<Exp ID="1" Value="2400" />
+		<Exp ID="2" Value="2400" />
+		<Exp ID="3" Value="4000" />
+		<Exp ID="4" Value="6000" />
+		<Exp ID="5" Value="8400" />
+		<Exp ID="6" Value="11200" />
+		<Exp ID="7" Value="14400" />
+		<Exp ID="8" Value="18000" />
+		<Exp ID="9" Value="22000" />
+		<Exp ID="10" Value="26400" />
+	</ExpByHour>
+</XiuLianZhu>

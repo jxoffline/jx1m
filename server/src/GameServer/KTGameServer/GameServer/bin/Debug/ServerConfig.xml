@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	THIẾT LẬP HỆ THỐNG
+	LimitAccount: Giới hạn tài khoản
+		- MaxCCU: Giới hạn CCU
+		- LimitAccountPerIPAddress: Giới hạn số tài khoản đăng nhập trên một địa chỉ IP
+	MonsterAI: Thiết lập AI quái
+		- EnableMonsterAIRandomMove: Mở luồng AI tự di chuyển
+		- EnableMonsterAI: Mở luồng thực thi AI
+	Threading: Thiết lập luồng
+		- MaxUpdateGridThread: Số luồng tối đa cập nhật tầm nhìn của người chơi
+		- MaxPlayerStoryBoardThread: Số luồng thực thi StoryBoard tối đa của người chơi
+		- MaxMonsterTimer: Số luồng thực thi của quái
+		- MaxBuffTimer: Số luồng thực thi của Buff
+		- MaxPetTimer: Số luồng thực thi của Pet
+		- MaxTraderCarriageTimer: Số luồng thực thi của xe tiêu
+	GameConfig: Thiết lập trò chơi
+		- LimitLevel: Giới hạn cấp
+		- MonsterKilledToSpawnElite: Tổng số quái sau khi tiêu diệt đủ sẽ xuất hiện tinh anh ở mỗi bãi
+		- MonsterKilledToSpawnLeader: Tổng số quái sau khi tiêu diệt đủ sẽ xuất hiện thủ lĩnh ở mỗi bãi
+		- MaxFireCampAndElitePerZone: Số lượng lửa trại đồng thời cùng tinh anh tối đa có thể tồn tại đồng thời trên cùng 1 bãi
+		- EnableCrossServer: Mở liên Server
+	Captcha: Thiết lập Captcha
+		- EnableCaptcha: Kích hoạt Captcha
+		- EnableCaptchaForIOS: Kích hoạt Captcha cho các thiết bị iOS
+		- CaptchaAppearMinPeriod: Thời gian tối thiểu mỗi lần xuất hiện Captcha
+		- CaptchaAppearMaxPeriod: Thời gian tối đa mỗi lần xuất hiện Captcha
+		- CaptchaTeamPlayersOnly: Chỉ hiện Captcha với người chơi có nhóm
+		- CaptchaAppearFromTime: Thời gian (giờ:phút) bắt đầu xuất hiện Captcha trong ngày
+		- CaptchaAppearToTime: Thời gian (giờ:phút) kết thúc xuất hiện Captcha trong ngày
+		- CaptchaExpAddPerLevel: Phần thưởng kinh nghiệm khi trả lời đúng Captcha
+		- CaptchaBoundMoneyAddPerLevel: Phần thưởng bạc khóa khi trả lời đúng Captcha
+-->
+<ServerConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ServerRate MoneyRate="2.0" ExpRate="6.0" />
+	<LimitAccount MaxCCU="1000" LimitAccountPerIPAddress="30" />
+	<MonsterAI EnableMonsterAIRandomMove="true" EnableMonsterAI="true" />
+	<Threading MaxUpdateGridThread="5" MaxPlayerStoryBoardThread="5" MaxMonsterTimer="5" MaxBuffTimer="1" MaxPetTimer="3" MaxTraderCarriageTimer="1" MaxBotTimer="1" />
+	<GameConfig LimitLevel="200" MonsterKilledToSpawnElite="300" MonsterKilledToSpawnLeader="600" MaxFireCampAndElitePerZone="2" />
+	<Captcha EnableCaptcha="false" EnableCaptchaForIOS="false" CaptchaAppearMinPeriod="30000" CaptchaAppearMaxPeriod="36000" CaptchaTeamPlayersOnly="false" CaptchaAppearFromTime="9:00" CaptchaAppearToTime="23:59" CaptchaExpAddPerLevel="500" CaptchaBoundMoneyAddPerLevel="100" />
+	<CrossServer EnableCrossServer="true" />
+</ServerConfig>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	PHỤ BẢN VƯỢT ẢI GIA TỘC
+	Config: Thiết lập
+		- Duration: Thời gian tồn tại (Mili-giây)
+		- MaxCallBoss: Tổng số Boss cho phép tối đa được tạo ra trong phụ bản
+		- PrepareDuration: Thời gian chuẩn bị trước khi mở ải (Mili-giây)
+		- FinishWaitTime: Thời gian chờ tự đóng phụ bản khi hoàn thành vượt ải (Mili-giây)
+		- MaxParticipatedTimesPerWeek: Số lượt tham gia tối đa của mỗi người chơi trong tuần
+		- MinLevel: Cấp độ tối thiểu tham gia
+	Map: Thông tin bản đồ phụ bản
+		- MapID: ID bản đồ phụ bản
+		- EnterPosX: Vị trí vào X
+		- EnterPosY: Vị trí vào Y
+	Item: Thông tin vật phẩm
+		- CallBoss55ItemID: ID vật phẩm Câu Hồn Ngọc (sơ)
+		- CallBoss75ItemID: ID vật phẩm Câu Hồn Ngọc (trung)
+		- CallBoss95ItemID: ID vật phẩm Câu Hồn Ngọc (cao)
+		- FamilyCoinItemID: ID vật phẩm đồng tiền cổ
+	GameRule: Các bước chơi
+		- Step: Bước
+			- ID: ID bước (bắt đầu từ 1)
+			- AllowCallBoss: Cho phép thả Boss bằng Cầu Hồn Ngọc không
+			- Guardian: Thông tin quái hộ vệ
+				- ID: ID quái
+				- Name: Tên quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+				- Title: Danh hiệu quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+				- PosX: Vị trí X
+				- PosY: Vị trí Y
+				- BaseHP: Sinh lực cơ bản
+				- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+				- AIType: Loại AI (0: Quái thường, 1: Quái tinh anh, 2: Quái thủ lĩnh, 3: Boss, 4: Hải tặc, 5: Quái chữ đỏ)
+				- AIScriptID: IDScriptAI điều khiển
+					- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+				- TriggerIndex: Bảo vệ cơ quan có thứ tự tương ứng
+			- Boss: Thông tin Boss
+				- ID: ID Boss
+				- Name: Tên Boss, bỏ trống sẽ lấy thông tin ở File cấu hình
+				- Title: Danh hiệu Boss, bỏ trống sẽ lấy thông tin ở File cấu hình
+				- PosX: Vị trí X
+				- PosY: Vị trí Y
+				- BaseHP: Sinh lực cơ bản
+				- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+				- AIType: Loại AI (0: Quái thường, 1: Quái tinh anh, 2: Quái thủ lĩnh, 3: Boss, 4: Hải tặc, 5: Quái chữ đỏ)
+				- AIScriptID: IDScriptAI điều khiển
+					- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+				- TriggerIndex: Bảo vệ cơ quan có thứ tự tương ứng
+			- Trigger: Cơ quan
+				- ID: ID Res (xem ở File Npc)
+				- Name: Tên cơ quan
+				- CollectTick: Thời gian mở (mili-giây)
+				- PosX: Vị trí X
+				- PosY: Vị trí Y
+				- Index: Thứ tự xuất hiện của cơ quan
+			- Teleport: Cổng dịch chuyển
+				- Name: Tên cổng
+				- PosX: Vị trí X (nếu mặc định là dịch chuyển ra ngoài vị trí báo danh thì điền -1)
+				- PosY: Vị trí Y (nếu mặc định là dịch chuyển ra ngoài vị trí báo danh thì điền -1)
+				- ToMapID: Vị trí bản đồ đích đến (nếu cùng bản đồ hiện tại thì điền -1)
+				- ToPosX: Vị trí đích đến X
+				- ToPosY: Vị trí đích đến Y
+				- SpawnImmediate: Xuất hiện ngay lập tức khi mở Step
+	Luật chơi: Bắt đầu từ Step 1, đến Step cuối cùng, với mỗi Step, phải tiêu diệt hết toàn bộ hộ vệ và cả Boss, khi đó cơ quan sẽ xuất hiện, sau khi mở tất cả cơ quan trong Step tương ứng thì cổng Teleport dẫn tới Step tiếp theo sẽ được mở ra
+-->
+<FamilyFuBen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Config EventID="14" Duration="7200000" MaxCallBoss="10" PrepareDuration="60000" FinishWaitTime="600000" MaxParticipatedTimesPerWeek="2" MinLevel="80" />
+	<Map MapID="273" EnterPosX="655" EnterPosY="310" />
+	<Item CallBoss55ItemID="431" CallBoss75ItemID="432" CallBoss95ItemID="433" FamilyCoinItemID="371" />
+	<GameRule>
+		
+		<Step ID="1" AllowCallBoss="false">
+			<Boss ID="6754" Name="Độc Cô Kiếm" Title="" PosX="9843" PosY="7615" BaseHP="600000" HPIncreaseEachLevel="0" AIType="3" AIScriptID="100001" Auras="106_20" Skills="83_20_2000;93_20_1000" />
+			<Boss ID="6754" Name="Độc Cô Kiếm" Title="" PosX="13909" PosY="5286" BaseHP="600000" HPIncreaseEachLevel="0" AIType="3" AIScriptID="100001" Auras="106_10" Skills="103_20_2000;117_20_1000" />
+
+			<Teleport Name="Cửa kế tiếp" PosX="12494" PosY="6685" ToMapID="-1" ToPosX="13125" ToPosY="7061" SpawnImmediate="false" />
+			<Teleport Name="Cửa trước" PosX="11205" PosY="6030" ToMapID="-1" ToPosX="10683" ToPosY="5680" SpawnImmediate="true" />
+		</Step>
+		
+		<Step ID="2" AllowCallBoss="true">
+			<Teleport Name="Cửa kế tiếp" PosX="14956" PosY="8117" ToMapID="-1" ToPosX="-1" ToPosY="-1" SpawnImmediate="true" />
+			<Teleport Name="Cửa trước" PosX="12827" PosY="6920" ToMapID="-1" ToPosX="12290" ToPosY="6552" SpawnImmediate="true" />
+		</Step>
+			
+	</GameRule>
+</FamilyFuBen>

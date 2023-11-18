@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+ 
+  <Server LineID="1" EventLevel="3" LogType="2" />
+  <Socket ip="" port="3001" capacity="1000" />
+  <DBServer pool="10" ip="127.0.0.1" port="23001" />
+  <LogDBServer pool="10" ip="127.0.0.1" port="43001" />
+  <NameServer IP="127.0.0.1" Port="7878" PingTaiID="0" />
+  <Token count="10000" randseed="123456" sha1="12345" data="12345" webkey="9377(*)#mst9" />
+  
+  <GameManager SuperUserNames="*" UserNames="*" IPs="*" />
+  <Map Code="6090" MainCode="1" />
+  
+  <Goods GoodsIDs="410001,411001,412001" />
+ 
+  <Resource Path="Config" /> 
+ 
+  <GiftCode Url="http://localhost:81/ActiveGiftCode.aspx" />
+
+  <ClientVersion Core="23" Resource="56" />
+  
+  <APIWebServer Port="8889" />
+ 
+  
+  <DBLog DBLogEnable="0" Path="log" />
+ 
+  <CacheMemoryParam CacheMemoryBlocks="40,20000|100,100|600,80|2014,40|4096,10|100000,2400" />
+  
+  <SendDataParam SendDataIntervalTicks="50" MaxSingleSocketSendBufferSize="100000" SendDataTimeOutTicks="5000" />
+  
+  <Lua InitNum="5" />
+</Config>

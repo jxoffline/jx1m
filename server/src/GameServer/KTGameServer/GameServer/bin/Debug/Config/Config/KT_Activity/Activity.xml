@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	=== DANH SÁCH SỰ KIỆN TRONG GAME ===
+	
+	ID: ID sự kiện
+	Name: Tên sự kiện
+	Type: Loại thời gian
+			- -1: Đóng
+			- 0: 1 lần duy nhất sau khi khởi động lại Server
+			- 1: Mỗi ngày
+			- 2: Mỗi tuần
+			- 3: Mỗi tháng vào ngày chỉ định
+			- 4: Mỗi tháng vào tuần chỉ định
+			- 5: Thời gian cố định
+	Time: Thiết lập thời gian, ngăn cách nhau bởi dấu _ giữa các mốc
+			- Nếu Type = 0 thì sẽ là chuỗi rỗng ""
+			- Nếu Type = 1, thì sẽ là dạng "HH;MM" tương ứng Giờ, phút
+			- Nếu Type = 2, thì sẽ là dạng "dd;HH;MM" tương ứng Thứ tự ngày trong tuần (0-6), Giờ, phút
+			- Nếu Type = 3, thì sẽ là dạng "DD;HH;MM" tương ứng Thứ tự ngày trong tháng (1-31), Giờ, phút
+			- Nếu Type = 4, thì sẽ là dạng "WW;dd;HH;MM" tương ứng Thứ tự tuần trong tháng (0-3), Thứ tự ngày trong tuần (0-6, tương ứng Chủ nhật - Thứ 7), Giờ, phút
+			- Nếu Type = 5, thì sẽ là dạng "DD;MM;YYYY;HH;MM" tương ứng Ngày, tháng, năm, Giờ, phút
+	DurationTicks: Thời gian duy trì sự kiện (đơn vị Mili-giây)
+	CoreScript: Tên Script được viết trong CORE C# điều khiển sự kiện
+-->
+
+<Activities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Bạch Hổ Đường -->
+	<Activity ID="100" Name="Chuẩn bị Bạch Hổ Đường" Type="1" Time="8;50_14;50_19;50" DurationTicks="600000" CoreScript="BaiHuTang" />
+	
+	<Activity ID="101" Name="Bắt đầu Bạch Hổ Đường - 1 (sơ)" Type="1" Time="9;00_15;00_20;00" DurationTicks="1200000" CoreScript="BaiHuTang" />
+	<Activity ID="102" Name="Bắt đầu Bạch Hổ Đường - 2 (sơ)" Type="1" Time="9;10_15;10_20;10" DurationTicks="1200000" CoreScript="BaiHuTang" />
+	<Activity ID="103" Name="Bắt đầu Bạch Hổ Đường - 3 (sơ)" Type="1" Time="9;20_15;20_20;20" DurationTicks="1200000" CoreScript="BaiHuTang" />
+	
+	<Activity ID="106" Name="Bắt đầu Bạch Hổ Đường - 1 (cao)" Type="1" Time="9;00_15;00_20;00" DurationTicks="1200000" CoreScript="BaiHuTang" />
+	<Activity ID="107" Name="Bắt đầu Bạch Hổ Đường - 2 (cao)" Type="1" Time="9;10_15;10_20;10" DurationTicks="1200000" CoreScript="BaiHuTang" />
+	<Activity ID="108" Name="Bắt đầu Bạch Hổ Đường - 3 (cao)" Type="1" Time="9;20_15;20_20;20" DurationTicks="1200000" CoreScript="BaiHuTang" />
+	
+	<Activity ID="112" Name="Kết thúc Bạch Hổ Đường" Type="1" Time="9;40_15;40_20;40" DurationTicks="0" CoreScript="BaiHuTang" />
+	<!-- End -->
+	
+	<!-- Thông báo Võ Lâm Liên Đấu -->
+	<!--
+	<Activity ID="200" Name="Báo danh Võ Lâm Liên Đấu ngày 12" Type="3" Time="12;00;00_12;04;00_12;08;00_12;12;00_12;16;00_12;20;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="201" Name="Báo danh Võ Lâm Liên Đấu ngày 13" Type="3" Time="13;00;00_13;04;00_13;08;00_13;12;00_13;16;00_13;20;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="202" Name="Báo danh Võ Lâm Liên Đấu ngày 14" Type="3" Time="14;00;00_14;04;00_14;08;00_14;12;00_14;16;00_14;20;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	
+	<Activity ID="203" Name="Thi đấu Võ Lâm Liên Đấu ngày 15" Type="3" Time="15;00;00_15;04;00_15;08;00_15;12;00_15;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="204" Name="Thi đấu Võ Lâm Liên Đấu ngày 16" Type="3" Time="16;00;00_16;04;00_16;08;00_16;12;00_16;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="205" Name="Thi đấu Võ Lâm Liên Đấu ngày 17" Type="3" Time="17;00;00_17;04;00_17;08;00_17;12;00_17;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="206" Name="Thi đấu Võ Lâm Liên Đấu ngày 18" Type="3" Time="18;00;00_18;04;00_18;08;00_18;12;00_18;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="207" Name="Thi đấu Võ Lâm Liên Đấu ngày 19" Type="3" Time="19;00;00_19;04;00_19;08;00_19;12;00_19;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="208" Name="Thi đấu Võ Lâm Liên Đấu ngày 20" Type="3" Time="20;00;00_20;04;00_20;08;00_20;12;00_20;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="209" Name="Thi đấu Võ Lâm Liên Đấu ngày 21" Type="3" Time="21;00;00_21;04;00_21;08;00_21;12;00_21;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="210" Name="Thi đấu Võ Lâm Liên Đấu ngày 22" Type="3" Time="22;00;00_22;04;00_22;08;00_22;12;00_22;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="211" Name="Thi đấu Võ Lâm Liên Đấu ngày 23" Type="3" Time="23;00;00_23;04;00_23;08;00_23;12;00_23;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="212" Name="Thi đấu Võ Lâm Liên Đấu ngày 24" Type="3" Time="24;00;00_24;04;00_24;08;00_24;12;00_24;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="213" Name="Thi đấu Võ Lâm Liên Đấu ngày 25" Type="3" Time="25;00;00_25;04;00_25;08;00_25;12;00_25;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	
+	<Activity ID="214" Name="Chung kết thi đấu Võ Lâm Liên Đấu ngày 26" Type="3" Time="26;00;00_26;04;00_26;08;00_26;12;00_26;16;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	
+	<Activity ID="215" Name="Nhận thưởng Võ Lâm Liên Đấu ngày 27" Type="3" Time="27;00;00_27;04;00_27;08;00_27;12;00_27;16;00_27;20;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	<Activity ID="216" Name="Nhận thưởng Võ Lâm Liên Đấu ngày 28" Type="3" Time="28;00;00_28;04;00_28;08;00_28;12;00_28;16;00_28;20;00" DurationTicks="60000" CoreScript="TeamBattle" />
+	-->
+	<!-- End -->
+	
+	
+	<!-- Đoán Hoa Đăng -->
+	<Activity ID="300" Name="Thông báo chuẩn bị Đoán Hoa Đăng" Type="2" Time="01;20;50_05;20;50" DurationTicks="60000" CoreScript="KnowledgeChallenge" />
+	<Activity ID="301" Name="Bắt đầu Đoán Hoa Đăng" Type="2" Time="01;21;00_05;21;00" DurationTicks="3000000" CoreScript="KnowledgeChallenge" />
+	<Activity ID="302" Name="Kết thúc Đoán Hoa Đăng" Type="2" Time="01;21;50_05;21;50" DurationTicks="60000" CoreScript="KnowledgeChallenge" />
+	<!-- End -->
+	
+	<!-- Tần Lăng -->
+	<Activity ID="400" Name="Khai mở Tần Lăng" Type="1" Time="9;00" DurationTicks="50400000" CoreScript="EmperorTomb" />
+	<Activity ID="401" Name="Thông báo xuất hiện Boss Tần Thủy Hoàng" Type="1" Time="15;00" DurationTicks="60000" CoreScript="EmperorTomb" />
+	<Activity ID="402" Name="Đóng Tần Lăng" Type="1" Time="23;00" DurationTicks="60000" CoreScript="EmperorTomb" />
+	<!-- End -->
+	
+	<!-- vận tiêu -->
+	<!--
+	<Activity ID="500" Name="Vận Tiêu" Type="1" Time="12;00" DurationTicks="43140000" CoreScript="CargoCarriage" />
+	-->
+	<Activity ID="500" Name="Vận Tiêu" Type="1" Time="12;00" DurationTicks="50400000" CoreScript="CargoCarriage" />
+	<!-- End -->
+	
+	<!-- Phong Hỏa Liên Thành -->
+	<Activity ID="600" Name="Thông báo chuẩn bị Phong Hỏa Liên Thành" Type="2" Time="1;20;50_3;20;50_5;20;50" DurationTicks="60000" CoreScript="FengHuoLianCheng" />
+	<Activity ID="601" Name="Phong Hỏa Liên Thành" Type="2" Time="1;21;00_3;21;00_5;21;00" DurationTicks="3600000" CoreScript="FengHuoLianCheng" />
+	<!-- End -->
+</Activities>

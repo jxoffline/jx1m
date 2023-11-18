@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	MapGroup => THÔNG TIN NHÓM BẢN ĐỒ
+		ID:			 ID nhóm (buộc phải mang giá trị âm)
+		Name:		 Tên nhóm
+		MapList:	 Danh sách bản đồ thuộc nhóm; ngăn cách bằng dấu ; (ví dụ: 1;2;3)
+		
+	Bản ghi Node => THÔNG TIN ĐIỂM DI CHUYỂN QUA LẠI GIỮA CÁC KHU VỰC
+		FromMapCode: ID bản đồ xuất phát.
+					 Nếu là nhóm bản đồ thì sẽ mang giá trị âm tương ứng ID nhóm.
+		ToMapCode:	 ID bản đồ đích đến.
+		PosX; PosY:	 Vị trí có thể dùng nếu là truyền tống phù.
+					 Vị trí đặt NPC dịch chuyển nếu là dịch chuyển từ NPC.
+					 Vị trí đặt cổng dịch chuyển.
+					 Mang giá trị -1 nếu không cần kiểm tra điều kiện tọa độ.
+		ToX; ToY:	 Vị trí đích đến; buộc phải có nếu là truyền tống phù hoặc NPC.
+					 Nếu là cổng Teleport thì không cần; điền giá trị -1.
+-->
+<AutoPath xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Thiết lập cấu hình nhóm bản đồ -->
+	<MapGroup>
+    <Group ID="-1" Name="Tân thủ thôn" MapList="1;10" />
+		<Group ID="-2" Name="Thành thị" MapList="39;32;2" />
+		<Group ID="-3" Name="Môn phái" MapList="3;9;27;28;20;19;29;33;5;41;42" />
+		<Group ID="-4" Name="Bản đồ dã ngoại" MapList="6;7;8;11;12;13;14;15;16;17;18;21;22;23;24;25;26;30;31;34;35;36;37" />
+		<Group ID="-5" Name="Tân thủ thôn - Thành thị " MapList="1;10;39;32;2" />
+		<Group ID="-6" Name="Tống Kim" MapList="39;32;2" />
+	</MapGroup>
+	<!-- End -->
+
+	<!-- Dịch chuyển theo Vô hạn truyền tống phù -->
+	<TeleportItem>
+    
+		<!-- Thành -->
+		<Item IDList="9683;9679;9680">
+			<Node FromMapCode="0" ToMapCode="39" PosX="-1" PosY="-1" ToX="4480" ToY="2380" /> 
+      <Node FromMapCode="0" ToMapCode="2" PosX="-1" PosY="-1" ToX="6030" ToY="3570" />
+      <Node FromMapCode="0" ToMapCode="32" PosX="-1" PosY="-1" ToX="6320" ToY="3330" /> 
+		</Item>
+		<!-- Tân Thủ Thôn-->
+		<Item IDList="9683;9679;9680">
+			<Node FromMapCode="0" ToMapCode="1" PosX="-1" PosY="-1" ToX="5670" ToY="3000" /> 
+      <Node FromMapCode="0" ToMapCode="10" PosX="-1" PosY="-1" ToX="5930" ToY="3040" /> 
+		</Item>
+		<!-- Phái -->
+		<Item IDList="9683;9679;9680">
+	  	<Node FromMapCode="0" ToMapCode="3" PosX="-1" PosY="-1" ToX="4070" ToY="4580" /> 
+      <Node FromMapCode="0" ToMapCode="9" PosX="-1" PosY="-1" ToX="3900" ToY="2550" /> 
+      <Node FromMapCode="0" ToMapCode="27" PosX="-1" PosY="-1" ToX="5300" ToY="3300" />
+      <Node FromMapCode="0" ToMapCode="28" PosX="-1" PosY="-1" ToX="5500" ToY="3230" />
+      <Node FromMapCode="0" ToMapCode="20" PosX="-1" PosY="-1" ToX="5340" ToY="3090" />
+      <Node FromMapCode="0" ToMapCode="19" PosX="-1" PosY="-1" ToX="3820" ToY="3400" />
+      <Node FromMapCode="0" ToMapCode="29" PosX="-1" PosY="-1" ToX="4470" ToY="4280" />
+      <Node FromMapCode="0" ToMapCode="33" PosX="-1" PosY="-1" ToX="4760" ToY="2820" />
+      <Node FromMapCode="0" ToMapCode="5" PosX="-1" PosY="-1" ToX="4710" ToY="2160" />
+      <Node FromMapCode="0" ToMapCode="41" PosX="-1" PosY="-1" ToX="3610" ToY="6000" />	
+      <Node FromMapCode="0" ToMapCode="42" PosX="-1" PosY="-1" ToX="3820" ToY="2090" />
+      <Node FromMapCode="0" ToMapCode="91" PosX="-1" PosY="-1" ToX="2600" ToY="1760" />
+		</Item>
+	</TeleportItem>
+	<!-- End -->
+	
+	<!-- Dịch chuyển theo NPC -->
+  <Teleport>
+    <Node FromMapCode="1" ToMapCode="32" PosX="2446" PosY="5706" ToX="628" ToY="1074" />
+    <Node FromMapCode="1" ToMapCode="27" PosX="9168" PosY="3373" ToX="937" ToY="2218" />
+    <Node FromMapCode="1" ToMapCode="6" PosX="512" PosY="305" ToX="4822" ToY="445" />
+    <Node FromMapCode="1" ToMapCode="20" PosX="7999" PosY="156" ToX="845" ToY="2384" />
+    <Node FromMapCode="2" ToMapCode="33" PosX="888" PosY="4660" ToX="788" ToY="751" />
+    <Node FromMapCode="2" ToMapCode="42" PosX="6611" PosY="287" ToX="824" ToY="506" />
+    <Node FromMapCode="2" ToMapCode="16" PosX="9518" PosY="5533" ToX="605" ToY="3310" />
+    <Node FromMapCode="2" ToMapCode="28" PosX="593" PosY="238" ToX="953" ToY="743" />
+    <Node FromMapCode="3" ToMapCode="32" PosX="4785" PosY="244" ToX="11478" ToY="4116" />
+    <Node FromMapCode="5" ToMapCode="14" PosX="8484" PosY="242" ToX="1368" ToY="2266" />
+    <Node FromMapCode="77" ToMapCode="76" PosX="464" PosY="3675" ToX="13906" ToY="1645" />
+    <Node FromMapCode="77" ToMapCode="76" PosX="10559" PosY="6315" ToX="13906" ToY="1645" />
+    <Node FromMapCode="6" ToMapCode="1" PosX="4752" PosY="269" ToX="589" ToY="477" />
+    <Node FromMapCode="7" ToMapCode="19" PosX="2764" PosY="5332" ToX="6183" ToY="1579" />
+    <Node FromMapCode="7" ToMapCode="29" PosX="6512" PosY="5334" ToX="7216" ToY="6445" />
+    <Node FromMapCode="7" ToMapCode="26" PosX="6872" PosY="4176" ToX="628" ToY="1466" />
+    <Node FromMapCode="7" ToMapCode="91" PosX="6860" PosY="375" ToX="5300" ToY="5740" />
+    <Node FromMapCode="35" ToMapCode="24" PosX="6883" PosY="4135" ToX="3407" ToY="1380" />
+    <Node FromMapCode="35" ToMapCode="23" PosX="2788" PosY="5330" ToX="577" ToY="4352" />
+    <Node FromMapCode="8" ToMapCode="22" PosX="2925" PosY="425" ToX="2058" ToY="791" />
+    <Node FromMapCode="9" ToMapCode="10" PosX="349" PosY="754" ToX="6576" ToY="4840" />
+    <Node FromMapCode="9" ToMapCode="37" PosX="601" PosY="4694" ToX="7109" ToY="4560" />
+    <Node FromMapCode="10" ToMapCode="39" PosX="2191" PosY="4913" ToX="7026" ToY="395" />
+    <Node FromMapCode="10" ToMapCode="29" PosX="337" PosY="1968" ToX="734" ToY="448" />
+    <Node FromMapCode="10" ToMapCode="19" PosX="4926" PosY="309" ToX="709" ToY="1978" />
+    <Node FromMapCode="10" ToMapCode="9" PosX="6589" PosY="4973" ToX="503" ToY="839" />
+    <Node FromMapCode="10" ToMapCode="91" PosX="8600" PosY="500" ToX="1310" ToY="900" />
+    <Node FromMapCode="11" ToMapCode="32" PosX="6927" PosY="2031" ToX="1932" ToY="6299" />
+    <Node FromMapCode="11" ToMapCode="33" PosX="4343" PosY="3979" ToX="8351" ToY="1182" />
+    <Node FromMapCode="11" ToMapCode="22" PosX="930" PosY="1805" ToX="5773" ToY="2821" />
+    <Node FromMapCode="76" ToMapCode="79" PosX="2439" PosY="859" ToX="1002" ToY="2909" />
+    <Node FromMapCode="76" ToMapCode="79" PosX="2223" PosY="1571" ToX="4540" ToY="751" />
+    <Node FromMapCode="76" ToMapCode="78" PosX="13844" PosY="7648" ToX="1255" ToY="6295" />
+    <Node FromMapCode="76" ToMapCode="78" PosX="14109" PosY="7311" ToX="11077" ToY="7510" />
+    <Node FromMapCode="76" ToMapCode="77" PosX="13511" PosY="1121" ToX="799" ToY="3479" />
+    <Node FromMapCode="76" ToMapCode="77" PosX="14811" PosY="1316" ToX="10204" ToY="6236" />
+    <Node FromMapCode="13" ToMapCode="15" PosX="7241" PosY="4683" ToX="6527" ToY="5339" />
+    <Node FromMapCode="13" ToMapCode="14" PosX="893" PosY="5445" ToX="4137" ToY="1447" />
+    <Node FromMapCode="13" ToMapCode="41" PosX="2654" PosY="549" ToX="8908" ToY="1600" />
+    <Node FromMapCode="41" ToMapCode="13" PosX="8991" PosY="1368" ToX="2787" ToY="463" />
+    <Node FromMapCode="41" ToMapCode="39" PosX="671" PosY="4441" ToX="717" ToY="4555" />
+    <Node FromMapCode="14" ToMapCode="37" PosX="482" PosY="1831" ToX="827" ToY="5373" />
+    <Node FromMapCode="14" ToMapCode="5" PosX="1180" PosY="2165" ToX="8327" ToY="337" />
+    <Node FromMapCode="14" ToMapCode="24" PosX="3064" PosY="3071" ToX="631" ToY="397" />
+    <Node FromMapCode="14" ToMapCode="13" PosX="4322" PosY="1423" ToX="816" ToY="5345" />
+    <Node FromMapCode="15" ToMapCode="39" PosX="6745" PosY="3566" ToX="8800" ToY="3953" />
+    <Node FromMapCode="15" ToMapCode="13" PosX="6693" PosY="5423" ToX="7130" ToY="4571" />
+    <Node FromMapCode="16" ToMapCode="31" PosX="8539" PosY="4517" ToX="698" ToY="3252" />
+    <Node FromMapCode="16" ToMapCode="2" PosX="441" PosY="3192" ToX="9140" ToY="5327" />
+    <Node FromMapCode="17" ToMapCode="37" PosX="516" PosY="1397" ToX="2793" ToY="453" />
+    <Node FromMapCode="17" ToMapCode="18" PosX="6292" PosY="2896" ToX="630" ToY="5773" />
+    <Node FromMapCode="36" ToMapCode="23" PosX="7241" PosY="4694" ToX="5102" ToY="2291" />
+    <Node FromMapCode="36" ToMapCode="31" PosX="917" PosY="5500" ToX="5220" ToY="460" />
+    <Node FromMapCode="18" ToMapCode="17" PosX="463" PosY="5859" ToX="6192" ToY="2790" />
+    <Node FromMapCode="18" ToMapCode="24" PosX="1032" PosY="578" ToX="1060" ToY="2399" />
+    <Node FromMapCode="18" ToMapCode="23" PosX="7780" PosY="1953" ToX="2536" ToY="6356" />
+    <Node FromMapCode="91" ToMapCode="10" PosX="1040" PosY="750" ToX="8370" ToY="650" />
+    <Node FromMapCode="91" ToMapCode="7" PosX="5470" PosY="6100" ToX="6560" ToY="490" />
+    <Node FromMapCode="19" ToMapCode="10" PosX="550" PosY="2080" ToX="4834" ToY="460" />
+    <Node FromMapCode="19" ToMapCode="7" PosX="6385" PosY="1633" ToX="2667" ToY="5207" />
+    <Node FromMapCode="20" ToMapCode="1" PosX="640" PosY="2490" ToX="7776" ToY="308" />
+    <Node FromMapCode="20" ToMapCode="34" PosX="1492" PosY="320" ToX="8265" ToY="2109" />
+    <Node FromMapCode="21" ToMapCode="28" PosX="3638" PosY="528" ToX="9616" ToY="6530" />
+    <Node FromMapCode="22" ToMapCode="11" PosX="2202" PosY="3241" ToX="1040" ToY="1747" />
+    <Node FromMapCode="22" ToMapCode="8" PosX="2050" PosY="919" ToX="3098" ToY="577" />
+    <Node FromMapCode="22" ToMapCode="39" PosX="456" PosY="1133" ToX="600" ToY="1094" />
+    <Node FromMapCode="39" ToMapCode="22" PosX="430" PosY="972" ToX="565" ToY="1036" />
+    <Node FromMapCode="39" ToMapCode="10" PosX="7198" PosY="298" ToX="2401" ToY="4798" />
+    <Node FromMapCode="39" ToMapCode="15" PosX="8987" PosY="4054" ToX="6579" ToY="3488" />
+    <Node FromMapCode="39" ToMapCode="41" PosX="522" PosY="4531" ToX="717" ToY="4555" />
+    <Node FromMapCode="23" ToMapCode="35" PosX="447" PosY="4454" ToX="2678" ToY="5212" />
+    <Node FromMapCode="23" ToMapCode="18" PosX="2321" PosY="6412" ToX="7565" ToY="2047" />
+    <Node FromMapCode="23" ToMapCode="36" PosX="5228" PosY="2397" ToX="7131" ToY="4608" />
+    <Node FromMapCode="79" ToMapCode="76" PosX="4239" PosY="560" ToX="2909" ToY="1277" />
+    <Node FromMapCode="79" ToMapCode="76" PosX="361" PosY="2877" ToX="2909" ToY="1277" />
+    <Node FromMapCode="24" ToMapCode="14" PosX="476" PosY="301" ToX="3003" ToY="2947" />
+    <Node FromMapCode="24" ToMapCode="18" PosX="928" PosY="2472" ToX="1191" ToY="663" />
+    <Node FromMapCode="24" ToMapCode="35" PosX="3602" PosY="1381" ToX="6846" ToY="4038" />
+    <Node FromMapCode="25" ToMapCode="27" PosX="6228" PosY="3345" ToX="8132" ToY="648" />
+    <Node FromMapCode="37" ToMapCode="9" PosX="7218" PosY="4656" ToX="700" ToY="4597" />
+    <Node FromMapCode="37" ToMapCode="17" PosX="2670" PosY="520" ToX="691" ToY="1293" />
+    <Node FromMapCode="37" ToMapCode="14" PosX="890" PosY="5451" ToX="631" ToY="1746" />
+    <Node FromMapCode="42" ToMapCode="2" PosX="668" PosY="420" ToX="6453" ToY="417" />
+    <Node FromMapCode="26" ToMapCode="7" PosX="489" PosY="1367" ToX="6788" ToY="4068" />
+    <Node FromMapCode="27" ToMapCode="1" PosX="696" PosY="2401" ToX="8967" ToY="3277" />
+    <Node FromMapCode="27" ToMapCode="25" PosX="8266" PosY="534" ToX="6107" ToY="3281" />
+    <Node FromMapCode="28" ToMapCode="2" PosX="707" PosY="557" ToX="671" ToY="383" />
+    <Node FromMapCode="28" ToMapCode="21" PosX="9759" PosY="6627" ToX="3638" ToY="757" />
+    <Node FromMapCode="29" ToMapCode="10" PosX="559" PosY="346" ToX="499" ToY="2056" />
+    <Node FromMapCode="29" ToMapCode="7" PosX="7334" PosY="6607" ToX="6383" ToY="5234" />
+    <Node FromMapCode="78" ToMapCode="76" PosX="11296" PosY="7623" ToX="13731" ToY="7035" />
+    <Node FromMapCode="78" ToMapCode="76" PosX="803" PosY="6380" ToX="13731" ToY="7035" />
+    <Node FromMapCode="30" ToMapCode="32" PosX="3476" PosY="326" ToX="11504" ToY="2225" />
+    <Node FromMapCode="72" ToMapCode="38" PosX="1835" PosY="1247" ToX="2851" ToY="2092" />
+    <Node FromMapCode="72" ToMapCode="38" PosX="11614" PosY="7456" ToX="10955" ToY="6797" />
+    <Node FromMapCode="73" ToMapCode="38" PosX="1835" PosY="1247" ToX="2851" ToY="2092" />
+    <Node FromMapCode="73" ToMapCode="38" PosX="11614" PosY="7456" ToX="10955" ToY="6797" />
+    <Node FromMapCode="75" ToMapCode="38" PosX="1835" PosY="1247" ToX="2851" ToY="2092" />
+    <Node FromMapCode="75" ToMapCode="38" PosX="11614" PosY="7456" ToX="10955" ToY="6797" />
+    <Node FromMapCode="38" ToMapCode="38" PosX="1835" PosY="1247" ToX="2851" ToY="2092" />
+    <Node FromMapCode="38" ToMapCode="38" PosX="11614" PosY="7456" ToX="10955" ToY="6797" />
+    <Node FromMapCode="74" ToMapCode="38" PosX="1835" PosY="1247" ToX="2851" ToY="2092" />
+    <Node FromMapCode="74" ToMapCode="38" PosX="11614" PosY="7456" ToX="10955" ToY="6797" />
+    <Node FromMapCode="31" ToMapCode="36" PosX="5238" PosY="265" ToX="847" ToY="5383" />
+    <Node FromMapCode="31" ToMapCode="16" PosX="523" PosY="3259" ToX="8382" ToY="4391" />
+    <Node FromMapCode="32" ToMapCode="1" PosX="503" PosY="978" ToX="2568" ToY="5643" />
+    <Node FromMapCode="32" ToMapCode="30" PosX="11593" PosY="2348" ToX="3619" ToY="405" />
+    <Node FromMapCode="32" ToMapCode="3" PosX="11578" PosY="4245" ToX="4779" ToY="436" />
+    <Node FromMapCode="32" ToMapCode="11" PosX="2073" PosY="6395" ToX="6787" ToY="2125" />
+    <Node FromMapCode="33" ToMapCode="11" PosX="8467" PosY="1053" ToX="4267" ToY="3880" />
+    <Node FromMapCode="33" ToMapCode="2" PosX="542" PosY="599" ToX="1023" ToY="4588" />
+    <Node FromMapCode="34" ToMapCode="20" PosX="8445" PosY="1972" ToX="1330" ToY="453" />
+  </Teleport>
+	<!-- End -->
+
+	<!-- Dịch chuyển theo cổng Teleport -->
+  <TransferNPC>
+    <Node FromMapCode="1" ToMapCode="10" PosX="4240" PosY="2075" ToX="3220" ToY="4410" />
+    <Node FromMapCode="1" ToMapCode="39" PosX="4240" PosY="2075" ToX="6000" ToY="1090" />
+    <Node FromMapCode="1" ToMapCode="2" PosX="4240" PosY="2075" ToX="2650" ToY="1690" />
+    <Node FromMapCode="1" ToMapCode="32" PosX="4240" PosY="2075" ToX="2570" ToY="3280" />
+    <Node FromMapCode="1" ToMapCode="3" PosX="4240" PosY="2075" ToX="4530" ToY="10380" />
+    <Node FromMapCode="1" ToMapCode="9" PosX="4240" PosY="2075" ToX="1500" ToY="1870" />
+    <Node FromMapCode="1" ToMapCode="27" PosX="4240" PosY="2075" ToX="2250" ToY="2520" />
+    <Node FromMapCode="1" ToMapCode="28" PosX="4240" PosY="2075" ToX="1959" ToY="1496" />
+    <Node FromMapCode="1" ToMapCode="20" PosX="4240" PosY="2075" ToX="3260" ToY="1500" />
+    <Node FromMapCode="1" ToMapCode="19" PosX="4240" PosY="2075" ToX="2320" ToY="2570" />
+    <Node FromMapCode="1" ToMapCode="29" PosX="4240" PosY="2075" ToX="2350" ToY="3170" />
+    <Node FromMapCode="1" ToMapCode="33" PosX="4240" PosY="2075" ToX="3100" ToY="1990" />
+    <Node FromMapCode="1" ToMapCode="5" PosX="4240" PosY="2075" ToX="2750" ToY="3090" />
+    <Node FromMapCode="1" ToMapCode="41" PosX="4240" PosY="2075" ToX="4640" ToY="4100" />
+    <Node FromMapCode="1" ToMapCode="42" PosX="4240" PosY="2075" ToX="3930" ToY="3930" />
+    <Node FromMapCode="1" ToMapCode="91" PosX="4240" PosY="2075" ToX="2600" ToY="1760" />
+    <Node FromMapCode="2" ToMapCode="1" PosX="2400" PosY="1660" ToX="4450" ToY="2100" />
+    <Node FromMapCode="2" ToMapCode="10" PosX="2400" PosY="1660" ToX="3220" ToY="4410" />
+    <Node FromMapCode="2" ToMapCode="39" PosX="2400" PosY="1660" ToX="6000" ToY="1090" />
+    <Node FromMapCode="2" ToMapCode="32" PosX="2400" PosY="1660" ToX="2570" ToY="3280" />
+    <Node FromMapCode="2" ToMapCode="3" PosX="2400" PosY="1660" ToX="4530" ToY="10380" />
+    <Node FromMapCode="2" ToMapCode="9" PosX="2400" PosY="1660" ToX="1500" ToY="1870" />
+    <Node FromMapCode="2" ToMapCode="27" PosX="2400" PosY="1660" ToX="2250" ToY="2520" />
+    <Node FromMapCode="2" ToMapCode="28" PosX="2400" PosY="1660" ToX="1959" ToY="1496" />
+    <Node FromMapCode="2" ToMapCode="20" PosX="2400" PosY="1660" ToX="3260" ToY="1500" />
+    <Node FromMapCode="2" ToMapCode="19" PosX="2400" PosY="1660" ToX="2320" ToY="2570" />
+    <Node FromMapCode="2" ToMapCode="29" PosX="2400" PosY="1660" ToX="2350" ToY="3170" />
+    <Node FromMapCode="2" ToMapCode="33" PosX="2400" PosY="1660" ToX="3100" ToY="1990" />
+    <Node FromMapCode="2" ToMapCode="5" PosX="2400" PosY="1660" ToX="2750" ToY="3090" />
+    <Node FromMapCode="2" ToMapCode="41" PosX="2400" PosY="1660" ToX="4640" ToY="4100" />
+    <Node FromMapCode="2" ToMapCode="42" PosX="2400" PosY="1660" ToX="3930" ToY="3930" />
+    <Node FromMapCode="2" ToMapCode="91" PosX="2400" PosY="1660" ToX="2600" ToY="1760" />
+    <Node FromMapCode="2" ToMapCode="1" PosX="1220" PosY="4680" ToX="4450" ToY="2100" />
+    <Node FromMapCode="2" ToMapCode="10" PosX="1220" PosY="4680" ToX="3220" ToY="4410" />
+    <Node FromMapCode="2" ToMapCode="39" PosX="1220" PosY="4680" ToX="6000" ToY="1090" />
+    <Node FromMapCode="2" ToMapCode="32" PosX="1220" PosY="4680" ToX="2570" ToY="3280" />
+    <Node FromMapCode="2" ToMapCode="3" PosX="1220" PosY="4680" ToX="4530" ToY="10380" />
+    <Node FromMapCode="2" ToMapCode="9" PosX="1220" PosY="4680" ToX="1500" ToY="1870" />
+    <Node FromMapCode="2" ToMapCode="27" PosX="1220" PosY="4680" ToX="2250" ToY="2520" />
+    <Node FromMapCode="2" ToMapCode="28" PosX="1220" PosY="4680" ToX="1959" ToY="1496" />
+    <Node FromMapCode="2" ToMapCode="20" PosX="1220" PosY="4680" ToX="3260" ToY="1500" />
+    <Node FromMapCode="2" ToMapCode="19" PosX="1220" PosY="4680" ToX="2320" ToY="2570" />
+    <Node FromMapCode="2" ToMapCode="29" PosX="1220" PosY="4680" ToX="2350" ToY="3170" />
+    <Node FromMapCode="2" ToMapCode="33" PosX="1220" PosY="4680" ToX="3100" ToY="1990" />
+    <Node FromMapCode="2" ToMapCode="5" PosX="1220" PosY="4680" ToX="2750" ToY="3090" />
+    <Node FromMapCode="2" ToMapCode="41" PosX="1220" PosY="4680" ToX="4640" ToY="4100" />
+    <Node FromMapCode="2" ToMapCode="42" PosX="1220" PosY="4680" ToX="3930" ToY="3930" />
+    <Node FromMapCode="2" ToMapCode="91" PosX="1220" PosY="4680" ToX="2600" ToY="1760" />
+    <Node FromMapCode="2" ToMapCode="1" PosX="9397" PosY="5389" ToX="4450" ToY="2100" />
+    <Node FromMapCode="2" ToMapCode="10" PosX="9397" PosY="5389" ToX="3220" ToY="4410" />
+    <Node FromMapCode="2" ToMapCode="39" PosX="9397" PosY="5389" ToX="6000" ToY="1090" />
+    <Node FromMapCode="2" ToMapCode="32" PosX="9397" PosY="5389" ToX="2570" ToY="3280" />
+    <Node FromMapCode="2" ToMapCode="3" PosX="9397" PosY="5389" ToX="4530" ToY="10380" />
+    <Node FromMapCode="2" ToMapCode="9" PosX="9397" PosY="5389" ToX="1500" ToY="1870" />
+    <Node FromMapCode="2" ToMapCode="27" PosX="9397" PosY="5389" ToX="2250" ToY="2520" />
+    <Node FromMapCode="2" ToMapCode="28" PosX="9397" PosY="5389" ToX="1959" ToY="1496" />
+    <Node FromMapCode="2" ToMapCode="20" PosX="9397" PosY="5389" ToX="3260" ToY="1500" />
+    <Node FromMapCode="2" ToMapCode="19" PosX="9397" PosY="5389" ToX="2320" ToY="2570" />
+    <Node FromMapCode="2" ToMapCode="29" PosX="9397" PosY="5389" ToX="2350" ToY="3170" />
+    <Node FromMapCode="2" ToMapCode="33" PosX="9397" PosY="5389" ToX="3100" ToY="1990" />
+    <Node FromMapCode="2" ToMapCode="5" PosX="9397" PosY="5389" ToX="2750" ToY="3090" />
+    <Node FromMapCode="2" ToMapCode="41" PosX="9397" PosY="5389" ToX="4640" ToY="4100" />
+    <Node FromMapCode="2" ToMapCode="42" PosX="9397" PosY="5389" ToX="3930" ToY="3930" />
+    <Node FromMapCode="2" ToMapCode="91" PosX="9397" PosY="5389" ToX="2600" ToY="1760" />
+    <Node FromMapCode="2" ToMapCode="1" PosX="4720" PosY="1050" ToX="4450" ToY="2100" />
+    <Node FromMapCode="2" ToMapCode="10" PosX="4720" PosY="1050" ToX="3220" ToY="4410" />
+    <Node FromMapCode="2" ToMapCode="39" PosX="4720" PosY="1050" ToX="6000" ToY="1090" />
+    <Node FromMapCode="2" ToMapCode="32" PosX="4720" PosY="1050" ToX="2570" ToY="3280" />
+    <Node FromMapCode="2" ToMapCode="3" PosX="4720" PosY="1050" ToX="4530" ToY="10380" />
+    <Node FromMapCode="2" ToMapCode="9" PosX="4720" PosY="1050" ToX="1500" ToY="1870" />
+    <Node FromMapCode="2" ToMapCode="27" PosX="4720" PosY="1050" ToX="2250" ToY="2520" />
+    <Node FromMapCode="2" ToMapCode="28" PosX="4720" PosY="1050" ToX="1959" ToY="1496" />
+    <Node FromMapCode="2" ToMapCode="20" PosX="4720" PosY="1050" ToX="3260" ToY="1500" />
+    <Node FromMapCode="2" ToMapCode="19" PosX="4720" PosY="1050" ToX="2320" ToY="2570" />
+    <Node FromMapCode="2" ToMapCode="29" PosX="4720" PosY="1050" ToX="2350" ToY="3170" />
+    <Node FromMapCode="2" ToMapCode="33" PosX="4720" PosY="1050" ToX="3100" ToY="1990" />
+    <Node FromMapCode="2" ToMapCode="5" PosX="4720" PosY="1050" ToX="2750" ToY="3090" />
+    <Node FromMapCode="2" ToMapCode="41" PosX="4720" PosY="1050" ToX="4640" ToY="4100" />
+    <Node FromMapCode="2" ToMapCode="42" PosX="4720" PosY="1050" ToX="3930" ToY="3930" />
+    <Node FromMapCode="2" ToMapCode="91" PosX="4720" PosY="1050" ToX="2600" ToY="1760" />
+    <Node FromMapCode="3" ToMapCode="1" PosX="4150" PosY="8250" ToX="4450" ToY="2100" />
+    <Node FromMapCode="3" ToMapCode="10" PosX="4150" PosY="8250" ToX="3220" ToY="4410" />
+    <Node FromMapCode="3" ToMapCode="39" PosX="4150" PosY="8250" ToX="6000" ToY="1090" />
+    <Node FromMapCode="3" ToMapCode="2" PosX="4150" PosY="8250" ToX="2650" ToY="1690" />
+    <Node FromMapCode="3" ToMapCode="32" PosX="4150" PosY="8250" ToX="2570" ToY="3280" />
+    <Node FromMapCode="3" ToMapCode="9" PosX="4150" PosY="8250" ToX="1500" ToY="1870" />
+    <Node FromMapCode="3" ToMapCode="27" PosX="4150" PosY="8250" ToX="2250" ToY="2520" />
+    <Node FromMapCode="3" ToMapCode="28" PosX="4150" PosY="8250" ToX="1959" ToY="1496" />
+    <Node FromMapCode="3" ToMapCode="20" PosX="4150" PosY="8250" ToX="3260" ToY="1500" />
+    <Node FromMapCode="3" ToMapCode="19" PosX="4150" PosY="8250" ToX="2320" ToY="2570" />
+    <Node FromMapCode="3" ToMapCode="29" PosX="4150" PosY="8250" ToX="2350" ToY="3170" />
+    <Node FromMapCode="3" ToMapCode="33" PosX="4150" PosY="8250" ToX="3100" ToY="1990" />
+    <Node FromMapCode="3" ToMapCode="5" PosX="4150" PosY="8250" ToX="2750" ToY="3090" />
+    <Node FromMapCode="3" ToMapCode="41" PosX="4150" PosY="8250" ToX="4640" ToY="4100" />
+    <Node FromMapCode="3" ToMapCode="42" PosX="4150" PosY="8250" ToX="3930" ToY="3930" />
+    <Node FromMapCode="3" ToMapCode="91" PosX="4150" PosY="8250" ToX="2600" ToY="1760" />
+    <Node FromMapCode="5" ToMapCode="1" PosX="2792" PosY="3271" ToX="4450" ToY="2100" />
+    <Node FromMapCode="5" ToMapCode="10" PosX="2792" PosY="3271" ToX="3220" ToY="4410" />
+    <Node FromMapCode="5" ToMapCode="39" PosX="2792" PosY="3271" ToX="6000" ToY="1090" />
+    <Node FromMapCode="5" ToMapCode="2" PosX="2792" PosY="3271" ToX="2650" ToY="1690" />
+    <Node FromMapCode="5" ToMapCode="32" PosX="2792" PosY="3271" ToX="2570" ToY="3280" />
+    <Node FromMapCode="5" ToMapCode="3" PosX="2792" PosY="3271" ToX="4530" ToY="10380" />
+    <Node FromMapCode="5" ToMapCode="9" PosX="2792" PosY="3271" ToX="1500" ToY="1870" />
+    <Node FromMapCode="5" ToMapCode="27" PosX="2792" PosY="3271" ToX="2250" ToY="2520" />
+    <Node FromMapCode="5" ToMapCode="28" PosX="2792" PosY="3271" ToX="1959" ToY="1496" />
+    <Node FromMapCode="5" ToMapCode="20" PosX="2792" PosY="3271" ToX="3260" ToY="1500" />
+    <Node FromMapCode="5" ToMapCode="19" PosX="2792" PosY="3271" ToX="2320" ToY="2570" />
+    <Node FromMapCode="5" ToMapCode="29" PosX="2792" PosY="3271" ToX="2350" ToY="3170" />
+    <Node FromMapCode="5" ToMapCode="33" PosX="2792" PosY="3271" ToX="3100" ToY="1990" />
+    <Node FromMapCode="5" ToMapCode="41" PosX="2792" PosY="3271" ToX="4640" ToY="4100" />
+    <Node FromMapCode="5" ToMapCode="42" PosX="2792" PosY="3271" ToX="3930" ToY="3930" />
+    <Node FromMapCode="5" ToMapCode="91" PosX="2792" PosY="3271" ToX="2600" ToY="1760" />
+    <Node FromMapCode="9" ToMapCode="1" PosX="1363" PosY="1971" ToX="4450" ToY="2100" />
+    <Node FromMapCode="9" ToMapCode="10" PosX="1363" PosY="1971" ToX="3220" ToY="4410" />
+    <Node FromMapCode="9" ToMapCode="39" PosX="1363" PosY="1971" ToX="6000" ToY="1090" />
+    <Node FromMapCode="9" ToMapCode="2" PosX="1363" PosY="1971" ToX="2650" ToY="1690" />
+    <Node FromMapCode="9" ToMapCode="32" PosX="1363" PosY="1971" ToX="2570" ToY="3280" />
+    <Node FromMapCode="9" ToMapCode="3" PosX="1363" PosY="1971" ToX="4530" ToY="10380" />
+    <Node FromMapCode="9" ToMapCode="27" PosX="1363" PosY="1971" ToX="2250" ToY="2520" />
+    <Node FromMapCode="9" ToMapCode="28" PosX="1363" PosY="1971" ToX="1959" ToY="1496" />
+    <Node FromMapCode="9" ToMapCode="20" PosX="1363" PosY="1971" ToX="3260" ToY="1500" />
+    <Node FromMapCode="9" ToMapCode="19" PosX="1363" PosY="1971" ToX="2320" ToY="2570" />
+    <Node FromMapCode="9" ToMapCode="29" PosX="1363" PosY="1971" ToX="2350" ToY="3170" />
+    <Node FromMapCode="9" ToMapCode="33" PosX="1363" PosY="1971" ToX="3100" ToY="1990" />
+    <Node FromMapCode="9" ToMapCode="5" PosX="1363" PosY="1971" ToX="2750" ToY="3090" />
+    <Node FromMapCode="9" ToMapCode="41" PosX="1363" PosY="1971" ToX="4640" ToY="4100" />
+    <Node FromMapCode="9" ToMapCode="42" PosX="1363" PosY="1971" ToX="3930" ToY="3930" />
+    <Node FromMapCode="9" ToMapCode="91" PosX="1363" PosY="1971" ToX="2600" ToY="1760" />
+    <Node FromMapCode="10" ToMapCode="1" PosX="3080" PosY="4560" ToX="4450" ToY="2100" />
+    <Node FromMapCode="10" ToMapCode="39" PosX="3080" PosY="4560" ToX="6000" ToY="1090" />
+    <Node FromMapCode="10" ToMapCode="2" PosX="3080" PosY="4560" ToX="2650" ToY="1690" />
+    <Node FromMapCode="10" ToMapCode="32" PosX="3080" PosY="4560" ToX="2570" ToY="3280" />
+    <Node FromMapCode="10" ToMapCode="3" PosX="3080" PosY="4560" ToX="4530" ToY="10380" />
+    <Node FromMapCode="10" ToMapCode="9" PosX="3080" PosY="4560" ToX="1500" ToY="1870" />
+    <Node FromMapCode="10" ToMapCode="27" PosX="3080" PosY="4560" ToX="2250" ToY="2520" />
+    <Node FromMapCode="10" ToMapCode="28" PosX="3080" PosY="4560" ToX="1959" ToY="1496" />
+    <Node FromMapCode="10" ToMapCode="20" PosX="3080" PosY="4560" ToX="3260" ToY="1500" />
+    <Node FromMapCode="10" ToMapCode="19" PosX="3080" PosY="4560" ToX="2320" ToY="2570" />
+    <Node FromMapCode="10" ToMapCode="29" PosX="3080" PosY="4560" ToX="2350" ToY="3170" />
+    <Node FromMapCode="10" ToMapCode="33" PosX="3080" PosY="4560" ToX="3100" ToY="1990" />
+    <Node FromMapCode="10" ToMapCode="5" PosX="3080" PosY="4560" ToX="2750" ToY="3090" />
+    <Node FromMapCode="10" ToMapCode="41" PosX="3080" PosY="4560" ToX="4640" ToY="4100" />
+    <Node FromMapCode="10" ToMapCode="42" PosX="3080" PosY="4560" ToX="3930" ToY="3930" />
+    <Node FromMapCode="10" ToMapCode="91" PosX="3080" PosY="4560" ToX="2600" ToY="1760" />
+    <Node FromMapCode="76" ToMapCode="1" PosX="11860" PosY="2580" ToX="4450" ToY="2100" />
+    <Node FromMapCode="76" ToMapCode="10" PosX="11860" PosY="2580" ToX="3220" ToY="4410" />
+    <Node FromMapCode="76" ToMapCode="39" PosX="11860" PosY="2580" ToX="6000" ToY="1090" />
+    <Node FromMapCode="76" ToMapCode="2" PosX="11860" PosY="2580" ToX="2650" ToY="1690" />
+    <Node FromMapCode="76" ToMapCode="32" PosX="11860" PosY="2580" ToX="2570" ToY="3280" />
+    <Node FromMapCode="76" ToMapCode="3" PosX="11860" PosY="2580" ToX="4530" ToY="10380" />
+    <Node FromMapCode="76" ToMapCode="9" PosX="11860" PosY="2580" ToX="1500" ToY="1870" />
+    <Node FromMapCode="76" ToMapCode="27" PosX="11860" PosY="2580" ToX="2250" ToY="2520" />
+    <Node FromMapCode="76" ToMapCode="28" PosX="11860" PosY="2580" ToX="1959" ToY="1496" />
+    <Node FromMapCode="76" ToMapCode="20" PosX="11860" PosY="2580" ToX="3260" ToY="1500" />
+    <Node FromMapCode="76" ToMapCode="19" PosX="11860" PosY="2580" ToX="2320" ToY="2570" />
+    <Node FromMapCode="76" ToMapCode="29" PosX="11860" PosY="2580" ToX="2350" ToY="3170" />
+    <Node FromMapCode="76" ToMapCode="33" PosX="11860" PosY="2580" ToX="3100" ToY="1990" />
+    <Node FromMapCode="76" ToMapCode="5" PosX="11860" PosY="2580" ToX="2750" ToY="3090" />
+    <Node FromMapCode="76" ToMapCode="41" PosX="11860" PosY="2580" ToX="4640" ToY="4100" />
+    <Node FromMapCode="76" ToMapCode="42" PosX="11860" PosY="2580" ToX="3930" ToY="3930" />
+    <Node FromMapCode="76" ToMapCode="91" PosX="11860" PosY="2580" ToX="2600" ToY="1760" />
+    <Node FromMapCode="76" ToMapCode="1" PosX="12910" PosY="6310" ToX="4450" ToY="2100" />
+    <Node FromMapCode="76" ToMapCode="10" PosX="12910" PosY="6310" ToX="3220" ToY="4410" />
+    <Node FromMapCode="76" ToMapCode="39" PosX="12910" PosY="6310" ToX="6000" ToY="1090" />
+    <Node FromMapCode="76" ToMapCode="2" PosX="12910" PosY="6310" ToX="2650" ToY="1690" />
+    <Node FromMapCode="76" ToMapCode="32" PosX="12910" PosY="6310" ToX="2570" ToY="3280" />
+    <Node FromMapCode="76" ToMapCode="3" PosX="12910" PosY="6310" ToX="4530" ToY="10380" />
+    <Node FromMapCode="76" ToMapCode="9" PosX="12910" PosY="6310" ToX="1500" ToY="1870" />
+    <Node FromMapCode="76" ToMapCode="27" PosX="12910" PosY="6310" ToX="2250" ToY="2520" />
+    <Node FromMapCode="76" ToMapCode="28" PosX="12910" PosY="6310" ToX="1959" ToY="1496" />
+    <Node FromMapCode="76" ToMapCode="20" PosX="12910" PosY="6310" ToX="3260" ToY="1500" />
+    <Node FromMapCode="76" ToMapCode="19" PosX="12910" PosY="6310" ToX="2320" ToY="2570" />
+    <Node FromMapCode="76" ToMapCode="29" PosX="12910" PosY="6310" ToX="2350" ToY="3170" />
+    <Node FromMapCode="76" ToMapCode="33" PosX="12910" PosY="6310" ToX="3100" ToY="1990" />
+    <Node FromMapCode="76" ToMapCode="5" PosX="12910" PosY="6310" ToX="2750" ToY="3090" />
+    <Node FromMapCode="76" ToMapCode="41" PosX="12910" PosY="6310" ToX="4640" ToY="4100" />
+    <Node FromMapCode="76" ToMapCode="42" PosX="12910" PosY="6310" ToX="3930" ToY="3930" />
+    <Node FromMapCode="76" ToMapCode="91" PosX="12910" PosY="6310" ToX="2600" ToY="1760" />
+    <Node FromMapCode="76" ToMapCode="1" PosX="3730" PosY="2880" ToX="4450" ToY="2100" />
+    <Node FromMapCode="76" ToMapCode="10" PosX="3730" PosY="2880" ToX="3220" ToY="4410" />
+    <Node FromMapCode="76" ToMapCode="39" PosX="3730" PosY="2880" ToX="6000" ToY="1090" />
+    <Node FromMapCode="76" ToMapCode="2" PosX="3730" PosY="2880" ToX="2650" ToY="1690" />
+    <Node FromMapCode="76" ToMapCode="32" PosX="3730" PosY="2880" ToX="2570" ToY="3280" />
+    <Node FromMapCode="76" ToMapCode="3" PosX="3730" PosY="2880" ToX="4530" ToY="10380" />
+    <Node FromMapCode="76" ToMapCode="9" PosX="3730" PosY="2880" ToX="1500" ToY="1870" />
+    <Node FromMapCode="76" ToMapCode="27" PosX="3730" PosY="2880" ToX="2250" ToY="2520" />
+    <Node FromMapCode="76" ToMapCode="28" PosX="3730" PosY="2880" ToX="1959" ToY="1496" />
+    <Node FromMapCode="76" ToMapCode="20" PosX="3730" PosY="2880" ToX="3260" ToY="1500" />
+    <Node FromMapCode="76" ToMapCode="19" PosX="3730" PosY="2880" ToX="2320" ToY="2570" />
+    <Node FromMapCode="76" ToMapCode="29" PosX="3730" PosY="2880" ToX="2350" ToY="3170" />
+    <Node FromMapCode="76" ToMapCode="33" PosX="3730" PosY="2880" ToX="3100" ToY="1990" />
+    <Node FromMapCode="76" ToMapCode="5" PosX="3730" PosY="2880" ToX="2750" ToY="3090" />
+    <Node FromMapCode="76" ToMapCode="41" PosX="3730" PosY="2880" ToX="4640" ToY="4100" />
+    <Node FromMapCode="76" ToMapCode="42" PosX="3730" PosY="2880" ToX="3930" ToY="3930" />
+    <Node FromMapCode="76" ToMapCode="91" PosX="3730" PosY="2880" ToX="2600" ToY="1760" />
+    <Node FromMapCode="41" ToMapCode="1" PosX="4870" PosY="4200" ToX="4450" ToY="2100" />
+    <Node FromMapCode="41" ToMapCode="10" PosX="4870" PosY="4200" ToX="3220" ToY="4410" />
+    <Node FromMapCode="41" ToMapCode="39" PosX="4870" PosY="4200" ToX="6000" ToY="1090" />
+    <Node FromMapCode="41" ToMapCode="2" PosX="4870" PosY="4200" ToX="2650" ToY="1690" />
+    <Node FromMapCode="41" ToMapCode="32" PosX="4870" PosY="4200" ToX="2570" ToY="3280" />
+    <Node FromMapCode="41" ToMapCode="3" PosX="4870" PosY="4200" ToX="4530" ToY="10380" />
+    <Node FromMapCode="41" ToMapCode="9" PosX="4870" PosY="4200" ToX="1500" ToY="1870" />
+    <Node FromMapCode="41" ToMapCode="27" PosX="4870" PosY="4200" ToX="2250" ToY="2520" />
+    <Node FromMapCode="41" ToMapCode="28" PosX="4870" PosY="4200" ToX="1959" ToY="1496" />
+    <Node FromMapCode="41" ToMapCode="20" PosX="4870" PosY="4200" ToX="3260" ToY="1500" />
+    <Node FromMapCode="41" ToMapCode="19" PosX="4870" PosY="4200" ToX="2320" ToY="2570" />
+    <Node FromMapCode="41" ToMapCode="29" PosX="4870" PosY="4200" ToX="2350" ToY="3170" />
+    <Node FromMapCode="41" ToMapCode="33" PosX="4870" PosY="4200" ToX="3100" ToY="1990" />
+    <Node FromMapCode="41" ToMapCode="5" PosX="4870" PosY="4200" ToX="2750" ToY="3090" />
+    <Node FromMapCode="41" ToMapCode="42" PosX="4870" PosY="4200" ToX="3930" ToY="3930" />
+    <Node FromMapCode="41" ToMapCode="91" PosX="4870" PosY="4200" ToX="2600" ToY="1760" />
+    <Node FromMapCode="91" ToMapCode="1" PosX="2950" PosY="1990" ToX="4450" ToY="2100" />
+    <Node FromMapCode="91" ToMapCode="10" PosX="2950" PosY="1990" ToX="3220" ToY="4410" />
+    <Node FromMapCode="91" ToMapCode="39" PosX="2950" PosY="1990" ToX="6000" ToY="1090" />
+    <Node FromMapCode="91" ToMapCode="2" PosX="2950" PosY="1990" ToX="2650" ToY="1690" />
+    <Node FromMapCode="91" ToMapCode="32" PosX="2950" PosY="1990" ToX="2570" ToY="3280" />
+    <Node FromMapCode="91" ToMapCode="3" PosX="2950" PosY="1990" ToX="4530" ToY="10380" />
+    <Node FromMapCode="91" ToMapCode="9" PosX="2950" PosY="1990" ToX="1500" ToY="1870" />
+    <Node FromMapCode="91" ToMapCode="27" PosX="2950" PosY="1990" ToX="2250" ToY="2520" />
+    <Node FromMapCode="91" ToMapCode="28" PosX="2950" PosY="1990" ToX="1959" ToY="1496" />
+    <Node FromMapCode="91" ToMapCode="20" PosX="2950" PosY="1990" ToX="3260" ToY="1500" />
+    <Node FromMapCode="91" ToMapCode="19" PosX="2950" PosY="1990" ToX="2320" ToY="2570" />
+    <Node FromMapCode="91" ToMapCode="29" PosX="2950" PosY="1990" ToX="2350" ToY="3170" />
+    <Node FromMapCode="91" ToMapCode="33" PosX="2950" PosY="1990" ToX="3100" ToY="1990" />
+    <Node FromMapCode="91" ToMapCode="5" PosX="2950" PosY="1990" ToX="2750" ToY="3090" />
+    <Node FromMapCode="91" ToMapCode="41" PosX="2950" PosY="1990" ToX="4640" ToY="4100" />
+    <Node FromMapCode="91" ToMapCode="42" PosX="2950" PosY="1990" ToX="3930" ToY="3930" />
+    <Node FromMapCode="19" ToMapCode="1" PosX="2225" PosY="2725" ToX="4450" ToY="2100" />
+    <Node FromMapCode="19" ToMapCode="10" PosX="2225" PosY="2725" ToX="3220" ToY="4410" />
+    <Node FromMapCode="19" ToMapCode="39" PosX="2225" PosY="2725" ToX="6000" ToY="1090" />
+    <Node FromMapCode="19" ToMapCode="2" PosX="2225" PosY="2725" ToX="2650" ToY="1690" />
+    <Node FromMapCode="19" ToMapCode="32" PosX="2225" PosY="2725" ToX="2570" ToY="3280" />
+    <Node FromMapCode="19" ToMapCode="3" PosX="2225" PosY="2725" ToX="4530" ToY="10380" />
+    <Node FromMapCode="19" ToMapCode="9" PosX="2225" PosY="2725" ToX="1500" ToY="1870" />
+    <Node FromMapCode="19" ToMapCode="27" PosX="2225" PosY="2725" ToX="2250" ToY="2520" />
+    <Node FromMapCode="19" ToMapCode="28" PosX="2225" PosY="2725" ToX="1959" ToY="1496" />
+    <Node FromMapCode="19" ToMapCode="20" PosX="2225" PosY="2725" ToX="3260" ToY="1500" />
+    <Node FromMapCode="19" ToMapCode="29" PosX="2225" PosY="2725" ToX="2350" ToY="3170" />
+    <Node FromMapCode="19" ToMapCode="33" PosX="2225" PosY="2725" ToX="3100" ToY="1990" />
+    <Node FromMapCode="19" ToMapCode="5" PosX="2225" PosY="2725" ToX="2750" ToY="3090" />
+    <Node FromMapCode="19" ToMapCode="41" PosX="2225" PosY="2725" ToX="4640" ToY="4100" />
+    <Node FromMapCode="19" ToMapCode="42" PosX="2225" PosY="2725" ToX="3930" ToY="3930" />
+    <Node FromMapCode="19" ToMapCode="91" PosX="2225" PosY="2725" ToX="2600" ToY="1760" />
+    <Node FromMapCode="20" ToMapCode="1" PosX="2940" PosY="1380" ToX="4450" ToY="2100" />
+    <Node FromMapCode="20" ToMapCode="10" PosX="2940" PosY="1380" ToX="3220" ToY="4410" />
+    <Node FromMapCode="20" ToMapCode="39" PosX="2940" PosY="1380" ToX="6000" ToY="1090" />
+    <Node FromMapCode="20" ToMapCode="2" PosX="2940" PosY="1380" ToX="2650" ToY="1690" />
+    <Node FromMapCode="20" ToMapCode="32" PosX="2940" PosY="1380" ToX="2570" ToY="3280" />
+    <Node FromMapCode="20" ToMapCode="3" PosX="2940" PosY="1380" ToX="4530" ToY="10380" />
+    <Node FromMapCode="20" ToMapCode="9" PosX="2940" PosY="1380" ToX="1500" ToY="1870" />
+    <Node FromMapCode="20" ToMapCode="27" PosX="2940" PosY="1380" ToX="2250" ToY="2520" />
+    <Node FromMapCode="20" ToMapCode="28" PosX="2940" PosY="1380" ToX="1959" ToY="1496" />
+    <Node FromMapCode="20" ToMapCode="19" PosX="2940" PosY="1380" ToX="2320" ToY="2570" />
+    <Node FromMapCode="20" ToMapCode="29" PosX="2940" PosY="1380" ToX="2350" ToY="3170" />
+    <Node FromMapCode="20" ToMapCode="33" PosX="2940" PosY="1380" ToX="3100" ToY="1990" />
+    <Node FromMapCode="20" ToMapCode="5" PosX="2940" PosY="1380" ToX="2750" ToY="3090" />
+    <Node FromMapCode="20" ToMapCode="41" PosX="2940" PosY="1380" ToX="4640" ToY="4100" />
+    <Node FromMapCode="20" ToMapCode="42" PosX="2940" PosY="1380" ToX="3930" ToY="3930" />
+    <Node FromMapCode="20" ToMapCode="91" PosX="2940" PosY="1380" ToX="2600" ToY="1760" />
+    <Node FromMapCode="39" ToMapCode="1" PosX="6360" PosY="1060" ToX="4450" ToY="2100" />
+    <Node FromMapCode="39" ToMapCode="10" PosX="6360" PosY="1060" ToX="3220" ToY="4410" />
+    <Node FromMapCode="39" ToMapCode="2" PosX="6360" PosY="1060" ToX="2650" ToY="1690" />
+    <Node FromMapCode="39" ToMapCode="32" PosX="6360" PosY="1060" ToX="2570" ToY="3280" />
+    <Node FromMapCode="39" ToMapCode="3" PosX="6360" PosY="1060" ToX="4530" ToY="10380" />
+    <Node FromMapCode="39" ToMapCode="9" PosX="6360" PosY="1060" ToX="1500" ToY="1870" />
+    <Node FromMapCode="39" ToMapCode="27" PosX="6360" PosY="1060" ToX="2250" ToY="2520" />
+    <Node FromMapCode="39" ToMapCode="28" PosX="6360" PosY="1060" ToX="1959" ToY="1496" />
+    <Node FromMapCode="39" ToMapCode="20" PosX="6360" PosY="1060" ToX="3260" ToY="1500" />
+    <Node FromMapCode="39" ToMapCode="19" PosX="6360" PosY="1060" ToX="2320" ToY="2570" />
+    <Node FromMapCode="39" ToMapCode="29" PosX="6360" PosY="1060" ToX="2350" ToY="3170" />
+    <Node FromMapCode="39" ToMapCode="33" PosX="6360" PosY="1060" ToX="3100" ToY="1990" />
+    <Node FromMapCode="39" ToMapCode="5" PosX="6360" PosY="1060" ToX="2750" ToY="3090" />
+    <Node FromMapCode="39" ToMapCode="41" PosX="6360" PosY="1060" ToX="4640" ToY="4100" />
+    <Node FromMapCode="39" ToMapCode="42" PosX="6360" PosY="1060" ToX="3930" ToY="3930" />
+    <Node FromMapCode="39" ToMapCode="91" PosX="6360" PosY="1060" ToX="2600" ToY="1760" />
+    <Node FromMapCode="39" ToMapCode="1" PosX="6370" PosY="2880" ToX="4450" ToY="2100" />
+    <Node FromMapCode="39" ToMapCode="10" PosX="6370" PosY="2880" ToX="3220" ToY="4410" />
+    <Node FromMapCode="39" ToMapCode="2" PosX="6370" PosY="2880" ToX="2650" ToY="1690" />
+    <Node FromMapCode="39" ToMapCode="32" PosX="6370" PosY="2880" ToX="2570" ToY="3280" />
+    <Node FromMapCode="39" ToMapCode="3" PosX="6370" PosY="2880" ToX="4530" ToY="10380" />
+    <Node FromMapCode="39" ToMapCode="9" PosX="6370" PosY="2880" ToX="1500" ToY="1870" />
+    <Node FromMapCode="39" ToMapCode="27" PosX="6370" PosY="2880" ToX="2250" ToY="2520" />
+    <Node FromMapCode="39" ToMapCode="28" PosX="6370" PosY="2880" ToX="1959" ToY="1496" />
+    <Node FromMapCode="39" ToMapCode="20" PosX="6370" PosY="2880" ToX="3260" ToY="1500" />
+    <Node FromMapCode="39" ToMapCode="19" PosX="6370" PosY="2880" ToX="2320" ToY="2570" />
+    <Node FromMapCode="39" ToMapCode="29" PosX="6370" PosY="2880" ToX="2350" ToY="3170" />
+    <Node FromMapCode="39" ToMapCode="33" PosX="6370" PosY="2880" ToX="3100" ToY="1990" />
+    <Node FromMapCode="39" ToMapCode="5" PosX="6370" PosY="2880" ToX="2750" ToY="3090" />
+    <Node FromMapCode="39" ToMapCode="41" PosX="6370" PosY="2880" ToX="4640" ToY="4100" />
+    <Node FromMapCode="39" ToMapCode="42" PosX="6370" PosY="2880" ToX="3930" ToY="3930" />
+    <Node FromMapCode="39" ToMapCode="91" PosX="6370" PosY="2880" ToX="2600" ToY="1760" />
+    <Node FromMapCode="39" ToMapCode="1" PosX="3220" PosY="3910" ToX="4450" ToY="2100" />
+    <Node FromMapCode="39" ToMapCode="10" PosX="3220" PosY="3910" ToX="3220" ToY="4410" />
+    <Node FromMapCode="39" ToMapCode="2" PosX="3220" PosY="3910" ToX="2650" ToY="1690" />
+    <Node FromMapCode="39" ToMapCode="32" PosX="3220" PosY="3910" ToX="2570" ToY="3280" />
+    <Node FromMapCode="39" ToMapCode="3" PosX="3220" PosY="3910" ToX="4530" ToY="10380" />
+    <Node FromMapCode="39" ToMapCode="9" PosX="3220" PosY="3910" ToX="1500" ToY="1870" />
+    <Node FromMapCode="39" ToMapCode="27" PosX="3220" PosY="3910" ToX="2250" ToY="2520" />
+    <Node FromMapCode="39" ToMapCode="28" PosX="3220" PosY="3910" ToX="1959" ToY="1496" />
+    <Node FromMapCode="39" ToMapCode="20" PosX="3220" PosY="3910" ToX="3260" ToY="1500" />
+    <Node FromMapCode="39" ToMapCode="19" PosX="3220" PosY="3910" ToX="2320" ToY="2570" />
+    <Node FromMapCode="39" ToMapCode="29" PosX="3220" PosY="3910" ToX="2350" ToY="3170" />
+    <Node FromMapCode="39" ToMapCode="33" PosX="3220" PosY="3910" ToX="3100" ToY="1990" />
+    <Node FromMapCode="39" ToMapCode="5" PosX="3220" PosY="3910" ToX="2750" ToY="3090" />
+    <Node FromMapCode="39" ToMapCode="41" PosX="3220" PosY="3910" ToX="4640" ToY="4100" />
+    <Node FromMapCode="39" ToMapCode="42" PosX="3220" PosY="3910" ToX="3930" ToY="3930" />
+    <Node FromMapCode="39" ToMapCode="91" PosX="3220" PosY="3910" ToX="2600" ToY="1760" />
+    <Node FromMapCode="39" ToMapCode="1" PosX="2390" PosY="1690" ToX="4450" ToY="2100" />
+    <Node FromMapCode="39" ToMapCode="10" PosX="2390" PosY="1690" ToX="3220" ToY="4410" />
+    <Node FromMapCode="39" ToMapCode="2" PosX="2390" PosY="1690" ToX="2650" ToY="1690" />
+    <Node FromMapCode="39" ToMapCode="32" PosX="2390" PosY="1690" ToX="2570" ToY="3280" />
+    <Node FromMapCode="39" ToMapCode="3" PosX="2390" PosY="1690" ToX="4530" ToY="10380" />
+    <Node FromMapCode="39" ToMapCode="9" PosX="2390" PosY="1690" ToX="1500" ToY="1870" />
+    <Node FromMapCode="39" ToMapCode="27" PosX="2390" PosY="1690" ToX="2250" ToY="2520" />
+    <Node FromMapCode="39" ToMapCode="28" PosX="2390" PosY="1690" ToX="1959" ToY="1496" />
+    <Node FromMapCode="39" ToMapCode="20" PosX="2390" PosY="1690" ToX="3260" ToY="1500" />
+    <Node FromMapCode="39" ToMapCode="19" PosX="2390" PosY="1690" ToX="2320" ToY="2570" />
+    <Node FromMapCode="39" ToMapCode="29" PosX="2390" PosY="1690" ToX="2350" ToY="3170" />
+    <Node FromMapCode="39" ToMapCode="33" PosX="2390" PosY="1690" ToX="3100" ToY="1990" />
+    <Node FromMapCode="39" ToMapCode="5" PosX="2390" PosY="1690" ToX="2750" ToY="3090" />
+    <Node FromMapCode="39" ToMapCode="41" PosX="2390" PosY="1690" ToX="4640" ToY="4100" />
+    <Node FromMapCode="39" ToMapCode="42" PosX="2390" PosY="1690" ToX="3930" ToY="3930" />
+    <Node FromMapCode="39" ToMapCode="91" PosX="2390" PosY="1690" ToX="2600" ToY="1760" />
+    <Node FromMapCode="42" ToMapCode="1" PosX="2600" PosY="1240" ToX="4450" ToY="2100" />
+    <Node FromMapCode="42" ToMapCode="10" PosX="2600" PosY="1240" ToX="3220" ToY="4410" />
+    <Node FromMapCode="42" ToMapCode="39" PosX="2600" PosY="1240" ToX="6000" ToY="1090" />
+    <Node FromMapCode="42" ToMapCode="2" PosX="2600" PosY="1240" ToX="2650" ToY="1690" />
+    <Node FromMapCode="42" ToMapCode="32" PosX="2600" PosY="1240" ToX="2570" ToY="3280" />
+    <Node FromMapCode="42" ToMapCode="3" PosX="2600" PosY="1240" ToX="4530" ToY="10380" />
+    <Node FromMapCode="42" ToMapCode="9" PosX="2600" PosY="1240" ToX="1500" ToY="1870" />
+    <Node FromMapCode="42" ToMapCode="27" PosX="2600" PosY="1240" ToX="2250" ToY="2520" />
+    <Node FromMapCode="42" ToMapCode="28" PosX="2600" PosY="1240" ToX="1959" ToY="1496" />
+    <Node FromMapCode="42" ToMapCode="20" PosX="2600" PosY="1240" ToX="3260" ToY="1500" />
+    <Node FromMapCode="42" ToMapCode="19" PosX="2600" PosY="1240" ToX="2320" ToY="2570" />
+    <Node FromMapCode="42" ToMapCode="29" PosX="2600" PosY="1240" ToX="2350" ToY="3170" />
+    <Node FromMapCode="42" ToMapCode="33" PosX="2600" PosY="1240" ToX="3100" ToY="1990" />
+    <Node FromMapCode="42" ToMapCode="5" PosX="2600" PosY="1240" ToX="2750" ToY="3090" />
+    <Node FromMapCode="42" ToMapCode="41" PosX="2600" PosY="1240" ToX="4640" ToY="4100" />
+    <Node FromMapCode="42" ToMapCode="91" PosX="2600" PosY="1240" ToX="2600" ToY="1760" />
+    <Node FromMapCode="27" ToMapCode="1" PosX="2076" PosY="2547" ToX="4450" ToY="2100" />
+    <Node FromMapCode="27" ToMapCode="10" PosX="2076" PosY="2547" ToX="3220" ToY="4410" />
+    <Node FromMapCode="27" ToMapCode="39" PosX="2076" PosY="2547" ToX="6000" ToY="1090" />
+    <Node FromMapCode="27" ToMapCode="2" PosX="2076" PosY="2547" ToX="2650" ToY="1690" />
+    <Node FromMapCode="27" ToMapCode="32" PosX="2076" PosY="2547" ToX="2570" ToY="3280" />
+    <Node FromMapCode="27" ToMapCode="3" PosX="2076" PosY="2547" ToX="4530" ToY="10380" />
+    <Node FromMapCode="27" ToMapCode="9" PosX="2076" PosY="2547" ToX="1500" ToY="1870" />
+    <Node FromMapCode="27" ToMapCode="28" PosX="2076" PosY="2547" ToX="1959" ToY="1496" />
+    <Node FromMapCode="27" ToMapCode="20" PosX="2076" PosY="2547" ToX="3260" ToY="1500" />
+    <Node FromMapCode="27" ToMapCode="19" PosX="2076" PosY="2547" ToX="2320" ToY="2570" />
+    <Node FromMapCode="27" ToMapCode="29" PosX="2076" PosY="2547" ToX="2350" ToY="3170" />
+    <Node FromMapCode="27" ToMapCode="33" PosX="2076" PosY="2547" ToX="3100" ToY="1990" />
+    <Node FromMapCode="27" ToMapCode="5" PosX="2076" PosY="2547" ToX="2750" ToY="3090" />
+    <Node FromMapCode="27" ToMapCode="41" PosX="2076" PosY="2547" ToX="4640" ToY="4100" />
+    <Node FromMapCode="27" ToMapCode="42" PosX="2076" PosY="2547" ToX="3930" ToY="3930" />
+    <Node FromMapCode="27" ToMapCode="91" PosX="2076" PosY="2547" ToX="2600" ToY="1760" />
+    <Node FromMapCode="28" ToMapCode="1" PosX="1800" PosY="1670" ToX="4450" ToY="2100" />
+    <Node FromMapCode="28" ToMapCode="10" PosX="1800" PosY="1670" ToX="3220" ToY="4410" />
+    <Node FromMapCode="28" ToMapCode="39" PosX="1800" PosY="1670" ToX="6000" ToY="1090" />
+    <Node FromMapCode="28" ToMapCode="2" PosX="1800" PosY="1670" ToX="2650" ToY="1690" />
+    <Node FromMapCode="28" ToMapCode="32" PosX="1800" PosY="1670" ToX="2570" ToY="3280" />
+    <Node FromMapCode="28" ToMapCode="3" PosX="1800" PosY="1670" ToX="4530" ToY="10380" />
+    <Node FromMapCode="28" ToMapCode="9" PosX="1800" PosY="1670" ToX="1500" ToY="1870" />
+    <Node FromMapCode="28" ToMapCode="27" PosX="1800" PosY="1670" ToX="2250" ToY="2520" />
+    <Node FromMapCode="28" ToMapCode="20" PosX="1800" PosY="1670" ToX="3260" ToY="1500" />
+    <Node FromMapCode="28" ToMapCode="19" PosX="1800" PosY="1670" ToX="2320" ToY="2570" />
+    <Node FromMapCode="28" ToMapCode="29" PosX="1800" PosY="1670" ToX="2350" ToY="3170" />
+    <Node FromMapCode="28" ToMapCode="33" PosX="1800" PosY="1670" ToX="3100" ToY="1990" />
+    <Node FromMapCode="28" ToMapCode="5" PosX="1800" PosY="1670" ToX="2750" ToY="3090" />
+    <Node FromMapCode="28" ToMapCode="41" PosX="1800" PosY="1670" ToX="4640" ToY="4100" />
+    <Node FromMapCode="28" ToMapCode="42" PosX="1800" PosY="1670" ToX="3930" ToY="3930" />
+    <Node FromMapCode="28" ToMapCode="91" PosX="1800" PosY="1670" ToX="2600" ToY="1760" />
+    <Node FromMapCode="29" ToMapCode="1" PosX="2120" PosY="3220" ToX="4450" ToY="2100" />
+    <Node FromMapCode="29" ToMapCode="10" PosX="2120" PosY="3220" ToX="3220" ToY="4410" />
+    <Node FromMapCode="29" ToMapCode="39" PosX="2120" PosY="3220" ToX="6000" ToY="1090" />
+    <Node FromMapCode="29" ToMapCode="2" PosX="2120" PosY="3220" ToX="2650" ToY="1690" />
+    <Node FromMapCode="29" ToMapCode="32" PosX="2120" PosY="3220" ToX="2570" ToY="3280" />
+    <Node FromMapCode="29" ToMapCode="3" PosX="2120" PosY="3220" ToX="4530" ToY="10380" />
+    <Node FromMapCode="29" ToMapCode="9" PosX="2120" PosY="3220" ToX="1500" ToY="1870" />
+    <Node FromMapCode="29" ToMapCode="27" PosX="2120" PosY="3220" ToX="2250" ToY="2520" />
+    <Node FromMapCode="29" ToMapCode="28" PosX="2120" PosY="3220" ToX="1959" ToY="1496" />
+    <Node FromMapCode="29" ToMapCode="20" PosX="2120" PosY="3220" ToX="3260" ToY="1500" />
+    <Node FromMapCode="29" ToMapCode="19" PosX="2120" PosY="3220" ToX="2320" ToY="2570" />
+    <Node FromMapCode="29" ToMapCode="33" PosX="2120" PosY="3220" ToX="3100" ToY="1990" />
+    <Node FromMapCode="29" ToMapCode="5" PosX="2120" PosY="3220" ToX="2750" ToY="3090" />
+    <Node FromMapCode="29" ToMapCode="41" PosX="2120" PosY="3220" ToX="4640" ToY="4100" />
+    <Node FromMapCode="29" ToMapCode="42" PosX="2120" PosY="3220" ToX="3930" ToY="3930" />
+    <Node FromMapCode="29" ToMapCode="91" PosX="2120" PosY="3220" ToX="2600" ToY="1760" />
+    <Node FromMapCode="32" ToMapCode="1" PosX="2593" PosY="3386" ToX="4450" ToY="2100" />
+    <Node FromMapCode="32" ToMapCode="10" PosX="2593" PosY="3386" ToX="3220" ToY="4410" />
+    <Node FromMapCode="32" ToMapCode="39" PosX="2593" PosY="3386" ToX="6000" ToY="1090" />
+    <Node FromMapCode="32" ToMapCode="2" PosX="2593" PosY="3386" ToX="2650" ToY="1690" />
+    <Node FromMapCode="32" ToMapCode="3" PosX="2593" PosY="3386" ToX="4530" ToY="10380" />
+    <Node FromMapCode="32" ToMapCode="9" PosX="2593" PosY="3386" ToX="1500" ToY="1870" />
+    <Node FromMapCode="32" ToMapCode="27" PosX="2593" PosY="3386" ToX="2250" ToY="2520" />
+    <Node FromMapCode="32" ToMapCode="28" PosX="2593" PosY="3386" ToX="1959" ToY="1496" />
+    <Node FromMapCode="32" ToMapCode="20" PosX="2593" PosY="3386" ToX="3260" ToY="1500" />
+    <Node FromMapCode="32" ToMapCode="19" PosX="2593" PosY="3386" ToX="2320" ToY="2570" />
+    <Node FromMapCode="32" ToMapCode="29" PosX="2593" PosY="3386" ToX="2350" ToY="3170" />
+    <Node FromMapCode="32" ToMapCode="33" PosX="2593" PosY="3386" ToX="3100" ToY="1990" />
+    <Node FromMapCode="32" ToMapCode="5" PosX="2593" PosY="3386" ToX="2750" ToY="3090" />
+    <Node FromMapCode="32" ToMapCode="41" PosX="2593" PosY="3386" ToX="4640" ToY="4100" />
+    <Node FromMapCode="32" ToMapCode="42" PosX="2593" PosY="3386" ToX="3930" ToY="3930" />
+    <Node FromMapCode="32" ToMapCode="91" PosX="2593" PosY="3386" ToX="2600" ToY="1760" />
+    <Node FromMapCode="32" ToMapCode="1" PosX="7020" PosY="1100" ToX="4450" ToY="2100" />
+    <Node FromMapCode="32" ToMapCode="10" PosX="7020" PosY="1100" ToX="3220" ToY="4410" />
+    <Node FromMapCode="32" ToMapCode="39" PosX="7020" PosY="1100" ToX="6000" ToY="1090" />
+    <Node FromMapCode="32" ToMapCode="2" PosX="7020" PosY="1100" ToX="2650" ToY="1690" />
+    <Node FromMapCode="32" ToMapCode="3" PosX="7020" PosY="1100" ToX="4530" ToY="10380" />
+    <Node FromMapCode="32" ToMapCode="9" PosX="7020" PosY="1100" ToX="1500" ToY="1870" />
+    <Node FromMapCode="32" ToMapCode="27" PosX="7020" PosY="1100" ToX="2250" ToY="2520" />
+    <Node FromMapCode="32" ToMapCode="28" PosX="7020" PosY="1100" ToX="1959" ToY="1496" />
+    <Node FromMapCode="32" ToMapCode="20" PosX="7020" PosY="1100" ToX="3260" ToY="1500" />
+    <Node FromMapCode="32" ToMapCode="19" PosX="7020" PosY="1100" ToX="2320" ToY="2570" />
+    <Node FromMapCode="32" ToMapCode="29" PosX="7020" PosY="1100" ToX="2350" ToY="3170" />
+    <Node FromMapCode="32" ToMapCode="33" PosX="7020" PosY="1100" ToX="3100" ToY="1990" />
+    <Node FromMapCode="32" ToMapCode="5" PosX="7020" PosY="1100" ToX="2750" ToY="3090" />
+    <Node FromMapCode="32" ToMapCode="41" PosX="7020" PosY="1100" ToX="4640" ToY="4100" />
+    <Node FromMapCode="32" ToMapCode="42" PosX="7020" PosY="1100" ToX="3930" ToY="3930" />
+    <Node FromMapCode="32" ToMapCode="91" PosX="7020" PosY="1100" ToX="2600" ToY="1760" />
+    <Node FromMapCode="32" ToMapCode="1" PosX="10460" PosY="3630" ToX="4450" ToY="2100" />
+    <Node FromMapCode="32" ToMapCode="10" PosX="10460" PosY="3630" ToX="3220" ToY="4410" />
+    <Node FromMapCode="32" ToMapCode="39" PosX="10460" PosY="3630" ToX="6000" ToY="1090" />
+    <Node FromMapCode="32" ToMapCode="2" PosX="10460" PosY="3630" ToX="2650" ToY="1690" />
+    <Node FromMapCode="32" ToMapCode="3" PosX="10460" PosY="3630" ToX="4530" ToY="10380" />
+    <Node FromMapCode="32" ToMapCode="9" PosX="10460" PosY="3630" ToX="1500" ToY="1870" />
+    <Node FromMapCode="32" ToMapCode="27" PosX="10460" PosY="3630" ToX="2250" ToY="2520" />
+    <Node FromMapCode="32" ToMapCode="28" PosX="10460" PosY="3630" ToX="1959" ToY="1496" />
+    <Node FromMapCode="32" ToMapCode="20" PosX="10460" PosY="3630" ToX="3260" ToY="1500" />
+    <Node FromMapCode="32" ToMapCode="19" PosX="10460" PosY="3630" ToX="2320" ToY="2570" />
+    <Node FromMapCode="32" ToMapCode="29" PosX="10460" PosY="3630" ToX="2350" ToY="3170" />
+    <Node FromMapCode="32" ToMapCode="33" PosX="10460" PosY="3630" ToX="3100" ToY="1990" />
+    <Node FromMapCode="32" ToMapCode="5" PosX="10460" PosY="3630" ToX="2750" ToY="3090" />
+    <Node FromMapCode="32" ToMapCode="41" PosX="10460" PosY="3630" ToX="4640" ToY="4100" />
+    <Node FromMapCode="32" ToMapCode="42" PosX="10460" PosY="3630" ToX="3930" ToY="3930" />
+    <Node FromMapCode="32" ToMapCode="91" PosX="10460" PosY="3630" ToX="2600" ToY="1760" />
+    <Node FromMapCode="32" ToMapCode="1" PosX="3190" PosY="4420" ToX="4450" ToY="2100" />
+    <Node FromMapCode="32" ToMapCode="10" PosX="3190" PosY="4420" ToX="3220" ToY="4410" />
+    <Node FromMapCode="32" ToMapCode="39" PosX="3190" PosY="4420" ToX="6000" ToY="1090" />
+    <Node FromMapCode="32" ToMapCode="2" PosX="3190" PosY="4420" ToX="2650" ToY="1690" />
+    <Node FromMapCode="32" ToMapCode="3" PosX="3190" PosY="4420" ToX="4530" ToY="10380" />
+    <Node FromMapCode="32" ToMapCode="9" PosX="3190" PosY="4420" ToX="1500" ToY="1870" />
+    <Node FromMapCode="32" ToMapCode="27" PosX="3190" PosY="4420" ToX="2250" ToY="2520" />
+    <Node FromMapCode="32" ToMapCode="28" PosX="3190" PosY="4420" ToX="1959" ToY="1496" />
+    <Node FromMapCode="32" ToMapCode="20" PosX="3190" PosY="4420" ToX="3260" ToY="1500" />
+    <Node FromMapCode="32" ToMapCode="19" PosX="3190" PosY="4420" ToX="2320" ToY="2570" />
+    <Node FromMapCode="32" ToMapCode="29" PosX="3190" PosY="4420" ToX="2350" ToY="3170" />
+    <Node FromMapCode="32" ToMapCode="33" PosX="3190" PosY="4420" ToX="3100" ToY="1990" />
+    <Node FromMapCode="32" ToMapCode="5" PosX="3190" PosY="4420" ToX="2750" ToY="3090" />
+    <Node FromMapCode="32" ToMapCode="41" PosX="3190" PosY="4420" ToX="4640" ToY="4100" />
+    <Node FromMapCode="32" ToMapCode="42" PosX="3190" PosY="4420" ToX="3930" ToY="3930" />
+    <Node FromMapCode="32" ToMapCode="91" PosX="3190" PosY="4420" ToX="2600" ToY="1760" />
+    <Node FromMapCode="33" ToMapCode="1" PosX="2820" PosY="2047" ToX="4450" ToY="2100" />
+    <Node FromMapCode="33" ToMapCode="10" PosX="2820" PosY="2047" ToX="3220" ToY="4410" />
+    <Node FromMapCode="33" ToMapCode="39" PosX="2820" PosY="2047" ToX="6000" ToY="1090" />
+    <Node FromMapCode="33" ToMapCode="2" PosX="2820" PosY="2047" ToX="2650" ToY="1690" />
+    <Node FromMapCode="33" ToMapCode="32" PosX="2820" PosY="2047" ToX="2570" ToY="3280" />
+    <Node FromMapCode="33" ToMapCode="3" PosX="2820" PosY="2047" ToX="4530" ToY="10380" />
+    <Node FromMapCode="33" ToMapCode="9" PosX="2820" PosY="2047" ToX="1500" ToY="1870" />
+    <Node FromMapCode="33" ToMapCode="27" PosX="2820" PosY="2047" ToX="2250" ToY="2520" />
+    <Node FromMapCode="33" ToMapCode="28" PosX="2820" PosY="2047" ToX="1959" ToY="1496" />
+    <Node FromMapCode="33" ToMapCode="20" PosX="2820" PosY="2047" ToX="3260" ToY="1500" />
+    <Node FromMapCode="33" ToMapCode="19" PosX="2820" PosY="2047" ToX="2320" ToY="2570" />
+    <Node FromMapCode="33" ToMapCode="29" PosX="2820" PosY="2047" ToX="2350" ToY="3170" />
+    <Node FromMapCode="33" ToMapCode="5" PosX="2820" PosY="2047" ToX="2750" ToY="3090" />
+    <Node FromMapCode="33" ToMapCode="41" PosX="2820" PosY="2047" ToX="4640" ToY="4100" />
+    <Node FromMapCode="33" ToMapCode="42" PosX="2820" PosY="2047" ToX="3930" ToY="3930" />
+    <Node FromMapCode="33" ToMapCode="91" PosX="2820" PosY="2047" ToX="2600" ToY="1760" />
+  </TransferNPC>
+<!-- All Npc-->
+<NPCs>
+  <NPC MapCode="1" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="4240" Y="2075" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="1" Code="18300" Name="Tạ Phi Kinh" MinimapName="Thiên Nhẫn Sĩ Tử" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Thiên Nhẫn" X="5552" Y="3266" Dir="1" ScriptID="18" />
+  <NPC MapCode="1" Code="2471" Name="Long Ngũ" MinimapName="Long Ngũ" VisibleOnMinimap="1" Title="Trưởng Lão" X="5505" Y="3171" Dir="1" ScriptID="28" />
+  <NPC MapCode="1" Code="179" Name="Đường Tế Dân" MinimapName="Đường Môn Thị Vệ" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Đường Môn" X="5365" Y="3095" Dir="1" ScriptID="17" />
+  <NPC MapCode="1" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="6100" Y="2410" Dir="1" ScriptID="222" />
+  <NPC MapCode="1" Code="1850" Name="Tất Minh" MinimapName="Hoa Sơn Kiếm Khách" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Hoa Sơn" X="5921" Y="3065" Dir="1" ScriptID="195" />
+  <NPC MapCode="1" Code="8600" Name="Huyền Tịnh" MinimapName="Nga My Cẩm Y Ni Cô" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Nga My" X="5730" Y="3140" Dir="1" ScriptID="16" />
+  <NPC MapCode="1" Code="19000" Name="Minh Tuệ" MinimapName="Võ Đang Đạo Nhân" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Võ Đang " X="6054" Y="2844" Dir="1" ScriptID="15" />
+  <NPC MapCode="1" Code="379" Name="Lễ Quan" MinimapName="Lễ Quan" VisibleOnMinimap="1" Title=" " X="5899" Y="2765" Dir="1" ScriptID="191" />
+  <NPC MapCode="1" Code="18800" Name="Biên Nhất Xuân" MinimapName="Ngũ Độc Tán Nhân" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Ngũ Độc" X="5591" Y="2582" Dir="1" ScriptID="14" />
+  <NPC MapCode="1" Code="1966" Name="Ngô Thần Y" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Hiệu thuốc" X="4900" Y="2500" Dir="1" ScriptID="196" />
+  <NPC MapCode="1" Code="218" Name="Chủ Tiệm Tạp Hóa" MinimapName="Trang Bị" VisibleOnMinimap="1" Title="Tạp Hóa" X="4950" Y="3132" Dir="1" ScriptID="12" />
+  <NPC MapCode="1" Code="1936" Name="Bảo Thủ" MinimapName="Binh Khí" VisibleOnMinimap="1" Title="Tiệm Rèn Siêu Phàm" X="4441" Y="3428" Dir="1" ScriptID="11" />
+  <NPC MapCode="1" Code="3112" Name="Quy Kinh Tinh " MinimapName="Côn Lôn Hộ Pháp" VisibleOnMinimap="1" Title="Tiếp Dẫn Môn Phái Côn Lôn" X="4140" Y="3520" Dir="1" ScriptID="26" />
+  <NPC MapCode="1" Code="17300" Name="Tô Nhã" MinimapName="Thúy Yên Hoa Sứ" VisibleOnMinimap="1" Title="Tiếp Dẫn Môn Phái Thúy Yên" X="4340" Y="2620" Dir="1" ScriptID="22" />
+  <NPC MapCode="1" Code="3261" Name="Thẩm cửu" MinimapName="Thẩm cửu" VisibleOnMinimap="1" Title="" X="1984" Y="3067" Dir="1" ScriptID="27" />
+  <NPC MapCode="1" Code="313" Name="Võ Sư" MinimapName="Võ Sư" VisibleOnMinimap="1" Title="" X="8000" Y="5160" Dir="1" ScriptID="25" />
+  <NPC MapCode="1" Code="375" Name="Công Thành Quan" MinimapName="Công Thành Quan" VisibleOnMinimap="0" Title=" " X="4940" Y="2925" Dir="1" ScriptID="23" />
+  <NPC MapCode="1" Code="244" Name="Đại Hải" MinimapName="Ngư Dân" VisibleOnMinimap="0" Title="Thuyền Phu" X="8774" Y="3314" Dir="1" ScriptID="24" />
+  <NPC MapCode="1" Code="18600" Name="Bùi Viễn" MinimapName="Thiên Vương Tướng Lĩnh" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Thiên Vương" X="5480" Y="2730" Dir="1" ScriptID="13" />
+  <NPC MapCode="1" Code="110" Name="Dã Tẩu" MinimapName="Dã Tẩu" VisibleOnMinimap="1" Title="Trưởng Lão" X="6096" Y="2921" Dir="1" ScriptID="27" />
+  <NPC MapCode="1" Code="19100" Name="Tịch Huyễn" MinimapName="Thiếu Lâm La Hán" VisibleOnMinimap="1" Title="Tiếp Dẫn Môn Phái Thiếu Lâm" X="4680" Y="3780" Dir="1" ScriptID="19" />
+  <NPC MapCode="1" Code="105" Name="La Tuấn" MinimapName="Đệ Tử Cái Bang" VisibleOnMinimap="1" Title="Tiếp Dẫn Môn Phái Cái Bang" X="4950" Y="3850" Dir="1" ScriptID="20" />
+  <NPC MapCode="1" Code="214" Name="Ông Chủ Tửu Điếm" MinimapName="Tửu Lâu" VisibleOnMinimap="1" Title="Tửu Lâu" X="5130" Y="3930" Dir="1" ScriptID="21" />
+  <NPC MapCode="1" Code="2013" Name="Sứ Giả Sự Kiện" MinimapName="Sứ Giả Sự Kiện" VisibleOnMinimap="1" Title="" X="5625" Y="2935" Dir="1" ScriptID="1000" />
+  <NPC MapCode="2" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2400" Y="1660" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="2" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="1220" Y="4680" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="2" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="9397" Y="5389" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="2" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="4720" Y="1050" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="2" Code="197" Name="Chủ Tiệm Cầm Đồ" MinimapName="Chủ Tiệm Cầm Đồ" VisibleOnMinimap="0" Title=" " X="3315" Y="1480" Dir="1" ScriptID="33" />
+  <NPC MapCode="2" Code="1322" Name="Bình Bình Cô Nương" MinimapName="Bình Bình Cô Nương" VisibleOnMinimap="1" Title="Người Chỉ Dẫn " X="5145" Y="1755" Dir="1" ScriptID="186" />
+  <NPC MapCode="2" Code="1322" Name="Bình Bình Cô Nương" MinimapName="Bình Bình Cô Nương" VisibleOnMinimap="1" Title="Người Chỉ Dẫn " X="2620" Y="2300" Dir="1" ScriptID="186" />
+  <NPC MapCode="2" Code="1322" Name="Bình Bình Cô Nương" MinimapName="Bình Bình Cô Nương" VisibleOnMinimap="1" Title="Người Chỉ Dẫn " X="1900" Y="4330" Dir="1" ScriptID="186" />
+  <NPC MapCode="2" Code="1322" Name="Bình Bình Cô Nương" MinimapName="Bình Bình Cô Nương" VisibleOnMinimap="0" Title="Người Chỉ Dẫn " X="9585" Y="5065" Dir="1" ScriptID="186" />
+  <NPC MapCode="2" Code="1936" Name="Hạ Phi Yên" MinimapName="Binh Khí" VisibleOnMinimap="1" Title="Tiệm Rèn Siêu Phàm" X="4915" Y="2980" Dir="1" ScriptID="11" />
+  <NPC MapCode="2" Code="323" Name="Ăn Mày" MinimapName="Ăn Mày" VisibleOnMinimap="0" Title="" X="2400" Y="2444" Dir="1" ScriptID="-1" />
+  <NPC MapCode="2" Code="323" Name="Ăn Mày" MinimapName="Ăn Mày" VisibleOnMinimap="0" Title="" X="4020" Y="4640" Dir="1" ScriptID="-1" />
+  <NPC MapCode="2" Code="6600" Name="Đại Bộ Thiền Sư" MinimapName="Thiền Sư" VisibleOnMinimap="1" Title="" X="5035" Y="5015" Dir="1" ScriptID="53" />
+  <NPC MapCode="2" Code="2161" Name="Bán Ngựa" MinimapName="Bán Ngựa" VisibleOnMinimap="1" Title=" " X="5030" Y="4170" Dir="1" ScriptID="1" />
+  <NPC MapCode="2" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Ông Chủ Dược Điếm" X="7020" Y="3115" Dir="1" ScriptID="10" />
+  <NPC MapCode="2" Code="218" Name="Tạp Hóa" MinimapName="Trang Bị" VisibleOnMinimap="1" Title="Ông Chủ Tạp Hóa" X="7305" Y="2950" Dir="1" ScriptID="12" />
+  <NPC MapCode="2" Code="379" Name="Lễ Quan" MinimapName="Lễ Quan" VisibleOnMinimap="1" Title=" " X="8040" Y="3070" Dir="1" ScriptID="191" />
+  <NPC MapCode="2" Code="226" Name="Chủ Tiệm Trà" MinimapName="Tiệm Trà" VisibleOnMinimap="1" Title=" " X="5376" Y="2527" Dir="1" ScriptID="46" />
+  <NPC MapCode="2" Code="89" Name="Liên Đấu" MinimapName="Liên Đấu" VisibleOnMinimap="1" Title="Sứ giả liên Đấu" X="6555" Y="3145" Dir="1" ScriptID="400020" />
+  <NPC MapCode="2" Code="362" Name="Tiểu Hải" MinimapName="Tiểu Hải" VisibleOnMinimap="0" Title="" X="6540" Y="3480" Dir="1" ScriptID="39" />
+  <NPC MapCode="2" Code="110" Name="Dã Tẩu" MinimapName="Dã Tẩu" VisibleOnMinimap="1" Title=" " X="5706" Y="2970" Dir="1" ScriptID="27" />
+  <NPC MapCode="2" Code="310" Name="Võ Lâm Truyền Nhân" MinimapName="Võ Lâm Truyền Nhân" VisibleOnMinimap="1" Title=" " X="6340" Y="3930" Dir="1" ScriptID="7" />
+  <NPC MapCode="2" Code="3101" Name="Sứ Giả Kiệt Xuất" MinimapName="Sứ Giả Kiệt Xuất" VisibleOnMinimap="0" Title="  " X="7024" Y="3594" Dir="1" ScriptID="40" />
+  <NPC MapCode="2" Code="308" Name="Đường Lão Gia" MinimapName="Đường Lão Gia" VisibleOnMinimap="0" Title=" " X="6235" Y="3480" Dir="1" ScriptID="-1" />
+  <NPC MapCode="2" Code="365" Name="Anh Tử" MinimapName="Anh Tử" VisibleOnMinimap="1" Title=" " X="7965" Y="2720" Dir="1" ScriptID="39" />
+  <NPC MapCode="2" Code="220" Name="Cổ Giới Tiên Sinh" MinimapName="Cổ Giới Tiên Sinh" VisibleOnMinimap="0" Title=" " X="8150" Y="3145" Dir="1" ScriptID="27" />
+  <NPC MapCode="2" Code="248" Name="Thần Nông Lão Gia" MinimapName="Thần Nông Lão Gia" VisibleOnMinimap="0" Title=" " X="8300" Y="3230" Dir="1" ScriptID="42" />
+  <NPC MapCode="2" Code="3150" Name="Lưu Viên Ngoại" MinimapName="Lưu Viên Ngoại" VisibleOnMinimap="0" Title=" " X="9244" Y="2784" Dir="1" ScriptID="43" />
+  <NPC MapCode="2" Code="353" Name="Đông Mai" MinimapName="Đông Mai" VisibleOnMinimap="0" Title=" " X="9180" Y="3645" Dir="1" ScriptID="44" />
+  <NPC MapCode="2" Code="249" Name="Phương Lão Thái" MinimapName="Phương Lão Thái" VisibleOnMinimap="0" Title=" " X="10090" Y="4810" Dir="1" ScriptID="48" />
+  <NPC MapCode="2" Code="217" Name="Tôn Tú Tài" MinimapName="Tôn Tú Tài" VisibleOnMinimap="0" Title=" " X="8925" Y="5345" Dir="1" ScriptID="49" />
+  <NPC MapCode="2" Code="338" Name="Lý Tổ Đức" MinimapName="Lý Tổ Đức" VisibleOnMinimap="0" Title=" " X="8055" Y="5550" Dir="1" ScriptID="51" />
+  <NPC MapCode="2" Code="331" Name="Mạnh Húc" MinimapName="Mạnh Húc" VisibleOnMinimap="0" Title=" " X="8140" Y="5610" Dir="1" ScriptID="50" />
+  <NPC MapCode="2" Code="198" Name="Hành Cước Thương Nhân" MinimapName="Thương Nhân" VisibleOnMinimap="0" Title=" " X="7450" Y="5300" Dir="1" ScriptID="52" />
+  <NPC MapCode="2" Code="377" Name="Dịch Dung Thuật Sĩ" MinimapName="Dịch Dung Thuật Sĩ" VisibleOnMinimap="1" Title=" " X="6540" Y="4835" Dir="1" ScriptID="184" />
+  <NPC MapCode="2" Code="367" Name="Ông Chủ Tửu Lâu" MinimapName="Tửu Lâu" VisibleOnMinimap="1" Title=" " X="4220" Y="3115" Dir="1" ScriptID="21" />
+  <NPC MapCode="2" Code="216" Name="Tửu Bảo" MinimapName="Tửu Bảo" VisibleOnMinimap="0" Title=" " X="4111" Y="3173" Dir="1" ScriptID="9" />
+  <NPC MapCode="2" Code="329" Name="Bạch Công Tử" MinimapName="Bạch Công Tử" VisibleOnMinimap="0" Title=" " X="3265" Y="3535" Dir="1" ScriptID="54" />
+  <NPC MapCode="2" Code="81" Name="Thác Bạt Hoài Xuyên" MinimapName="Thác Bạt Hoài Xuyên" VisibleOnMinimap="1" Title=" " X="3855" Y="3915" Dir="1" ScriptID="192" />
+  <NPC MapCode="2" Code="976" Name="Nhiếp Thí Trần" MinimapName="Nhiếp Thí Trần" VisibleOnMinimap="0" Title=" " X="2860" Y="3790" Dir="1" ScriptID="187" />
+  <NPC MapCode="2" Code="3791" Name="Dịch Quan" MinimapName="Dịch Quan" VisibleOnMinimap="0" Title=" " X="1450" Y="4585" Dir="1" ScriptID="2" />
+  <NPC MapCode="2" Code="211" Name="Lão Cao" MinimapName="Sòng Bạc" VisibleOnMinimap="1" Title="Ông Chủ Sòng Bạc" X="1655" Y="2838" Dir="1" ScriptID="35" />
+  <NPC MapCode="2" Code="207" Name="Ông Chủ Đồ Cổ" MinimapName="Ông Chủ Đồ Cổ" VisibleOnMinimap="1" Title=" " X="4280" Y="2660" Dir="1" ScriptID="55" />
+  <NPC MapCode="2" Code="385" Name="Vương Phu Nhân" MinimapName="Vương Phu Nhân" VisibleOnMinimap="0" Title=" " X="3700" Y="2350" Dir="1" ScriptID="-1" />
+  <NPC MapCode="2" Code="350" Name="Xuân Hoa" MinimapName="Xuân Hoa" VisibleOnMinimap="0" Title=" " X="3700" Y="2270" Dir="1" ScriptID="-1" />
+  <NPC MapCode="2" Code="225" Name="Như Ngọc" MinimapName="Như Ngọc" VisibleOnMinimap="0" Title=" " X="3854" Y="2347" Dir="1" ScriptID="-1" />
+  <NPC MapCode="2" Code="3260" Name="Hoàng Đại Thiếu" MinimapName="Hoàng Đại Thiếu" VisibleOnMinimap="0" Title=" " X="3830" Y="2260" Dir="1" ScriptID="-1" />
+  <NPC MapCode="2" Code="197" Name="Chủ Lữ Quán" MinimapName="Chủ Lữ Quán" VisibleOnMinimap="0" Title=" " X="2200" Y="2550" Dir="1" ScriptID="8" />
+  <NPC MapCode="2" Code="19361" Name="Con Bạc" MinimapName="Con Bạc" VisibleOnMinimap="0" Title=" " X="1465" Y="2855" Dir="1" ScriptID="34" />
+  <NPC MapCode="2" Code="327" Name="Con Bạc" MinimapName="Con Bạc" VisibleOnMinimap="0" Title=" " X="1245" Y="2945" Dir="1" ScriptID="34" />
+  <NPC MapCode="2" Code="3100" Name="Ông Chủ Tiêu Cục " MinimapName="Tiêu Cục" VisibleOnMinimap="1" Title=" " X="1370" Y="3350" Dir="1" ScriptID="36" />
+  <NPC MapCode="2" Code="337" Name="Đậu Tử Lý " MinimapName="Đậu Tử Lý " VisibleOnMinimap="0" Title=" " X="5960" Y="2260" Dir="1" ScriptID="47" />
+  <NPC MapCode="2" Code="1928" Name="Trương Quả phụ" MinimapName="Trương Quả Phụ" VisibleOnMinimap="0" Title=" " X="4740" Y="1440" Dir="1" ScriptID="45" />
+  <NPC MapCode="2" Code="375" Name="Tiếp Đầu Công Thành Chiến" MinimapName="Công Thành Chiến" VisibleOnMinimap="1" Title=" " X="4320" Y="1210" Dir="1" ScriptID="200" />
+  <NPC MapCode="2" Code="3130" Name="Kim Quốc Võ Sư" MinimapName="Võ Sư" VisibleOnMinimap="1" Title="" X="3850" Y="990" Dir="1" ScriptID="25" />
+  <NPC MapCode="2" Code="449" Name="Tiền Trang" MinimapName="Tiền Trang" VisibleOnMinimap="1" Title="Phi Phong" X="3490" Y="1300" Dir="1" ScriptID="32" />
+  <NPC MapCode="2" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="5300" Y="3315" Dir="1" ScriptID="222" />
+  <NPC MapCode="2" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="2160" Y="4200" Dir="1" ScriptID="222" />
+  <NPC MapCode="2" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="0" Title="Thủ Khố" X="4480" Y="1280" Dir="1" ScriptID="222" />
+  <NPC MapCode="2" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="0" Title="Thủ Khố" X="9360" Y="5185" Dir="1" ScriptID="222" />
+  <NPC MapCode="2" Code="1990" Name="Dã Luyện" MinimapName="Dã Luyện" VisibleOnMinimap="1" Title="Cường Hóa Trang Bị" X="4690" Y="2080" Dir="1" ScriptID="194" />
+  <NPC MapCode="2" Code="2013" Name="Sứ Giả Hoạt Động" MinimapName="Hoạt Động" VisibleOnMinimap="1" Title="Hoàng Kim Tiên Tử" X="7210" Y="3905" Dir="1" ScriptID="320" />
+  <NPC MapCode="2" Code="55" Name="Tống Hiệu Uý" MinimapName="Tống Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim" X="3728" Y="3334" Dir="1" ScriptID="5018" />
+  <NPC MapCode="2" Code="51" Name="Kim Hiệu Uý" MinimapName="Kim Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim" X="5940" Y="2004" Dir="1" ScriptID="5019" />
+  <NPC MapCode="2" Code="63" Name="Vệ Binh Thành Môn" MinimapName="Phong Hỏa Liên Thành" VisibleOnMinimap="1" Title="Phong Hỏa Liên Thành" X="2200" Y="1540" Dir="1" ScriptID="400040" />
+  <NPC MapCode="2" Code="2019" Name="Thống Lĩnh" MinimapName="Quân Doanh" VisibleOnMinimap="1" Title="Quân Doanh" X="3300" Y="4320" Dir="1" ScriptID="500100" />
+  <NPC MapCode="2" Code="20026" Name="Sứ Giả" MinimapName="Thủy Hoàng Địa Cung" VisibleOnMinimap="1" Title="Thủy Hoàng Địa Cung" X="10310" Y="4260" Dir="1" ScriptID="400030" />
+  <NPC MapCode="2" Code="20027" Name="Mã Xuyên Sơn" MinimapName="Phụ Bản Bang Hội" VisibleOnMinimap="1" Title="Phụ Bản Bang Hội" X="5930" Y="4560" Dir="1" ScriptID="500200" />
+  <NPC MapCode="2" Code="20028" Name="Sứ Giả Bạch Hổ Đường" MinimapName="Bạch Hổ Đường" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="1970" Y="3610" Dir="1" ScriptID="400012" />
+  <NPC MapCode="2" Code="245" Name="Quan Quân" MinimapName="Quan Quân" VisibleOnMinimap="1" Title="Cửa Hàng Danh Vọng" X="5565" Y="3635" Dir="1" ScriptID="38" />
+  <NPC MapCode="3" Code="100" Name="Hà Nhân Ngã" MinimapName="Cái Bang bang Chủ" VisibleOnMinimap="1" Title="Cái Bang bang Chủ" X="4590" Y="4165" Dir="1" ScriptID="67" />
+  <NPC MapCode="3" Code="101" Name="Ngụy Liễu Ông" MinimapName="Ngụy Liễu Ông" VisibleOnMinimap="1" Title="Truyền công trưởng lão" X="4670" Y="1480" Dir="1" ScriptID="70" />
+  <NPC MapCode="3" Code="102" Name="Chấp pháp trưởng lão" MinimapName="Chấp pháp trưởng lão" VisibleOnMinimap="1" Title="Chấp pháp trưởng lão" X="2916" Y="5830" Dir="1" ScriptID="74" />
+  <NPC MapCode="3" Code="103" Name="Chấp pháp trưởng lão" MinimapName="Chưởng Bát trưởng lão" VisibleOnMinimap="1" Title="Chưởng Bát trưởng lão" X="3640" Y="2580" Dir="1" ScriptID="72" />
+  <NPC MapCode="3" Code="104" Name="La Khuông Sinh" MinimapName="La Khuông Sinh" VisibleOnMinimap="1" Title="Chưởng Bổng trưởng lão" X="4435" Y="5560" Dir="1" ScriptID="66" />
+  <NPC MapCode="3" Code="17601" Name="Lý Tý" MinimapName="Lý Tý(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử Cái Bang(Trang bị)" X="3460" Y="6500" Dir="1" ScriptID="12" />
+  <NPC MapCode="3" Code="17602" Name="Vương Ngô" MinimapName="Vương Ngô(Dược)" VisibleOnMinimap="1" Title="Đệ tử Cái Bang(Dược)" X="4210" Y="6340" Dir="1" ScriptID="10" />
+  <NPC MapCode="3" Code="17603" Name="Trương Tán" MinimapName="Trương Tán(Binh khí)" VisibleOnMinimap="1" Title="Đệ tử Cái Bang(Binh khí)" X="5260" Y="5940" Dir="1" ScriptID="71" />
+  <NPC MapCode="3" Code="17604" Name="Khởi ông" MinimapName="Khởi ông(Giúp đỡ)" VisibleOnMinimap="1" Title="Đệ tử Cái Bang(Giúp đỡ)" X="4340" Y="4680" Dir="1" ScriptID="68" />
+  <NPC MapCode="3" Code="17600" Name="Để Tử 5 Túi" MinimapName="Để Tử 5 Túi" VisibleOnMinimap="1" Title="Để Tử 5 Túi" X="2890" Y="6250" Dir="1" ScriptID="75" />
+  <NPC MapCode="3" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="4150" Y="8250" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="3" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="3770" Y="4730" Dir="1" ScriptID="222" />
+  <NPC MapCode="4" Code="205" Name="Trương Trảm Kinh(phe công)" MinimapName="Hiệu Thuốc(phe công)" VisibleOnMinimap="1" Title=" " X="8150" Y="530" Dir="1" ScriptID="10" />
+  <NPC MapCode="4" Code="205" Name="Trương Trảm Kinh(phe thủ)" MinimapName="Hiệu Thuốc(phe thủ)" VisibleOnMinimap="1" Title=" " X="416" Y="5030" Dir="1" ScriptID="10" />
+  <NPC MapCode="4" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="8315" Y="445" Dir="1" ScriptID="222" />
+  <NPC MapCode="4" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="955" Y="5330" Dir="1" ScriptID="222" />
+  <NPC MapCode="4" Code="20003" Name="Thống Soái" MinimapName="Thống Soái(phe thủ)" VisibleOnMinimap="1" Title=" " X="1195" Y="4800" Dir="1" ScriptID="-1" />
+  <NPC MapCode="4" Code="20004" Name="Thống Soái" MinimapName="Thống Soái(phe công)" VisibleOnMinimap="1" Title=" " X="8600" Y="1080" Dir="1" ScriptID="-1" />
+  <NPC MapCode="5" Code="3115" Name="Trần Tâm" MinimapName="Trần Tâm(Binh khí)" VisibleOnMinimap="1" Title="Đệ tử Côn Lôn(Binh khí)" X="4220" Y="2020" Dir="1" ScriptID="162" />
+  <NPC MapCode="5" Code="3113" Name="Trần Duyên" MinimapName="Trần Duyên(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử Côn Lôn(Trang bị)" X="5127" Y="2399" Dir="1" ScriptID="12" />
+  <NPC MapCode="5" Code="3114" Name="Trần Niệm" MinimapName="Trần Niệm(Dược)" VisibleOnMinimap="1" Title="Đệ tử Côn Lôn(Dược)" X="5220" Y="2040" Dir="1" ScriptID="10" />
+  <NPC MapCode="5" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="3054" Y="3524" Dir="1" ScriptID="222" />
+  <NPC MapCode="5" Code="94" Name="Tuyền Cơ Tử" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Côn Lôn Chưởng môn" X="4284" Y="2454" Dir="1" ScriptID="67" />
+  <NPC MapCode="5" Code="95" Name="Thanh Liên Tử " MinimapName="Thanh Liên Tử" VisibleOnMinimap="1" Title="Côn Lôn Hộ pháp" X="3427" Y="1576" Dir="1" ScriptID="164" />
+  <NPC MapCode="5" Code="96" Name="Ngọc Hoành Tử" MinimapName="Ngọc Hoành Tử" VisibleOnMinimap="1" Title="Côn Lôn Hộ pháp" X="5789" Y="2757" Dir="1" ScriptID="165" />
+  <NPC MapCode="5" Code="97" Name="Thán Tức Lão Nhân" MinimapName="Thán Tức Lão Nhân" VisibleOnMinimap="1" Title="Côn Lôn Hộ pháp" X="4617" Y="1095" Dir="1" ScriptID="166" />
+  <NPC MapCode="5" Code="98" Name="Đồng Tịch Nhan" MinimapName="Đồng Tịch Nhan" VisibleOnMinimap="1" Title="Côn Lôn Hộ pháp" X="1420" Y="2572" Dir="1" ScriptID="27" />
+  <NPC MapCode="5" Code="99" Name="Chu Khuyết" MinimapName="Chu Khuyết" VisibleOnMinimap="1" Title="Côn Lôn Hộ pháp" X="6050" Y="1188" Dir="1" ScriptID="169" />
+  <NPC MapCode="5" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2792" Y="3271" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="43" Code="20029" Name="Sứ Giả(Nam)" MinimapName="Sứ Giả(Nam)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="5110" Y="1050" Dir="1" ScriptID="400010" />
+  <NPC MapCode="43" Code="20029" Name="Sứ Giả(Đông)" MinimapName="Sứ Giả(Đông)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="7750" Y="2460" Dir="1" ScriptID="400007" />
+  <NPC MapCode="43" Code="20029" Name="Sứ Giả(Bắc)" MinimapName="Sứ Giả(Bắc)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="5050" Y="4030" Dir="1" ScriptID="400008" />
+  <NPC MapCode="43" Code="20029" Name="Sứ Giả(Tây)" MinimapName="Sứ Giả(Tây)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="2260" Y="2490" Dir="1" ScriptID="400009" />
+  <NPC MapCode="43" Code="20028" Name="Sứ Giả(Đại Điện)" MinimapName="Sứ Giả(Đại Điện)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="4820" Y="2350" Dir="1" ScriptID="400011" />
+  <NPC MapCode="51" Code="20029" Name="Sứ Giả(Nam)" MinimapName="Sứ Giả(Nam)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="5110" Y="1050" Dir="1" ScriptID="400010" />
+  <NPC MapCode="51" Code="20029" Name="Sứ Giả(Đông)" MinimapName="Sứ Giả(Đông)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="7750" Y="2460" Dir="1" ScriptID="400007" />
+  <NPC MapCode="51" Code="20029" Name="Sứ Giả(Bắc)" MinimapName="Sứ Giả(Bắc)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="5050" Y="4030" Dir="1" ScriptID="400008" />
+  <NPC MapCode="51" Code="20029" Name="Sứ Giả(Tây)" MinimapName="Sứ Giả(Tây)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="2260" Y="2490" Dir="1" ScriptID="400009" />
+  <NPC MapCode="51" Code="20028" Name="Sứ Giả(Đại Điện)" MinimapName="Sứ Giả(Đại Điện)" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="4820" Y="2350" Dir="1" ScriptID="400011" />
+  <NPC MapCode="9" Code="17900" Name="Đường độc" MinimapName="Đường độc(Dược)" VisibleOnMinimap="1" Title="Đệ tử Đường Môn(Dược)" X="1875" Y="2215" Dir="1" ScriptID="10" />
+  <NPC MapCode="9" Code="17901" Name="Đường Khinh" MinimapName="Đường Khinh(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử Đường Môn(Trang bị)" X="2710" Y="1520" Dir="1" ScriptID="12" />
+  <NPC MapCode="9" Code="17902" Name="Đường khuyết" MinimapName="Đường khuyết(Binh khí)" VisibleOnMinimap="1" Title="Đệ tử Đường Môn(Binh khí)" X="2563" Y="2033" Dir="1" ScriptID="174" />
+  <NPC MapCode="9" Code="371" Name="Quản gia" MinimapName="Quản gia(Giúp đỡ)" VisibleOnMinimap="1" Title="Đệ tử Đường Môn" X="2260" Y="1920" Dir="1" ScriptID="175" />
+  <NPC MapCode="9" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="1632" Y="1805" Dir="1" ScriptID="222" />
+  <NPC MapCode="9" Code="106" Name="Đường Cừu" MinimapName="Đường Môn Chưởng Môn" VisibleOnMinimap="1" Title="Đường Môn Chưởng Môn" X="3040" Y="2140" Dir="1" ScriptID="67" />
+  <NPC MapCode="9" Code="107" Name="Đường Nhàn" MinimapName="Truy Hồn Tẩu" VisibleOnMinimap="1" Title="Truy Hồn Tẩu" X="2690" Y="3600" Dir="1" ScriptID="178" />
+  <NPC MapCode="9" Code="108" Name="Đường Tiêu" MinimapName="Tiêu Nhiêm Tẩu" VisibleOnMinimap="1" Title="Tiêu Nhiêm Tẩu" X="4155" Y="1535" Dir="1" ScriptID="179" />
+  <NPC MapCode="9" Code="109" Name="Đường Tuyệt" MinimapName="Tuyệt Xuân Tẩu" VisibleOnMinimap="1" Title="Tuyệt Xuân Tẩu" X="4910" Y="2075" Dir="1" ScriptID="180" />
+  <NPC MapCode="9" Code="110" Name="Đường Bạch" MinimapName="Bạch Bào Tẩu" VisibleOnMinimap="1" Title="Bạch Bào Tẩu" X="3420" Y="3140" Dir="1" ScriptID="181" />
+  <NPC MapCode="9" Code="111" Name="Đường Nhất Trần" MinimapName="Đường Nhất Trần" VisibleOnMinimap="1" Title="Đệ tử Đường Môn" X="2780" Y="2740" Dir="1" ScriptID="182" />
+  <NPC MapCode="9" Code="112" Name="Đường Bất Nhiễm" MinimapName="Đường Bất Nhiễm" VisibleOnMinimap="1" Title="Đệ tử Đường Môn" X="4640" Y="3120" Dir="1" ScriptID="183" />
+  <NPC MapCode="9" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="1363" Y="1971" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="10" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="3080" Y="4560" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="10" Code="1850" Name="Tất Minh" MinimapName="Hoa Sơn Kiếm Khách" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Hoa Sơn" X="6650" Y="3207" Dir="1" ScriptID="195" />
+  <NPC MapCode="10" Code="105" Name="La Tuấn" MinimapName="Đệ Tử Cái Bang" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Cái Bang" X="6340" Y="2520" Dir="1" ScriptID="20" />
+  <NPC MapCode="10" Code="179" Name="Đường Tế Dân" MinimapName="Đường Môn Thị Vệ" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Đường Môn" X="6140" Y="2600" Dir="1" ScriptID="17" />
+  <NPC MapCode="10" Code="17300" Name="Tô Nhã" MinimapName="Thúy Yên Hoa Sứ" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Thúy Yên" X="6043" Y="2423" Dir="1" ScriptID="22" />
+  <NPC MapCode="10" Code="19100" Name="Tịch Huyễn" MinimapName="Thiếu Lâm La Hán" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Thiếu Lâm" X="6470" Y="2830" Dir="1" ScriptID="19" />
+  <NPC MapCode="10" Code="19000" Name="Minh Tuệ" MinimapName="Võ Đang Đạo Nhân" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Võ Đang" X="6700" Y="2980" Dir="1" ScriptID="15" />
+  <NPC MapCode="10" Code="18300" Name="Tạ Phi Kinh" MinimapName="Thiên Nhẫn Sĩ Tử" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Thiên Nhẫn" X="7035" Y="3070" Dir="1" ScriptID="18" />
+  <NPC MapCode="10" Code="18600" Name="Bùi Viễn" MinimapName="Thiên Vương Tướng Lĩnh" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Thiên Vương" X="6390" Y="3345" Dir="1" ScriptID="13" />
+  <NPC MapCode="10" Code="8600" Name="Huyền Tịnh" MinimapName="Nga My Cẩm Y Ni Cô" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Nga My" X="5745" Y="2815" Dir="1" ScriptID="16" />
+  <NPC MapCode="10" Code="379" Name="Lễ Quan" MinimapName="Lễ Quan" VisibleOnMinimap="1" Title=" " X="6100" Y="3185" Dir="1" ScriptID="191" />
+  <NPC MapCode="10" Code="2471" Name="Long Ngũ" MinimapName="Long Ngũ" VisibleOnMinimap="1" Title="Trưởng Lão" X="5920" Y="2710" Dir="1" ScriptID="28" />
+  <NPC MapCode="10" Code="18800" Name="Biên Nhất Xuân" MinimapName="Ngũ Độc Tán Nhân" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Ngũ Độc" X="6920" Y="2765" Dir="1" ScriptID="14" />
+  <NPC MapCode="10" Code="3112" Name="Quy Kinh Tinh" MinimapName="Côn Lôn Hộ Pháp" VisibleOnMinimap="0" Title="Tiếp Dẫn Môn Phái Côn Lôn" X="5340" Y="2810" Dir="1" ScriptID="26" />
+  <NPC MapCode="10" Code="1966" Name="Ngô Thân Y" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Ông Chủ Dược Điếm" X="3445" Y="3686" Dir="1" ScriptID="196" />
+  <NPC MapCode="10" Code="1936" Name="Bảo Cầu" MinimapName="Binh Khí" VisibleOnMinimap="1" Title="Tiệm Rèn Siêu Phàm" X="2480" Y="2755" Dir="1" ScriptID="11" />
+  <NPC MapCode="10" Code="206" Name="Chủ Tiệm Tạp Hóa " MinimapName="Trang Bị" VisibleOnMinimap="1" Title="Tạp Hóa" X="1563" Y="2930" Dir="1" ScriptID="12" />
+  <NPC MapCode="10" Code="244" Name="Lão Bá" MinimapName="Thuyền Phu" VisibleOnMinimap="0" Title="Thuyền Phu" X="560" Y="1920" Dir="1" ScriptID="31" />
+  <NPC MapCode="10" Code="449" Name="La Tiên Sinh" MinimapName="La Tiên Sinh" VisibleOnMinimap="1" Title="Người Kể Chuyện" X="3609" Y="4328" Dir="1" ScriptID="30" />
+  <NPC MapCode="10" Code="313" Name="Võ Sư" MinimapName="Võ Sư" VisibleOnMinimap="1" Title=" " X="8800" Y="2090" Dir="1" ScriptID="25" />
+  <NPC MapCode="10" Code="2521" Name="Nguyệt Hạ Lão Nhân" MinimapName="Nguyệt Hạ Lão Nhân" VisibleOnMinimap="1" Title=" " X="5110" Y="4410" Dir="1" ScriptID="193" />
+  <NPC MapCode="10" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="6190" Y="2820" Dir="1" ScriptID="222" />
+  <NPC MapCode="10" Code="110" Name="Dã Tẩu" MinimapName="Dã Tẩu" VisibleOnMinimap="1" Title="Trưởng Lão" X="5704" Y="2586" Dir="1" ScriptID="27" />
+  <NPC MapCode="10" Code="252" Name="Nguyệt Lão " MinimapName="Nguyệt Lão" VisibleOnMinimap="1" Title="Tình Duyên" X="5515" Y="2908" Dir="1" ScriptID="27" />
+  <NPC MapCode="10" Code="344" Name="Ngô Hồng Mai" MinimapName="Ngô Hồng Mai" VisibleOnMinimap="0" Title="Dân Đen" X="3890" Y="3880" Dir="1" ScriptID="29" />
+  <NPC MapCode="10" Code="2013" Name="Sứ Giả Sự Kiện" MinimapName="Sứ Giả Sự Kiện" VisibleOnMinimap="1" Title="" X="5930" Y="3040" Dir="1" ScriptID="1000" />
+  <NPC MapCode="11" Code="2003" Name="Tống trưởng lão" MinimapName="Tống trưởng lão" VisibleOnMinimap="1" Title="" X="6740" Y="2256" Dir="1" ScriptID="27" />
+  <NPC MapCode="11" Code="2004" Name="Cơ quan đại sư" MinimapName="Cơ quan đại sư" VisibleOnMinimap="1" Title="" X="1950" Y="2570" Dir="1" ScriptID="27" />
+  <NPC MapCode="76" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm - Liên Server" X="11860" Y="2580" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="76" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm - Liên Server" X="12910" Y="6310" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="76" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm - Liên Server" X="3730" Y="2880" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="76" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố - Liên Server" X="11980" Y="6550" Dir="1" ScriptID="222" />
+  <NPC MapCode="76" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố - Liên Server" X="9720" Y="2920" Dir="1" ScriptID="222" />
+  <NPC MapCode="76" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố - Liên Server" X="5110" Y="1830" Dir="1" ScriptID="222" />
+  <NPC MapCode="76" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Ông Chủ Dược Điếm - Liên Server" X="4820" Y="2460" Dir="1" ScriptID="10" />
+  <NPC MapCode="76" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Ông Chủ Dược Điếm - Liên Server" X="11150" Y="3560" Dir="1" ScriptID="10" />
+  <NPC MapCode="76" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Ông Chủ Dược Điếm - Liên Server" X="11600" Y="6060" Dir="1" ScriptID="10" />
+  <NPC MapCode="76" Code="218" Name="Tạp Hóa" MinimapName="Trang Bị" VisibleOnMinimap="1" Title="Ông Chủ Tạp Hóa - Liên Server" X="6670" Y="4100" Dir="1" ScriptID="12" />
+  <NPC MapCode="76" Code="367" Name="Đại Lão Cửu" MinimapName="Tửu Lâu" VisibleOnMinimap="1" Title="Ông Chủ Tửu Lâu - Liên Server" X="8420" Y="5350" Dir="1" ScriptID="21" />
+  <NPC MapCode="76" Code="1936" Name="Hạo Thúc Thúc" MinimapName="Binh Khí" VisibleOnMinimap="1" Title="Tiệm Rèn - Liên Server" X="6800" Y="4920" Dir="1" ScriptID="11" />
+  <NPC MapCode="76" Code="1990" Name="Dã Luyện" MinimapName="Dã Luyện" VisibleOnMinimap="1" Title="Cường Hóa Trang Bị - Liên Server" X="10960" Y="4640" Dir="1" ScriptID="194" />
+  <NPC MapCode="76" Code="55" Name="Tống Hiệu Uý" MinimapName="Tống Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim - Liên Server" X="6720" Y="6620" Dir="1" ScriptID="5018" />
+  <NPC MapCode="76" Code="51" Name="Kim Hiệu Uý" MinimapName="Kim Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim - Liên Server" X="5240" Y="5320" Dir="1" ScriptID="5019" />
+  <NPC MapCode="13" Code="2002" Name="Tiểu Ngư" MinimapName="Tiểu Ngư" VisibleOnMinimap="1" Title="" X="5696" Y="5630" Dir="1" ScriptID="27" />
+  <NPC MapCode="13" Code="2001" Name="Tiểu Sơn" MinimapName="Tiểu Sơn" VisibleOnMinimap="1" Title="" X="4610" Y="5817" Dir="1" ScriptID="27" />
+  <NPC MapCode="13" Code="2000" Name="Thôn Dân" MinimapName="Thôn Dân" VisibleOnMinimap="1" Title="" X="5140" Y="5865" Dir="1" ScriptID="27" />
+  <NPC MapCode="13" Code="2012" Name="Đệ Tử Côn Lôn" MinimapName="Đệ Tử Côn Lôn" VisibleOnMinimap="1" Title="" X="4900" Y="3020" Dir="1" ScriptID="-1" />
+  <NPC MapCode="41" Code="9481" Name="Tiêu Giác" MinimapName="Tiêu Giác (Giúp Đỡ)" VisibleOnMinimap="1" Title="Đệ tử Hoa Sơn(Giúp Đỡ)" X="2540" Y="6050" Dir="1" ScriptID="147" />
+  <NPC MapCode="41" Code="7600" Name="Mạc Phong Như" MinimapName="Mạc Phong Như(Trang Bị)" VisibleOnMinimap="1" Title="Đệ tử Hoa Sơn(Trang Bị)" X="800" Y="6420" Dir="1" ScriptID="12" />
+  <NPC MapCode="41" Code="7200" Name="Tiêu Viễn Tứ" MinimapName="Tiêu Viễn Tứ(Binh Khí)" VisibleOnMinimap="1" Title="Đệ tử Hoa Sơn(Binh Khí)" X="3210" Y="7970" Dir="1" ScriptID="127" />
+  <NPC MapCode="41" Code="9482" Name="Phó Dung" MinimapName="Phó Dung(Dược)" VisibleOnMinimap="1" Title="Đệ tử Hoa Sơn(Dược)" X="3670" Y="5400" Dir="1" ScriptID="10" />
+  <NPC MapCode="41" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="3270" Y="5560" Dir="1" ScriptID="222" />
+  <NPC MapCode="41" Code="9483" Name="Lân Hảo Thiên" MinimapName="Lân Hảo Thiên" VisibleOnMinimap="1" Title="Đệ tử Hoa Sơn" X="2365" Y="6775" Dir="1" ScriptID="152" />
+  <NPC MapCode="41" Code="9484" Name="Đệ Tử Luyện Kiếm Hoa Sơn" MinimapName="Đệ Tử Luyện Kiếm" VisibleOnMinimap="1" Title="" X="3650" Y="6600" Dir="1" ScriptID="152" />
+  <NPC MapCode="41" Code="7510" Name="Nam Cung Tuyệt" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Hoa Sơn Chưởng Môn" X="5140" Y="6970" Dir="1" ScriptID="67" />
+  <NPC MapCode="41" Code="9760" Name="Tử Mộ" MinimapName="Tử Mộ" VisibleOnMinimap="1" Title="Đệ tử Hoa Sơn" X="7320" Y="6390" Dir="1" ScriptID="154" />
+  <NPC MapCode="41" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="4870" Y="4200" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="90" Code="20000" Name="Cai Ngục" MinimapName="" VisibleOnMinimap="1" Title="Cai Ngục" X="4820" Y="2350" Dir="1" ScriptID="202" />
+  <NPC MapCode="91" Code="20001" Name="Phương Hành Giáp" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Chưởng Môn Phái" X="6340" Y="4240" Dir="1" ScriptID="67" />
+  <NPC MapCode="91" Code="20002" Name="Thiên Tật" MinimapName="Đệ Tử Minh Gíáo(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử Minh Gíáo(Trang bị)" X="5780" Y="2480" Dir="1" ScriptID="12" />
+  <NPC MapCode="91" Code="20002" Name="Ngô Hạo" MinimapName="Đệ Tử Minh Gíáo(Dược)" VisibleOnMinimap="1" Title="Đệ tử Minh Gíáo(Dược)" X="3800" Y="3510" Dir="1" ScriptID="10" />
+  <NPC MapCode="91" Code="20002" Name="Cửu Sinh" MinimapName="Đệ Tử Minh Gíáo(Binh khí)" VisibleOnMinimap="1" Title="Đệ tử Minh Gíáo(Binh khí)" X="4960" Y="4270" Dir="1" ScriptID="-1" />
+  <NPC MapCode="91" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2950" Y="1990" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="91" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="8680" Y="5520" Dir="1" ScriptID="222" />
+  <NPC MapCode="19" Code="8500" Name="Diệu Hoa" MinimapName="Diệu Hoa(Giúp đỡ)" VisibleOnMinimap="1" Title="Đệ tử Nga Mi(Giúp đỡ)" X="3970" Y="3090" Dir="1" ScriptID="108" />
+  <NPC MapCode="19" Code="8501" Name="Diệu Tâm" MinimapName="Diệu Tâm(trang bị)" VisibleOnMinimap="1" Title="Đệ tử Nga Mi(Trang bị)" X="4334" Y="3317" Dir="1" ScriptID="12" />
+  <NPC MapCode="19" Code="8502" Name="Diệu Linh" MinimapName="Diệu Linh(binh khí)" VisibleOnMinimap="1" Title="Đệ tử Nga Mi(Binh khí)" X="5000" Y="3960" Dir="1" ScriptID="110" />
+  <NPC MapCode="19" Code="8503" Name="Diệu Khiết" MinimapName="Diệu Khiết(dược)" VisibleOnMinimap="1" Title="Đệ tử Nga Mi(Dược)" X="3564" Y="3645" Dir="1" ScriptID="10" />
+  <NPC MapCode="19" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="4126" Y="3537" Dir="1" ScriptID="222" />
+  <NPC MapCode="19" Code="84" Name="Thanh Hiểu Sư Thái" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Nga Mi Chưởng Môn" X="5273" Y="4280" Dir="1" ScriptID="67" />
+  <NPC MapCode="19" Code="87" Name="Bái Nguyệt " MinimapName="Bái Nguyệt Tiên Tử" VisibleOnMinimap="1" Title="Tiên Tử" X="4534" Y="4372" Dir="1" ScriptID="113" />
+  <NPC MapCode="19" Code="85" Name="Diệu như" MinimapName="Diệu như" VisibleOnMinimap="1" Title="Đệ tử Nga Mi" X="3095" Y="3417" Dir="1" ScriptID="114" />
+  <NPC MapCode="19" Code="86" Name="Diệu ẩn" MinimapName="Diệu ẩn" VisibleOnMinimap="1" Title="Đệ tử Nga Mi" X="2575" Y="2655" Dir="1" ScriptID="115" />
+  <NPC MapCode="19" Code="91" Name="Ánh Tuyết" MinimapName="Ánh Tuyết Tiên Tử" VisibleOnMinimap="1" Title="Tiên Tử" X="3620" Y="3900" Dir="1" ScriptID="116" />
+  <NPC MapCode="19" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2225" Y="2725" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="20" Code="18801" Name="Co Hoặc" MinimapName="Co Hoặc(giúp đỡ)" VisibleOnMinimap="1" Title="Đệ tử ngũ độc(Giúp đỡ)" X="4080" Y="3465" Dir="1" ScriptID="87" />
+  <NPC MapCode="20" Code="18802" Name="Độc Thái" MinimapName="Độc Thái(trang bị)" VisibleOnMinimap="1" Title="Đệ tử ngũ độc(Trang bị)" X="2760" Y="2800" Dir="1" ScriptID="12" />
+  <NPC MapCode="20" Code="18803" Name="Độc Thích" MinimapName="Độc Thích(binh khí)" VisibleOnMinimap="1" Title="Đệ tử ngũ độc(Binh khí)" X="2220" Y="2520" Dir="1" ScriptID="89" />
+  <NPC MapCode="20" Code="18804" Name="Độc Tâm" MinimapName="Độc Tâm(dược)" VisibleOnMinimap="1" Title="Đệ tử ngũ độc(Dược)" X="3440" Y="3120" Dir="1" ScriptID="10" />
+  <NPC MapCode="20" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="2920" Y="1180" Dir="1" ScriptID="222" />
+  <NPC MapCode="20" Code="120" Name="Hắc Diện Lang Quân" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Giáo Chủ Ngũ Độc giáo" X="6310" Y="3635" Dir="1" ScriptID="67" />
+  <NPC MapCode="20" Code="121" Name="Vân Bất Tà" MinimapName="Vân Bất Tà" VisibleOnMinimap="1" Title="Kim Xà Hương Chủ" X="4894" Y="2876" Dir="1" ScriptID="92" />
+  <NPC MapCode="20" Code="122" Name="Đồ Dị" MinimapName="Đồ Dị" VisibleOnMinimap="1" Title="Xích Yết Hương Chủ" X="750" Y="2325" Dir="1" ScriptID="93" />
+  <NPC MapCode="20" Code="123" Name="Độc Nha" MinimapName="Độc Nha" VisibleOnMinimap="1" Title="Mặc Thù Hương Chủ" X="3390" Y="2112" Dir="1" ScriptID="94" />
+  <NPC MapCode="20" Code="126" Name="Bạch Doanh Doanh" MinimapName="Bạch Doanh Doanh" VisibleOnMinimap="1" Title="Ngân Thiềm Hương Chủ" X="6400" Y="340" Dir="1" ScriptID="95" />
+  <NPC MapCode="20" Code="125" Name="Thanh Bật" MinimapName="Thanh Bật" VisibleOnMinimap="1" Title="Thanh Ngô Hương Chủ" X="7497" Y="2525" Dir="1" ScriptID="96" />
+  <NPC MapCode="20" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2940" Y="1380" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="22" Code="2014" Name="Đại Tướng" MinimapName="Đại Tướng" VisibleOnMinimap="1" Title="" X="4980" Y="3280" Dir="1" ScriptID="-1" />
+  <NPC MapCode="39" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Ông Chủ Dược Điếm" X="4840" Y="2440" Dir="1" ScriptID="10" />
+  <NPC MapCode="39" Code="3290" Name="Sầm Hùng" MinimapName="Sầm Hùng" VisibleOnMinimap="0" Title=" " X="2747" Y="2097" Dir="1" ScriptID="64" />
+  <NPC MapCode="39" Code="976" Name="Nhiếp Thí Trần" MinimapName="Nhiếp Thí Trần" VisibleOnMinimap="1" Title=" " X="1732" Y="2517" Dir="1" ScriptID="187" />
+  <NPC MapCode="39" Code="247" Name="Lữ Lão Hán" MinimapName="Lữ Lão Hán" VisibleOnMinimap="0" Title=" " X="2460" Y="3000" Dir="1" ScriptID="28" />
+  <NPC MapCode="39" Code="374" Name="Bành Tiểu Đệ" MinimapName="Bành Tiểu Đệ" VisibleOnMinimap="0" Title=" " X="2970" Y="3150" Dir="1" ScriptID="63" />
+  <NPC MapCode="39" Code="377" Name="Dịch Dung Thuật Sĩ" MinimapName="Dịch Dung Thuật Sĩ" VisibleOnMinimap="1" Title=" " X="3260" Y="3300" Dir="1" ScriptID="184" />
+  <NPC MapCode="39" Code="3791" Name="Dịch quan" MinimapName="Dịch quan" VisibleOnMinimap="1" Title=" " X="3680" Y="3640" Dir="1" ScriptID="2" />
+  <NPC MapCode="39" Code="211" Name="Lão Cao" MinimapName="Sòng bạc" VisibleOnMinimap="1" Title="Ông Chủ Sòng Bạc" X="4555" Y="3220" Dir="1" ScriptID="35" />
+  <NPC MapCode="39" Code="218" Name="Tạp Hóa" MinimapName="Trang Bị" VisibleOnMinimap="1" Title="Ông Chủ Tạp Hóa" X="3460" Y="2180" Dir="1" ScriptID="12" />
+  <NPC MapCode="39" Code="326" Name="Dư Vũ" MinimapName="Dư Vũ" VisibleOnMinimap="0" Title=" " X="4620" Y="1822" Dir="1" ScriptID="65" />
+  <NPC MapCode="39" Code="449" Name="Tiền Trang" MinimapName="Tiền Trang" VisibleOnMinimap="1" Title="Phi Phong" X="3298" Y="1638" Dir="1" ScriptID="32" />
+  <NPC MapCode="39" Code="379" Name="Lễ Quan" MinimapName="Lễ Quan" VisibleOnMinimap="1" Title=" " X="5230" Y="3115" Dir="1" ScriptID="191" />
+  <NPC MapCode="39" Code="220" Name="Cổ Giới Tiên Sinh " MinimapName="Cổ Giới Tiên Sinh" VisibleOnMinimap="0" Title=" " X="5390" Y="3210" Dir="1" ScriptID="27" />
+  <NPC MapCode="39" Code="248" Name="Thần Nông Lão Gia " MinimapName="Thần Nông Lão Gia " VisibleOnMinimap="0" Title=" " X="5470" Y="3230" Dir="1" ScriptID="42" />
+  <NPC MapCode="39" Code="110" Name="Dã Tẩu" MinimapName="Dã Tẩu" VisibleOnMinimap="1" Title=" " X="5380" Y="4086" Dir="1" ScriptID="27" />
+  <NPC MapCode="39" Code="323" Name="Ăn Mày" MinimapName="Ăn Mày" VisibleOnMinimap="0" Title="" X="5033" Y="4213" Dir="1" ScriptID="-1" />
+  <NPC MapCode="39" Code="6600" Name="Trụ Trì Pháp Môn Tự" MinimapName="Trụ Trì" VisibleOnMinimap="1" Title=" " X="5690" Y="4500" Dir="1" ScriptID="53" />
+  <NPC MapCode="39" Code="367" Name="Ông Chủ Tửu Lâu" MinimapName="Tửu Lâu" VisibleOnMinimap="1" Title=" " X="5560" Y="3360" Dir="1" ScriptID="21" />
+  <NPC MapCode="39" Code="207" Name="Ông Chủ Đồ Cổ" MinimapName="Đồ Cổ" VisibleOnMinimap="0" Title=" " X="5580" Y="2800" Dir="1" ScriptID="55" />
+  <NPC MapCode="39" Code="2161" Name="Bán Ngựa" MinimapName="Bán Ngựa" VisibleOnMinimap="1" Title="" X="5947" Y="2446" Dir="1" ScriptID="1" />
+  <NPC MapCode="39" Code="1936" Name="Hạ Phi Yên" MinimapName="Binh Khí" VisibleOnMinimap="1" Title="Tiệm Rèn Siêu Phàm" X="5340" Y="2380" Dir="1" ScriptID="11" />
+  <NPC MapCode="39" Code="310" Name="Võ Lâm Truyền Nhân " MinimapName="Võ Lâm Truyền Nhân" VisibleOnMinimap="1" Title=" " X="5564" Y="2244" Dir="1" ScriptID="7" />
+  <NPC MapCode="39" Code="3101" Name="Liên Đấu " MinimapName="Liên Đấu" VisibleOnMinimap="1" Title="Sứ giả liên Đấu" X="7070" Y="2015" Dir="1" ScriptID="400020" />
+  <NPC MapCode="39" Code="3100" Name="Ông Chủ Tiêu Cục " MinimapName="Tiêu Cục " VisibleOnMinimap="1" Title=" " X="2890" Y="2490" Dir="1" ScriptID="36" />
+  <NPC MapCode="39" Code="197" Name="Chủ Lữ Quán" MinimapName="Chủ Lữ Quán" VisibleOnMinimap="0" Title=" " X="5074" Y="1727" Dir="1" ScriptID="8" />
+  <NPC MapCode="39" Code="9400" Name="Ngạo Vân Tông " MinimapName="Ngạo Vân Tông" VisibleOnMinimap="1" Title=" " X="4340" Y="900" Dir="1" ScriptID="190" />
+  <NPC MapCode="39" Code="226" Name="Chủ Tiệm Trà " MinimapName="Tiệm Trà " VisibleOnMinimap="1" Title=" " X="4780" Y="1260" Dir="1" ScriptID="46" />
+  <NPC MapCode="39" Code="375" Name="Tiếp Đầu Công Thành Chiến" MinimapName="Công Thành Chiến" VisibleOnMinimap="1" Title=" " X="6100" Y="1180" Dir="1" ScriptID="200" />
+  <NPC MapCode="39" Code="372" Name="Thái Đại Thúc " MinimapName="Thái Đại Thúc" VisibleOnMinimap="0" Title=" " X="5940" Y="3540" Dir="1" ScriptID="60" />
+  <NPC MapCode="39" Code="213" Name="Hàng Rong" MinimapName="Hàng Rong" VisibleOnMinimap="0" Title=" " X="5346" Y="3898" Dir="1" ScriptID="52" />
+  <NPC MapCode="39" Code="320" Name="Giang Bà Bà " MinimapName="Giang Bà Bà" VisibleOnMinimap="0" Title=" " X="4740" Y="3810" Dir="1" ScriptID="-1" />
+  <NPC MapCode="39" Code="383" Name="Tăng Vân Anh" MinimapName="Tăng Vân Anh" VisibleOnMinimap="0" Title=" " X="3540" Y="3450" Dir="1" ScriptID="62" />
+  <NPC MapCode="39" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="6360" Y="1060" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="39" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="6370" Y="2880" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="39" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="3220" Y="3910" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="39" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2390" Y="1690" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="39" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="0" Title="Thủ Khố" X="6820" Y="3155" Dir="1" ScriptID="222" />
+  <NPC MapCode="39" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="4140" Y="3450" Dir="1" ScriptID="222" />
+  <NPC MapCode="39" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="2990" Y="2010" Dir="1" ScriptID="222" />
+  <NPC MapCode="39" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="5590" Y="1480" Dir="1" ScriptID="222" />
+  <NPC MapCode="39" Code="1990" Name="Dã Luyện" MinimapName="Dã Luyện" VisibleOnMinimap="1" Title="Cường Hóa Trang Bị" X="5660" Y="1700" Dir="1" ScriptID="194" />
+  <NPC MapCode="39" Code="2013" Name="Sứ Giả Hoạt Động" MinimapName="Hoạt Động" VisibleOnMinimap="1" Title="Hoàng Kim Tiên Tử" X="4585" Y="2245" Dir="1" ScriptID="320" />
+  <NPC MapCode="39" Code="55" Name="Tống Hiệu Uý" MinimapName="Tống Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim" X="4450" Y="1980" Dir="1" ScriptID="5018" />
+  <NPC MapCode="39" Code="51" Name="Kim Hiệu Uý" MinimapName="Kim Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim" X="4480" Y="2720" Dir="1" ScriptID="5019" />
+  <NPC MapCode="39" Code="63" Name="Vệ Binh Thành Môn" MinimapName="Phong Hỏa Liên Thành" VisibleOnMinimap="1" Title="Phong Hỏa Liên Thành" X="2790" Y="3910" Dir="1" ScriptID="400040" />
+  <NPC MapCode="39" Code="2019" Name="Thống Lĩnh" MinimapName="Quân Doanh" VisibleOnMinimap="1" Title="Quân Doanh" X="1480" Y="2980" Dir="1" ScriptID="500100" />
+  <NPC MapCode="39" Code="20026" Name="Sứ Giả Tần Lăng" MinimapName="Tần Lăng" VisibleOnMinimap="1" Title="Thủy Hoàng Địa Cung" X="4140" Y="4520" Dir="1" ScriptID="400030" />
+  <NPC MapCode="39" Code="20027" Name="Mã Xuyên Sơn" MinimapName="Ải Gia Tộc" VisibleOnMinimap="1" Title="Ải Gia Tộc" X="6387" Y="2062" Dir="1" ScriptID="500200" />
+  <NPC MapCode="39" Code="20028" Name="Sứ Giả Báo Danh" MinimapName="Bạch Hổ Đường" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="3873" Y="1640" Dir="1" ScriptID="400012" />
+  <NPC MapCode="39" Code="245" Name="Quan Quân" MinimapName="Quan Quân" VisibleOnMinimap="1" Title="Cửa Hàng Danh Vọng" X="4280" Y="2380" Dir="1" ScriptID="38" />
+  <NPC MapCode="40" Code="70" Name="Thiếu Lâm Phản Tăng" MinimapName="Thiếu Lâm Phản Tăng" VisibleOnMinimap="1" Title=" " X="2010" Y="1820" Dir="1" ScriptID="197" />
+  <NPC MapCode="40" Code="205" Name="Bán Thuốc" MinimapName="Bán Thuốc" VisibleOnMinimap="1" Title=" " X="3190" Y="1720" Dir="1" ScriptID="10" />
+  <NPC MapCode="40" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="2250" Y="2450" Dir="1" ScriptID="222" />
+  <NPC MapCode="70" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="750" Y="560" Dir="1" ScriptID="400032" />
+  <NPC MapCode="37" Code="2011" Name="Đệ Tử Cái Bang" MinimapName="Đệ Tử Cái Bang" VisibleOnMinimap="1" Title="" X="3240" Y="3560" Dir="1" ScriptID="-1" />
+  <NPC MapCode="87" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="87" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="89" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="89" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="82" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="82" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="85" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="85" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="92" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="92" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="83" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="83" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="81" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="81" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="86" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="86" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="80" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="80" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="71" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="71" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="84" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="84" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="88" Code="2702" Name="Cờ Quán Quân" MinimapName="Cờ Quán Quân" VisibleOnMinimap="1" Title="Thi Đấu Môn Phái" X="6190" Y="3730" Dir="1" ScriptID="6000" />
+  <NPC MapCode="88" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm " X="3140" Y="2230" Dir="1" ScriptID="400032" />
+  <NPC MapCode="42" Code="18301" Name="Quân Sư" MinimapName="Quân Sư(Giúp đỡ)" VisibleOnMinimap="1" Title="Đệ tử thiên nhẫn(Giúp đỡ)" X="4360" Y="2620" Dir="1" ScriptID="157" />
+  <NPC MapCode="42" Code="18302" Name="Vũ Địch" MinimapName="Vũ Địch(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử thiên nhẫn(Trang bị)" X="3850" Y="2350" Dir="1" ScriptID="12" />
+  <NPC MapCode="42" Code="18303" Name="Tháp Lý Hãn" MinimapName="Tháp Lý Hãn(Binh khí)" VisibleOnMinimap="1" Title="Đệ tử thiên nhẫn(Binh khí)" X="3290" Y="2040" Dir="1" ScriptID="156" />
+  <NPC MapCode="42" Code="18304" Name="Khởi Hữu" MinimapName="Khởi Hữu(Dược)" VisibleOnMinimap="1" Title="Đệ tử thiên nhẫn(Dược)" X="4450" Y="2050" Dir="1" ScriptID="10" />
+  <NPC MapCode="42" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="2540" Y="1640" Dir="1" ScriptID="222" />
+  <NPC MapCode="42" Code="132" Name="Hoàn Nhan Hùng Liệt" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Thiên Nhẫn Giáo Chủ" X="5220" Y="2835" Dir="1" ScriptID="67" />
+  <NPC MapCode="42" Code="136" Name="Ngột Ngạo" MinimapName="Ngột Ngạo" VisibleOnMinimap="1" Title="Hoả Đường Chủ" X="1330" Y="2090" Dir="1" ScriptID="160" />
+  <NPC MapCode="42" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2600" Y="1240" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="27" Code="187" Name="Văn thư" MinimapName="Văn thư(Giúp đỡ)" VisibleOnMinimap="1" Title="Đệ tử Thiên Vương(Giúp đỡ)" X="2600" Y="3040" Dir="1" ScriptID="76" />
+  <NPC MapCode="27" Code="18500" Name="Trấn Lôi" MinimapName="Trấn Lôi(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử Thiên Vương(Trang bị)" X="5214" Y="3918" Dir="1" ScriptID="12" />
+  <NPC MapCode="27" Code="18501" Name="Kim Đào" MinimapName="Kim Đào(Binh khí)" VisibleOnMinimap="1" Title="Đệ tử Thiên Vương(Binh khí)" X="5986" Y="4219" Dir="1" ScriptID="78" />
+  <NPC MapCode="27" Code="18502" Name="Bùi Phi" MinimapName="Bùi Phi(Dược)" VisibleOnMinimap="1" Title="Đệ tử Thiên Vương(Dược)" X="7187" Y="3655" Dir="1" ScriptID="10" />
+  <NPC MapCode="27" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="6604" Y="4126" Dir="1" ScriptID="222" />
+  <NPC MapCode="27" Code="113" Name="Dương Anh" MinimapName="Thiên Vương Bang Chủ" VisibleOnMinimap="1" Title="Thiên Vương Bang Chủ" X="7720" Y="4500" Dir="1" ScriptID="67" />
+  <NPC MapCode="27" Code="114" Name="Lỗ Vân Viễn" MinimapName="Thiên Hộ Pháp" VisibleOnMinimap="1" Title="Thiên Hộ Pháp" X="7880" Y="3450" Dir="1" ScriptID="81" />
+  <NPC MapCode="27" Code="115" Name="Hạ Hành" MinimapName="Địa Hộ Pháp" VisibleOnMinimap="1" Title="Địa Hộ Pháp" X="6312" Y="3350" Dir="1" ScriptID="82" />
+  <NPC MapCode="27" Code="116" Name="Vương Tá" MinimapName="Tiền sứ" VisibleOnMinimap="1" Title="Tiền sứ" X="5455" Y="3180" Dir="1" ScriptID="83" />
+  <NPC MapCode="27" Code="117" Name="Dương Hồ" MinimapName="Hữu Sứ" VisibleOnMinimap="1" Title="Hữu Sứ" X="6799" Y="2918" Dir="1" ScriptID="84" />
+  <NPC MapCode="27" Code="118" Name="Cổ Bách" MinimapName="Tả Sứ" VisibleOnMinimap="1" Title="Tả Sứ" X="4444" Y="4167" Dir="1" ScriptID="85" />
+  <NPC MapCode="27" Code="119" Name="Hổ đảo Túy Tiên" MinimapName="Hổ đảo Túy Tiên" VisibleOnMinimap="1" Title="Thiên Vương Hộ Pháp" X="4352" Y="2749" Dir="1" ScriptID="-1" />
+  <NPC MapCode="27" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2076" Y="2547" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="28" Code="68" Name="Huyền hư" MinimapName="Huyền hư(Giúp đỡ)" VisibleOnMinimap="1" Title="Đệ tử Thiếu Lâm(Giúp đỡ)" X="1683" Y="1444" Dir="1" ScriptID="98" />
+  <NPC MapCode="28" Code="19101" Name="Trừng Vi" MinimapName="Trừng Vi(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử Thiếu Lâm(Trang bị)" X="5137" Y="3118" Dir="1" ScriptID="12" />
+  <NPC MapCode="28" Code="19102" Name="Trừng Tiết" MinimapName="Trừng Tiết(binh khí)" VisibleOnMinimap="1" Title="Đệ tử Thiếu Lâm(Binh khí)" X="5522" Y="3386" Dir="1" ScriptID="100" />
+  <NPC MapCode="28" Code="19103" Name="Trừng Viễn" MinimapName="Trừng Viễn(dược)" VisibleOnMinimap="1" Title="Đệ tử Thiếu Lâm(Dược)" X="5830" Y="3180" Dir="1" ScriptID="10" />
+  <NPC MapCode="28" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="2120" Y="1800" Dir="1" ScriptID="222" />
+  <NPC MapCode="28" Code="66" Name="Từ Nhân" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Chưởng Môn Phái" X="9013" Y="5102" Dir="1" ScriptID="67" />
+  <NPC MapCode="28" Code="67" Name="Không Tịch" MinimapName="Thiếu Lâm Không Tịch" VisibleOnMinimap="1" Title="Thiếu Lâm Không Tịch" X="6420" Y="6315" Dir="1" ScriptID="-1" />
+  <NPC MapCode="28" Code="70" Name="Huyền Bi" MinimapName="Đạt Ma viện đầu tọa" VisibleOnMinimap="1" Title="Đạt Ma viện đầu tọa" X="4060" Y="4040" Dir="1" ScriptID="104" />
+  <NPC MapCode="28" Code="72" Name="Huyền Giác" MinimapName="La Hán đường đầu tọa" VisibleOnMinimap="1" Title="La Hán đường đầu tọa" X="1950" Y="3105" Dir="1" ScriptID="105" />
+  <NPC MapCode="28" Code="74" Name="Huyền Từ" MinimapName="Tàng Kinh các đầu tọa" VisibleOnMinimap="1" Title="Tàng Kinh các đầu tọa" X="6114" Y="3542" Dir="1" ScriptID="106" />
+  <NPC MapCode="28" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="1800" Y="1670" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="29" Code="17304" Name="Ngạo Mai" MinimapName="Ngạo Mai(Giúp Đỡ)" VisibleOnMinimap="1" Title="Đệ tử Thúy Yên(Giúp Đỡ)" X="4420" Y="4414" Dir="1" ScriptID="117" />
+  <NPC MapCode="29" Code="17301" Name="Nhược Lan" MinimapName="Nhược Lan(Binh Khí)" VisibleOnMinimap="1" Title="Đệ tử Thúy Yên(Binh Khí) " X="5593" Y="5115" Dir="1" ScriptID="119" />
+  <NPC MapCode="29" Code="17302" Name="Phong Trúc" MinimapName="Phong Trúc(Trang Bị)" VisibleOnMinimap="1" Title=" Đệ tử Thúy Yên(Trang Bị)" X="4860" Y="5245" Dir="1" ScriptID="12" />
+  <NPC MapCode="29" Code="17303" Name="Tiêu Cúc" MinimapName="Tiêu Cúc(Dược)" VisibleOnMinimap="1" Title="Đệ tử Thúy Yên(Dược)" X="5700" Y="4724" Dir="1" ScriptID="10" />
+  <NPC MapCode="29" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="5412" Y="5220" Dir="1" ScriptID="222" />
+  <NPC MapCode="29" Code="127" Name="Doãn Hàm Yên" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Thúy Yên Chưởng môn" X="3739" Y="3936" Dir="1" ScriptID="67" />
+  <NPC MapCode="29" Code="128" Name="Lệ Thu Thủy" MinimapName="Hải Đường Sứ Giả" VisibleOnMinimap="1" Title="Hải Đường Sứ Giả" X="3904" Y="3629" Dir="1" ScriptID="122" />
+  <NPC MapCode="29" Code="129" Name="Thủy Tiên" MinimapName="Thủy Tiên Sứ Giả" VisibleOnMinimap="1" Title="Thủy Tiên Sứ Giả" X="3440" Y="5980" Dir="1" ScriptID="-1" />
+  <NPC MapCode="29" Code="130" Name="Tường Vi" MinimapName="Tường Vi Sứ Giả" VisibleOnMinimap="1" Title="Tường Vi Sứ Giả" X="6506" Y="3604" Dir="1" ScriptID="-1" />
+  <NPC MapCode="29" Code="131" Name="Lê Hoa" MinimapName="Lê Hoa Sứ Giả" VisibleOnMinimap="1" Title="Lê Hoa Sứ Giả" X="4120" Y="5220" Dir="1" ScriptID="-1" />
+  <NPC MapCode="29" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2120" Y="3220" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="72" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="1220" Y="1055" Dir="1" ScriptID="10" />
+  <NPC MapCode="72" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="12290" Y="8260" Dir="1" ScriptID="10" />
+  <NPC MapCode="72" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="824" Y="832" Dir="1" ScriptID="222" />
+  <NPC MapCode="72" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="13260" Y="7760" Dir="1" ScriptID="222" />
+  <NPC MapCode="72" Code="20030" Name="Tống Thống Lĩnh" MinimapName="Tống Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="1680" Y="850" Dir="1" ScriptID="5000" />
+  <NPC MapCode="72" Code="20031" Name="Kim Thống Lĩnh" MinimapName="Kim Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="12700" Y="7990" Dir="1" ScriptID="5000" />
+  <NPC MapCode="73" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="1220" Y="1055" Dir="1" ScriptID="10" />
+  <NPC MapCode="73" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="12290" Y="8260" Dir="1" ScriptID="10" />
+  <NPC MapCode="73" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="824" Y="832" Dir="1" ScriptID="222" />
+  <NPC MapCode="73" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="13260" Y="7760" Dir="1" ScriptID="222" />
+  <NPC MapCode="73" Code="20030" Name="Tống Thống Lĩnh" MinimapName="Tống Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="1680" Y="850" Dir="1" ScriptID="5000" />
+  <NPC MapCode="73" Code="20031" Name="Kim Thống Lĩnh" MinimapName="Kim Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="12700" Y="7990" Dir="1" ScriptID="5000" />
+  <NPC MapCode="75" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="1220" Y="1055" Dir="1" ScriptID="10" />
+  <NPC MapCode="75" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="12290" Y="8260" Dir="1" ScriptID="10" />
+  <NPC MapCode="75" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="824" Y="832" Dir="1" ScriptID="222" />
+  <NPC MapCode="75" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="13260" Y="7760" Dir="1" ScriptID="222" />
+  <NPC MapCode="75" Code="20030" Name="Tống Thống Lĩnh" MinimapName="Tống Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="1680" Y="850" Dir="1" ScriptID="5000" />
+  <NPC MapCode="75" Code="20031" Name="Kim Thống Lĩnh" MinimapName="Kim Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="12700" Y="7990" Dir="1" ScriptID="5000" />
+  <NPC MapCode="38" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="1220" Y="1055" Dir="1" ScriptID="10" />
+  <NPC MapCode="38" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="12290" Y="8260" Dir="1" ScriptID="10" />
+  <NPC MapCode="38" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="824" Y="832" Dir="1" ScriptID="222" />
+  <NPC MapCode="38" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="13260" Y="7760" Dir="1" ScriptID="222" />
+  <NPC MapCode="38" Code="20030" Name="Tống Thống Lĩnh" MinimapName="Tống Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="1680" Y="850" Dir="1" ScriptID="5000" />
+  <NPC MapCode="38" Code="20031" Name="Kim Thống Lĩnh" MinimapName="Kim Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="12700" Y="7990" Dir="1" ScriptID="5000" />
+  <NPC MapCode="74" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="1220" Y="1055" Dir="1" ScriptID="10" />
+  <NPC MapCode="74" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title=" " X="12290" Y="8260" Dir="1" ScriptID="10" />
+  <NPC MapCode="74" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="824" Y="832" Dir="1" ScriptID="222" />
+  <NPC MapCode="74" Code="315" Name="Rương đồ" MinimapName="Rương đồ" VisibleOnMinimap="1" Title=" " X="13260" Y="7760" Dir="1" ScriptID="222" />
+  <NPC MapCode="74" Code="20030" Name="Tống Thống Lĩnh" MinimapName="Tống Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="1680" Y="850" Dir="1" ScriptID="5000" />
+  <NPC MapCode="74" Code="20031" Name="Kim Thống Lĩnh" MinimapName="Kim Thống Lĩnh" VisibleOnMinimap="1" Title=" " X="12700" Y="7990" Dir="1" ScriptID="5000" />
+  <NPC MapCode="32" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2593" Y="3386" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="32" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="7020" Y="1100" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="32" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="10460" Y="3630" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="32" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="3190" Y="4420" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="32" Code="205" Name="Trương Trảm Kinh" MinimapName="Hiệu Thuốc" VisibleOnMinimap="1" Title="Ông Chủ Dược Điếm" X="7612" Y="3154" Dir="1" ScriptID="10" />
+  <NPC MapCode="32" Code="976" Name="Nhiếp Thí Trần" MinimapName="Nhiếp Thí Trần" VisibleOnMinimap="1" Title=" " X="4337" Y="3828" Dir="1" ScriptID="187" />
+  <NPC MapCode="32" Code="362" Name="Đậu Đậu" MinimapName="Đậu Đậu" VisibleOnMinimap="0" Title=" " X="5160" Y="2920" Dir="-1" ScriptID="39" />
+  <NPC MapCode="32" Code="377" Name="Dịch Dung Thuật Sĩ " MinimapName="Dịch Dung Thuật Sĩ" VisibleOnMinimap="1" Title=" " X="3928" Y="2675" Dir="1" ScriptID="184" />
+  <NPC MapCode="32" Code="3791" Name="Dịch quan " MinimapName="Dịch quan" VisibleOnMinimap="0" Title=" " X="6780" Y="1225" Dir="1" ScriptID="2" />
+  <NPC MapCode="32" Code="211" Name="Lão Cao" MinimapName="Sòng Bạc" VisibleOnMinimap="1" Title="Ông Chủ Sòng Bạc" X="7424" Y="2289" Dir="1" ScriptID="35" />
+  <NPC MapCode="32" Code="218" Name="Tạp Hóa" MinimapName="Trang Bị" VisibleOnMinimap="1" Title="Ông Chủ Tạp Hóa" X="8100" Y="2940" Dir="1" ScriptID="12" />
+  <NPC MapCode="32" Code="449" Name="Tiền Trang" MinimapName="Tiền Trang" VisibleOnMinimap="1" Title="Phi Phong" X="4930" Y="3535" Dir="1" ScriptID="32" />
+  <NPC MapCode="32" Code="379" Name="Lễ Quan" MinimapName="Lễ Quan" VisibleOnMinimap="1" Title=" " X="5180" Y="3160" Dir="1" ScriptID="191" />
+  <NPC MapCode="32" Code="220" Name="Cổ Giới Tiên Sinh" MinimapName="Cổ Giới Tiên Sinh" VisibleOnMinimap="0" Title=" " X="5360" Y="3295" Dir="1" ScriptID="27" />
+  <NPC MapCode="32" Code="220" Name="Cổ giá tiên sinh" MinimapName="Cổ Giới tiên sinh" VisibleOnMinimap="0" Title=" " X="2388" Y="3970" Dir="1" ScriptID="56" />
+  <NPC MapCode="32" Code="248" Name="Thần Nông Lão Gia" MinimapName="Thần Nông Lão Gia" VisibleOnMinimap="0" Title=" " X="5124" Y="5032" Dir="1" ScriptID="42" />
+  <NPC MapCode="32" Code="248" Name="Thần Nông Lão Gia" MinimapName="Thần Nông Lão Gia" VisibleOnMinimap="0" Title=" " X="4470" Y="3767" Dir="1" ScriptID="42" />
+  <NPC MapCode="32" Code="110" Name="Dã Tẩu" MinimapName="Dã Tẩu" VisibleOnMinimap="1" Title=" " X="7065" Y="2476" Dir="1" ScriptID="27" />
+  <NPC MapCode="32" Code="323" Name="Ăn Mày" MinimapName="Ăn Mày" VisibleOnMinimap="0" Title="" X="7400" Y="1740" Dir="1" ScriptID="-1" />
+  <NPC MapCode="32" Code="323" Name="Ăn Mày" MinimapName="Ăn Mày" VisibleOnMinimap="0" Title="" X="4980" Y="5440" Dir="1" ScriptID="-1" />
+  <NPC MapCode="32" Code="207" Name="Ông Chủ Đồ Cổ" MinimapName="Ông Chủ Đồ Cổ" VisibleOnMinimap="0" Title=" " X="6645" Y="2670" Dir="1" ScriptID="55" />
+  <NPC MapCode="32" Code="2161" Name="Bán Ngựa" MinimapName="Bán Ngựa" VisibleOnMinimap="1" Title="" X="6100" Y="4028" Dir="1" ScriptID="1" />
+  <NPC MapCode="32" Code="1936" Name="Hạ Phi Yên" MinimapName="Binh Khí" VisibleOnMinimap="1" Title="Tiệm Rèn" X="5560" Y="3680" Dir="1" ScriptID="11" />
+  <NPC MapCode="32" Code="310" Name="Võ Lâm Truyền Nhân" MinimapName="Võ Lâm Truyền Nhân" VisibleOnMinimap="1" Title=" " X="7376" Y="2967" Dir="1" ScriptID="7" />
+  <NPC MapCode="32" Code="3100" Name="Tiêu Đầu" MinimapName="Tiêu Đầu" VisibleOnMinimap="1" Title=" " X="5720" Y="4680" Dir="1" ScriptID="36" />
+  <NPC MapCode="32" Code="3101" Name="Sứ Giả Kiệt Xuất" MinimapName="Sứ Giả Kiệt Xuất" VisibleOnMinimap="0" Title=" " X="5490" Y="5480" Dir="1" ScriptID="40" />
+  <NPC MapCode="32" Code="197" Name="Chủ Lữ Quán" MinimapName="Chủ Lữ Quán" VisibleOnMinimap="0" Title=" " X="4700" Y="2787" Dir="1" ScriptID="8" />
+  <NPC MapCode="32" Code="375" Name="Tiếp Đầu Công Thành Chiến" MinimapName="Công Thành Chiến" VisibleOnMinimap="1" Title=" " X="6577" Y="1011" Dir="1" ScriptID="200" />
+  <NPC MapCode="32" Code="353" Name="Đặng Gia Tẩu Tử" MinimapName="Đặng Gia Tẩu Tử" VisibleOnMinimap="0" Title=" " X="8660" Y="2720" Dir="1" ScriptID="57" />
+  <NPC MapCode="32" Code="49" Name="Ngu Doãn Văn" MinimapName="Ngu Doãn Văn" VisibleOnMinimap="1" Title=" " X="7706" Y="3948" Dir="1" ScriptID="59" />
+  <NPC MapCode="32" Code="7400" Name="Lưu Uẩn Cổ" MinimapName="Lưu Uẩn Cổ" VisibleOnMinimap="1" Title=" " X="7620" Y="4140" Dir="1" ScriptID="58" />
+  <NPC MapCode="32" Code="3111" Name="Công Bình Tử" MinimapName="Công Bình Tử" VisibleOnMinimap="1" Title=" " X="6414" Y="1080" Dir="0" ScriptID="188" />
+  <NPC MapCode="32" Code="3111" Name="Công Bình Tử" MinimapName="Công Bình Tử" VisibleOnMinimap="1" Title=" " X="2822" Y="4200" Dir="1" ScriptID="188" />
+  <NPC MapCode="32" Code="3111" Name="Công Bình Tử" MinimapName="Công Bình Tử" VisibleOnMinimap="1" Title=" " X="3115" Y="2740" Dir="1" ScriptID="188" />
+  <NPC MapCode="32" Code="367" Name="Ông Chủ Tửu Lâu" MinimapName="Tửu Lâu" VisibleOnMinimap="1" Title=" " X="4875" Y="2197" Dir="1" ScriptID="21" />
+  <NPC MapCode="32" Code="382" Name="Thần Bí Thương Nhân" MinimapName="Thần Bí Thương Nhân" VisibleOnMinimap="1" Title="Buôn Bán" X="5795" Y="4165" Dir="1" ScriptID="189" />
+  <NPC MapCode="32" Code="89" Name="Liên Đấu" MinimapName="Liên Đấu" VisibleOnMinimap="1" Title="Sứ giả liên Đấu" X="5805" Y="5240" Dir="1" ScriptID="400020" />
+  <NPC MapCode="32" Code="6601" Name="Từ Vũ Pháp Sư" MinimapName="Từ Vũ Pháp Sư" VisibleOnMinimap="1" Title=" " X="4595" Y="5885" Dir="1" ScriptID="53" />
+  <NPC MapCode="32" Code="226" Name="Chủ Tiệm Trà" MinimapName="Tiệm Trà" VisibleOnMinimap="1" Title=" " X="3480" Y="4520" Dir="1" ScriptID="46" />
+  <NPC MapCode="32" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="3530" Y="4245" Dir="1" ScriptID="222" />
+  <NPC MapCode="32" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="0" Title="Thủ Khố" X="2550" Y="3010" Dir="1" ScriptID="222" />
+  <NPC MapCode="32" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="0" Title="Thủ Khố" X="6220" Y="1580" Dir="1" ScriptID="222" />
+  <NPC MapCode="32" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="10330" Y="3230" Dir="1" ScriptID="222" />
+  <NPC MapCode="32" Code="1990" Name="Dã Luyện" MinimapName="Dã Luyện" VisibleOnMinimap="1" Title="Cường Hóa Trang Bị" X="1720" Y="3600" Dir="1" ScriptID="194" />
+  <NPC MapCode="32" Code="2013" Name="Sứ Giả Hoạt Động" MinimapName="Hoạt Động" VisibleOnMinimap="1" Title="Hoàng Kim Tiên Tử" X="6320" Y="3350" Dir="1" ScriptID="320" />
+  <NPC MapCode="32" Code="55" Name="Tống Hiệu Uý" MinimapName="Tống Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim" X="6120" Y="2660" Dir="1" ScriptID="5018" />
+  <NPC MapCode="32" Code="51" Name="Kim Hiệu Uý" MinimapName="Kim Hiệu Uý" VisibleOnMinimap="1" Title="Đại Chiến Tống Kim" X="7245" Y="3450" Dir="1" ScriptID="5019" />
+  <NPC MapCode="32" Code="63" Name="Vệ Binh Thành Môn" MinimapName="Phong Hỏa Liên Thành" VisibleOnMinimap="1" Title="Phong Hỏa Liên Thành" X="6940" Y="3680" Dir="1" ScriptID="400040" />
+  <NPC MapCode="32" Code="2019" Name="Thống Lĩnh" MinimapName="Quân Doanh" VisibleOnMinimap="1" Title="Quân Doanh" X="9335" Y="3128" Dir="1" ScriptID="500100" />
+  <NPC MapCode="32" Code="20026" Name="Sứ Giả Tần Lăng" MinimapName="Tần Lăng" VisibleOnMinimap="1" Title="Thủy Hoàng Địa Cung" X="5750" Y="1726" Dir="1" ScriptID="400030" />
+  <NPC MapCode="32" Code="20027" Name="Mã Xuyên Sơn" MinimapName="Ải Gia Tộc" VisibleOnMinimap="1" Title="Ải Gia Tộc" X="4040" Y="4860" Dir="1" ScriptID="500200" />
+  <NPC MapCode="32" Code="20028" Name="Sứ Giả Báo Danh" MinimapName="Bạch Hổ Đường" VisibleOnMinimap="1" Title="Bạch Hổ Đường" X="5060" Y="4190" Dir="1" ScriptID="400012" />
+  <NPC MapCode="32" Code="245" Name="Quan Quân" MinimapName="Quan Quân" VisibleOnMinimap="1" Title="Cửa Hàng Danh Vọng" X="5990" Y="3400" Dir="1" ScriptID="38" />
+  <NPC MapCode="33" Code="19001" Name="Hoa Hành" MinimapName="Đệ tử Võ Đang(Binh khí)" VisibleOnMinimap="1" Title="Đệ tử Võ Đang(Binh khí)" X="5180" Y="2840" Dir="1" ScriptID="127" />
+  <NPC MapCode="33" Code="19002" Name="Ngọc Thụ" MinimapName="Đệ tử Võ Đang(Trang bị)" VisibleOnMinimap="1" Title="Đệ tử Võ Đang(Trang bị)" X="4450" Y="2830" Dir="1" ScriptID="12" />
+  <NPC MapCode="33" Code="83" Name="Minh Nguyệt" MinimapName="Võ Đang Thị Đồng(Dược)" VisibleOnMinimap="1" Title="Võ Đang Thị Đồng(Dược)" X="4920" Y="2390" Dir="1" ScriptID="10" />
+  <NPC MapCode="33" Code="315" Name="Trâu Đức Khoái" MinimapName="Thủ Khố" VisibleOnMinimap="1" Title="Thủ Khố" X="2060" Y="1400" Dir="1" ScriptID="222" />
+  <NPC MapCode="33" Code="75" Name="Đạo Nhất Chân Nhân" MinimapName="Chưởng Môn Phái" VisibleOnMinimap="1" Title="Võ Đang Chưởng Môn" X="5649" Y="3295" Dir="1" ScriptID="67" />
+  <NPC MapCode="33" Code="76" Name="Diệp Tiếp Mỹ " MinimapName="Diệp Tiếp Mỹ " VisibleOnMinimap="1" Title="Võ Đang Hộ pháp" X="5795" Y="4235" Dir="1" ScriptID="130" />
+  <NPC MapCode="33" Code="77" Name="Từ Đại Nhạc" MinimapName="Từ Đại Nhạc" VisibleOnMinimap="1" Title="Võ Đang Hộ pháp" X="3320" Y="2140" Dir="1" ScriptID="131" />
+  <NPC MapCode="33" Code="78" Name="Chu Vân Tuyền" MinimapName="Chu Vân Tuyền" VisibleOnMinimap="1" Title="Võ Đang Hộ pháp" X="7423" Y="3554" Dir="1" ScriptID="132" />
+  <NPC MapCode="33" Code="79" Name="Đơn Tư Nam" MinimapName="Đơn Tư Nam" VisibleOnMinimap="1" Title="Võ Đang Hộ pháp" X="5893" Y="2567" Dir="1" ScriptID="133" />
+  <NPC MapCode="33" Code="80" Name="Lý Thiên Mục" MinimapName="Lý Thiên Mục" VisibleOnMinimap="1" Title="Võ Đang Hộ pháp" X="6550" Y="2545" Dir="1" ScriptID="134" />
+  <NPC MapCode="33" Code="81" Name="Đào Thạch Môn" MinimapName="Đào Thạch Môn" VisibleOnMinimap="1" Title="Võ Đang Hộ pháp" X="3080" Y="3220" Dir="1" ScriptID="135" />
+  <NPC MapCode="33" Code="240" Name="Xa Phu" MinimapName="Xa Phu" VisibleOnMinimap="1" Title="Dịch Trạm" X="2820" Y="2047" Dir="1" ScriptID="999999999" />
+  <NPC MapCode="34" Code="4111" Name="Sứ Giả" MinimapName="Sứ Giả" VisibleOnMinimap="1" Title="" X="4040" Y="2647" Dir="1" ScriptID="27" />
+  <NPC MapCode="34" Code="4112" Name="Sĩ Binh" MinimapName=" " VisibleOnMinimap="0" Title="" X="4158" Y="2672" Dir="1" ScriptID="-1" />
+  <NPC MapCode="34" Code="4112" Name="Sĩ Binh" MinimapName=" " VisibleOnMinimap="0" Title="" X="3940" Y="2600" Dir="1" ScriptID="-1" />
+</NPCs>
+<!-- -->
+	<!-- End -->
+  
+</AutoPath>

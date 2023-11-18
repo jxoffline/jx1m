@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+
+  <Server EventLevel="0" LogType="0" />
+  <Socket ip="" port="43001" capacity="100" />
+  <Database names="utf8" codePage="936" maxConns="10" ip="127.0.0.1" port="3306" dname="logdb" uname="39D151A0ACD963CCC961EDA64BBC46C7" upasswd="79B872540BFE63284663AC625BC18EF6" />
+  <GameServer>
+    <Line ID="1" ip="127.0.0.1" port="4603" />
+  </GameServer>
+  <DBLog DBLogEnable="0" Path="log" />
+  <Zone ID="1" />
+   <!--Xóa bảng ghi sau 30 ngày|Tự tạo trước 3 bản ghi mỗi next DAY-->
+  <Table DeleteTableAfter="30"  CreateTable="3"/>
+</Config>

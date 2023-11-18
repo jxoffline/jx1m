@@ -1,0 +1,16 @@
+应用程序出现了异常[1]:
+No process is on the other end of the pipe.
+
+
+ 额外信息: CurrentDomain_UnhandledException
+    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__ConsoleStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.StreamReader.ReadBuffer()
+   at System.IO.StreamReader.ReadLine()
+   at System.IO.TextReader.SyncTextReader.ReadLine()
+   at System.Console.ReadLine()
+   at LogDBServer.Program.ConsoleInputThread(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart(Object obj)

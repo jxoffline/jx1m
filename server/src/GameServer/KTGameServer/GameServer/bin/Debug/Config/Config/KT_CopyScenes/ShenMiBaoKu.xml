@@ -1,0 +1,678 @@
+<!--
+	THẦN BÍ BẢO KHỐ
+	- Config: Thiết lập
+		- Duration: Thời gian tồn tại (Mili-giây)
+		- MaxCallBoss: Tổng số Boss cho phép tối đa được tạo ra bằng Câu Hồn Ngọc trong phụ bản
+		- LimitRoundPerWeek: Số lượt tham gia tối đa của bang hội trong tuần
+		- MinLevel: Cấp độ tối thiểu tham gia
+	- Map: Thông tin bản đồ phụ bản
+		- MapID: ID bản đồ phụ bản
+		- EnterPosX: Vị trí vào X
+		- EnterPosY: Vị trí vào Y
+		- OutMapID: ID bản đồ rời phụ bản
+		- OutPosX: Vị trí ra X
+		- OutPosY: Vị trí ra Y
+	- Items: Thông tin vật phẩm
+		- CallBoss55ItemID: ID vật phẩm Câu Hồn Ngọc (sơ)
+		- CallBoss75ItemID: ID vật phẩm Câu Hồn Ngọc (trung)
+		- CallBoss95ItemID: ID vật phẩm Câu Hồn Ngọc (cao)
+	- EventStages: Thông tin các tầng sự kiện
+		- Stage: Thông tin tầng
+			- ID: ID bước (bắt đầu từ 1)
+			- AllowCallBoss: Cho phép thả Boss bằng Câu Hồn Ngọc không
+			- Task: Thông tin nhiệm vụ nhỏ
+				- ID: ID nhiệm vụ nhỏ
+				- RequireTasks: Danh sách các nhiệm vụ nhỏ yêu cầu trước đó, ngăn cách bởi dấu ; (-1 nếu không yêu cầu)
+				- Type: Loại Task (0: Không làm gì, tự qua, 1: Giết toàn bộ quái, 2: Mở cơ quan giết toàn bộ quái, 3: Tiêu diệt Boss, 4: Mở cơ quan)
+				- Name: Tên Task
+				- Monsters: Danh sách quái trong nhiệm vụ nhỏ
+					- Monster: Thông tin quái
+						- ID: ID quái
+						- Name: Tên quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+						- Title: Danh hiệu quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+						- PosX: Vị trí X
+						- PosY: Vị trí Y
+						- BaseHP: Sinh lực cơ bản
+						- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+						- AIType: Loại AI (0: Quái thường, 1: Quái tinh anh, 2: Quái thủ lĩnh, 3: Boss, 4: Hải tặc, 5: Quái chữ đỏ)
+						- AIScriptID: IDScriptAI điều khiển
+							- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+				- Bosses: Danh sách Boss trong nhiệm vụ nhỏ
+					- Boss: Thông tin Boss
+						- ID: ID Boss
+						- Name: Tên Boss, bỏ trống sẽ lấy thông tin ở File cấu hình
+						- Title: Danh hiệu Boss, bỏ trống sẽ lấy thông tin ở File cấu hình
+						- PosX: Vị trí X
+						- PosY: Vị trí Y
+						- BaseHP: Sinh lực cơ bản
+						- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+						- AIType: Loại AI (0: Quái thường, 1: Quái tinh anh, 2: Quái thủ lĩnh, 3: Boss, 4: Hải tặc, 5: Quái chữ đỏ)
+						- AIScriptID: IDScriptAI điều khiển
+							- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+				- Triggers: Danh sách cơ quan trong nhiệm vụ nhỏ
+					- Trigger: Thông tin cơ quan
+						- ID: ID Res (xem ở File Npc)
+						- Name: Tên cơ quan
+						- CollectTick: Thời gian mở (mili-giây)
+						- PosX: Vị trí X
+						- PosY: Vị trí Y
+				- Teleports: Danh sách cổng dịch chuyển trong nhiệm vụ nhỏ
+					- Teleport: Thông tin cổng dịch chuyển
+						- Name: Tên cổng
+						- PosX: Vị trí X (nếu mặc định là dịch chuyển ra ngoài vị trí báo danh thì điền -1)
+						- PosY: Vị trí Y (nếu mặc định là dịch chuyển ra ngoài vị trí báo danh thì điền -1)
+						- ToMapID: Vị trí bản đồ đích đến (nếu cùng bản đồ hiện tại thì điền -1)
+						- ToPosX: Vị trí đích đến X
+						- ToPosY: Vị trí đích đến Y
+						- SpawnImmediate: Xuất hiện ngay lập tức khi mở Step
+				- DynamicObstacles: Danh sách Obs động sẽ mở trong nhiệm vụ nhỏ
+					- Layers: Danh sách nhãn Obs động, ngăn cách bởi dấu ;
+					- OpenImmediate: Mở ngay lập tức khi mở Step
+-->
+
+<ShenMiBaoKu>
+	<Config Duration="7200000" MaxCallBoss="2" LimitRoundPerWeek="2" MinLevel="80" />
+	
+	<Map MapID="70" EnterPosX="1019" EnterPosY="503" OutMapID="1" OutPosX="6120" OutPosY="4470" />
+	
+	<EventStages>
+		<Stage ID="1" AllowCallBoss="false">
+			<Task ID="1" RequireTasks="-1" Type="0" Name="">
+				<DynamicObstacles Layers="1" OpenImmediate="true" />
+			</Task>
+			
+			<Task ID="2" RequireTasks="-1" Type="2" Name="Khai mở cơ quan, tiêu diệt toàn bộ quái.">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan" PosX="2573" PosY="1312" CollectTick="5000" />
+				</Triggers>
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2490" PosY="1654" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3146" PosY="1267" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2688" PosY="991" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="1927" PosY="1372" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2222" PosY="1520" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2847" PosY="1456" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2920" PosY="1122" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2307" PosY="1164" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2258" PosY="1343" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2625" PosY="1153" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2507" PosY="1482" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2837" PosY="1294" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2599" PosY="1302" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+			
+				<DynamicObstacles Layers="4" OpenImmediate="false" />
+			</Task>
+		</Stage>
+		
+		<Stage ID="2" AllowCallBoss="false">
+			<Task ID="1" RequireTasks="-1" Type="2" Name="Khai mở cơ quan, tiêu diệt toàn bộ quái.">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan 1" PosX="3101" PosY="2285" CollectTick="5000" />
+				</Triggers>
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2997" PosY="2286" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3154" PosY="2368" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3235" PosY="2309" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3142" PosY="2205" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3283" PosY="2229" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+			</Task>
+			<Task ID="2" RequireTasks="-1" Type="2" Name="Khai mở cơ quan, tiêu diệt toàn bộ quái.">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan 2" PosX="3981" PosY="2708" CollectTick="5000" />
+				</Triggers>
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3971" PosY="2789" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4096" PosY="2719" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4042" PosY="2625" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3925" PosY="2632" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3863" PosY="2701" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+			</Task>
+			<Task ID="3" RequireTasks="-1" Type="2" Name="Khai mở cơ quan, tiêu diệt toàn bộ quái.">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan 3" PosX="5126" PosY="2104" CollectTick="5000" />
+				</Triggers>
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5307" PosY="2088" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5217" PosY="2013" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5073" PosY="2039" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5027" PosY="2123" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5137" PosY="2191" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+			</Task>
+			<Task ID="4" RequireTasks="-1" Type="2" Name="Khai mở cơ quan, tiêu diệt toàn bộ quái.">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan 4" PosX="4340" PosY="1663" CollectTick="5000" />
+				</Triggers>
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4343" PosY="1583" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4259" PosY="1656" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4291" PosY="1739" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4415" PosY="1740" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4456" PosY="1661" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+			</Task>
+			<Task ID="5" RequireTasks="1;2;3;4" Type="0" Name="">
+				<DynamicObstacles Layers="2;7;9" OpenImmediate="false" />
+			</Task>
+		</Stage>
+		<Stage ID="3" AllowCallBoss="false">
+			<Task ID="1" RequireTasks="-1" Type="4" Name="Khai mở cơ quan">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan" PosX="1833" PosY="4165" CollectTick="5000" />
+				</Triggers>
+				<DynamicObstacles Layers="22" OpenImmediate="false" />
+			</Task>
+			<Task ID="2" RequireTasks="-1" Type="4" Name="Khai mở cơ quan">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan" PosX="7952" PosY="903" CollectTick="5000" />
+				</Triggers>
+				<DynamicObstacles Layers="3" OpenImmediate="false" />
+			</Task>
+			<!-- 22 -->
+			<Task ID="3" RequireTasks="1" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10727" PosY="1094" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10840" PosY="1023" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10954" PosY="962" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11060" PosY="902" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10569" PosY="996" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10682" PosY="919" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10798" PosY="851" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10896" PosY="787" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10404" PosY="885" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10541" PosY="821" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10638" PosY="745" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10741" PosY="692" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+				</Monsters>
+				<DynamicObstacles Layers="5" OpenImmediate="false" />
+			</Task>
+			<!-- 3 -->
+			<Task ID="4" RequireTasks="2" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2189" PosY="5954" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2375" PosY="5865" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2543" PosY="5778" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2071" PosY="5887" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="1966" PosY="5827" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="1857" PosY="5753" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2268" PosY="5790" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2138" PosY="5721" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2004" PosY="5658" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="2428" PosY="5723" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2300" PosY="5666" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2175" PosY="5583" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="26" OpenImmediate="false" />
+			</Task>
+			<!-- 26 -->
+			<Task ID="5" RequireTasks="4" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11860" PosY="1614" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="12015" PosY="1531" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="12182" PosY="1455" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11714" PosY="1563" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11860" PosY="1457" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="12025" PosY="1372" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11643" PosY="1455" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11876" PosY="1353" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11730" PosY="1374" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11531" PosY="1441" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11632" PosY="1328" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11791" PosY="1262" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+				</Monsters>
+				<DynamicObstacles Layers="8" OpenImmediate="false" />
+			</Task>
+			<!-- 5 -->
+			<Task ID="6" RequireTasks="3" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3285" PosY="6307" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3272" PosY="6469" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3430" PosY="6401" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3537" PosY="6318" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3417" PosY="6197" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3222" PosY="6170" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3101" PosY="6238" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3106" PosY="6375" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="3163" PosY="6440" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3002" PosY="6294" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="2988" PosY="6172" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="3664" PosY="6294" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="29" OpenImmediate="false" />
+			</Task>
+			<!-- 29 -->
+			<Task ID="7" RequireTasks="6" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="12917" PosY="1989" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="12971" PosY="2178" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13258" PosY="2114" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13267" PosY="2023" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13179" PosY="1941" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13068" PosY="1863" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13048" PosY="1838" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="12784" PosY="1808" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="12670" PosY="1898" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="12720" PosY="2040" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="12846" PosY="2127" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13042" PosY="2025" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+				</Monsters>
+				<DynamicObstacles Layers="12" OpenImmediate="false" />
+			</Task>
+			<!-- 8 -->
+			<Task ID="8" RequireTasks="5" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4298" PosY="6806" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4441" PosY="6897" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4381" PosY="7040" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4564" PosY="6969" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4700" PosY="6879" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4586" PosY="6780" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4453" PosY="6705" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4228" PosY="6681" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4105" PosY="6798" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4149" PosY="6923" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4279" PosY="7005" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4440" PosY="6799" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="32" OpenImmediate="false" />
+			</Task>
+			<!-- 32 -->
+			<Task ID="9" RequireTasks="8" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13931" PosY="2484" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="14104" PosY="2601" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14026" PosY="2727" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14200" PosY="2706" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="14292" PosY="2625" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="14290" PosY="2515" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14166" PosY="2441" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="14041" PosY="2387" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13858" PosY="2408" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13774" PosY="2532" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13884" PosY="2643" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100001" Auras="" Skills="14235_20_5000;14514_20_-1" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14049" PosY="2494" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+			</Task>
+			<!-- 12 -->
+			<Task ID="10" RequireTasks="7" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5419" PosY="7364" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5600" PosY="7466" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5511" PosY="7578" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5679" PosY="7545" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5801" PosY="7451" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5836" PosY="7348" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5591" PosY="7282" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5481" PosY="7244" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5318" PosY="7306" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5276" PosY="7450" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5397" PosY="7525" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5516" PosY="7417" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14256_10" Skills="" />
+				</Monsters>
+			</Task>
+			<Task ID="11" RequireTasks="-1" Type="4" Name="Khai mở cơ quan">
+				<Triggers>
+					<Trigger ID="20025" Name="Cơ quan" PosX="7522" PosY="3917" CollectTick="5000" />
+				</Triggers>
+				<DynamicObstacles Layers="13;19" OpenImmediate="false" />
+			</Task>
+			
+			<!-- 19 -->
+			<Task ID="12" RequireTasks="11" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9090" PosY="3388" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9243" PosY="3330" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9338" PosY="3247" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8976" PosY="3321" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9117" PosY="3255" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9206" PosY="3169" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8995" PosY="3306" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8976" PosY="3182" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9081" PosY="3088" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8690" PosY="3190" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8837" PosY="3098" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8957" PosY="3022" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="10" OpenImmediate="false" />
+			</Task>
+			<!-- 13 -->
+			<Task ID="13" RequireTasks="11" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="6276" PosY="4860" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="6428" PosY="4749" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="6562" PosY="4666" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="6137" PosY="4778" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="6282" PosY="4689" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="6405" PosY="4602" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="6006" PosY="4706" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="6150" PosY="4617" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="6267" PosY="4545" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5861" PosY="4625" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="6023" PosY="4543" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="6151" PosY="4478" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="16" OpenImmediate="false" />
+			</Task>
+			<!-- 16 -->
+			<Task ID="14" RequireTasks="13" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8639" PosY="2171" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8750" PosY="2098" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8889" PosY="2008" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8503" PosY="2085" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8643" PosY="2012" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8769" PosY="1931" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8387" PosY="2028" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8521" PosY="1938" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8643" PosY="1866" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8245" PosY="1946" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8398" PosY="1875" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8528" PosY="1806" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="6" OpenImmediate="false" />
+			</Task>
+			<!-- 10 -->
+			<Task ID="15" RequireTasks="12" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5052" PosY="4173" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5190" PosY="4080" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5316" PosY="4011" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4916" PosY="4103" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5056" PosY="4019" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5178" PosY="3928" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4770" PosY="4022" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4928" PosY="3941" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5052" PosY="3869" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="4640" PosY="3946" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4797" PosY="3876" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4933" PosY="3813" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="20" OpenImmediate="false" />
+			</Task>
+			<!-- 20 -->
+			<Task ID="16" RequireTasks="15" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9848" PosY="2857" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9983" PosY="2767" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10116" PosY="2685" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9733" PosY="2770" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9874" PosY="2687" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10008" PosY="2607" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9599" PosY="2699" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9744" PosY="2595" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9865" PosY="2523" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9459" PosY="2615" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9618" PosY="2553" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9706" PosY="2469" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="11" OpenImmediate="false" />
+			</Task>
+			<!-- 6 -->
+			<Task ID="17" RequireTasks="14" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="4997" PosY="5182" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5139" PosY="5115" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5298" PosY="5027" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5480" PosY="5122" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5305" PosY="5209" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5193" PosY="5286" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5345" PosY="5359" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5483" PosY="5288" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5594" PosY="5196" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="5763" PosY="5262" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5621" PosY="5354" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="5497" PosY="5407" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="24" OpenImmediate="false" />
+			</Task>
+			<!-- 24 -->
+			<Task ID="18" RequireTasks="17" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11016" PosY="3660" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11156" PosY="3586" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11300" PosY="3498" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11040" PosY="3612" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11033" PosY="3504" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11171" PosY="3416" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10744" PosY="3512" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10901" PosY="3407" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11012" PosY="3330" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10618" PosY="3429" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10745" PosY="3335" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10890" PosY="3259" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="14" OpenImmediate="false" />
+			</Task>
+			<!-- 11 -->
+			<Task ID="19" RequireTasks="16" Type="1" Name="Giết toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="6994" PosY="5418" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7139" PosY="5321" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7266" PosY="5246" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7144" PosY="5493" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7266" PosY="5418" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7398" PosY="5329" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7276" PosY="5569" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7409" PosY="5489" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7542" PosY="5415" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7429" PosY="5652" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7569" PosY="5573" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7671" PosY="5487" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="14255_20" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="21" OpenImmediate="false" />
+			</Task>
+			<Task ID="20" RequireTasks="9;10;18;19" Type="0" Name="">
+				<DynamicObstacles Layers="15;17;33" OpenImmediate="false" />
+			</Task>
+		</Stage>
+		<Stage ID="4" AllowCallBoss="false">
+			<Task ID="1" RequireTasks="-1" Type="1" Name="Tiêu diệt toàn bộ quái">
+				<Monsters>
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8269" PosY="4885" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8486" PosY="4984" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8587" PosY="5043" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8743" PosY="5123" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8909" PosY="5207" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9052" PosY="5130" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8901" PosY="5051" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8733" PosY="4971" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8572" PosY="4891" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8413" PosY="4809" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8554" PosY="4738" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8720" PosY="4816" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8880" PosY="4894" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9038" PosY="4973" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9193" PosY="5052" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9345" PosY="4976" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9182" PosY="4897" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9031" PosY="4816" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8869" PosY="4741" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8707" PosY="4670" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8858" PosY="4588" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9013" PosY="4672" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9174" PosY="4754" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9336" PosY="4829" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9497" PosY="4904" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9648" PosY="4839" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9474" PosY="4758" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9318" PosY="4678" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9164" PosY="4601" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9006" PosY="4522" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9147" PosY="4446" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9313" PosY="4521" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9467" PosY="4607" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9628" PosY="4685" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9794" PosY="4765" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="23" OpenImmediate="false" />
+			</Task>
+			<Task ID="2" RequireTasks="-1" Type="1" Name="Tiêu diệt toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13109" PosY="3928" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13263" PosY="4012" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13435" PosY="4078" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13581" PosY="4144" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13766" PosY="4230" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13872" PosY="4167" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13713" PosY="4070" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13576" PosY="3978" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13404" PosY="3905" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13238" PosY="3828" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13423" PosY="3731" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13563" PosY="3822" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13702" PosY="3921" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13825" PosY="4013" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14001" PosY="4112" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="14164" PosY="4061" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14042" PosY="3969" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13921" PosY="3875" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13784" PosY="3781" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13669" PosY="3710" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13573" PosY="3641" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="13745" PosY="3558" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13874" PosY="3659" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14039" PosY="3758" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14191" PosY="3872" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="14321" PosY="3966" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="14526" PosY="3875" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14366" PosY="3762" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14232" PosY="3654" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="14035" PosY="3555" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="13927" PosY="3471" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="28" OpenImmediate="false" />
+			</Task>
+			<Task ID="3" RequireTasks="-1" Type="1" Name="Tiêu diệt toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="6946" PosY="7282" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7096" PosY="7384" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7243" PosY="7451" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7411" PosY="7541" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7633" PosY="7528" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7536" PosY="7437" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7392" PosY="7355" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7234" PosY="7277" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7082" PosY="7178" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7121" PosY="7047" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7343" PosY="7129" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7534" PosY="7262" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7691" PosY="7391" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7911" PosY="7384" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7831" PosY="7250" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7714" PosY="7146" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7527" PosY="7058" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7320" PosY="6961" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="7552" PosY="6886" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7712" PosY="6994" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7870" PosY="7098" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7990" PosY="7184" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8104" PosY="7284" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="8306" PosY="7189" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8173" PosY="7090" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="8017" PosY="7002" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7883" PosY="6912" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="7718" PosY="6831" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="18" OpenImmediate="false" />
+			</Task>
+		</Stage>
+		<Stage ID="5" AllowCallBoss="false">
+			<Task ID="1" RequireTasks="-1" Type="1" Name="Tiêu diệt toàn bộ quái">
+				<Monsters>
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9336" PosY="5878" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9496" PosY="5961" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9650" PosY="6056" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9810" PosY="6132" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9947" PosY="6206" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10097" PosY="6136" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9977" PosY="6045" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9780" PosY="5954" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9655" PosY="5867" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9472" PosY="5776" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9641" PosY="5685" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9768" PosY="5788" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9912" PosY="5883" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10159" PosY="5991" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10252" PosY="6038" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10414" PosY="5943" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10239" PosY="5856" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10075" PosY="5756" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9946" PosY="5691" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="9821" PosY="5595" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="9995" PosY="5496" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10110" PosY="5587" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10239" PosY="5674" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10375" PosY="5773" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10556" PosY="5888" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10716" PosY="5796" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10570" PosY="5694" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10468" PosY="5592" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10300" PosY="5508" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10196" PosY="5403" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10414" PosY="5317" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10539" PosY="5441" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11344" PosY="5550" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10832" PosY="5627" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="10916" PosY="5705" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11038" PosY="5609" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11064" PosY="5526" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11612" PosY="5385" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10702" PosY="5336" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10560" PosY="5212" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10778" PosY="5119" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="10933" PosY="5246" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11015" PosY="5363" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11164" PosY="5445" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11226" PosY="5528" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11434" PosY="5442" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11337" PosY="5350" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11279" PosY="5263" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11064" PosY="5142" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11088" PosY="5078" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11210" PosY="5025" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11338" PosY="5157" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10166" Name="Khôi Lỗi Hộ Vệ" Title="" PosX="11494" PosY="5275" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+					<Monster ID="10165" Name="Khôi Lỗi Sát Thủ" Title="" PosX="11599" PosY="5361" BaseHP="200000" HPIncreaseEachLevel="3000" AIType="5" Series="1" AIScriptID="100000" Auras="" Skills="" />
+				</Monsters>
+				<DynamicObstacles Layers="27" OpenImmediate="false" />
+			</Task>
+		</Stage>
+		<Stage ID="6" AllowCallBoss="false">
+			<Task ID="1" RequireTasks="-1" Type="3" Name="Tiêu Diệt Boss">
+				<Bosses>
+					<Boss ID="10163" Name="Kim Thí Lượng" Title="" PosX="11866" PosY="6421" BaseHP="1845440" HPIncreaseEachLevel="10000" AIType="3" AIScriptID="100001" Auras="14256_10" Skills="14257_40_4000;14258_40_2000;14510_40_-1" />
+				</Bosses>
+				<DynamicObstacles Layers="25;31" OpenImmediate="false" />
+			</Task>
+			<Task ID="2" RequireTasks="1" Type="3" Name="Tiêu Diệt Boss">
+				<Bosses>
+					<Boss ID="10164" Name="Trương Tuyên" Title="" PosX="13868" PosY="5226" BaseHP="1845440" HPIncreaseEachLevel="10000" AIType="3" AIScriptID="100001" Auras="14255_20" Skills="14262_40_5000;14259_40_3000;14511_40_-1" />
+				</Bosses>
+			</Task>
+			<Task ID="3" RequireTasks="1" Type="3" Name="Tiêu Diệt Boss">
+				<Bosses>
+					<Boss ID="10161" Name="Thần Nông" Title="" PosX="9828" PosY="7598" BaseHP="1845440" HPIncreaseEachLevel="10000" AIType="3" AIScriptID="100001" Auras="" Skills="14267_40_5000;14264_40_3000;14512_40_-1" />
+				</Bosses>
+			</Task>
+			<Task ID="4" RequireTasks="2;3" Type="0" Name="">
+				<DynamicObstacles Layers="30" OpenImmediate="false" />
+			</Task>
+		</Stage>
+		<Stage ID="7" AllowCallBoss="true">
+			<Task ID="1" RequireTasks="-1" Type="3" Name="Tiêu Diệt Boss">
+				<Bosses>
+					<Boss ID="10162" Name="Mộ Dung Toàn" Title="" PosX="13455" PosY="7333" BaseHP="2845440" HPIncreaseEachLevel="10000" AIType="3" AIScriptID="100001" Auras="14276_20" Skills="14271_40_5000;14272_40_3000;14514_40_-1" />
+				</Bosses>
+				<DynamicObstacles Layers="34" OpenImmediate="false" />
+			</Task>
+			<Task ID="2" RequireTasks="1" Type="0" Name="">
+				<Teleports>
+					<Teleport Name="Thoát ải" PosX="14953" PosY="8136" ToPosX="-1" ToPosY="-1" SpawnImmediate="false" />
+				</Teleports>
+			</Task>
+		</Stage>
+	</EventStages>
+</ShenMiBaoKu>

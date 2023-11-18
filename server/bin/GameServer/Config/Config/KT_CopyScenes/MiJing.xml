@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	BÍ CẢNH
+	Duration: Thời gian duy trì (mili-giây)
+	RequireLevel: Cấp độ yêu cầu
+	LimitRoundPerDay: Số lượt vào tối đa trong ngày
+	MapInfo: Thông tin bản đồ
+		- ID: ID bản đồ
+		- EnterPosX: Vị trí tiến vào X
+		- EnterPosY: Vị trí tiến vào Y
+	MapItem: Thông tin vật phẩm Bản Đồ Bí Cảnh
+		- ID: ID vật phẩm
+	DoubleExpBuff: Thông tin Buff x2 kinh nghiệm bí cảnh
+		- ID: ID Buff
+	Monster: Thông tin quái
+		- ID: ID quái
+		- Name: Tên quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+		- Title: Danh hiệu quái, bỏ trống sẽ lấy thông tin ở File cấu hình
+		- PosX: Vị trí X
+		- PosY: Vị trí Y
+		- BaseHP: Sinh lực cơ bản
+		- HPIncreaseEachLevel: Sinh lực tăng thêm với mỗi cấp
+		- AIType: Loại AI (0: Quái thường, 1: Quái tinh anh, 2: Quái thủ lĩnh, 3: Boss, 4: Hải tặc)
+		- AIScriptID: IDScriptAI điều khiển
+			- Nếu có sử dụng các Skill đánh thì AIScriptID để bằng 100001, sẽ không sử dụng kỹ năng đánh thường của quái như ngoài Map mà thay vào bằng kỹ năng trong danh sách thiết lập (buộc phải thiết lập kỹ năng đánh, nếu không sẽ lỗi)
+		- SpawnAfter: Xuất hiện sau khoảng thời gian (-1 nếu ngay lập tức)
+-->
+
+<MiJing EventID="12" Duration="7200000" RequireLevel="80" LimitRoundPerDay="1">
+	<!-- Thông tin bản đồ -->
+	<MapInfo ID="343" EnterPosX="1225" EnterPosY="1239" />
+	<!-- Vật phẩm Bản Đồ Bí Cảnh -->
+	<MapItem ID="590" />
+	<!-- Buff tăng kinh nghiệm gấp đôi -->
+	<DoubleExpBuff ID="1997" />
+	<!-- Danh sách quái -->
+	<Monsters>
+		<Monster ID="2038" Name="" Title="" PosX="935" PosY="1432" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="739" PosY="1312" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="11000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="792" PosY="1312" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="9000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1070" PosY="1212" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="9000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="905" PosY="1110" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="9000" /> 
+		
+		<Monster ID="2038" Name="" Title="" PosX="685" PosY="1156" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="12000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="621" PosY="996" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="873" PosY="961" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="13000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="677" PosY="829" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="11000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1004" PosY="811" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="822" PosY="662" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="9000" /> 
+		
+		<Monster ID="2038" Name="" Title="" PosX="848" PosY="527" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="8000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1091" PosY="498" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1029" PosY="663" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="11000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1203" PosY="787" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="12000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1352" PosY="609" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1471" PosY="488" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="11000" /> 
+		
+		<Monster ID="2038" Name="" Title="" PosX="1689" PosY="610" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="13000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1536" PosY="749" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="9000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1404" PosY="858" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1645" PosY="868" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1780" PosY="800" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="11000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1742" PosY="1047" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="13000" /> 
+		
+		<Monster ID="2038" Name="" Title="" PosX="1462" PosY="1114" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="9000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1664" PosY="1253" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1638" PosY="1418" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="11000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1377" PosY="1296" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="12000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1259" PosY="1199" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="11000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1250" PosY="1397" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="10000" /> 
+		<Monster ID="2038" Name="" Title="" PosX="1038" PosY="1402" BaseHP="1675" HPIncreaseEachLevel="132" AIType="0" AIScriptID="100000" RespawnTicks="13000" /> 
+		
+		<!-- Tinh Anh - Thủ Lĩnh -->			
+		<Monster ID="21048" Name="" Title="" PosX="726" PosY="1065" BaseHP="134000" HPIncreaseEachLevel="10520" AIType="1" AIScriptID="100000"  RespawnTicks="30000" /> 
+		<Monster ID="21049" Name="" Title="" PosX="937" PosY="719" BaseHP="251250" HPIncreaseEachLevel="19725" AIType="2" AIScriptID="100000"  RespawnTicks="36000" />
+	</Monsters>
+</MiJing>

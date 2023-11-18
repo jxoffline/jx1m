@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KiemTheMixDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="RoleParamInt">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="ZoneID" Type="Int32" />
+    <Property Name="ParamID" Type="Int32" />
+    <Property Name="ParamValue" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RoleParamString">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="ZoneID" Type="Int32" />
+    <Property Name="ParamID" Type="Int32" />
+    <Property Name="ParamValue" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="KiemTheMixDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RoleParamInts" EntityType="Self.RoleParamInt" />
+    <EntitySet Name="RoleParamStrings" EntityType="Self.RoleParamString" />
+  </EntityContainer>
+</Schema>
