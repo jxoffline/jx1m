@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2680633470348196891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2680633470348196890}
+  - component: {fileID: 2680633470348196888}
+  - component: {fileID: 2680633470348196889}
+  - component: {fileID: 2680633470348197095}
+  - component: {fileID: 2680633470348197094}
+  m_Layer: 5
+  m_Name: UIEquipStarIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2680633470348196890
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680633470348196891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2680633470348196888
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680633470348196891}
+  m_CullTransparentMesh: 1
+--- !u!114 &2680633470348196889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680633470348196891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2680633470348197095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680633470348196891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305b1e1ab51522e42a8c930396319290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _BundleDir: Common/StarAnim.unity3d
+  _AtlasName: StarAnim
+  _SpriteName: 
+  _PixelPerfect: 0
+  _PixelPerfectOnPlay: 0
+  _LoadImmedatelly: 0
+  _Scale: 1
+--- !u!114 &2680633470348197094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680633470348196891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621a660bc05d4684aa42f76faf2c142c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Sprites:
+  - Type: 0
+    SpriteNames:
+    - 3479-1
+  - Type: 1
+    SpriteNames:
+    - 3481-1
+  - Type: 2
+    SpriteNames:
+    - 3480-1
+    - 3480-2
+    - 3480-3
+    - 3480-4
+    - 3480-5
+    - 3480-6
+    - 3480-7
+    - 3480-8
+    - 3480-9
+    - 3480-10
+  - Type: 3
+    SpriteNames:
+    - 3482-1
+    - 3482-2
+    - 3482-3
+    - 3482-4
+    - 3482-5
+    - 3482-6
+    - 3482-7
+    - 3482-8
+    - 3482-9
+    - 3482-10
+  - Type: 4
+    SpriteNames:
+    - 3496-1
+    - 3496-2
+    - 3496-3
+    - 3496-4
+    - 3496-5
+    - 3496-6
+    - 3496-7
+    - 3496-8
+    - 3496-9
+    - 3496-10
+  - Type: 5
+    SpriteNames:
+    - 3498-1
+    - 3498-2
+    - 3498-3
+    - 3498-4
+    - 3498-5
+    - 3498-6
+    - 3498-7
+    - 3498-8
+    - 3498-9
+    - 3498-10
+  - Type: 6
+    SpriteNames:
+    - 3492-1
+    - 3492-2
+    - 3492-3
+    - 3492-4
+    - 3492-5
+    - 3492-6
+    - 3492-7
+    - 3492-8
+    - 3492-9
+    - 3492-10
+  - Type: 7
+    SpriteNames:
+    - 3494-1
+    - 3494-2
+    - 3494-3
+    - 3494-4
+    - 3494-5
+    - 3494-6
+    - 3494-7
+    - 3494-8
+    - 3494-9
+    - 3494-10
+  - Type: 8
+    SpriteNames:
+    - 3499-1
+    - 3499-2
+    - 3499-3
+    - 3499-4
+    - 3499-5
+    - 3499-6
+    - 3499-7
+    - 3499-8
+    - 3499-9
+    - 3499-10
+  - Type: 9
+    SpriteNames:
+    - 3500-1
+    - 3500-2
+    - 3500-3
+    - 3500-4
+    - 3500-5
+    - 3500-6
+    - 3500-7
+    - 3500-8
+    - 3500-9
+    - 3500-10
+  _AnimationDuration: 2
+  _SpriteBundleDir: Common/StarAnim.unity3d
+  _SpriteAtlasName: StarAnim
+  _PixelPerfect: 0

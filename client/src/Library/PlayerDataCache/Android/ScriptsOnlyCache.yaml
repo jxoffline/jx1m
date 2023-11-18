@@ -1,0 +1,4017 @@
+ScriptsOnlyBuild:
+  usedScripts:
+    Assembly-CSharp-firstpass.dll:
+    - FloatingJoystick
+    - MobilePostProcessing
+    Assembly-CSharp.dll:
+    - FS.GameFramework.Controls.PreGameTCPCmdHandler
+    - FS.VLTK.Control.Component.AutoFarmAreaDeco
+    - FS.VLTK.Control.Component.Character
+    - FS.VLTK.Control.Component.CharacterPreview
+    - FS.VLTK.Control.Component.DebugObject
+    - FS.VLTK.Control.Component.Effect
+    - FS.VLTK.Control.Component.Item
+    - FS.VLTK.Control.Component.Monster
+    - FS.VLTK.Control.Component.MonsterPreview
+    - FS.VLTK.Control.Component.RadarMapCamera
+    - FS.VLTK.Control.Component.SelectTargetDeco
+    - FS.VLTK.Control.Component.Skill.Bullet
+    - FS.VLTK.Control.Component.Skill.ExplodeEffect
+    - FS.VLTK.Control.Component.Teleport
+    - FS.VLTK.Control.Component.WeaponEnhanceEffect_Particle
+    - FS.VLTK.Debug.PrintBlock
+    - FS.VLTK.Factory.Animation.CharacterAnimationManager
+    - FS.VLTK.Factory.Animation.EffectAnimationManager
+    - FS.VLTK.Factory.Animation.MonsterAnimationManager
+    - FS.VLTK.Factory.AnimationManager.BulletAnimationManager
+    - FS.VLTK.Factory.KTObjectPoolManager
+    - FS.VLTK.Factory.KTObjectsManager
+    - FS.VLTK.Factory.KTResourceManager
+    - FS.VLTK.Factory.KTUIElementPoolManager
+    - FS.VLTK.Loader.KTDownloadManager
+    - FS.VLTK.UI.CanvasManager
+    - FS.VLTK.UI.CoreUI.UICanvasFlyingText
+    - FS.VLTK.UI.CoreUI.UIFlyingText
+    - FS.VLTK.UI.CoreUI.UIMinimapReference
+    - FS.VLTK.UI.CoreUI.UIMonsterHeader
+    - FS.VLTK.UI.CoreUI.UIRoleHeader
+    - FS.VLTK.UI.LoadingGame.UILoadingGame
+    - FS.VLTK.UI.LoadingMap.UILoadingMap
+    - FS.VLTK.UI.LoadingResources.UILoadingResources
+    - FS.VLTK.UI.LoginGame.UILoginGame
+    - FS.VLTK.UI.Main.ActivityList.UIActivityList_ActivityInfo
+    - FS.VLTK.UI.Main.AutoFight.Component.UIAutoFight_SelectSkill_SkillButton
+    - FS.VLTK.UI.Main.AutoFight.UIAutoFight_AutoFarmTab
+    - FS.VLTK.UI.Main.AutoFight.UIAutoFight_AutoPKTab
+    - FS.VLTK.UI.Main.AutoFight.UIAutoFight_AutoPickUpItemTab
+    - FS.VLTK.UI.Main.AutoFight.UIAutoFight_AutoSupportTab
+    - FS.VLTK.UI.Main.AutoFight.UIAutoFight_General
+    - FS.VLTK.UI.Main.AutoFight.UIAutoFight_SelectSkill
+    - FS.VLTK.UI.Main.AutoFight.UIAutoFight_SkillButton
+    - FS.VLTK.UI.Main.Bag.UIBag_Grid
+    - FS.VLTK.UI.Main.Bag.UIBag_Item
+    - FS.VLTK.UI.Main.BrowsePlayer.UIBrowsePlayer_PlayerInfo
+    - FS.VLTK.UI.Main.BrowsePlayer.UIBrowsePlayer_PlayerInfoPopup
+    - FS.VLTK.UI.Main.BrowsePlayer.UIBrowsePlayer_PlayerLocationReport
+    - FS.VLTK.UI.Main.Challenge.UIChallenge_PlayerInfo
+    - FS.VLTK.UI.Main.Chat.UIChat_SelectChannelFrame
+    - FS.VLTK.UI.Main.Chat.UIChat_SelectStickerFrame
+    - FS.VLTK.UI.Main.Chat.UIChat_SelectStickerFrame_StickerButton
+    - FS.VLTK.UI.Main.Chat.UIChat_VoiceChatFrame
+    - FS.VLTK.UI.Main.Crafting.UICrafting_CraftingItem
+    - FS.VLTK.UI.Main.Crafting.UICrafting_ProductItem
+    - FS.VLTK.UI.Main.Exchange.UIExchange_ExchangeBagGrid
+    - FS.VLTK.UI.Main.Friend.UIFriendBox_AskToBeFriendFrame
+    - FS.VLTK.UI.Main.Friend.UIFriendBox_AskToBeFriendFrame_PlayerInfo
+    - FS.VLTK.UI.Main.Friend.UIFriendBox_InteractionBox
+    - FS.VLTK.UI.Main.Friend.UIFriendBox_PlayerInfo
+    - FS.VLTK.UI.Main.GMCommand.UIGMCommand_Item
+    - FS.VLTK.UI.Main.GameResDownload.UIGameResDownload_Box
+    - FS.VLTK.UI.Main.GiftCode.UIGiftCode
+    - FS.VLTK.UI.Main.GuildEx.AskToJoinList.UIGuildEx_AskToJoinList_AutoAcceptRule
+    - FS.VLTK.UI.Main.GuildEx.AskToJoinList.UIGuildEx_AskToJoinList_PlayerInfo
+    - FS.VLTK.UI.Main.GuildEx.Battle.UIGuildEx_Battle_GuildListFrame
+    - FS.VLTK.UI.Main.GuildEx.Battle.UIGuildEx_Battle_GuildListFrame_GuildInfo
+    - FS.VLTK.UI.Main.GuildEx.Battle.UIGuildEx_Battle_MemberInfo
+    - FS.VLTK.UI.Main.GuildEx.Battle.UIGuildEx_Battle_MemberListFrame
+    - FS.VLTK.UI.Main.GuildEx.Battle.UIGuildEx_Battle_MemberListFrame_MemberInfo
+    - FS.VLTK.UI.Main.GuildEx.Dedicate.UIGuildEx_Dedicate_DedicationPerItem
+    - FS.VLTK.UI.Main.GuildEx.Dedicate.UIGuildEx_Dedicate_Item
+    - FS.VLTK.UI.Main.GuildEx.GuildList.UIGuildEx_GuildList_GuildInfo
+    - FS.VLTK.UI.Main.GuildEx.Main.UIGuildEx_Main_ItemInfo
+    - FS.VLTK.UI.Main.GuildEx.Main.UiGuildEx_Main_ChangeNotification
+    - FS.VLTK.UI.Main.GuildEx.MemberList.UIGuildEx_MemberList_ApprovePopup
+    - FS.VLTK.UI.Main.GuildEx.MemberList.UIGuildEx_MemberList_MemberInfo
+    - FS.VLTK.UI.Main.GuildEx.Skill.UIGuildEx_Skill_ButtonSkill
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_AskToJoinList
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_Battle
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_CreateNew
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_Dedicate
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_GuildList
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_Main
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_MemberList
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_Quest
+    - FS.VLTK.UI.Main.GuildEx.UIGuildEx_Skill
+    - FS.VLTK.UI.Main.InputBox.UIInputNumber
+    - FS.VLTK.UI.Main.InputBox.UIInputString
+    - FS.VLTK.UI.Main.ItemBox.UIItemBox
+    - FS.VLTK.UI.Main.ItemSlotBox.UIListItemBox
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_LocalMapTab
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_LocalMapTab_PointInfo
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_TabItem
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_WorldMapTab
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_WorldMapTab_PlaceInfo
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_WorldMapTab_WayPortInfo
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_WorldMapTab_World_AreaInfo
+    - FS.VLTK.UI.Main.LuckyCircle.UILuckyCircle_Cell
+    - FS.VLTK.UI.Main.LuckyCircle.UILuckyCircle_HistoryBox
+    - FS.VLTK.UI.Main.Mail.UIMailBox_Mail
+    - FS.VLTK.UI.Main.MainUI.BottomBar.SkillBar.UISkillBar_SelectAuraSkill
+    - FS.VLTK.UI.Main.MainUI.BottomBar.SkillBar.UISkillBar_SelectAuraSkill_SkillButton
+    - FS.VLTK.UI.Main.MainUI.CargoCarriageTaskInfo.UICargoCarriageTaskInfo_Frame
+    - FS.VLTK.UI.Main.MainUI.EventBroadboardMini.UIEventBroadboardMini_Content
+    - FS.VLTK.UI.Main.MainUI.GuildRequestList.UIGuildRequestList_Frame
+    - FS.VLTK.UI.Main.MainUI.GuildRequestList.UIGuildRequestList_Frame_PlayerInfo
+    - FS.VLTK.UI.Main.MainUI.InvitedToTeamList.UIInvitedToTeamList_Frame
+    - FS.VLTK.UI.Main.MainUI.InvitedToTeamList.UIInvitedToTeamList_Frame_PlayerInfo
+    - FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame.UIMiniTaskAndTeamFrame_MiniTaskBox
+    - FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame.UIMiniTaskAndTeamFrame_MiniTaskBox_TaskInfo
+    - FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame.UIMiniTaskAndTeamFrame_MiniTeamFrame
+    - FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame.UIMiniTaskAndTeamFrame_MiniTeamFrame_TeammateInfo
+    - FS.VLTK.UI.Main.MainUI.NearbyPlayer.UINearbyPlayer_PlayerInfo
+    - FS.VLTK.UI.Main.MainUI.RadarMap.UIRadarMap_QuickItemsBox
+    - FS.VLTK.UI.Main.MainUI.RadarMap.UISelectItem
+    - FS.VLTK.UI.Main.MainUI.RolePart.UIRolePart_BuffDetailBox
+    - FS.VLTK.UI.Main.MainUI.RolePart.UIRolePart_BuffInfo
+    - FS.VLTK.UI.Main.MainUI.RolePart.UIRolePart_BuffList
+    - FS.VLTK.UI.Main.MainUI.RolePart.UIRolePart_PKSelectionBox
+    - FS.VLTK.UI.Main.MainUI.RolePart.UIRolePart_PingInfo
+    - FS.VLTK.UI.Main.MainUI.SkillBar.UISkillBar_SkillButton
+    - FS.VLTK.UI.Main.MainUI.UIBrowseOtherRoleInfo
+    - FS.VLTK.UI.Main.MainUI.UICargoCarriageTaskInfo
+    - FS.VLTK.UI.Main.MainUI.UIChatBoxMini
+    - FS.VLTK.UI.Main.MainUI.UIControlButtons
+    - FS.VLTK.UI.Main.MainUI.UIDecorationText
+    - FS.VLTK.UI.Main.MainUI.UIEventBroadboardMini
+    - FS.VLTK.UI.Main.MainUI.UIGuildRequestList
+    - FS.VLTK.UI.Main.MainUI.UIHintButton
+    - FS.VLTK.UI.Main.MainUI.UIInvitedToTeamList
+    - FS.VLTK.UI.Main.MainUI.UIJoyStick
+    - FS.VLTK.UI.Main.MainUI.UIMainButtons
+    - FS.VLTK.UI.Main.MainUI.UIMiniTaskAndTeamFrame
+    - FS.VLTK.UI.Main.MainUI.UIMonsterFace
+    - FS.VLTK.UI.Main.MainUI.UINearbyPlayer
+    - FS.VLTK.UI.Main.MainUI.UIOtherRoleFace
+    - FS.VLTK.UI.Main.MainUI.UIPetFace
+    - FS.VLTK.UI.Main.MainUI.UIPetPart
+    - FS.VLTK.UI.Main.MainUI.UIProgressBar
+    - FS.VLTK.UI.Main.MainUI.UIRadarMap
+    - FS.VLTK.UI.Main.MainUI.UIRolePart
+    - FS.VLTK.UI.Main.MainUI.UIShortcutNPCTalk
+    - FS.VLTK.UI.Main.MainUI.UISkillBar
+    - FS.VLTK.UI.Main.MainUI.UISpecialChatBox
+    - FS.VLTK.UI.Main.MainUI.UIStreakKillNotification
+    - FS.VLTK.UI.Main.MainUI.UITopFunctionButtons
+    - FS.VLTK.UI.Main.MessageBox.UIMessageBox
+    - FS.VLTK.UI.Main.Money.UIMoneyBox
+    - FS.VLTK.UI.Main.NPCDialog.UINPCDialog_ItemSelection
+    - FS.VLTK.UI.Main.NPCDialog.UINPCDialog_Selection
+    - FS.VLTK.UI.Main.Pet.Main.UIPet_MoreHintPopup
+    - FS.VLTK.UI.Main.Pet.Main.UIPet_PetInfo
+    - FS.VLTK.UI.Main.Pet.Main.UIPet_SkillInfo
+    - FS.VLTK.UI.Main.Pet.OtherRolePet.UIOtherRolePet_PetInfo
+    - FS.VLTK.UI.Main.Pet.OtherRolePet.UIOtherRolePet_SkillInfo
+    - FS.VLTK.UI.Main.Pet.PetInfo.UIPetInfo_Skill
+    - FS.VLTK.UI.Main.Pet.StudySkill.UIPet_StudySkill_SkillInfo
+    - FS.VLTK.UI.Main.Pet.UIOtherRolePet
+    - FS.VLTK.UI.Main.Pet.UIPetInfo
+    - FS.VLTK.UI.Main.Pet.UIPet_StudySkill
+    - FS.VLTK.UI.Main.PlayerShop.UIPlayerShop_Buy_ConfirmBuyFrame
+    - FS.VLTK.UI.Main.PlayerShop.UIPlayerShop_Buy_Item
+    - FS.VLTK.UI.Main.PlayerShop.UIPlayerShop_Sell_AddItemToSellFrame
+    - FS.VLTK.UI.Main.PlayerShop.UIPlayerShop_Sell_Item
+    - FS.VLTK.UI.Main.PortableBag.UIPortableBag_Grid
+    - FS.VLTK.UI.Main.PortableBag.UIPortableBag_Item
+    - FS.VLTK.UI.Main.Ranking.UIRanking_PlayerInfo
+    - FS.VLTK.UI.Main.Ranking.UIRanking_RankTab
+    - FS.VLTK.UI.Main.Revive.UIReviveFrame
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_AttributesTab
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_AttributesTab_PropertyInfo
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_PropertiesTab
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_ReputesTab
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_ReputesTab_ReputeCategory
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_ReputesTab_ReputeCategory_Item
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_TitlesTab
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleInfo_TitlesTab_Item
+    - FS.VLTK.UI.Main.RoleInfo.UIRoleRemainPoint
+    - FS.VLTK.UI.Main.SeashellCircle.UISeashellCircle_AwardStageInfo
+    - FS.VLTK.UI.Main.SeashellCircle.UISeashellCircle_Item
+    - FS.VLTK.UI.Main.SecondPassword.UISecondPassword_Change
+    - FS.VLTK.UI.Main.SecondPassword.UISecondPassword_Input
+    - FS.VLTK.UI.Main.SecondPassword.UISecondPassword_Set
+    - FS.VLTK.UI.Main.SelectItem.UISelectItem_ButtonItem
+    - FS.VLTK.UI.Main.SelectPet.UISelectPet_PetInfo
+    - FS.VLTK.UI.Main.SelectPet.UISelectPet_SkillInfo
+    - FS.VLTK.UI.Main.SetExpSkill.UISetExpSkill_SkillButton
+    - FS.VLTK.UI.Main.SetHandSkill.UISetHandSkill_Button
+    - FS.VLTK.UI.Main.Shop.UIShop_BuyTab
+    - FS.VLTK.UI.Main.Shop.UIShop_BuyTab_ConfirmBuyFrame
+    - FS.VLTK.UI.Main.Shop.UIShop_BuyTab_Item
+    - FS.VLTK.UI.Main.Shop.UIShop_BuyTab_Item_CountDown
+    - FS.VLTK.UI.Main.Shop.UIShop_SellAndBuyBackTab
+    - FS.VLTK.UI.Main.Shop.UIShop_SellAndBuyBackTab_ItemPrefab
+    - FS.VLTK.UI.Main.SkillQuickKeyChooser.UISkillQuickKeyChooser
+    - FS.VLTK.UI.Main.SkillQuickKeyChooser.UISkillQuickKeyChooser_Item
+    - FS.VLTK.UI.Main.SkillTree.SkillTree_SkillItemBox
+    - FS.VLTK.UI.Main.SkillTree.UISkillTree
+    - FS.VLTK.UI.Main.SpecialEvents.FHLCScoreboard.UIFHLCScoreboard_PlayerInfo
+    - FS.VLTK.UI.Main.SpecialEvents.FactionBattle.UIFactionBattle_Ranking
+    - FS.VLTK.UI.Main.SpecialEvents.FactionBattle.UIFactionBattle_Ranking_PlayerInfo
+    - FS.VLTK.UI.Main.SpecialEvents.FactionBattle.UIFactionBattle_Round
+    - FS.VLTK.UI.Main.SpecialEvents.FactionBattle.UIFactionBattle_Round_RoundInfo
+    - FS.VLTK.UI.Main.SpecialEvents.SongJinRankingBoard.UISongJinRankingBoard_PlayerInfo
+    - FS.VLTK.UI.Main.SpecialEvents.TeamBattle.UITeamBattle_RankingBoard_TeamInfo
+    - FS.VLTK.UI.Main.SpecialEvents.UIFHLCScoreboard
+    - FS.VLTK.UI.Main.SpecialEvents.UISongJinRankingBoard
+    - FS.VLTK.UI.Main.SpecialEvents.UISpecialEventButtons
+    - FS.VLTK.UI.Main.SpecialEvents.UITeamBattle_RankingBoard
+    - FS.VLTK.UI.Main.SuperToolTip.UISuperToolTip_Component
+    - FS.VLTK.UI.Main.SytemNotification.UISystemNotification
+    - FS.VLTK.UI.Main.TaskBox.UITaskBox_Task
+    - FS.VLTK.UI.Main.TaskBox.UITaskBox_TaskCategory
+    - FS.VLTK.UI.Main.TeamFrame.UITeamFrame_AskToJoinPlayerInfo
+    - FS.VLTK.UI.Main.TeamFrame.UITeamFrame_TeamMemberInfo
+    - FS.VLTK.UI.Main.TokenShop.StoreProduct.UITokenShop_StoreProductBuy
+    - FS.VLTK.UI.Main.TokenShop.StoreProduct.UITokenShop_StoreProductBuy_Item
+    - FS.VLTK.UI.Main.TokenShop.UITokenShop_ConfirmBuyFrame
+    - FS.VLTK.UI.Main.TokenShop.UITokenShop_Item
+    - FS.VLTK.UI.Main.TokenShop.UITokenShop_Item_CountDown
+    - FS.VLTK.UI.Main.TopRanking.UITopRanking_AwardBox
+    - FS.VLTK.UI.Main.TopRanking.UITopRanking_PlayerInfo
+    - FS.VLTK.UI.Main.TurnPlate.UITurnPlate_ItemBox
+    - FS.VLTK.UI.Main.UIActivityList
+    - FS.VLTK.UI.Main.UIAdvertiseItem
+    - FS.VLTK.UI.Main.UIAdvertisePet
+    - FS.VLTK.UI.Main.UIAutoFight
+    - FS.VLTK.UI.Main.UIBag
+    - FS.VLTK.UI.Main.UIBottomBar
+    - FS.VLTK.UI.Main.UIBrowsePlayer
+    - FS.VLTK.UI.Main.UIChallenge
+    - FS.VLTK.UI.Main.UIChat
+    - FS.VLTK.UI.Main.UICrafting
+    - FS.VLTK.UI.Main.UICrystalStoneSynthesis
+    - FS.VLTK.UI.Main.UIDisconnected
+    - FS.VLTK.UI.Main.UIEnhance
+    - FS.VLTK.UI.Main.UIEquipLevelUp
+    - FS.VLTK.UI.Main.UIEquipRefineToFS
+    - FS.VLTK.UI.Main.UIEquipStarIcon
+    - FS.VLTK.UI.Main.UIExchange
+    - FS.VLTK.UI.Main.UIFriendBox
+    - FS.VLTK.UI.Main.UIGMCommand
+    - FS.VLTK.UI.Main.UIGameResDownload
+    - FS.VLTK.UI.Main.UIHintItemText
+    - FS.VLTK.UI.Main.UIInputEquipAndMaterials
+    - FS.VLTK.UI.Main.UIInputItems
+    - FS.VLTK.UI.Main.UIItemSlotBox
+    - FS.VLTK.UI.Main.UILoadingProgress
+    - FS.VLTK.UI.Main.UILuckyCircle
+    - FS.VLTK.UI.Main.UIMailBox
+    - FS.VLTK.UI.Main.UINPCDialog
+    - FS.VLTK.UI.Main.UIOtherRoleInfo
+    - FS.VLTK.UI.Main.UIPet
+    - FS.VLTK.UI.Main.UIPet_AssignAttributes
+    - FS.VLTK.UI.Main.UIPlayerInfo
+    - FS.VLTK.UI.Main.UIPlayerPray
+    - FS.VLTK.UI.Main.UIPlayerShop_Buy
+    - FS.VLTK.UI.Main.UIPlayerShop_Sell
+    - FS.VLTK.UI.Main.UIPortableBag
+    - FS.VLTK.UI.Main.UIRanking
+    - FS.VLTK.UI.Main.UIRoleAvarta
+    - FS.VLTK.UI.Main.UISeashellCircle
+    - FS.VLTK.UI.Main.UISecondPassword_Main
+    - FS.VLTK.UI.Main.UISelectAvarta
+    - FS.VLTK.UI.Main.UISelectPet
+    - FS.VLTK.UI.Main.UISetExpSkill
+    - FS.VLTK.UI.Main.UISetHandSkill
+    - FS.VLTK.UI.Main.UIShop
+    - FS.VLTK.UI.Main.UISignetEnhance
+    - FS.VLTK.UI.Main.UISplitCrystalStone
+    - FS.VLTK.UI.Main.UISplitEquipCrystalStones
+    - FS.VLTK.UI.Main.UISuperToolTip
+    - FS.VLTK.UI.Main.UISystemSetting
+    - FS.VLTK.UI.Main.UITaskBox
+    - FS.VLTK.UI.Main.UITeamFrame
+    - FS.VLTK.UI.Main.UITokenShop
+    - FS.VLTK.UI.Main.UITopRanking
+    - FS.VLTK.UI.Main.UITurnPlate
+    - FS.VLTK.UI.Main.UIWelfare
+    - FS.VLTK.UI.Main.UIYouLong
+    - FS.VLTK.UI.Main.Welfare.EverydayOnline.UIWelfare_EverydayOnline_SlotItemBox
+    - FS.VLTK.UI.Main.Welfare.LevelUp.UIWelfare_LevelUp_ListAward
+    - FS.VLTK.UI.Main.Welfare.LevelUp.UIWelfare_LevelUp_ListAward_Item
+    - FS.VLTK.UI.Main.Welfare.MonthCard.UIWelfare_MonthCard
+    - FS.VLTK.UI.Main.Welfare.MonthCard.UIWelfare_MonthCard_ItemBox
+    - FS.VLTK.UI.Main.Welfare.Recharge.UIWelfare_Recharge_EverydayRecharge
+    - FS.VLTK.UI.Main.Welfare.Recharge.UIWelfare_Recharge_FirstRecharge
+    - FS.VLTK.UI.Main.Welfare.Recharge.UIWelfare_Recharge_ItemList
+    - FS.VLTK.UI.Main.Welfare.Recharge.UIWelfare_Recharge_TotalConsume
+    - FS.VLTK.UI.Main.Welfare.Recharge.UIWelfare_Recharge_TotalRecharge
+    - FS.VLTK.UI.Main.Welfare.SeriesLogin.UIWelfare_SeriesLogin_ListAward_Item
+    - FS.VLTK.UI.Main.Welfare.SevenDayLogin.UIWelfare_SevenDayLogin_SlotItemBox
+    - FS.VLTK.UI.Main.Welfare.UIWelfare_EverydayOnline
+    - FS.VLTK.UI.Main.Welfare.UIWelfare_LevelUp
+    - FS.VLTK.UI.Main.Welfare.UIWelfare_Recharge
+    - FS.VLTK.UI.Main.Welfare.UIWelfare_SeriesLogin
+    - FS.VLTK.UI.Main.Welfare.UIWelfare_SevenDayLogin
+    - FS.VLTK.UI.RoleManager.UICreateRole
+    - FS.VLTK.UI.RoleManager.UIRoleManager
+    - FS.VLTK.UI.RoleManager.UISelectRole
+    - FS.VLTK.UI.RoleManager.UISelectRole_RoleInfoToggle
+    - FS.VLTK.UI.SelectServer.UISelectServer
+    - FS.VLTK.UI.SelectServer.UISelectServer_ButtonServerDetails
+    - FS.VLTK.UI.SelectServer.UISelectServer_ToggleGroupServer
+    - FS.VLTK.UI.UICore.UIItemHeader
+    - FS.VLTK.UI.UICore.UISpriteHPBar
+    - FS.VLTK.UI.UIDebugConsole
+    - FS.VLTK.UI.UIFirstScreen
+    - FS.VLTK.UI.UINotificationTip
+    - FS.VLTK.Utilities.UnityComponent.AudioClipFromAssetBundle
+    - FS.VLTK.Utilities.UnityComponent.AudioPlayer
+    - FS.VLTK.Utilities.UnityComponent.AudioRecorder
+    - FS.VLTK.Utilities.UnityComponent.AudioRecorderAndPlayer
+    - FS.VLTK.Utilities.UnityComponent.BulletAnimation2D
+    - FS.VLTK.Utilities.UnityComponent.BulletExplodeEffectAnimation2D
+    - FS.VLTK.Utilities.UnityComponent.CharacterAnimation2D
+    - FS.VLTK.Utilities.UnityComponent.CircleMaker
+    - FS.VLTK.Utilities.UnityComponent.ClickableCollider2D
+    - FS.VLTK.Utilities.UnityComponent.DropItemAnimation2D
+    - FS.VLTK.Utilities.UnityComponent.EffectAnimation2D
+    - FS.VLTK.Utilities.UnityComponent.FPSCounter
+    - FS.VLTK.Utilities.UnityComponent.FitCollider2D
+    - FS.VLTK.Utilities.UnityComponent.GroupColor
+    - FS.VLTK.Utilities.UnityComponent.GroupScale
+    - FS.VLTK.Utilities.UnityComponent.MonsterAnimation2D
+    - FS.VLTK.Utilities.UnityComponent.SmoothCamera2D
+    - FS.VLTK.Utilities.UnityComponent.SpriteGlowAnimation
+    - FS.VLTK.Utilities.UnityComponent.SpriteTrailRenderer
+    - FS.VLTK.Utilities.UnityComponent.SpriteTransition
+    - FS.VLTK.Utilities.UnityComponent.SpriteZoom
+    - FS.VLTK.Utilities.UnityComponent.VideoPlayerEx
+    - FS.VLTK.Utilities.UnityThreading.UnityBackgroundWorkerManager
+    - FS.VLTK.Utilities.UnityUI.KTUIResourceManager
+    - FS.VLTK.Utilities.UnityUI.SpriteFromAssetBundle
+    - FS.VLTK.Utilities.UnityUI.TargetContentSizeFitter
+    - FS.VLTK.Utilities.UnityUI.UIAnimatedImage
+    - FS.VLTK.Utilities.UnityUI.UIAnimatedSprite
+    - FS.VLTK.Utilities.UnityUI.UIButtonSprite
+    - FS.VLTK.Utilities.UnityUI.UIDragableObject
+    - FS.VLTK.Utilities.UnityUI.UIFadeOutText
+    - FS.VLTK.Utilities.UnityUI.UIFirstChild
+    - FS.VLTK.Utilities.UnityUI.UIFlicker
+    - FS.VLTK.Utilities.UnityUI.UIHideIfClickedOutSide
+    - FS.VLTK.Utilities.UnityUI.UIHoverableObject
+    - FS.VLTK.Utilities.UnityUI.UIRichText
+    - FS.VLTK.Utilities.UnityUI.UISliderText
+    - FS.VLTK.Utilities.UnityUI.UISlotSimulation
+    - FS.VLTK.Utilities.UnityUI.UITabPanel
+    - FS.VLTK.Utilities.UnityUI.UIToggleSprite
+    - FS.VLTK.Utilities.UnityUI.VerticalBox
+    - MainGame
+    Elringus.SpriteGlow.Runtime.dll:
+    - SpriteGlow.SpriteGlowEffect
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAnimator
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TextMeshPro
+    - TMPro.TextMeshProUGUI
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
+    - UnityEngine.UI.HorizontalLayoutGroup
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Slider
+    - UnityEngine.UI.Toggle
+    - UnityEngine.UI.ToggleGroup
+    - UnityEngine.UI.VerticalLayoutGroup
+  serializedClasses:
+    Assembly-CSharp:
+    - FS.VLTK.Factory.KTObjectPoolManager/Model
+    - FS.VLTK.Factory.KTObjectsManager/ObjectRender
+    - FS.VLTK.Factory.KTUIElementPoolManager/Model
+    - FS.VLTK.UI.CoreUI.UIMinimapReference/QuestStateIconPrefab
+    - FS.VLTK.UI.CoreUI.UIRoleHeader/PKValueIconSprite
+    - FS.VLTK.UI.Main.LocalMap.UILocalMap_LocalMapTab/QuestStateIconPrefab
+    - FS.VLTK.UI.Main.MainUI.UIRolePart/PKModeSprite
+    - FS.VLTK.UI.Main.MainUI.UIStreakKillNotification/Number
+    - FS.VLTK.UI.Main.MainUI.UIStreakKillNotification/NumberSprite
+    - FS.VLTK.UI.Main.UIActivityList/DayInfo
+    - FS.VLTK.UI.Main.UIEquipStarIcon/EquipStarSprite
+    - FS.VLTK.UI.RoleManager.UICreateRole/SeriesToggle
+    - FS.VLTK.Utilities.UnityUI.UIAnimatedImage/SpriteFrame
+    - FS.VLTK.Utilities.UnityUI.UITab
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_Character
+    - TMPro.TMP_Dropdown/DropdownEvent
+    - TMPro.TMP_Dropdown/OptionData
+    - TMPro.TMP_Dropdown/OptionDataList
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_InputField/OnChangeEvent
+    - TMPro.TMP_InputField/SelectionEvent
+    - TMPro.TMP_InputField/SubmitEvent
+    - TMPro.TMP_InputField/TextSelectionEvent
+    - TMPro.TMP_InputField/TouchScreenKeyboardEvent
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
+    - TMPro.VertexGradient
+    UnityEngine.CoreModule:
+    - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.RectOffset
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
+    UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Slider/SliderEvent
+    - UnityEngine.UI.SpriteState
+    - UnityEngine.UI.Toggle/ToggleEvent
+  methodsToPreserve: []
+  sceneClasses:
+    Assets/Scenes/MainGame.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1506}
+    - Class: 114
+      Script: {instanceID: 1508}
+    - Class: 114
+      Script: {instanceID: 1510}
+    - Class: 114
+      Script: {instanceID: 1512}
+    - Class: 114
+      Script: {instanceID: 1514}
+    - Class: 114
+      Script: {instanceID: 1516}
+    - Class: 114
+      Script: {instanceID: 1520}
+    - Class: 114
+      Script: {instanceID: 1530}
+    - Class: 114
+      Script: {instanceID: 1542}
+    - Class: 114
+      Script: {instanceID: 1546}
+    - Class: 114
+      Script: {instanceID: 1550}
+    - Class: 114
+      Script: {instanceID: 1560}
+    - Class: 114
+      Script: {instanceID: 1562}
+    - Class: 114
+      Script: {instanceID: 1572}
+    - Class: 114
+      Script: {instanceID: 1580}
+    - Class: 114
+      Script: {instanceID: 1584}
+    - Class: 114
+      Script: {instanceID: 1590}
+    - Class: 114
+      Script: {instanceID: 1620}
+    - Class: 114
+      Script: {instanceID: 1628}
+    - Class: 114
+      Script: {instanceID: 1664}
+    - Class: 114
+      Script: {instanceID: 1666}
+    - Class: 114
+      Script: {instanceID: 1676}
+    - Class: 114
+      Script: {instanceID: 1678}
+    - Class: 114
+      Script: {instanceID: 1686}
+    - Class: 114
+      Script: {instanceID: 1694}
+    - Class: 114
+      Script: {instanceID: 1700}
+    - Class: 114
+      Script: {instanceID: 1704}
+    - Class: 114
+      Script: {instanceID: 1714}
+    - Class: 114
+      Script: {instanceID: 1716}
+    - Class: 114
+      Script: {instanceID: 1718}
+    - Class: 114
+      Script: {instanceID: 1722}
+    - Class: 114
+      Script: {instanceID: 1730}
+    - Class: 114
+      Script: {instanceID: 1734}
+    - Class: 114
+      Script: {instanceID: 1740}
+    - Class: 114
+      Script: {instanceID: 1746}
+    - Class: 114
+      Script: {instanceID: 1760}
+    - Class: 114
+      Script: {instanceID: 1770}
+    - Class: 114
+      Script: {instanceID: 1784}
+    - Class: 114
+      Script: {instanceID: 1792}
+    - Class: 114
+      Script: {instanceID: 1794}
+    - Class: 114
+      Script: {instanceID: 1798}
+    - Class: 114
+      Script: {instanceID: 1800}
+    - Class: 114
+      Script: {instanceID: 1808}
+    - Class: 114
+      Script: {instanceID: 1850}
+    - Class: 114
+      Script: {instanceID: 1852}
+    - Class: 114
+      Script: {instanceID: 1858}
+    - Class: 114
+      Script: {instanceID: 1860}
+    - Class: 114
+      Script: {instanceID: 1862}
+    - Class: 114
+      Script: {instanceID: 1874}
+    - Class: 114
+      Script: {instanceID: 1878}
+    - Class: 114
+      Script: {instanceID: 1884}
+    - Class: 114
+      Script: {instanceID: 1904}
+    - Class: 114
+      Script: {instanceID: 1906}
+    - Class: 114
+      Script: {instanceID: 1908}
+    - Class: 114
+      Script: {instanceID: 1912}
+    - Class: 114
+      Script: {instanceID: 1918}
+    - Class: 114
+      Script: {instanceID: 1936}
+    - Class: 114
+      Script: {instanceID: 1950}
+    - Class: 114
+      Script: {instanceID: 1952}
+    - Class: 114
+      Script: {instanceID: 1960}
+    - Class: 114
+      Script: {instanceID: 1962}
+    - Class: 114
+      Script: {instanceID: 1968}
+    - Class: 114
+      Script: {instanceID: 1970}
+    - Class: 114
+      Script: {instanceID: 1984}
+    - Class: 114
+      Script: {instanceID: 1998}
+    - Class: 114
+      Script: {instanceID: 2008}
+    - Class: 114
+      Script: {instanceID: 2012}
+    - Class: 114
+      Script: {instanceID: 2024}
+    - Class: 114
+      Script: {instanceID: 2026}
+    - Class: 114
+      Script: {instanceID: 2034}
+    - Class: 114
+      Script: {instanceID: 2038}
+    - Class: 114
+      Script: {instanceID: 2048}
+    - Class: 114
+      Script: {instanceID: 2056}
+    - Class: 114
+      Script: {instanceID: 2078}
+    - Class: 114
+      Script: {instanceID: 2086}
+    - Class: 114
+      Script: {instanceID: 2100}
+    - Class: 114
+      Script: {instanceID: 2110}
+    - Class: 114
+      Script: {instanceID: 2118}
+    - Class: 114
+      Script: {instanceID: 2120}
+    - Class: 114
+      Script: {instanceID: 2124}
+    - Class: 114
+      Script: {instanceID: 2136}
+    - Class: 114
+      Script: {instanceID: 2140}
+    - Class: 114
+      Script: {instanceID: 2150}
+    - Class: 114
+      Script: {instanceID: 2152}
+    - Class: 114
+      Script: {instanceID: 2164}
+    - Class: 114
+      Script: {instanceID: 2172}
+    - Class: 114
+      Script: {instanceID: 2178}
+    - Class: 114
+      Script: {instanceID: 2190}
+    - Class: 114
+      Script: {instanceID: 2198}
+    - Class: 114
+      Script: {instanceID: 2204}
+    - Class: 114
+      Script: {instanceID: 2216}
+    - Class: 114
+      Script: {instanceID: 2224}
+    - Class: 114
+      Script: {instanceID: 2226}
+    - Class: 114
+      Script: {instanceID: 2228}
+    - Class: 114
+      Script: {instanceID: 2254}
+    - Class: 114
+      Script: {instanceID: 2258}
+    - Class: 114
+      Script: {instanceID: 2278}
+    - Class: 114
+      Script: {instanceID: 2290}
+    - Class: 114
+      Script: {instanceID: 2294}
+    - Class: 114
+      Script: {instanceID: 2298}
+    - Class: 114
+      Script: {instanceID: 2300}
+    - Class: 114
+      Script: {instanceID: 2302}
+    - Class: 114
+      Script: {instanceID: 2308}
+    - Class: 114
+      Script: {instanceID: 2310}
+    - Class: 114
+      Script: {instanceID: 2316}
+    - Class: 114
+      Script: {instanceID: 2318}
+    - Class: 114
+      Script: {instanceID: 2322}
+    - Class: 114
+      Script: {instanceID: 2328}
+    - Class: 114
+      Script: {instanceID: 2340}
+    - Class: 114
+      Script: {instanceID: 2344}
+    - Class: 114
+      Script: {instanceID: 2358}
+    - Class: 114
+      Script: {instanceID: 2362}
+    - Class: 114
+      Script: {instanceID: 2374}
+    - Class: 114
+      Script: {instanceID: 2392}
+    - Class: 114
+      Script: {instanceID: 2404}
+    - Class: 114
+      Script: {instanceID: 2406}
+    - Class: 114
+      Script: {instanceID: 2410}
+    - Class: 114
+      Script: {instanceID: 2418}
+    - Class: 114
+      Script: {instanceID: 2428}
+    - Class: 114
+      Script: {instanceID: 2436}
+    - Class: 114
+      Script: {instanceID: 2444}
+    - Class: 114
+      Script: {instanceID: 2450}
+    - Class: 114
+      Script: {instanceID: 2470}
+    - Class: 114
+      Script: {instanceID: 2472}
+    - Class: 114
+      Script: {instanceID: 2504}
+    - Class: 114
+      Script: {instanceID: 2510}
+    - Class: 114
+      Script: {instanceID: 2522}
+    - Class: 114
+      Script: {instanceID: 2572}
+    - Class: 114
+      Script: {instanceID: 2584}
+    - Class: 114
+      Script: {instanceID: 2600}
+    - Class: 114
+      Script: {instanceID: 2602}
+    - Class: 114
+      Script: {instanceID: 2610}
+    - Class: 114
+      Script: {instanceID: 2614}
+    - Class: 114
+      Script: {instanceID: 2624}
+    - Class: 114
+      Script: {instanceID: 2628}
+    - Class: 114
+      Script: {instanceID: 2638}
+    - Class: 114
+      Script: {instanceID: 2644}
+    - Class: 114
+      Script: {instanceID: 2648}
+    - Class: 114
+      Script: {instanceID: 2654}
+    - Class: 114
+      Script: {instanceID: 2656}
+    - Class: 114
+      Script: {instanceID: 2660}
+    - Class: 114
+      Script: {instanceID: 2668}
+    - Class: 114
+      Script: {instanceID: 2674}
+    - Class: 114
+      Script: {instanceID: 2692}
+    - Class: 114
+      Script: {instanceID: 2710}
+    - Class: 114
+      Script: {instanceID: 2720}
+    - Class: 114
+      Script: {instanceID: 2726}
+    - Class: 114
+      Script: {instanceID: 2762}
+    - Class: 114
+      Script: {instanceID: 2768}
+    - Class: 114
+      Script: {instanceID: 2778}
+    - Class: 114
+      Script: {instanceID: 2784}
+    - Class: 114
+      Script: {instanceID: 2804}
+    - Class: 114
+      Script: {instanceID: 2822}
+    - Class: 114
+      Script: {instanceID: 2826}
+    - Class: 114
+      Script: {instanceID: 2834}
+    - Class: 114
+      Script: {instanceID: 2842}
+    - Class: 114
+      Script: {instanceID: 2860}
+    - Class: 114
+      Script: {instanceID: 2862}
+    - Class: 114
+      Script: {instanceID: 2878}
+    - Class: 114
+      Script: {instanceID: 2880}
+    - Class: 114
+      Script: {instanceID: 2888}
+    - Class: 114
+      Script: {instanceID: 2896}
+    - Class: 114
+      Script: {instanceID: 2904}
+    - Class: 114
+      Script: {instanceID: 2908}
+    - Class: 114
+      Script: {instanceID: 2910}
+    - Class: 114
+      Script: {instanceID: 2918}
+    - Class: 114
+      Script: {instanceID: 2954}
+    - Class: 114
+      Script: {instanceID: 2962}
+    - Class: 114
+      Script: {instanceID: 2966}
+    - Class: 114
+      Script: {instanceID: 2974}
+    - Class: 114
+      Script: {instanceID: 2978}
+    - Class: 114
+      Script: {instanceID: 2982}
+    - Class: 114
+      Script: {instanceID: 2984}
+    - Class: 114
+      Script: {instanceID: 2990}
+    - Class: 114
+      Script: {instanceID: 2998}
+    - Class: 114
+      Script: {instanceID: 3010}
+    - Class: 114
+      Script: {instanceID: 3012}
+    - Class: 114
+      Script: {instanceID: 3028}
+    - Class: 114
+      Script: {instanceID: 3030}
+    - Class: 114
+      Script: {instanceID: 3040}
+    - Class: 114
+      Script: {instanceID: 3042}
+    - Class: 114
+      Script: {instanceID: 3046}
+    - Class: 114
+      Script: {instanceID: 3048}
+    - Class: 114
+      Script: {instanceID: 3062}
+    - Class: 114
+      Script: {instanceID: 3068}
+    - Class: 114
+      Script: {instanceID: 3076}
+    - Class: 114
+      Script: {instanceID: 3078}
+    - Class: 114
+      Script: {instanceID: 3088}
+    - Class: 114
+      Script: {instanceID: 3096}
+    - Class: 114
+      Script: {instanceID: 3118}
+    - Class: 114
+      Script: {instanceID: 3128}
+    - Class: 114
+      Script: {instanceID: 3138}
+    - Class: 114
+      Script: {instanceID: 3154}
+    - Class: 114
+      Script: {instanceID: 3164}
+    - Class: 114
+      Script: {instanceID: 3170}
+    - Class: 114
+      Script: {instanceID: 3172}
+    - Class: 114
+      Script: {instanceID: 3188}
+    - Class: 114
+      Script: {instanceID: 3204}
+    - Class: 114
+      Script: {instanceID: 3206}
+    - Class: 114
+      Script: {instanceID: 3214}
+    - Class: 114
+      Script: {instanceID: 3228}
+    - Class: 114
+      Script: {instanceID: 3234}
+    - Class: 114
+      Script: {instanceID: 3256}
+    - Class: 114
+      Script: {instanceID: 3258}
+    - Class: 114
+      Script: {instanceID: 3268}
+    - Class: 114
+      Script: {instanceID: 3272}
+    - Class: 114
+      Script: {instanceID: 3276}
+    - Class: 114
+      Script: {instanceID: 3278}
+    - Class: 114
+      Script: {instanceID: 3280}
+    - Class: 114
+      Script: {instanceID: 3288}
+    - Class: 114
+      Script: {instanceID: 3304}
+    - Class: 114
+      Script: {instanceID: 3314}
+    - Class: 114
+      Script: {instanceID: 3320}
+    - Class: 114
+      Script: {instanceID: 3322}
+    - Class: 114
+      Script: {instanceID: 3326}
+    - Class: 114
+      Script: {instanceID: 3338}
+    - Class: 114
+      Script: {instanceID: 3346}
+    - Class: 114
+      Script: {instanceID: 3354}
+    - Class: 114
+      Script: {instanceID: 3364}
+    - Class: 114
+      Script: {instanceID: 3376}
+    - Class: 114
+      Script: {instanceID: 3392}
+    - Class: 114
+      Script: {instanceID: 3396}
+    - Class: 114
+      Script: {instanceID: 3408}
+    - Class: 114
+      Script: {instanceID: 3416}
+    - Class: 114
+      Script: {instanceID: 3422}
+    - Class: 114
+      Script: {instanceID: 3424}
+    - Class: 114
+      Script: {instanceID: 3432}
+    - Class: 114
+      Script: {instanceID: 3438}
+    - Class: 114
+      Script: {instanceID: 3446}
+    - Class: 114
+      Script: {instanceID: 3454}
+    - Class: 114
+      Script: {instanceID: 3456}
+    - Class: 114
+      Script: {instanceID: 3464}
+    - Class: 114
+      Script: {instanceID: 3468}
+    - Class: 114
+      Script: {instanceID: 3470}
+    - Class: 114
+      Script: {instanceID: 3478}
+    - Class: 114
+      Script: {instanceID: 3480}
+    - Class: 114
+      Script: {instanceID: 3484}
+    - Class: 114
+      Script: {instanceID: 3490}
+    - Class: 114
+      Script: {instanceID: 3494}
+    - Class: 114
+      Script: {instanceID: 3496}
+    - Class: 114
+      Script: {instanceID: 3506}
+    - Class: 114
+      Script: {instanceID: 3516}
+    - Class: 114
+      Script: {instanceID: 3526}
+    - Class: 114
+      Script: {instanceID: 3528}
+    - Class: 114
+      Script: {instanceID: 3534}
+    - Class: 114
+      Script: {instanceID: 3538}
+    - Class: 114
+      Script: {instanceID: 3548}
+    - Class: 114
+      Script: {instanceID: 3558}
+    - Class: 114
+      Script: {instanceID: 3580}
+    - Class: 114
+      Script: {instanceID: 3588}
+    - Class: 114
+      Script: {instanceID: 3590}
+    - Class: 114
+      Script: {instanceID: 3592}
+    - Class: 114
+      Script: {instanceID: 3596}
+    - Class: 114
+      Script: {instanceID: 3618}
+    - Class: 114
+      Script: {instanceID: 3620}
+    - Class: 114
+      Script: {instanceID: 3624}
+    - Class: 114
+      Script: {instanceID: 3640}
+    - Class: 114
+      Script: {instanceID: 3646}
+    - Class: 114
+      Script: {instanceID: 3658}
+    - Class: 114
+      Script: {instanceID: 3668}
+    - Class: 114
+      Script: {instanceID: 3672}
+    - Class: 114
+      Script: {instanceID: 3680}
+    - Class: 114
+      Script: {instanceID: 3694}
+    - Class: 114
+      Script: {instanceID: 3698}
+    - Class: 114
+      Script: {instanceID: 3704}
+    - Class: 114
+      Script: {instanceID: 3706}
+    - Class: 114
+      Script: {instanceID: 3726}
+    - Class: 114
+      Script: {instanceID: 3732}
+    - Class: 114
+      Script: {instanceID: 3736}
+    - Class: 114
+      Script: {instanceID: 3742}
+    - Class: 114
+      Script: {instanceID: 3750}
+    - Class: 114
+      Script: {instanceID: 3754}
+    - Class: 114
+      Script: {instanceID: 3758}
+    - Class: 114
+      Script: {instanceID: 3776}
+    - Class: 114
+      Script: {instanceID: 3782}
+    - Class: 114
+      Script: {instanceID: 3784}
+    - Class: 114
+      Script: {instanceID: 3786}
+    - Class: 114
+      Script: {instanceID: 3788}
+    - Class: 114
+      Script: {instanceID: 3792}
+    - Class: 114
+      Script: {instanceID: 3798}
+    - Class: 114
+      Script: {instanceID: 3804}
+    - Class: 114
+      Script: {instanceID: 3810}
+    - Class: 114
+      Script: {instanceID: 3814}
+    - Class: 114
+      Script: {instanceID: 3816}
+    - Class: 114
+      Script: {instanceID: 3820}
+    - Class: 114
+      Script: {instanceID: 3830}
+    - Class: 114
+      Script: {instanceID: 3838}
+    - Class: 114
+      Script: {instanceID: 3854}
+    - Class: 114
+      Script: {instanceID: 3862}
+    - Class: 114
+      Script: {instanceID: 3870}
+    - Class: 114
+      Script: {instanceID: 3882}
+    - Class: 114
+      Script: {instanceID: 3894}
+    - Class: 114
+      Script: {instanceID: 3904}
+    - Class: 114
+      Script: {instanceID: 3942}
+    - Class: 114
+      Script: {instanceID: 3948}
+    - Class: 114
+      Script: {instanceID: 3952}
+    - Class: 114
+      Script: {instanceID: 3976}
+    - Class: 114
+      Script: {instanceID: 3988}
+    - Class: 114
+      Script: {instanceID: 4012}
+    - Class: 114
+      Script: {instanceID: 4020}
+    - Class: 114
+      Script: {instanceID: 4024}
+    - Class: 114
+      Script: {instanceID: 4034}
+    - Class: 114
+      Script: {instanceID: 4038}
+    - Class: 114
+      Script: {instanceID: 4040}
+    - Class: 114
+      Script: {instanceID: 4048}
+    - Class: 114
+      Script: {instanceID: 4060}
+    - Class: 114
+      Script: {instanceID: 4062}
+    - Class: 114
+      Script: {instanceID: 4064}
+    - Class: 114
+      Script: {instanceID: 4116}
+    - Class: 114
+      Script: {instanceID: 4128}
+    - Class: 114
+      Script: {instanceID: 4132}
+    - Class: 114
+      Script: {instanceID: 4136}
+    - Class: 114
+      Script: {instanceID: 4142}
+    - Class: 114
+      Script: {instanceID: 4150}
+    - Class: 114
+      Script: {instanceID: 4154}
+    - Class: 114
+      Script: {instanceID: 4158}
+    - Class: 114
+      Script: {instanceID: 4164}
+    - Class: 114
+      Script: {instanceID: 4174}
+    - Class: 114
+      Script: {instanceID: 4188}
+    - Class: 114
+      Script: {instanceID: 4192}
+    - Class: 114
+      Script: {instanceID: 4204}
+    - Class: 114
+      Script: {instanceID: 4220}
+    - Class: 114
+      Script: {instanceID: 4230}
+    - Class: 114
+      Script: {instanceID: 4242}
+    - Class: 114
+      Script: {instanceID: 4248}
+    - Class: 114
+      Script: {instanceID: 4256}
+    - Class: 114
+      Script: {instanceID: 4270}
+    - Class: 114
+      Script: {instanceID: 4280}
+    - Class: 114
+      Script: {instanceID: 4286}
+    - Class: 114
+      Script: {instanceID: 4294}
+    - Class: 114
+      Script: {instanceID: 4296}
+    - Class: 114
+      Script: {instanceID: 4314}
+    - Class: 114
+      Script: {instanceID: 4320}
+    - Class: 114
+      Script: {instanceID: 4332}
+    - Class: 114
+      Script: {instanceID: 4340}
+    - Class: 114
+      Script: {instanceID: 4342}
+    - Class: 114
+      Script: {instanceID: 4360}
+    - Class: 114
+      Script: {instanceID: 4372}
+    - Class: 114
+      Script: {instanceID: 4380}
+    - Class: 114
+      Script: {instanceID: 4406}
+    - Class: 114
+      Script: {instanceID: 4408}
+    - Class: 114
+      Script: {instanceID: 4424}
+    - Class: 114
+      Script: {instanceID: 4432}
+    - Class: 114
+      Script: {instanceID: 4436}
+    - Class: 114
+      Script: {instanceID: 4440}
+    - Class: 114
+      Script: {instanceID: 4474}
+    - Class: 114
+      Script: {instanceID: 4476}
+    - Class: 114
+      Script: {instanceID: 4492}
+    - Class: 114
+      Script: {instanceID: 4502}
+    - Class: 114
+      Script: {instanceID: 4514}
+    - Class: 114
+      Script: {instanceID: 4520}
+    - Class: 114
+      Script: {instanceID: 4526}
+    - Class: 114
+      Script: {instanceID: 4530}
+    - Class: 114
+      Script: {instanceID: 4540}
+    - Class: 114
+      Script: {instanceID: 4552}
+    - Class: 114
+      Script: {instanceID: 4554}
+    - Class: 114
+      Script: {instanceID: 4572}
+    - Class: 114
+      Script: {instanceID: 4578}
+    - Class: 114
+      Script: {instanceID: 4586}
+    - Class: 114
+      Script: {instanceID: 4588}
+    - Class: 114
+      Script: {instanceID: 4594}
+    - Class: 114
+      Script: {instanceID: 4604}
+    - Class: 114
+      Script: {instanceID: 4608}
+    - Class: 114
+      Script: {instanceID: 4614}
+    - Class: 114
+      Script: {instanceID: 4622}
+    - Class: 114
+      Script: {instanceID: 4628}
+    - Class: 114
+      Script: {instanceID: 4636}
+    - Class: 114
+      Script: {instanceID: 4644}
+    - Class: 114
+      Script: {instanceID: 4646}
+    - Class: 114
+      Script: {instanceID: 4652}
+    - Class: 114
+      Script: {instanceID: 4654}
+    - Class: 114
+      Script: {instanceID: 4664}
+    - Class: 114
+      Script: {instanceID: 4684}
+    - Class: 114
+      Script: {instanceID: 4698}
+    - Class: 114
+      Script: {instanceID: 4704}
+    - Class: 114
+      Script: {instanceID: 4708}
+    - Class: 114
+      Script: {instanceID: 4712}
+    - Class: 114
+      Script: {instanceID: 4722}
+    - Class: 114
+      Script: {instanceID: 4726}
+    - Class: 114
+      Script: {instanceID: 4734}
+    - Class: 114
+      Script: {instanceID: 4736}
+    - Class: 114
+      Script: {instanceID: 4746}
+    - Class: 114
+      Script: {instanceID: 4752}
+    - Class: 114
+      Script: {instanceID: 4754}
+    - Class: 114
+      Script: {instanceID: 23014}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
+  scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: bcaee4c2a83047257b5f47d6ed264b75
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 040dd48e3a027d5424519a5fa2009df4
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 0dbc3be398b4869a5c8d0d8481ee402c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: c1d728126ff1918728036c59106d32b2
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 22f526260da59db74e0e8b6e869a275b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.ActivityList
+    className: UIActivityList_ActivityInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UIElements
+    className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 392f35695141770a493315a344cadb24
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_TitlesTab_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 824e8d4cb47ffd88ddf959dbd4526585
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: DynamicJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 5142c230002a6e69215b8b4da81dee49
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.ItemSlotBox
+    className: UIListItemBox
+  - hash:
+      serializedVersion: 2
+      Hash: ab93ee23c4d8262ce05e7e28cfc8955f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.SkillBar
+    className: UISkillBar_SkillButton
+  - hash:
+      serializedVersion: 2
+      Hash: 8abb0aafcc08a641da35cbb8f04d8a6b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.GuildRequestList
+    className: UIGuildRequestList_Frame
+  - hash:
+      serializedVersion: 2
+      Hash: 4a515ddf304a34ae068bfa2d088ad7df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.FactionBattle
+    className: UIFactionBattle_Round_RoundInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 309f02b65ed52da9b21621a21873f6ad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Main
+    className: UiGuildEx_Main_ChangeNotification
+  - hash:
+      serializedVersion: 2
+      Hash: c3879fa4a1a80136491c5bc570f752ca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISystemSetting
+  - hash:
+      serializedVersion: 2
+      Hash: 4ec6f692a7f0ae0386b439674e8c521a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIEventBroadboardMini
+  - hash:
+      serializedVersion: 2
+      Hash: 5924df2bcbcb2d56ddce7e6b065c378b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISelectPet
+  - hash:
+      serializedVersion: 2
+      Hash: 77aaaaa51f7a8d8ff333a879741e47d2
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 9c76426a640448074b5e387bac39c40f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VLTK.UI.Main.AutoFight.AutoPickUpItem
+    className: UIAutoFight_AutoPickItemTab_SelectNoPickItemFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Logic
+    className: KTStoryBoard
+  - hash:
+      serializedVersion: 2
+      Hash: 766d4b644041246c9c268c9bd38f37c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIShop
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: DropItemAnimation2D
+  - hash:
+      serializedVersion: 2
+      Hash: f727e56fb7310443b3fe6b248ea40376
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.AskToJoinList
+    className: UIGuildEx_AskToJoinList_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: cc0bce9a0d7d6315e7063c45bb4f6fd5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.NearbyPlayer
+    className: UINearbyPlayer_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: BulletExplodeEffectAnimation2D
+  - hash:
+      serializedVersion: 2
+      Hash: d961df5014b54c88df802c65bd50fc19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Chat
+    className: UIChat_SelectStickerFrame_StickerButton
+  - hash:
+      serializedVersion: 2
+      Hash: 7fc0318ccfcc2009b54a15e51647e51c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_WorldMapTab_WayPortInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 21fca5689d0f6881a184e6101ba2f8df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISecondPassword_Main
+  - hash:
+      serializedVersion: 2
+      Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 92e5af1d7f09197abc004bdc4db86ed8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet.OtherRolePet
+    className: UIOtherRolePet_SkillInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory.Animation
+    className: EffectAnimationManager
+  - hash:
+      serializedVersion: 2
+      Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 6d568fc9c470c79fbcffd9515fd8dbef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainGame
+  - hash:
+      serializedVersion: 2
+      Hash: 09fa3a6dd9f29e5da397f104eb30ae23
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_ReputesTab
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: Joystick
+  - hash:
+      serializedVersion: 2
+      Hash: affa467b63967f5f56ef8f01a8d672dd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.MemberList
+    className: UIGuildEx_MemberList_MemberInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 26c3d8618b7bb85f77e3fa241213777e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.Recharge
+    className: UIWelfare_Recharge_TotalConsume
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 280f9c5fae990c4680e246e0b1eaf673
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIPortableBag
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory.Animation
+    className: MonsterAnimationManager
+  - hash:
+      serializedVersion: 2
+      Hash: c0e80fd65617fc23c2c0ff8d06e2420e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet
+    className: UIOtherRolePet
+  - hash:
+      serializedVersion: 2
+      Hash: d1330fdbbb886483818e737e9bba134b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_Dedicate
+  - hash:
+      serializedVersion: 2
+      Hash: 86db2c05e869731be82c0c35790fb67e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_CrossServerMapTab
+  - hash:
+      serializedVersion: 2
+      Hash: eb8e9d3e8449a3373df1d12b3f772634
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIJoyStick
+  - hash:
+      serializedVersion: 2
+      Hash: b3a421de7b29987dc9852fb808e019ca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet.Main
+    className: UIPet_MoreHintPopup
+  - hash:
+      serializedVersion: 2
+      Hash: 2f0f2fb308167fc6524895bddd1beaa6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIFriendBox
+  - hash:
+      serializedVersion: 2
+      Hash: e91c93ad7978a12bb00a6aac0b3e28df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UINearbyPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 4be030530c12f830b37d5a9c0a3990bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.PlayerShop
+    className: UIPlayerShop_Sell_AddItemToSellFrame
+  - hash:
+      serializedVersion: 2
+      Hash: e78765d93b37fe61ed100bbbc2be3ac6
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 253a1a946fec7528c1e20752ba7037fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI
+    className: CanvasManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory.UIManager
+    className: UIHintItemManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory.AnimationManager
+    className: BulletAnimationManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5d9fb8964af4a2ee979a76afa04573af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: GroupColor
+  - hash:
+      serializedVersion: 2
+      Hash: e016ecb2934df7fb1b600bdbce762a4c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.RadarMap
+    className: UIRadarMap_QuickItemsBox
+  - hash:
+      serializedVersion: 2
+      Hash: f10373b234967c9ac064b60ff9b7889a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_WorldMapTab_World_AreaInfo
+  - hash:
+      serializedVersion: 2
+      Hash: a886e7865814a202412c138e6cb01357
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Debug
+    className: PrintBlock
+  - hash:
+      serializedVersion: 2
+      Hash: a366f48b0ee4c0fc2ed79901208895a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight
+    className: UIAutoFight_AutoPickUpItemTab
+  - hash:
+      serializedVersion: 2
+      Hash: 136580f098fe50790bc17f3b3fc09c52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.Recharge
+    className: UIWelfare_Recharge_EverydayRecharge
+  - hash:
+      serializedVersion: 2
+      Hash: a97bdd74a165fd4f5caf6d27c59d3bfb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SeashellCircle
+    className: UISeashellCircle_Item
+  - hash:
+      serializedVersion: 2
+      Hash: fa7ae96683a2dd73853fe57777c6643b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TokenShop
+    className: UITokenShop_ConfirmBuyFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 216091f50900f8af4588028f36b55cda
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: Monster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: KTUIResourceManager
+  - hash:
+      serializedVersion: 2
+      Hash: 3382ae48e47a6e027cb7c5da12743968
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.NPCDialog
+    className: UINPCDialog_Selection
+  - hash:
+      serializedVersion: 2
+      Hash: 0bffad760d5647e29bb864f89f69a234
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Friend
+    className: UIFriendBox_AskToBeFriendFrame_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: b51267fea5abbdeb64e7dae4b3bdaca8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Entities.LoadObject
+    className: Map
+  - hash:
+      serializedVersion: 2
+      Hash: 4266f9b712b1154329ad6b04db2ca0b3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MessageBox
+    className: UIMessageBox
+  - hash:
+      serializedVersion: 2
+      Hash: c8bd72b30e33eb6a4f6ef0ab47ba2a6a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISplitCrystalStone
+  - hash:
+      serializedVersion: 2
+      Hash: ec14e509982e60629989e1842080a921
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIRolePart
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory.Animation
+    className: CharacterAnimationManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5be943c85293f66b334ce1c46679cc02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UICargoCarriageTaskInfo
+  - hash:
+      serializedVersion: 2
+      Hash: e5d378d0e44d0c3dd2fefb23476ada92
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.RoleManager
+    className: UIRoleManager
+  - hash:
+      serializedVersion: 2
+      Hash: 10f9e1dcb51282f251ea2ef26bc9d2d9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.CoreUI
+    className: UIMonsterHeader
+  - hash:
+      serializedVersion: 2
+      Hash: 2fbab513189d3df04ecaf213decc4f3d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SelectItem
+    className: UISelectItem_ButtonItem
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UIElements
+    className: PanelEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: c5c77c12cbcff86dd65eee56f1ebe9cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.RolePart
+    className: UIRolePart_BuffList
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: AudioRecorder
+  - hash:
+      serializedVersion: 2
+      Hash: d295d38a93e5f5d2d5b5aa214098f38f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISuperToolTip
+  - hash:
+      serializedVersion: 2
+      Hash: 79b2d57c1c16d2ca060f6b5ae45a2849
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI
+    className: UINotificationTip
+  - hash:
+      serializedVersion: 2
+      Hash: 2f24e622f71b70d0f7e100ac590c1b3d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIAutoFight
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: FixedJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: a3eb14b7e0a4bbecd6035a24add38861
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIGuildRequestList
+  - hash:
+      serializedVersion: 2
+      Hash: 101b82f44f40503a1134d06247554180
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIYouLong
+  - hash:
+      serializedVersion: 2
+      Hash: ba9fac8a8d403bf929e3fa42b7a14cdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIOtherRoleInfo
+  - hash:
+      serializedVersion: 2
+      Hash: f9adedbb5c3423bc260cbe24ab7ce10c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIBag
+  - hash:
+      serializedVersion: 2
+      Hash: 3ffc9a898bb0e1aadcf9c1f3cabb56db
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.CargoCarriageTaskInfo
+    className: UICargoCarriageTaskInfo_Frame
+  - hash:
+      serializedVersion: 2
+      Hash: 14fa08cb483c003d8da88390d55f602e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIWelfare
+  - hash:
+      serializedVersion: 2
+      Hash: 9dac16f3efc511835ac976dfae55f580
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: VariableJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 800c50acba124432abb4cf0d47202e06
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 1ddd2bfcb22774ad93df27900b9d2b46
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISetExpSkill
+  - hash:
+      serializedVersion: 2
+      Hash: 7b30e7cac6de7adef716e0c567b0f08b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.BottomBar.SkillBar
+    className: UISkillBar_SelectAuraSkill_SkillButton
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 2e8e3787b8745e4fbe2e1495067458d8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TokenShop.StoreProduct
+    className: UITokenShop_StoreProductBuy
+  - hash:
+      serializedVersion: 2
+      Hash: 11f5195127c7f8b600265ec2a1f95ce9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.SeriesLogin
+    className: UIWelfare_SeriesLogin_ListAward_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 146b2d5262affcec16ca622ba62bc53a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.BrowsePlayer
+    className: UIBrowsePlayer_PlayerLocationReport
+  - hash:
+      serializedVersion: 2
+      Hash: 6c062a06fbe8993acfebc8dea5bd8801
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: AutoFarmAreaDeco
+  - hash:
+      serializedVersion: 2
+      Hash: 8f4a504ce237b699fd068174784a6ec7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIMainButtons
+  - hash:
+      serializedVersion: 2
+      Hash: 3701db512b2a6a1b6898a40a1f0ec888
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight.Component
+    className: UIAutoFight_SelectSkill_SkillButton
+  - hash:
+      serializedVersion: 2
+      Hash: 8eba650714ff65c0f2658dbbe5ccdcac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.InvitedToTeamList
+    className: UIInvitedToTeamList_Frame
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIFirstChild
+  - hash:
+      serializedVersion: 2
+      Hash: 91d258529db2b5060a913f2afcea1a21
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner
+    className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 348cbfe84dc408122cdbbd3afe3357cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIEquipStarIcon
+  - hash:
+      serializedVersion: 2
+      Hash: 30cf37ee065de96d5d58cf397d6b0829
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight
+    className: UIAutoFight_SkillButton
+  - hash:
+      serializedVersion: 2
+      Hash: 297cd89e0a9f6920c3cb4137575db9d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Dedicate
+    className: UIGuildEx_Dedicate_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 40b7b6f9435513cf5a7579c585b86230
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_AttributesTab
+  - hash:
+      serializedVersion: 2
+      Hash: 317b2fbc9a5d819e1cbf1b5c46ba0779
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIPetPart
+  - hash:
+      serializedVersion: 2
+      Hash: 1bfa3d1bec7fa4c88a50983ac8a421f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: FadeAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: e504291dee3fcaf5cb27fd6c72c19086
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SytemNotification
+    className: UISystemNotification
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Loader
+    className: LoadVersion
+  - hash:
+      serializedVersion: 2
+      Hash: 26103d8b309f3c08885358c1c029acc8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIButtonSprite
+  - hash:
+      serializedVersion: 2
+      Hash: 6fa45bf7bf745a553bdf7710ce720042
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIBottomBar
+  - hash:
+      serializedVersion: 2
+      Hash: 53fbb601652afdc4311776ab226a8fa2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.Recharge
+    className: UIWelfare_Recharge_FirstRecharge
+  - hash:
+      serializedVersion: 2
+      Hash: 12151fff3de78e8c8f24c94d6df0e04a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Mail
+    className: UIMailBox_Mail
+  - hash:
+      serializedVersion: 2
+      Hash: fc4c0806cd402d247979d4b94fefd37a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIFadeOutText
+  - hash:
+      serializedVersion: 2
+      Hash: e1033d07cba73372a4ccae5b02c415c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.SevenDayLogin
+    className: UIWelfare_SevenDayLogin_SlotItemBox
+  - hash:
+      serializedVersion: 2
+      Hash: b0fec69d0a8ff4b7bfaf342463ca18eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare
+    className: UIWelfare_Recharge
+  - hash:
+      serializedVersion: 2
+      Hash: 994670202cf88e064556cd0485207525
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Crafting
+    className: UICrafting_CraftingItem
+  - hash:
+      serializedVersion: 2
+      Hash: c506ed8e04e72f2336454f832ea7e42c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.LevelUp
+    className: UIWelfare_LevelUp_ListAward_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 7c6760568644cec99ddb45cb24cde287
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GMCommand
+    className: UIGMCommand_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 7ed42d78365c72af62c94c0f8ccc957c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_TitlesTab
+  - hash:
+      serializedVersion: 2
+      Hash: 652588ab198db72ae526d123017198bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIGMCommand
+  - hash:
+      serializedVersion: 2
+      Hash: 5ea5d88688e3f04ac31c78049035cb59
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Shop
+    className: UIShop_SellAndBuyBackTab_ItemPrefab
+  - hash:
+      serializedVersion: 2
+      Hash: 4b5ebac15eded85a2a9369384846bd20
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIExchange
+  - hash:
+      serializedVersion: 2
+      Hash: f4fec2eb30dac23e8bcc9208f128b36b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIRadarMap
+  - hash:
+      serializedVersion: 2
+      Hash: 680fd350fe8c1b244987191a5396d17e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: Character
+  - hash:
+      serializedVersion: 2
+      Hash: d83326912897a68922fca999f9f32cfb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.TeamBattle
+    className: UITeamBattle_RankingBoard_TeamInfo
+  - hash:
+      serializedVersion: 2
+      Hash: c5672259c7cf0219fafab089b485d871
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.BrowsePlayer
+    className: UIBrowsePlayer_PlayerInfoPopup
+  - hash:
+      serializedVersion: 2
+      Hash: 1798d4f3f5b78f2d1a35a72eacdfaab0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Bag
+    className: UIBag_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 45a2154c9f8fa9699936dd11f84f759f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIPetFace
+  - hash:
+      serializedVersion: 2
+      Hash: 8be90f0cd463b7df757b040e16271039
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISetHandSkill
+  - hash:
+      serializedVersion: 2
+      Hash: 509623b0940c9ec64e5b7e1fde7f9a26
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISplitEquipCrystalStones
+  - hash:
+      serializedVersion: 2
+      Hash: 1798d4f3f5b78f2d1a35a72eacdfaab0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.PortableBag
+    className: UIPortableBag_Item
+  - hash:
+      serializedVersion: 2
+      Hash: a93ef999389c94323daf0912c6e2de94
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIDecorationText
+  - hash:
+      serializedVersion: 2
+      Hash: 68582d19eeebdd61d33df8c6cb738046
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet
+    className: UIPet_StudySkill
+  - hash:
+      serializedVersion: 2
+      Hash: 1088d9bdaeea1de8831e5a8aac548ad5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LuckyCircle
+    className: UILuckyCircle_Cell
+  - hash:
+      serializedVersion: 2
+      Hash: 1623e416bd101165b10795c608d85070
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component.Skill
+    className: Bullet
+  - hash:
+      serializedVersion: 2
+      Hash: b764225420a17ed9fad0e6da53a51637
+    assemblyName: Elringus.SpriteGlow.Runtime.dll
+    namespaceName: SpriteGlow
+    className: SpriteGlowEffect
+  - hash:
+      serializedVersion: 2
+      Hash: b871d699c0d5f533a9ec20c8b0410d50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: SpriteZoom
+  - hash:
+      serializedVersion: 2
+      Hash: 0b7cfaf2234e95817f53d76aa4974a64
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: AudioRecorderAndPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 4290ffe4dfb080c6f74a60e9b6a68f95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SkillQuickKeyChooser
+    className: UISkillQuickKeyChooser
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Logic.BackgroundWork
+    className: KTBackgroundWorkManager
+  - hash:
+      serializedVersion: 2
+      Hash: a1aa98c78061c6f03a8c124cda576e67
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 681e951a89b49db924f1a79fa1ff99e4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_Main
+  - hash:
+      serializedVersion: 2
+      Hash: 6cc6e2ee6f5ab5b0401cb2fa6204073b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.FactionBattle
+    className: UIFactionBattle_Round
+  - hash:
+      serializedVersion: 2
+      Hash: e326d5e71b6039530106bf8da54f6da4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Chat
+    className: UIChat_VoiceChatFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 071a46f691853645a8cc57e6bd34aa5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight
+    className: UIAutoFight_AutoPKTab
+  - hash:
+      serializedVersion: 2
+      Hash: 9201604c3dc92027e0b1111e837870a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TokenShop
+    className: UITokenShop_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 7572213b8070f11969b57a28c3c96e4e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory
+    className: KTUIElementPoolManager
+  - hash:
+      serializedVersion: 2
+      Hash: cf9f5cf2c3145a37ac07f00e50e460f9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory.ObjectsManager
+    className: KTVoiceChatManager
+  - hash:
+      serializedVersion: 2
+      Hash: b40719e4ce641f3387a7a9554dc6c063
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_ReputesTab_ReputeCategory_Item
+  - hash:
+      serializedVersion: 2
+      Hash: cc4274b586df3c02688bac01b88bd16c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: fe64a45214940b510a0ec79c96d43498
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: f4512205396bc0e1d8c4af8553e83a89
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents
+    className: UITeamBattle_RankingBoard
+  - hash:
+      serializedVersion: 2
+      Hash: 7bf931cb1784587d98d2e458e1023587
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UITabPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.GameFramework.Controls
+    className: PreGameTCPCmdHandler
+  - hash:
+      serializedVersion: 2
+      Hash: f0fb08d7b7311d478c256ade76397d10
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.RolePart
+    className: UIRolePart_PingInfo
+  - hash:
+      serializedVersion: 2
+      Hash: bb0dc680ae88106c1177705d9efa4ec1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: SpriteTrailRenderer
+  - hash:
+      serializedVersion: 2
+      Hash: 760787567e1b60d64a3e421ab83ee14a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: b777a293919129c3cf72d7e407e6ca2f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SecondPassword
+    className: UISecondPassword_Input
+  - hash:
+      serializedVersion: 2
+      Hash: 92f5c07e61b738232eec31f42b0111c3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIHintItemText
+  - hash:
+      serializedVersion: 2
+      Hash: 555886d660e7e6a0144782edb79dca17
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Dedicate
+    className: UIGuildEx_Dedicate_DedicationPerItem
+  - hash:
+      serializedVersion: 2
+      Hash: 20980c5694b3e03b083e079ff3a91bfc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIPlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 9797a9db4f97adc6b5680586dfccfd19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI
+    className: UIDebugConsole
+  - hash:
+      serializedVersion: 2
+      Hash: 55f28cd6b14496dd4bd336292e65d3a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.BrowsePlayer
+    className: UIBrowsePlayer_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 98faf1518251e26c9497491df61f8385
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UISlotSimulation
+  - hash:
+      serializedVersion: 2
+      Hash: e8050181e003e079c745fde92894a9a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIPet
+  - hash:
+      serializedVersion: 2
+      Hash: a917b6856a27cc57e603a640c234769d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TeamFrame
+    className: UITeamFrame_TeamMemberInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Logic
+    className: AutoQuest
+  - hash:
+      serializedVersion: 2
+      Hash: 360428cb4a330643e5094bed2568b948
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UICaptcha
+  - hash:
+      serializedVersion: 2
+      Hash: 6c8e5451c975bdb416efeb67072bf306
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.CoreUI
+    className: UICanvasFlyingText
+  - hash:
+      serializedVersion: 2
+      Hash: 4c7b83b4f966203e9b0bd7b0a0fbe4a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_AskToJoinList
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 58a154282650f13905364d8b6e65fb6f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: VerticalBox
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Logic
+    className: AutoPathManager
+  - hash:
+      serializedVersion: 2
+      Hash: 6269a73cfec9ff6b8ff9f68d4d09b2ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_ReputesTab_ReputeCategory
+  - hash:
+      serializedVersion: 2
+      Hash: f40fedccd4adbc76605bea6d67537e4b
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 219a77af54d4fcf1a238cdcb4172b052
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Friend
+    className: UIFriendBox_AskToBeFriendFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 8fbc134fd506d97c845cf2b715231396
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.Threading
+    className: KTTimerManager
+  - hash:
+      serializedVersion: 2
+      Hash: b5e48799a3465bb8e5aa38ba9ca6bba4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight
+    className: UIAutoFight_AutoFarmTab
+  - hash:
+      serializedVersion: 2
+      Hash: 3089cf993eb10915786641b125701c23
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIInputEquipAndMaterials
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory.UIManager
+    className: UIBottomTextManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5f4f964ce64ae05c0df8adcee92f6b2c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: LockRotation
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Loader
+    className: LoadSavedAccountInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 6517084a2310ad7b6e3166dbdda91323
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TeamFrame
+    className: UITeamFrame_AskToJoinPlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 1623e416bd101165b10795c608d85070
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component.Skill
+    className: ExplodeEffect
+  - hash:
+      serializedVersion: 2
+      Hash: 3c66753a0bc3aa53182556c1a6a2893d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: BulletAnimation2D
+  - hash:
+      serializedVersion: 2
+      Hash: 32305c57520fa742cd814637e7ba2414
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.PlayerShop
+    className: UIPlayerShop_Buy_Item
+  - hash:
+      serializedVersion: 2
+      Hash: c206fd2b1b72561411e6449a0e01879e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_Battle
+  - hash:
+      serializedVersion: 2
+      Hash: 902c433b1d62e69f91368f702e7c6542
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: SwingSprite
+  - hash:
+      serializedVersion: 2
+      Hash: 935adbf1945973dc29c6876b1a6f183c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UISkillBar
+  - hash:
+      serializedVersion: 2
+      Hash: 2121cbc582dc2241a4546a2c98ea3e75
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: SelectTargetDeco
+  - hash:
+      serializedVersion: 2
+      Hash: 419de613d03aa08900de7a1be5da0e26
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.PlayerShop
+    className: UIPlayerShop_Sell_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 83f06eb3c63897fbc8822fcbfa7b2aa9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_WorldMapTab_PlaceInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 246925d1767b2d6d7736d0f852ff1c4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TopRanking
+    className: UITopRanking_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: d304fe15174e83776b137577f9d73950
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_MemberList
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIHideIfClickedOutSide
+  - hash:
+      serializedVersion: 2
+      Hash: a3225e85caed8a8ba69e5561546e7c41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIInvitedToTeamList
+  - hash:
+      serializedVersion: 2
+      Hash: e09e8bebc0fcd32bb8af1287a6b44816
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: dd153f9e4b97524a165fad121ceac5ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents
+    className: UIColonyDispute_Achievement
+  - hash:
+      serializedVersion: 2
+      Hash: 6da04808ba62b20edfa63f293ed3a49d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIPlayerPray
+  - hash:
+      serializedVersion: 2
+      Hash: d5b24a4b52564dda73769f7b7bc125aa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.GuildList
+    className: UIGuildEx_GuildList_GuildInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayZone
+  - hash:
+      serializedVersion: 2
+      Hash: b751cdbdc1b143850b78058f88539f2a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Captcha
+    className: UICaptcha_ToggleAnswer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Loader
+    className: KTDownloadManager
+  - hash:
+      serializedVersion: 2
+      Hash: f7858108331b563fb41b80b729297acd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 496cc7c67d56bbb27bb3ca8324be55f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet.OtherRolePet
+    className: UIOtherRolePet_PetInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 5dea360fb0b147724ac344e6f399c2f3
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 3be1fe87e6522727cec80aac791e52f4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_AttributesTab_PropertyInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 0a1eb9fe3dc243d65744e562391f5820
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIPlayerShop_Buy
+  - hash:
+      serializedVersion: 2
+      Hash: 57be64fcdc172379ab258551748a2f01
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.ColonyDispute
+    className: UIColonyDispute_Achievement_FightMapInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 1d6753f36d027d2b3172910bfe05a0f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIAnimatedSprite
+  - hash:
+      serializedVersion: 2
+      Hash: 92e5af1d7f09197abc004bdc4db86ed8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet.Main
+    className: UIPet_SkillInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 8e6ceabfd38a184413d69b7db56c89cc
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools
+    className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 5eed5c07f2d41e9ecdaea87d1e3c2ee8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.InputBox
+    className: UIInputString
+  - hash:
+      serializedVersion: 2
+      Hash: 4260a916f2f677085a42e2fb98983ede
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory
+    className: KTObjectPoolManager
+  - hash:
+      serializedVersion: 2
+      Hash: 605afd8dea6c52c453538b1511638e1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: CharacterPreview
+  - hash:
+      serializedVersion: 2
+      Hash: 8a8bee72da750929b4d66258834e917e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Main
+    className: UIGuildEx_Main_ItemInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 0fd6822f6177297bd0eb4d83cc7a9030
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: dea1b266a046f7fb4015d1dd78ce929b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Shop
+    className: UIShop_SellAndBuyBackTab
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: CharacterAnimation2D
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 2452908b47a2b8f7d4b90d0aba6d1ff4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Chat
+    className: UIChat_SelectStickerFrame
+  - hash:
+      serializedVersion: 2
+      Hash: e0033d2b66360ed88d435a6fd76642f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIItemSlotBox
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: ClickableCollider2D
+  - hash:
+      serializedVersion: 2
+      Hash: 89b77269d95d2c8f14b34974d36abf42
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare
+    className: UIWelfare_LevelUp
+  - hash:
+      serializedVersion: 2
+      Hash: 928a7d10bfffe2c38df566c10f42f732
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Shop
+    className: UIShop_BuyTab_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 4fd8bf02e3089425d3502e26c44ba31a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 1cd5b76efbcc9f4f747f6acafdd04bd2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents
+    className: UISpecialEventButtons
+  - hash:
+      serializedVersion: 2
+      Hash: c8a21d8d709c1dc2127849f5d6f6ecc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.EventBroadboardMini
+    className: UIEventBroadboardMini_Content
+  - hash:
+      serializedVersion: 2
+      Hash: 968d96faf0f780575c4c34b372fe5451
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: GroupScale
+  - hash:
+      serializedVersion: 2
+      Hash: 548cb052bf67cda9875b736917b0384b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.BottomBar.SkillBar
+    className: UISkillBar_SelectAuraSkill
+  - hash:
+      serializedVersion: 2
+      Hash: 1e192a7556b303982026d7d6369eb930
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.InputBox
+    className: UIInputNumber
+  - hash:
+      serializedVersion: 2
+      Hash: 58919f12cdbf57f824e8d8f70db64625
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet.Main
+    className: UIPet_PetInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 96570b8c68da313af214d68edf8eed14
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIBrowseOtherRoleInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 58d839451ad9d0a0aebae320d4f46cd9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UITopRanking
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Logic
+    className: KTAutoPickUpItemAround
+  - hash:
+      serializedVersion: 2
+      Hash: 2f71debfe1ff73595cffcafaed342234
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.CoreUI
+    className: UIMinimapReference
+  - hash:
+      serializedVersion: 2
+      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BasePlayZone
+  - hash:
+      serializedVersion: 2
+      Hash: f7728dfd48b2c4c934167a4bed46fda3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.RadarMap
+    className: UISelectItem
+  - hash:
+      serializedVersion: 2
+      Hash: 459623b1eb233f489e626aa00ac33a48
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SuperToolTip
+    className: UISuperToolTip_Component
+  - hash:
+      serializedVersion: 2
+      Hash: 7fab6b1d4da43aec927c512143e4ef7a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.GuildRequestList
+    className: UIGuildRequestList_Frame_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 11f5195127c7f8b600265ec2a1f95ce9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.MonthCard
+    className: UIWelfare_MonthCard_ItemBox
+  - hash:
+      serializedVersion: 2
+      Hash: 54e3fdf7189a1211bbe57d5287f6934b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UINPCDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 6324f795faa820a019297e1727f800c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIMiniTaskAndTeamFrame
+  - hash:
+      serializedVersion: 2
+      Hash: edd6158d02dd8b872047f6f6b4cf88c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory
+    className: KTObjectsManager
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: efec7517cf4c2bf4df1d9e181dfce189
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UITaskBox
+  - hash:
+      serializedVersion: 2
+      Hash: 07b09df11da98e747099196dfc82f49c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: DebugObject
+  - hash:
+      serializedVersion: 2
+      Hash: 875ed3dbc5af88dbb75a99909d063b82
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame
+    className: UIMiniTaskAndTeamFrame_MiniTaskBox
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: MonsterAnimation2D
+  - hash:
+      serializedVersion: 2
+      Hash: 791c1a01ec369b8081a7a1d8705304d0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TopRanking
+    className: UITopRanking_AwardBox
+  - hash:
+      serializedVersion: 2
+      Hash: 1d27f5c3485aec6c5149783c03fb8e87
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.RolePart
+    className: UIRolePart_PKSelectionBox
+  - hash:
+      serializedVersion: 2
+      Hash: 4eeea56e870f3f14e537dc62c442ec50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_GuildList
+  - hash:
+      serializedVersion: 2
+      Hash: 6a9458002dbcc3cbcb9628998dd489eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SkillTree
+    className: UISkillTree
+  - hash:
+      serializedVersion: 2
+      Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 6cebc2a5a84324bc41eafde574370c8f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.LoginGame
+    className: UILoginGame
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: f5288388eb529c6597ea312a39f34da8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.UICore
+    className: UIItemHeader
+  - hash:
+      serializedVersion: 2
+      Hash: 7bf54798c9e00a642c3baa471ad214ab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LuckyCircle
+    className: UILuckyCircle_HistoryBox
+  - hash:
+      serializedVersion: 2
+      Hash: dd653d94ab3fb4b9733849717bdc32ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIAdvertisePet
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 28bc62a2c796ccaa7f326c2ea1e0df0b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight
+    className: UIAutoFight_General
+  - hash:
+      serializedVersion: 2
+      Hash: 931271fe3d7ae7fe805f3288465d1d02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.FHLCScoreboard
+    className: UIFHLCScoreboard_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: eb39a63e15c11df879f2870d9b3c0cc4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame
+    className: UIMiniTaskAndTeamFrame_MiniTeamFrame_TeammateInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 251de22c52c9f9d90fa2377615543eae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIDragableObject
+  - hash:
+      serializedVersion: 2
+      Hash: 5b981362c1a7b9f7e59606f1095d8895
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleRemainPoint
+  - hash:
+      serializedVersion: 2
+      Hash: 8d178309ad1027c66d4025d357aedcea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TaskBox
+    className: UITaskBox_Task
+  - hash:
+      serializedVersion: 2
+      Hash: da4face631cb7e3ba4a573d82b796126
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Ranking
+    className: UIRanking_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: d2d324b7141dd0aa3e48285cbec6a6fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.RoleInfo
+    className: UIRoleInfo_PropertiesTab
+  - hash:
+      serializedVersion: 2
+      Hash: 21b9f293f5dea9225130f2eb13dd8d18
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Battle
+    className: UIGuildEx_Battle_MemberListFrame
+  - hash:
+      serializedVersion: 2
+      Hash: bb16c58fbd457c6b0867c5e93c2a4e85
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.SelectServer
+    className: UISelectServer
+  - hash:
+      serializedVersion: 2
+      Hash: 27ec3360f0c0a6803ba71cc3106480b8
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 5b2a320eaa5085358e6a54a611087a36
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIGameResDownload
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 1726c93d84faa3b5b828390547278716
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight
+    className: UIAutoFight_SelectSkill
+  - hash:
+      serializedVersion: 2
+      Hash: c8a21d8d709c1dc2127849f5d6f6ecc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIRichText
+  - hash:
+      serializedVersion: 2
+      Hash: d90eaa9aacf5ea15e2d5fd610276fac7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Friend
+    className: UIFriendBox_InteractionBox
+  - hash:
+      serializedVersion: 2
+      Hash: 83f06eb3c63897fbc8822fcbfa7b2aa9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_CrossServerMapTab_MapInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 8d19c745a225d26412be66ff58f55ffc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIAdvertiseItem
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: 528cdf34be3ea34f2be58f1859e7c641
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.RolePart
+    className: UIRolePart_BuffDetailBox
+  - hash:
+      serializedVersion: 2
+      Hash: 1165ad9ca8a4b2f501b44753ea1c8df1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.AskToJoinList
+    className: UIGuildEx_AskToJoinList_AutoAcceptRule
+  - hash:
+      serializedVersion: 2
+      Hash: cbe12c02d9cd75a143da72fd1a152163
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIMonsterFace
+  - hash:
+      serializedVersion: 2
+      Hash: 501b547ea07acd26747bd3187a5f2349
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: SpriteFromAssetBundle
+  - hash:
+      serializedVersion: 2
+      Hash: 9f89a2790d312c07a285e944ae4c6867
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SkillTree
+    className: SkillTree_SkillItemBox
+  - hash:
+      serializedVersion: 2
+      Hash: c517163b7ac3cadb0ed63b7dac29b204
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.SelectServer
+    className: UISelectServer_ToggleGroupServer
+  - hash:
+      serializedVersion: 2
+      Hash: d89d2251397bf91dcb366ad9af111262
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.RolePart
+    className: UIRolePart_BuffInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 43f6c8d52d2661c8e8e7187c9fd6218f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIEquipRefineToFS
+  - hash:
+      serializedVersion: 2
+      Hash: 735a7499c4e4f94faa9d162bc261c92e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.NPCDialog
+    className: UINPCDialog_ItemSelection
+  - hash:
+      serializedVersion: 2
+      Hash: 323caf79d61afdeece602b753586d868
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Battle
+    className: UIGuildEx_Battle_MemberListFrame_MemberInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 80873d9251e4819e43b0c8c0520572da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SeashellCircle
+    className: UISeashellCircle_AwardStageInfo
+  - hash:
+      serializedVersion: 2
+      Hash: f682f990067dee8f9445f8174e66289c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control
+    className: LoginSceneManager
+  - hash:
+      serializedVersion: 2
+      Hash: 0cb1450c310b6a76b75d4ba750ef75fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.SongJinRankingBoard
+    className: UISongJinRankingBoard_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 92ff8c5aea91439f36003576f500ddd7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIHintButton
+  - hash:
+      serializedVersion: 2
+      Hash: 19a6d0a2656657d81e6509c0d824919b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIFlicker
+  - hash:
+      serializedVersion: 2
+      Hash: 1623e416bd101165b10795c608d85070
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: Effect
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: Map
+  - hash:
+      serializedVersion: 2
+      Hash: c6aebcf74776bbd1a0d86607d245c7b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UITokenShop
+  - hash:
+      serializedVersion: 2
+      Hash: fa3a7a14563376a48f666ab112f2963f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.InvitedToTeamList
+    className: UIInvitedToTeamList_Frame_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: b08286dcf4c5dac7eff6f6146ec8b659
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: FitCollider2D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 134322c9293c1896357cce271b819ce4
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 2ac18d43e77c75c4aea14a06613b8193
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIBrowsePlayer
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: FloatingJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 496cc7c67d56bbb27bb3ca8324be55f5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SelectPet
+    className: UISelectPet_PetInfo
+  - hash:
+      serializedVersion: 2
+      Hash: b4ac128c84ab0f745e960adb0228d311
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIPet_AssignAttributes
+  - hash:
+      serializedVersion: 2
+      Hash: 212e107908a5765f8d530197af5f64f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Challenge
+    className: UIChallenge_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: a81d4c2c1cf3ad164d277d927a193679
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: bc3c2c468bb7e97a6aa77bba957db6da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: AudioPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Loader
+    className: DownloadResource
+  - hash:
+      serializedVersion: 2
+      Hash: a5335fb93f8c936c671035ca4ea07cb7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UICrystalStoneSynthesis
+  - hash:
+      serializedVersion: 2
+      Hash: 8c6cb2530e3d368d955cfdde5f7ae3b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIHoverableObject
+  - hash:
+      serializedVersion: 2
+      Hash: 62e3ff4624136a227bd1c310dbc460b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.RoleManager
+    className: UISelectRole
+  - hash:
+      serializedVersion: 2
+      Hash: 5ac6e1ba2913d7936832f4919d141423
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents
+    className: UIFHLCScoreboard
+  - hash:
+      serializedVersion: 2
+      Hash: 8fae6965a7fe697bc179e3409d0355d7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_TabItem
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: RadarMapCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: FPSCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 40e32880610d6db412f4a0d6e04d8b66
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TokenShop
+    className: UITokenShop_Item_CountDown
+  - hash:
+      serializedVersion: 2
+      Hash: b1dbc9addc918dcfffa3918835e0a3a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: CircleMaker
+  - hash:
+      serializedVersion: 2
+      Hash: 6d765edffe0826f679ee65d6042faf49
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Skill
+    className: UIGuildEx_Skill_ButtonSkill
+  - hash:
+      serializedVersion: 2
+      Hash: a9d6f287ad759c0fc4c2f4a7b060ac7d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.EverydayOnline
+    className: UIWelfare_EverydayOnline_SlotItemBox
+  - hash:
+      serializedVersion: 2
+      Hash: 0714df4163c95d55de27a2d10927f744
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.PlayerShop
+    className: UIPlayerShop_Buy_ConfirmBuyFrame
+  - hash:
+      serializedVersion: 2
+      Hash: e74ef029ed006d520cfb2dab4e468732
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIShortcutNPCTalk
+  - hash:
+      serializedVersion: 2
+      Hash: 8e5fba8adf7bf654be27ff614e7f0637
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.RoleManager
+    className: UISelectRole_RoleInfoToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 363cb49e904d2f41ce748924d15abffe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: Item
+  - hash:
+      serializedVersion: 2
+      Hash: b87e979defc1cee715f37c35f73bf262
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SecondPassword
+    className: UISecondPassword_Change
+  - hash:
+      serializedVersion: 2
+      Hash: d3a0d8b46420a0c3885c563d1854d020
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TaskBox
+    className: UITaskBox_TaskCategory
+  - hash:
+      serializedVersion: 2
+      Hash: 234ded67d5528786b7aa89a70ae89de0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: VideoPlayerEx
+  - hash:
+      serializedVersion: 2
+      Hash: c1105cc20682eb871fee6ae6b001fb7f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Battle
+    className: UIGuildEx_Battle_GuildListFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 0a92b726c77b4860cc0100846f157994
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.AutoFight
+    className: UIAutoFight_AutoSupportTab
+  - hash:
+      serializedVersion: 2
+      Hash: af9d1e87e6997844e20a185f6227158e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityThreading
+    className: UnityBackgroundWorkerManager
+  - hash:
+      serializedVersion: 2
+      Hash: 041528d8c05eaf4cadbe66ebe0609122
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.LevelUp
+    className: UIWelfare_LevelUp_ListAward
+  - hash:
+      serializedVersion: 2
+      Hash: 07d6b9c862e9686d4cd11892285c91c2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UICrafting
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_Shop
+  - hash:
+      serializedVersion: 2
+      Hash: 5840ca0059f27b81efd2f282719798d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: LockZ
+  - hash:
+      serializedVersion: 2
+      Hash: ebe298b02761e0f5689f916d743bfa2f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UISliderText
+  - hash:
+      serializedVersion: 2
+      Hash: aba7b2852ef61d175dd9602e7723d5e5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 5d478d2bf3e06380eacaaf650bcbec96
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VLTK.UI.Main.AutoFight.AutoPickUpItem.SelectNoPickItem
+    className: UIAutoFight_AutoPickItemTab_SelectNoPickItemFrame_ItemInfo
+  - hash:
+      serializedVersion: 2
+      Hash: b8b58fbeeafcdcc11ad2b2ba5a424394
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SetHandSkill
+    className: UISetHandSkill_Button
+  - hash:
+      serializedVersion: 2
+      Hash: d44000c58ce971411195bd45cec1f0cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_Quest
+  - hash:
+      serializedVersion: 2
+      Hash: 4fa0709da10ea1fd5a104665b29db999
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Exchange
+    className: UIExchange_ExchangeBagGrid
+  - hash:
+      serializedVersion: 2
+      Hash: 8c3acea6b8b9dea4528f2daeaa2b3d10
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIAnimatedImage
+  - hash:
+      serializedVersion: 2
+      Hash: 6601cfbd0917e0cf25877f36ee94f372
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_WorldMapTab
+  - hash:
+      serializedVersion: 2
+      Hash: ab48e5b25d1a27b0f86b16cbde74123e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UITeamFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 49b0674a24377a73843d8d2eb2aa2073
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TurnPlate
+    className: UITurnPlate_ItemBox
+  - hash:
+      serializedVersion: 2
+      Hash: 131d25fc902bf0190fad5b8be2767cd7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UILoadingProgress
+  - hash:
+      serializedVersion: 2
+      Hash: b1d28c015ca1ebd3a1a51b9dfe8f7d08
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: MonsterPreview
+  - hash:
+      serializedVersion: 2
+      Hash: 3165968ba45c74472d279ba04455fccb
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 2341c5c814d899a42f75387910b47f79
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GiftCode
+    className: UIGiftCode
+  - hash:
+      serializedVersion: 2
+      Hash: ddab567fbf97fb05ade0bf9b920a0c93
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: FollowTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 720a1aeabbdd19549be36427ad7dab7b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: Teleport
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: cf9fda04b68b0976cbef67fde26ffeef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIDisconnected
+  - hash:
+      serializedVersion: 2
+      Hash: 8476ad7dc6f3dbf75e583ccc5da3a51e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Chat
+    className: UIChat_SelectChannelFrame
+  - hash:
+      serializedVersion: 2
+      Hash: ef5c43f921427d03730f6ea4c848f07d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: d5dbeb0878a146fd0b8058030d3ccc1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.LoadingResources
+    className: UILoadingResources
+  - hash:
+      serializedVersion: 2
+      Hash: 87ad3705a58f19c47136728d4a6e9c47
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 1e3f9ff22e1b1cc143f57f2718122f19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.UICore
+    className: UISpriteHPBar
+  - hash:
+      serializedVersion: 2
+      Hash: 5fade3e9c174f382cc977b43e257b2de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Revive
+    className: UIReviveFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 56527208dd188bbbbfa8476a6dc890a7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Money
+    className: UIMoneyBox
+  - hash:
+      serializedVersion: 2
+      Hash: 4e8b5ddbe128f602672b55042f6a7a1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.RoleManager
+    className: UICreateRole
+  - hash:
+      serializedVersion: 2
+      Hash: b50506a618fe3dcc922e90c6aaba557d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_LocalMapTab
+  - hash:
+      serializedVersion: 2
+      Hash: eb4349ed9fdd0706543f17a1110f3bcd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UITopFunctionButtons
+  - hash:
+      serializedVersion: 2
+      Hash: 3701db512b2a6a1b6898a40a1f0ec888
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SkillQuickKeyChooser
+    className: UISkillQuickKeyChooser_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 227d3d56356f0d9a5b80f39b5293d90e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIPlayerShop_Sell
+  - hash:
+      serializedVersion: 2
+      Hash: c381cc5519dd591104f8125bb5c5118f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Battle
+    className: UIGuildEx_Battle_MemberInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 3d73cb94cb5480ee247b4fb03e50a654
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIProgressBar
+  - hash:
+      serializedVersion: 2
+      Hash: 4edfdf88ca48170bc21eda17942e2b26
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_CreateNew
+  - hash:
+      serializedVersion: 2
+      Hash: ffe24a07b7e0a45e318f7dcba82e8d3f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SecondPassword
+    className: UISecondPassword_Set
+  - hash:
+      serializedVersion: 2
+      Hash: e27ea9fd2e02246df97e604475d4ca39
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIOtherRoleFace
+  - hash:
+      serializedVersion: 2
+      Hash: 40e32880610d6db412f4a0d6e04d8b66
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Shop
+    className: UIShop_BuyTab_Item_CountDown
+  - hash:
+      serializedVersion: 2
+      Hash: 6980e81ddc615a861309d2d659cc3760
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 786fdc504969b7e9ab1a20acf351e134
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.Recharge
+    className: UIWelfare_Recharge_TotalRecharge
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: EffectAnimation2D
+  - hash:
+      serializedVersion: 2
+      Hash: 167b5ca925c23d16e7490512bb3f55bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet
+    className: UIPetInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 80dbfef1b4ccd53f6cd850464c46dbb8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap_LocalMapTab_PointInfo
+  - hash:
+      serializedVersion: 2
+      Hash: d5a770f60bbabd42268a93276b8e7959
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Shop
+    className: UIShop_BuyTab
+  - hash:
+      serializedVersion: 2
+      Hash: fc07918d87ea8f69597431141517b4d2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: UIToggleSprite
+  - hash:
+      serializedVersion: 2
+      Hash: eefcdd279bcc08db3c0d4124df35acb4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare
+    className: UIWelfare_SeriesLogin
+  - hash:
+      serializedVersion: 2
+      Hash: 207a1dcee9771cb10d31f7d86560beaf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIControlButtons
+  - hash:
+      serializedVersion: 2
+      Hash: 6d2632d2fa490cfb3f85ab547196d304
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame
+    className: UIMiniTaskAndTeamFrame_MiniTaskBox_TaskInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 4ce90340b3cc42128193992cbd6c52bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.CoreUI
+    className: UIRoleHeader
+  - hash:
+      serializedVersion: 2
+      Hash: 75de60bccbd35c2e82026d4a60733734
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 5e61c5be39abb6d5cec4d037caaa9142
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: 
+    className: MobilePostProcessing
+  - hash:
+      serializedVersion: 2
+      Hash: f3c0d860404e70cc102544b219eb3178
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.PortableBag
+    className: UIPortableBag_Grid
+  - hash:
+      serializedVersion: 2
+      Hash: 4d18185f3f2d66a1e6e12ebba305af37
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: AudioClipFromAssetBundle
+  - hash:
+      serializedVersion: 2
+      Hash: 51953bdec10afe5845fcfd26f2f776bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GameResDownload
+    className: UIGameResDownload_Box
+  - hash:
+      serializedVersion: 2
+      Hash: 6308f3f34d97d9d7b11457f8cb649bbd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Crafting
+    className: UICrafting_ProductItem
+  - hash:
+      serializedVersion: 2
+      Hash: 1ee5d832178b37ed8d4b8d50e7fd9169
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.SelectServer
+    className: UISelectServer_ButtonServerDetails
+  - hash:
+      serializedVersion: 2
+      Hash: e7a73f5f78ba6445195ec23b74a1ce2d
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: b6f4c340f7e275747c79439c49eb5f87
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Control.Component
+    className: WeaponEnhanceEffect_Particle
+  - hash:
+      serializedVersion: 2
+      Hash: fc6b5076eeea4b8f0dfc097783a160a3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityUI
+    className: TargetContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 92e5af1d7f09197abc004bdc4db86ed8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SelectPet
+    className: UISelectPet_SkillInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 09f9e058a1e2ad6794faea477495dbd2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.FactionBattle
+    className: UIFactionBattle_Ranking
+  - hash:
+      serializedVersion: 2
+      Hash: 62220938de5627c801332e5eb4ca9be1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare
+    className: UIWelfare_SevenDayLogin
+  - hash:
+      serializedVersion: 2
+      Hash: 1736eb0ad5ea645746deafee38a87a2c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.TokenShop.StoreProduct
+    className: UITokenShop_StoreProductBuy_Item
+  - hash:
+      serializedVersion: 2
+      Hash: 1827df303b33d7064d7d89dad2454f98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIChatBoxMini
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Loader
+    className: LoadConfig
+  - hash:
+      serializedVersion: 2
+      Hash: 3663c29065b65c7eb742a84e04a712ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI.MiniTaskAndTeamFrame
+    className: UIMiniTaskAndTeamFrame_MiniTeamFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 7c4776b2a13bdbe3204d00a2711c625c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: SpriteGlowAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 430d3221fe3fcff1783d3a5e718c65e8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIRanking
+  - hash:
+      serializedVersion: 2
+      Hash: cb053ad689ad7bd73c8a8e7b05156433
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISignetEnhance
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Logic
+    className: KTAutoPetManager
+  - hash:
+      serializedVersion: 2
+      Hash: c3752c2c079d80e8437596460d9608d0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents
+    className: UISongJinRankingBoard
+  - hash:
+      serializedVersion: 2
+      Hash: 00ae0b89ef3eb93bb94c8d7b3edf0790
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIMailBox
+  - hash:
+      serializedVersion: 2
+      Hash: 92e5af1d7f09197abc004bdc4db86ed8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet.StudySkill
+    className: UIPet_StudySkill_SkillInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 7658f337646f79508333172f9e3ac56f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIEnhance
+  - hash:
+      serializedVersion: 2
+      Hash: 2f4ddf0ea54afade7e92954ce4950ac1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: AnimatedSprite
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab1f974199a844544115a03cc417d4e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIInputItems
+  - hash:
+      serializedVersion: 2
+      Hash: 51ef427d7b70928b0408c8e8d61ad069
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UITurnPlate
+  - hash:
+      serializedVersion: 2
+      Hash: dc3e303241bf9cc518aee5fe0b7a008f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.LoadingGame
+    className: UILoadingGame
+  - hash:
+      serializedVersion: 2
+      Hash: 3c1f9eb0feed08c53112acdf7882845b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.MemberList
+    className: UIGuildEx_MemberList_ApprovePopup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI
+    className: UIFirstScreen
+  - hash:
+      serializedVersion: 2
+      Hash: 189cbb1aeef5c1258120317ce4c75a3a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.FactionBattle
+    className: UIFactionBattle_Ranking_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: c361c1881e67215c43a47c42998410b6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UIStreakKillNotification
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTMonoBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: ee98ec480049e3da5211ce00416c9d14
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: SpriteTransition
+  - hash:
+      serializedVersion: 2
+      Hash: f4a1d3219f010bfd1bbb0dc7997ac88b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UILuckyCircle
+  - hash:
+      serializedVersion: 2
+      Hash: ca1a27457d1bcb49324d72ac3377d1df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Bag
+    className: UIBag_Grid
+  - hash:
+      serializedVersion: 2
+      Hash: c3cdef38f4737c27a8e0a89d708dc776
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Utilities.UnityComponent
+    className: SmoothCamera2D
+  - hash:
+      serializedVersion: 2
+      Hash: 46ad9814505a57b4f446bf9448f5350a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.Recharge
+    className: UIWelfare_Recharge_ItemList
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleHttpTask
+  - hash:
+      serializedVersion: 2
+      Hash: 92e5af1d7f09197abc004bdc4db86ed8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Pet.PetInfo
+    className: UIPetInfo_Skill
+  - hash:
+      serializedVersion: 2
+      Hash: 6c8e5451c975bdb416efeb67072bf306
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.CoreUI
+    className: UIFlyingText
+  - hash:
+      serializedVersion: 2
+      Hash: f7b7580492a68ebc6b0897bd074dfd6a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Ranking
+    className: UIRanking_RankTab
+  - hash:
+      serializedVersion: 2
+      Hash: 3fc7f6f0af038ec1ffbef515478583b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.LoadingMap
+    className: UILoadingMap
+  - hash:
+      serializedVersion: 2
+      Hash: 202060dfe6d4477de91ddcd0800bd5fc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx
+    className: UIGuildEx_Skill
+  - hash:
+      serializedVersion: 2
+      Hash: c8475a976df35a3aece9c4291e515568
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIChallenge
+  - hash:
+      serializedVersion: 2
+      Hash: 0f078ae4a86296147ace577f09ed70b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Shop
+    className: UIShop_BuyTab_ConfirmBuyFrame
+  - hash:
+      serializedVersion: 2
+      Hash: 7f626598b762bb626047a58f16c95f09
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare
+    className: UIWelfare_EverydayOnline
+  - hash:
+      serializedVersion: 2
+      Hash: 907617fe77d5a663ee925aa2d8457ff3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISeashellCircle
+  - hash:
+      serializedVersion: 2
+      Hash: b52c6c0d98b82f0540232e25c49f1733
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Friend
+    className: UIFriendBox_PlayerInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: ec4c1d7d9fe98434976788ebc4ee261e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: ead122b3a3154fe420014b9c1c495b6f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.ItemBox
+    className: UIItemBox
+  - hash:
+      serializedVersion: 2
+      Hash: e27a9ac10424a6aa36e87de65ae6a593
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIChat
+  - hash:
+      serializedVersion: 2
+      Hash: 14731b87b53094d6b252bc03e061fb8d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.LocalMap
+    className: UILocalMap
+  - hash:
+      serializedVersion: 2
+      Hash: 7334df9bdbbe7fb556ffc8c6dac79638
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SetExpSkill
+    className: UISetExpSkill_SkillButton
+  - hash:
+      serializedVersion: 2
+      Hash: eb324732c7c4ee010c0ed5be574be5f6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIRoleAvarta
+  - hash:
+      serializedVersion: 2
+      Hash: 1f2e03792665131e6d86d32615206306
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Logic
+    className: KTAutoFightManager
+  - hash:
+      serializedVersion: 2
+      Hash: f0af8e132d716275aa054bcd0c37a094
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.MainUI
+    className: UISpecialChatBox
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.Factory
+    className: KTResourceManager
+  - hash:
+      serializedVersion: 2
+      Hash: 2e9aa1a0583ba25222ae7d9d1fc805c0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.SpecialEvents.ColonyDispute
+    className: UIColonyDispute_Achievement_GuildMemberInfo
+  - hash:
+      serializedVersion: 2
+      Hash: d71a6158a401de30db980c11a56bf99a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.Welfare.MonthCard
+    className: UIWelfare_MonthCard
+  - hash:
+      serializedVersion: 2
+      Hash: 6269a73cfec9ff6b8ff9f68d4d09b2ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main.GuildEx.Battle
+    className: UIGuildEx_Battle_GuildListFrame_GuildInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 0de5d465cd9d10e3dea1686935a70883
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIEquipLevelUp
+  - hash:
+      serializedVersion: 2
+      Hash: 9c7974a48fa1af7063019b9c99411a58
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UIActivityList
+  - hash:
+      serializedVersion: 2
+      Hash: d9c29b29f34cfb3bf985c7cfa5d1e827
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: FS.VLTK.UI.Main
+    className: UISelectAvarta
+  platform: 13
+  scenePathNames:
+  - Assets/Scenes/MainGame.unity
+  playerPath: C:/Users/mirac/OneDrive/Desktop/QUYVAN.apk

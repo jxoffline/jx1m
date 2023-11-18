@@ -1,0 +1,457 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &489209345353084934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489209345353084933}
+  - component: {fileID: 489209345353084929}
+  - component: {fileID: 489209345353084930}
+  - component: {fileID: 489209345353084931}
+  - component: {fileID: 489209345353084932}
+  m_Layer: 5
+  m_Name: Animation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &489209345353084933
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489209345353084934}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3224484740310561290}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 224, y: 76}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &489209345353084929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489209345353084934}
+  m_CullTransparentMesh: 1
+--- !u!114 &489209345353084930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489209345353084934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &489209345353084931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489209345353084934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3160df7586bb5064cb241c42348973be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIImage: {fileID: 489209345353084932}
+  _AutoStart: 1
+  _Repeat: 1
+  _FirstDuration: 2
+  _RepeatDuration: 2
+  _RepeatFromID: 0
+  _RepeatToID: 47
+  _Sprites:
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 1
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 2
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 3
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 4
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 5
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 6
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 7
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 8
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 9
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 10
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 11
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 12
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 13
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 14
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 15
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 16
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 17
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 18
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 19
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 20
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 21
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 22
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 23
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 24
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 25
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 26
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 27
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 28
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 29
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 30
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 31
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 32
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 33
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 34
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 35
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 36
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 37
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 38
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 39
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 40
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 41
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 42
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 43
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 44
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 45
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 46
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 47
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  - BundleDir: Common/TextAutoFindPath.unity3d
+    AtlasName: TextAutoFindPath
+    SpriteName: 48
+    Offset: {x: 0, y: 0}
+    PixelPerfect: 1
+    Scale: 1
+  _UseOriginPos: 0
+--- !u!114 &489209345353084932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489209345353084934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305b1e1ab51522e42a8c930396319290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _BundleDir: Common/TextAutoFindPath.unity3d
+  _AtlasName: TextAutoFindPath
+  _SpriteName: 1
+  _PixelPerfect: 0
+  _PixelPerfectOnPlay: 0
+  _LoadImmedatelly: 0
+  _Scale: 1
+--- !u!1 &3224484740310561291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3224484740310561290}
+  - component: {fileID: 3224484740310561285}
+  m_Layer: 5
+  m_Name: UITextAutoFindPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3224484740310561290
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224484740310561291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 489209345353084933}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 271.75}
+  m_SizeDelta: {x: 244, y: 76}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3224484740310561285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224484740310561291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6d79a7151c5304499752a2f61a1c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIText_Animation: {fileID: 489209345353084931}
