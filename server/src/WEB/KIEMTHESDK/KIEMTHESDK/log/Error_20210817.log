@@ -1,0 +1,50 @@
+2021-08-17 15:25:36: Revice Void Data....
+2021-08-17 15:25:36: Revice Void Data....LENG :0
+2021-08-17 15:25:36: Bug ChatVoiceService::System.IO.FileNotFoundException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.ChatVoiceService.Page_Load(Object sender, EventArgs e) in D:\PROJECT_KT\KIEMTHESDK\KIEMTHESDK\ChatVoiceService.aspx.cs:line 49
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///D:/PROJECT_KT/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = D:\PROJECT_KT\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\PROJECT_KT\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Users\bom14\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Users/bom14/AppData/Local/Temp/Temporary ASP.NET Files/vs/e2dcf296/5c8c023f/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/bom14/AppData/Local/Temp/Temporary ASP.NET Files/vs/e2dcf296/5c8c023f/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECT_KT/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.DLL.
+LOG: Attempting download of new URL file:///D:/PROJECT_KT/KIEMTHESDK/KIEMTHESDK/bin/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/bom14/AppData/Local/Temp/Temporary ASP.NET Files/vs/e2dcf296/5c8c023f/zlib.net.EXE.
+LOG: Attempting download of new URL file:///C:/Users/bom14/AppData/Local/Temp/Temporary ASP.NET Files/vs/e2dcf296/5c8c023f/zlib.net/zlib.net.EXE.
+LOG: Attempting download of new URL file:///D:/PROJECT_KT/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.EXE.
+LOG: Attempting download of new URL file:///D:/PROJECT_KT/KIEMTHESDK/KIEMTHESDK/bin/zlib.net/zlib.net.EXE.
+
+2021-08-17 15:25:48: Revice Void Data....
+2021-08-17 15:25:48: Revice Void Data....LENG :22
+2021-08-17 15:25:48: Bug ChatVoiceService::System.IO.FileNotFoundException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.ChatVoiceService.Page_Load(Object sender, EventArgs e) in D:\PROJECT_KT\KIEMTHESDK\KIEMTHESDK\ChatVoiceService.aspx.cs:line 49
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///D:/PROJECT_KT/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = D:\PROJECT_KT\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\PROJECT_KT\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Users\bom14\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+2021-08-17 15:25:55: Revice Void Data....

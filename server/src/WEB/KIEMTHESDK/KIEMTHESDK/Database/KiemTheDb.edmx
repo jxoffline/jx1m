@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KiemTheDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="KiemTheDbModelStoreContainer">
+    <EntitySet Name="ChatDatas" EntityType="KiemTheDbModel.Store.ChatDatas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Configs" EntityType="KiemTheDbModel.Store.Configs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CsmLogins" EntityType="KiemTheDbModel.Store.CsmLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiftCodeLogs" EntityType="KiemTheDbModel.Store.GiftCodeLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiftCodes" EntityType="KiemTheDbModel.Store.GiftCodes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KTCoins" EntityType="KiemTheDbModel.Store.KTCoins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginTables" EntityType="KiemTheDbModel.Store.LoginTables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogsTrans" EntityType="KiemTheDbModel.Store.LogsTrans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewsTables" EntityType="KiemTheDbModel.Store.NewsTables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RechageLogs" EntityType="KiemTheDbModel.Store.RechageLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServerLists" EntityType="KiemTheDbModel.Store.ServerLists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServerListsIos" EntityType="KiemTheDbModel.Store.ServerListsIos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TokenManagers" EntityType="KiemTheDbModel.Store.TokenManagers" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ChatDatas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChatID" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="FromRoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ToRoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Channel" Type="int" Nullable="true" />
+    <Property Name="ChatTime" Type="datetime" Nullable="true" />
+    <Property Name="FileName" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Configs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartKM" Type="datetime" Nullable="true" />
+    <Property Name="EndKM" Type="datetime" Nullable="true" />
+    <Property Name="NormalRate" Type="float" Nullable="true" />
+    <Property Name="KMRate" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="CsmLogins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Premission" Type="int" Nullable="true" />
+    <Property Name="RegTime" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="GiftCodeLogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ActiveRole" Type="int" Nullable="true" />
+    <Property Name="ActiveTime" Type="datetime" Nullable="true" />
+    <Property Name="CodeType" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ServerID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="GiftCodes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServerID" Type="int" Nullable="true" />
+    <Property Name="Code" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="true" />
+    <Property Name="ItemList" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="TimeCreate" Type="datetime" Nullable="true" />
+    <Property Name="CodeType" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MaxActive" Type="int" Nullable="true" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KTCoins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="true" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="KCoin" Type="int" Nullable="true" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="LoginTables">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="true" />
+    <Property Name="Date" Type="datetime" Nullable="true" />
+    <Property Name="ActiveRoleID" Type="int" Nullable="true" />
+    <Property Name="ActiveRoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="TokenTimeExp" Type="datetime" Nullable="true" />
+    <Property Name="AccessToken" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LastServerLogin" Type="int" Nullable="true" />
+    <Property Name="LastLoginTime" Type="datetime" Nullable="true" />
+    <Property Name="LastIPLogin" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Commission" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="LogsTrans">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="true" />
+    <Property Name="RoleID" Type="int" Nullable="true" />
+    <Property Name="RoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ServerID" Type="int" Nullable="true" />
+    <Property Name="Value" Type="int" Nullable="true" />
+    <Property Name="TimeTrans" Type="datetime" Nullable="true" />
+    <Property Name="BeforeValue" Type="int" Nullable="true" />
+    <Property Name="AfterValue" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="NewsTables">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Catagory" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="Context" Type="varchar(max)" Nullable="true" />
+    <Property Name="DateTime" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="RechageLogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="true" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="20" />
+    <Property Name="CoinValue" Type="int" Nullable="true" />
+    <Property Name="BeforeCoin" Type="int" Nullable="true" />
+    <Property Name="AfterCoin" Type="int" Nullable="true" />
+    <Property Name="RechageDate" Type="datetime" Nullable="true" />
+    <Property Name="RechageType" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_0" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_1" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_2" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_3" Type="int" Nullable="true" />
+    <Property Name="Messenger" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="true" />
+    <Property Name="TransID" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ValueRechage" Type="int" Nullable="true" />
+    <Property Name="ActionBy" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServerLists">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strServerName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="nServerOrder" Type="int" Nullable="true" />
+    <Property Name="nServerPort" Type="int" Nullable="true" />
+    <Property Name="nStatus" Type="int" Nullable="true" />
+    <Property Name="strURL" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="nServerID" Type="int" Nullable="true" />
+    <Property Name="nOnlineNum" Type="int" Nullable="true" />
+    <Property Name="HttpServicePort" Type="int" Nullable="true" />
+    <Property Name="strMaintainStarTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTerminalTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTxt" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="isTestServer" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ServerListsIos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strServerName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="nServerOrder" Type="int" Nullable="true" />
+    <Property Name="nServerPort" Type="int" Nullable="true" />
+    <Property Name="nStatus" Type="int" Nullable="true" />
+    <Property Name="strURL" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="nServerID" Type="int" Nullable="true" />
+    <Property Name="nOnlineNum" Type="int" Nullable="true" />
+    <Property Name="HttpServicePort" Type="int" Nullable="true" />
+    <Property Name="strMaintainStarTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTerminalTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTxt" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="isTestServer" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TokenManagers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="tokencreate" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="time" Type="bigint" Nullable="true" />
+    <Property Name="requestSendStatus" Type="int" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KiemTheDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="KiemTheDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ChatDatas" EntityType="KiemTheDbModel.ChatData" />
+          <EntitySet Name="Configs" EntityType="KiemTheDbModel.Config" />
+          <EntitySet Name="CsmLogins" EntityType="KiemTheDbModel.CsmLogin" />
+          <EntitySet Name="GiftCodeLogs" EntityType="KiemTheDbModel.GiftCodeLog" />
+          <EntitySet Name="GiftCodes" EntityType="KiemTheDbModel.GiftCode" />
+          <EntitySet Name="KTCoins" EntityType="KiemTheDbModel.KTCoin" />
+          <EntitySet Name="LoginTables" EntityType="KiemTheDbModel.LoginTable" />
+          <EntitySet Name="LogsTrans" EntityType="KiemTheDbModel.LogsTran" />
+          <EntitySet Name="NewsTables" EntityType="KiemTheDbModel.NewsTable" />
+          <EntitySet Name="RechageLogs" EntityType="KiemTheDbModel.RechageLog" />
+          <EntitySet Name="ServerLists" EntityType="KiemTheDbModel.ServerList" />
+          <EntitySet Name="ServerListsIos" EntityType="KiemTheDbModel.ServerListsIo" />
+          <EntitySet Name="TokenManagers" EntityType="KiemTheDbModel.TokenManager" />
+        </EntityContainer>
+        <EntityType Name="ChatData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChatID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FromRoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ToRoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Channel" Type="Int32" />
+          <Property Name="ChatTime" Type="DateTime" Precision="3" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Config">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartKM" Type="DateTime" Precision="3" />
+          <Property Name="EndKM" Type="DateTime" Precision="3" />
+          <Property Name="NormalRate" Type="Double" />
+          <Property Name="KMRate" Type="Double" />
+        </EntityType>
+        <EntityType Name="CsmLogin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Premission" Type="Int32" />
+          <Property Name="RegTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="GiftCodeLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActiveRole" Type="Int32" />
+          <Property Name="ActiveTime" Type="DateTime" Precision="3" />
+          <Property Name="CodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServerID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="GiftCode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServerID" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="ItemList" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TimeCreate" Type="DateTime" Precision="3" />
+          <Property Name="CodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxActive" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="KTCoin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KCoin" Type="Int32" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="LoginTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="ActiveRoleID" Type="Int32" />
+          <Property Name="ActiveRoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TokenTimeExp" Type="DateTime" Precision="3" />
+          <Property Name="AccessToken" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastServerLogin" Type="Int32" />
+          <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+          <Property Name="LastIPLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Commission" Type="Double" />
+        </EntityType>
+        <EntityType Name="LogsTran">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="RoleID" Type="Int32" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ServerID" Type="Int32" />
+          <Property Name="Value" Type="Int32" />
+          <Property Name="TimeTrans" Type="DateTime" Precision="3" />
+          <Property Name="BeforeValue" Type="Int32" />
+          <Property Name="AfterValue" Type="Int32" />
+        </EntityType>
+        <EntityType Name="NewsTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Catagory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Context" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="RechageLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CoinValue" Type="Int32" />
+          <Property Name="BeforeCoin" Type="Int32" />
+          <Property Name="AfterCoin" Type="Int32" />
+          <Property Name="RechageDate" Type="DateTime" Precision="3" />
+          <Property Name="RechageType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pram_0" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pram_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pram_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pram_3" Type="Int32" />
+          <Property Name="Messenger" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="TransID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValueRechage" Type="Int32" />
+          <Property Name="ActionBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ServerList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strServerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="nServerOrder" Type="Int32" />
+          <Property Name="nServerPort" Type="Int32" />
+          <Property Name="nStatus" Type="Int32" />
+          <Property Name="strURL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nServerID" Type="Int32" />
+          <Property Name="nOnlineNum" Type="Int32" />
+          <Property Name="HttpServicePort" Type="Int32" />
+          <Property Name="strMaintainStarTime" Type="DateTime" Precision="3" />
+          <Property Name="strMaintainTerminalTime" Type="DateTime" Precision="3" />
+          <Property Name="strMaintainTxt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isTestServer" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ServerListsIo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strServerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="nServerOrder" Type="Int32" />
+          <Property Name="nServerPort" Type="Int32" />
+          <Property Name="nStatus" Type="Int32" />
+          <Property Name="strURL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nServerID" Type="Int32" />
+          <Property Name="nOnlineNum" Type="Int32" />
+          <Property Name="HttpServicePort" Type="Int32" />
+          <Property Name="strMaintainStarTime" Type="DateTime" Precision="3" />
+          <Property Name="strMaintainTerminalTime" Type="DateTime" Precision="3" />
+          <Property Name="strMaintainTxt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isTestServer" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TokenManager">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tokencreate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="Int64" />
+          <Property Name="requestSendStatus" Type="Int32" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KiemTheDbModelStoreContainer" CdmEntityContainer="KiemTheDbEntities">
+    <EntitySetMapping Name="ChatDatas">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.ChatData)">
+        <MappingFragment StoreEntitySet="ChatDatas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ChatID" ColumnName="ChatID" />
+          <ScalarProperty Name="FromRoleName" ColumnName="FromRoleName" />
+          <ScalarProperty Name="ToRoleName" ColumnName="ToRoleName" />
+          <ScalarProperty Name="Channel" ColumnName="Channel" />
+          <ScalarProperty Name="ChatTime" ColumnName="ChatTime" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.Config)">
+        <MappingFragment StoreEntitySet="Configs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StartKM" ColumnName="StartKM" />
+          <ScalarProperty Name="EndKM" ColumnName="EndKM" />
+          <ScalarProperty Name="NormalRate" ColumnName="NormalRate" />
+          <ScalarProperty Name="KMRate" ColumnName="KMRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CsmLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.CsmLogin)">
+        <MappingFragment StoreEntitySet="CsmLogins">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Premission" ColumnName="Premission" />
+          <ScalarProperty Name="RegTime" ColumnName="RegTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCodeLogs">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.GiftCodeLog)">
+        <MappingFragment StoreEntitySet="GiftCodeLogs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ActiveRole" ColumnName="ActiveRole" />
+          <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
+          <ScalarProperty Name="CodeType" ColumnName="CodeType" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiftCodes">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.GiftCode)">
+        <MappingFragment StoreEntitySet="GiftCodes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ItemList" ColumnName="ItemList" />
+          <ScalarProperty Name="TimeCreate" ColumnName="TimeCreate" />
+          <ScalarProperty Name="CodeType" ColumnName="CodeType" />
+          <ScalarProperty Name="MaxActive" ColumnName="MaxActive" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KTCoins">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.KTCoin)">
+        <MappingFragment StoreEntitySet="KTCoins">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="KCoin" ColumnName="KCoin" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginTables">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.LoginTable)">
+        <MappingFragment StoreEntitySet="LoginTables">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ActiveRoleID" ColumnName="ActiveRoleID" />
+          <ScalarProperty Name="ActiveRoleName" ColumnName="ActiveRoleName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TokenTimeExp" ColumnName="TokenTimeExp" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="LastServerLogin" ColumnName="LastServerLogin" />
+          <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+          <ScalarProperty Name="LastIPLogin" ColumnName="LastIPLogin" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogsTrans">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.LogsTran)">
+        <MappingFragment StoreEntitySet="LogsTrans">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="TimeTrans" ColumnName="TimeTrans" />
+          <ScalarProperty Name="BeforeValue" ColumnName="BeforeValue" />
+          <ScalarProperty Name="AfterValue" ColumnName="AfterValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsTables">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.NewsTable)">
+        <MappingFragment StoreEntitySet="NewsTables">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Catagory" ColumnName="Catagory" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Context" ColumnName="Context" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RechageLogs">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.RechageLog)">
+        <MappingFragment StoreEntitySet="RechageLogs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CoinValue" ColumnName="CoinValue" />
+          <ScalarProperty Name="BeforeCoin" ColumnName="BeforeCoin" />
+          <ScalarProperty Name="AfterCoin" ColumnName="AfterCoin" />
+          <ScalarProperty Name="RechageDate" ColumnName="RechageDate" />
+          <ScalarProperty Name="RechageType" ColumnName="RechageType" />
+          <ScalarProperty Name="Pram_0" ColumnName="Pram_0" />
+          <ScalarProperty Name="Pram_1" ColumnName="Pram_1" />
+          <ScalarProperty Name="Pram_2" ColumnName="Pram_2" />
+          <ScalarProperty Name="Pram_3" ColumnName="Pram_3" />
+          <ScalarProperty Name="Messenger" ColumnName="Messenger" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransID" ColumnName="TransID" />
+          <ScalarProperty Name="ValueRechage" ColumnName="ValueRechage" />
+          <ScalarProperty Name="ActionBy" ColumnName="ActionBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServerLists">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.ServerList)">
+        <MappingFragment StoreEntitySet="ServerLists">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="strServerName" ColumnName="strServerName" />
+          <ScalarProperty Name="nServerOrder" ColumnName="nServerOrder" />
+          <ScalarProperty Name="nServerPort" ColumnName="nServerPort" />
+          <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+          <ScalarProperty Name="strURL" ColumnName="strURL" />
+          <ScalarProperty Name="nServerID" ColumnName="nServerID" />
+          <ScalarProperty Name="nOnlineNum" ColumnName="nOnlineNum" />
+          <ScalarProperty Name="HttpServicePort" ColumnName="HttpServicePort" />
+          <ScalarProperty Name="strMaintainStarTime" ColumnName="strMaintainStarTime" />
+          <ScalarProperty Name="strMaintainTerminalTime" ColumnName="strMaintainTerminalTime" />
+          <ScalarProperty Name="strMaintainTxt" ColumnName="strMaintainTxt" />
+          <ScalarProperty Name="isTestServer" ColumnName="isTestServer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServerListsIos">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.ServerListsIo)">
+        <MappingFragment StoreEntitySet="ServerListsIos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="strServerName" ColumnName="strServerName" />
+          <ScalarProperty Name="nServerOrder" ColumnName="nServerOrder" />
+          <ScalarProperty Name="nServerPort" ColumnName="nServerPort" />
+          <ScalarProperty Name="nStatus" ColumnName="nStatus" />
+          <ScalarProperty Name="strURL" ColumnName="strURL" />
+          <ScalarProperty Name="nServerID" ColumnName="nServerID" />
+          <ScalarProperty Name="nOnlineNum" ColumnName="nOnlineNum" />
+          <ScalarProperty Name="HttpServicePort" ColumnName="HttpServicePort" />
+          <ScalarProperty Name="strMaintainStarTime" ColumnName="strMaintainStarTime" />
+          <ScalarProperty Name="strMaintainTerminalTime" ColumnName="strMaintainTerminalTime" />
+          <ScalarProperty Name="strMaintainTxt" ColumnName="strMaintainTxt" />
+          <ScalarProperty Name="isTestServer" ColumnName="isTestServer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TokenManagers">
+      <EntityTypeMapping TypeName="IsTypeOf(KiemTheDbModel.TokenManager)">
+        <MappingFragment StoreEntitySet="TokenManagers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="tokencreate" ColumnName="tokencreate" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="requestSendStatus" ColumnName="requestSendStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

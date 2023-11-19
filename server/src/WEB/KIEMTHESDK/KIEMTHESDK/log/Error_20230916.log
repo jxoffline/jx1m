@@ -1,0 +1,79 @@
+2023-09-16 18:22:43: GET SID FROM CLIENT :System.IO.FileLoadException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.VerifyAccount.Page_Load(Object sender, EventArgs e) in E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\VerifyAccount.aspx.cs:line 20
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Users\akira\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: PUBLIC KEY TOKEN
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+2023-09-16 18:22:50: GET SID FROM CLIENT :System.IO.FileLoadException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.VerifyAccount.Page_Load(Object sender, EventArgs e) in E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\VerifyAccount.aspx.cs:line 20
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Users\akira\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: PUBLIC KEY TOKEN
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+2023-09-16 18:23:36: GET SID FROM CLIENT :System.IO.FileNotFoundException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.VerifyAccount.Page_Load(Object sender, EventArgs e) in E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\VerifyAccount.aspx.cs:line 20
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Users\akira\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net.EXE.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/a53fca1b/7c094dc5/zlib.net/zlib.net.EXE.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.EXE.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net/zlib.net.EXE.
+
+2023-09-16 18:28:37: USER :-1 | Request ServerList
+2023-09-16 18:29:45: USER :-1 | Request ServerList
+2023-09-16 18:31:03: USER :-1 | Request ServerList
+2023-09-16 18:34:54: USER :-1 | Request ServerList
+2023-09-16 18:37:38: USER :-1 | Request ServerList
+2023-09-16 18:39:51: USER :-1 | Request ServerList
+2023-09-16 18:42:45: USER :-1 | Request ServerList

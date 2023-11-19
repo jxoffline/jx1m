@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KiemTheDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="KiemTheDbModelStoreContainer">
+    <EntitySet Name="ChatDatas" EntityType="KiemTheDbModel.Store.ChatDatas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Configs" EntityType="KiemTheDbModel.Store.Configs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CsmLogins" EntityType="KiemTheDbModel.Store.CsmLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiftCodeLogs" EntityType="KiemTheDbModel.Store.GiftCodeLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiftCodes" EntityType="KiemTheDbModel.Store.GiftCodes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KTCoins" EntityType="KiemTheDbModel.Store.KTCoins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginTables" EntityType="KiemTheDbModel.Store.LoginTables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogsTrans" EntityType="KiemTheDbModel.Store.LogsTrans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewsTables" EntityType="KiemTheDbModel.Store.NewsTables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RechageLogs" EntityType="KiemTheDbModel.Store.RechageLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServerLists" EntityType="KiemTheDbModel.Store.ServerLists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServerListsIos" EntityType="KiemTheDbModel.Store.ServerListsIos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TokenManagers" EntityType="KiemTheDbModel.Store.TokenManagers" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ChatDatas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChatID" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="FromRoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ToRoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Channel" Type="int" Nullable="true" />
+    <Property Name="ChatTime" Type="datetime" Nullable="true" />
+    <Property Name="FileName" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Configs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartKM" Type="datetime" Nullable="true" />
+    <Property Name="EndKM" Type="datetime" Nullable="true" />
+    <Property Name="NormalRate" Type="float" Nullable="true" />
+    <Property Name="KMRate" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="CsmLogins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Premission" Type="int" Nullable="true" />
+    <Property Name="RegTime" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="GiftCodeLogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ActiveRole" Type="int" Nullable="true" />
+    <Property Name="ActiveTime" Type="datetime" Nullable="true" />
+    <Property Name="CodeType" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ServerID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="GiftCodes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServerID" Type="int" Nullable="true" />
+    <Property Name="Code" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="true" />
+    <Property Name="ItemList" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="TimeCreate" Type="datetime" Nullable="true" />
+    <Property Name="CodeType" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="MaxActive" Type="int" Nullable="true" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KTCoins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="true" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="KCoin" Type="int" Nullable="true" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="LoginTables">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="true" />
+    <Property Name="Date" Type="datetime" Nullable="true" />
+    <Property Name="ActiveRoleID" Type="int" Nullable="true" />
+    <Property Name="ActiveRoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="TokenTimeExp" Type="datetime" Nullable="true" />
+    <Property Name="AccessToken" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LastServerLogin" Type="int" Nullable="true" />
+    <Property Name="LastLoginTime" Type="datetime" Nullable="true" />
+    <Property Name="LastIPLogin" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Commission" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="LogsTrans">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="true" />
+    <Property Name="RoleID" Type="int" Nullable="true" />
+    <Property Name="RoleName" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="ServerID" Type="int" Nullable="true" />
+    <Property Name="Value" Type="int" Nullable="true" />
+    <Property Name="TimeTrans" Type="datetime" Nullable="true" />
+    <Property Name="BeforeValue" Type="int" Nullable="true" />
+    <Property Name="AfterValue" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="NewsTables">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Catagory" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="Context" Type="varchar(max)" Nullable="true" />
+    <Property Name="DateTime" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="RechageLogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="true" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="20" />
+    <Property Name="CoinValue" Type="int" Nullable="true" />
+    <Property Name="BeforeCoin" Type="int" Nullable="true" />
+    <Property Name="AfterCoin" Type="int" Nullable="true" />
+    <Property Name="RechageDate" Type="datetime" Nullable="true" />
+    <Property Name="RechageType" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_0" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_1" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_2" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Pram_3" Type="int" Nullable="true" />
+    <Property Name="Messenger" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="true" />
+    <Property Name="TransID" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ValueRechage" Type="int" Nullable="true" />
+    <Property Name="ActionBy" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServerLists">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strServerName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="nServerOrder" Type="int" Nullable="true" />
+    <Property Name="nServerPort" Type="int" Nullable="true" />
+    <Property Name="nStatus" Type="int" Nullable="true" />
+    <Property Name="strURL" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="nServerID" Type="int" Nullable="true" />
+    <Property Name="nOnlineNum" Type="int" Nullable="true" />
+    <Property Name="HttpServicePort" Type="int" Nullable="true" />
+    <Property Name="strMaintainStarTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTerminalTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTxt" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="isTestServer" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ServerListsIos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strServerName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="nServerOrder" Type="int" Nullable="true" />
+    <Property Name="nServerPort" Type="int" Nullable="true" />
+    <Property Name="nStatus" Type="int" Nullable="true" />
+    <Property Name="strURL" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="nServerID" Type="int" Nullable="true" />
+    <Property Name="nOnlineNum" Type="int" Nullable="true" />
+    <Property Name="HttpServicePort" Type="int" Nullable="true" />
+    <Property Name="strMaintainStarTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTerminalTime" Type="datetime" Nullable="true" />
+    <Property Name="strMaintainTxt" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="isTestServer" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TokenManagers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="tokencreate" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="time" Type="bigint" Nullable="true" />
+    <Property Name="requestSendStatus" Type="int" Nullable="true" />
+  </EntityType>
+</Schema>

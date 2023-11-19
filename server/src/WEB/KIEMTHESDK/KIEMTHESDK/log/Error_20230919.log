@@ -1,0 +1,53 @@
+2023-09-19 03:06:38: GET SID FROM CLIENT :System.IO.FileLoadException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.VerifyAccount.Page_Load(Object sender, EventArgs e) in E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\VerifyAccount.aspx.cs:line 20
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/Temporary ASP.NET Files/root/a53fca1b/7c094dc5/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/Temporary ASP.NET Files/root/a53fca1b/7c094dc5/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: PUBLIC KEY TOKEN
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+2023-09-19 03:07:34: GET SID FROM CLIENT :System.IO.FileLoadException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.VerifyAccount.Page_Load(Object sender, EventArgs e) in E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\VerifyAccount.aspx.cs:line 20
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\VL1M\WEB\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/Temporary ASP.NET Files/root/a53fca1b/7c094dc5/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Windows/Microsoft.NET/Framework64/v4.0.30319/Temporary ASP.NET Files/root/a53fca1b/7c094dc5/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/VL1M/WEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: PUBLIC KEY TOKEN
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+2023-09-19 03:11:05: USER :187_akiravjp | Request ServerList
+2023-09-19 03:26:38: USER :187_akiravjp | Request ServerList
+2023-09-19 03:27:36: USER :187_akiravjp | Request ServerList
+2023-09-19 03:53:26: USER :187_akiravjp | Request ServerList
+2023-09-19 19:36:45: USER :187_akiravjp | Request ServerList
+2023-09-19 19:47:16: USER :187_akiravjp | Request ServerList
+2023-09-19 20:39:40: USER :187_akiravjp | Request ServerList

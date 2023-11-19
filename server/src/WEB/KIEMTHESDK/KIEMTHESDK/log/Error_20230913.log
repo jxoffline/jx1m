@@ -1,0 +1,26 @@
+2023-09-13 23:38:15: GET SID FROM CLIENT :System.IO.FileNotFoundException: Could not load file or assembly 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null'
+   at Server.Tools.DataHelper.BytesToObject[T](Byte[] bytesData, Int32 offset, Int32 length)
+   at KIEMTHESDK.VerifyAccount.Page_Load(Object sender, EventArgs e) in E:\OpenAI\Resource_SELL_2\Resource_SELL\ALLRES_HTTPWEB\KIEMTHESDK\KIEMTHESDK\VerifyAccount.aspx.cs:line 20
+
+=== Pre-bind state information ===
+LOG: DisplayName = zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///E:/OpenAI/Resource_SELL_2/Resource_SELL/ALLRES_HTTPWEB/KIEMTHESDK/KIEMTHESDK/
+LOG: Initial PrivatePath = E:\OpenAI\Resource_SELL_2\Resource_SELL\ALLRES_HTTPWEB\KIEMTHESDK\KIEMTHESDK\bin
+Calling assembly : ClientTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: E:\OpenAI\Resource_SELL_2\Resource_SELL\ALLRES_HTTPWEB\KIEMTHESDK\KIEMTHESDK\web.config
+LOG: Using host configuration file: C:\Users\akira\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/b73e8cf5/b8dca8cb/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/b73e8cf5/b8dca8cb/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/OpenAI/Resource_SELL_2/Resource_SELL/ALLRES_HTTPWEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.DLL.
+LOG: Attempting download of new URL file:///E:/OpenAI/Resource_SELL_2/Resource_SELL/ALLRES_HTTPWEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net/zlib.net.DLL.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/b73e8cf5/b8dca8cb/zlib.net.EXE.
+LOG: Attempting download of new URL file:///C:/Users/akira/AppData/Local/Temp/Temporary ASP.NET Files/vs/b73e8cf5/b8dca8cb/zlib.net/zlib.net.EXE.
+LOG: Attempting download of new URL file:///E:/OpenAI/Resource_SELL_2/Resource_SELL/ALLRES_HTTPWEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net.EXE.
+LOG: Attempting download of new URL file:///E:/OpenAI/Resource_SELL_2/Resource_SELL/ALLRES_HTTPWEB/KIEMTHESDK/KIEMTHESDK/bin/zlib.net/zlib.net.EXE.
+
